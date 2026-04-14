@@ -303,6 +303,7 @@ main {
 .card-tag.iracing { background: rgba(0, 136, 255, 0.15); color: #0088ff; }
 .card-tag.lmu { background: rgba(0, 200, 120, 0.15); color: #00c878; }
 .card-tag.sim { background: rgba(160, 100, 255, 0.15); color: #a064ff; }
+.card-tag.cas { background: rgba(231, 76, 60, 0.15); color: #e74c3c; }
 
 .card h3 {
   font-family: var(--font-heading);
