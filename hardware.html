@@ -37,12 +37,30 @@
     <h1>SimRacing <span>Hardware</span></h1>
     <p>Wheelbases, pedals, shifters, cockpits and everything you need to build the ultimate rig.</p>
     <div class="hero-date">April 14, 2026</div>
+    <div class="visitor-counter" style="margin-top: 0.8rem; font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+      <span id="visitor-count"></span>
+    </div>
   </section>
+
+  <!-- Section Jump Navigation -->
+  <div class="section-jump-nav" style="background: var(--bg-card); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1rem 0; position: sticky; top: 0; z-index: 90;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+      <a href="#wheelbases" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#9881; Wheelbases</a>
+      <a href="#wheels" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127919; Steering Wheels</a>
+      <a href="#pedals" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128095; Pedals</a>
+      <a href="#shifters" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128295; Shifters &amp; Handbrakes</a>
+      <a href="#cockpits" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128376; Cockpits &amp; Rigs</a>
+      <a href="#displays" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128421; Displays &amp; VR</a>
+      <a href="#dashboards" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128200; Dashboards</a>
+      <a href="#quickrelease" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128260; Quick Releases</a>
+      <a href="#comments" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128172; Comments</a>
+    </div>
+  </div>
 
   <main>
 
     <!-- Wheelbases -->
-    <div class="sub-section">
+    <div class="sub-section" id="wheelbases">
       <div class="section-header">
         <h2><span class="icon">&#9881;</span> Wheelbases</h2>
         <p>Direct drive is king in 2026 &mdash; here's what's new</p>
@@ -127,7 +145,7 @@
     </div>
 
     <!-- Steering Wheels -->
-    <div class="sub-section">
+    <div class="sub-section" id="wheels">
       <div class="section-header">
         <h2><span class="icon">&#127919;</span> Steering Wheels</h2>
         <p>From budget rims to carbon fiber Formula replicas</p>
@@ -275,7 +293,7 @@
     </div>
 
     <!-- Pedals -->
-    <div class="sub-section">
+    <div class="sub-section" id="pedals">
       <div class="section-header">
         <h2><span class="icon">&#128095;</span> Pedals</h2>
         <p>Load cells, hydraulic feel, and modular designs lead 2026</p>
@@ -353,7 +371,7 @@
     </div>
 
     <!-- Shifters & Handbrakes -->
-    <div class="sub-section">
+    <div class="sub-section" id="shifters">
       <div class="section-header">
         <h2><span class="icon">&#128736;</span> Shifters & Handbrakes</h2>
         <p>Essential add-ons for the complete sim racing experience</p>
@@ -396,7 +414,7 @@
     </div>
 
     <!-- Cockpits & Rigs -->
-    <div class="sub-section">
+    <div class="sub-section" id="cockpits">
       <div class="section-header">
         <h2><span class="icon">&#128186;</span> Cockpits & Rigs</h2>
         <p>From desk mounts to full motion platforms</p>
@@ -445,7 +463,7 @@
     </div>
 
     <!-- Displays & VR -->
-    <div class="sub-section">
+    <div class="sub-section" id="displays">
       <div class="section-header">
         <h2><span class="icon">&#128421;</span> Displays & VR</h2>
         <p>Triple screens, ultrawide monitors, and virtual reality</p>
@@ -484,7 +502,7 @@
     </div>
 
     <!-- Dashboards -->
-    <div class="sub-section">
+    <div class="sub-section" id="dashboards">
       <div class="section-header">
         <h2><span class="icon">&#128200;</span> Sim Racing Dashboards</h2>
         <p>Standalone dashboard displays for telemetry, RPM, lap times, and race data</p>
@@ -556,7 +574,7 @@
     </div>
 
     <!-- Quick Releases -->
-    <div class="sub-section">
+    <div class="sub-section" id="quickrelease">
       <div class="section-header">
         <h2><span class="icon">&#128260;</span> Quick Release Systems</h2>
         <p>Swap steering wheels in seconds &mdash; the connector between your wheelbase and rim</p>
@@ -623,6 +641,29 @@
 
   </main>
 
+  <!-- Comments Section -->
+  <div class="sub-section" id="comments" style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
+    <div class="section-header">
+      <h2><span class="icon">&#128172;</span> Comments &amp; Feedback</h2>
+      <p>Share your thoughts, suggest improvements, or discuss sim racing hardware</p>
+    </div>
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://simracing-hub.com/hardware.html';
+        this.page.identifier = 'hardware';
+        this.page.title = 'SimRacing Hardware - SimRacing Hub';
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://simracing-hub.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
   <footer>
     <div class="footer-inner">
       <div class="footer-links">
@@ -638,6 +679,44 @@
       <span class="last-updated"></span>
     </div>
   </footer>
+
+  <!-- Visitor Counter (api.counterapi.dev - free, no signup) -->
+  <script>
+    fetch('https://api.counterapi.dev/v1/simracing-hub/hardware/up')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('visitor-count').textContent = data.count.toLocaleString() + ' page views';
+      })
+      .catch(() => {});
+  </script>
+
+  <!-- Smooth scrolling for jump nav -->
+  <script>
+    document.querySelectorAll('.jump-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const navHeight = document.querySelector('.section-jump-nav').offsetHeight;
+          const y = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 10;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      });
+    });
+    // Highlight active section in jump nav
+    const sections = document.querySelectorAll('.sub-section[id]');
+    const jumpBtns = document.querySelectorAll('.jump-btn');
+    window.addEventListener('scroll', () => {
+      const navH = document.querySelector('.section-jump-nav')?.offsetHeight || 60;
+      let current = '';
+      sections.forEach(s => {
+        if (window.pageYOffset >= s.offsetTop - navH - 20) current = s.id;
+      });
+      jumpBtns.forEach(b => {
+        b.style.background = b.getAttribute('href') === '#' + current ? 'rgba(255,107,53,0.3)' : '';
+      });
+    });
+  </script>
 
   <script src="js/main.js"></script>
 </body>
