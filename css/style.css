@@ -339,6 +339,105 @@ main {
 
 .card-link:hover { gap: 0.6rem; }
 
+/* ===== COMPARISON TABLES ===== */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-card);
+}
+
+.comparison-table-wrapper h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 1rem 1.25rem 0.5rem;
+  color: var(--text-primary);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.comparison-table thead th {
+  background: rgba(230, 57, 70, 0.1);
+  color: var(--accent-red);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table tbody td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(42, 42, 62, 0.5);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+  background: rgba(230, 57, 70, 0.05);
+}
+
+.comparison-table tbody td:first-child {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.comparison-table .price {
+  color: var(--accent-yellow);
+  font-weight: 500;
+}
+
+.comparison-table .tier-budget { border-left: 3px solid #00c878; }
+.comparison-table .tier-mid { border-left: 3px solid #0088ff; }
+.comparison-table .tier-high { border-left: 3px solid var(--accent-orange); }
+.comparison-table .tier-pro { border-left: 3px solid var(--accent-red); }
+
+.table-legend {
+  display: flex;
+  gap: 1.25rem;
+  padding: 0.5rem 1.25rem 0.75rem;
+  flex-wrap: wrap;
+}
+
+.table-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.table-legend span::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.legend-budget::before { background: #00c878 !important; }
+.legend-mid::before { background: #0088ff !important; }
+.legend-high::before { background: var(--accent-orange) !important; }
+.legend-pro::before { background: var(--accent-red) !important; }
+
+@media (max-width: 768px) {
+  .comparison-table { font-size: 0.8rem; }
+  .comparison-table thead th, .comparison-table tbody td { padding: 0.5rem 0.75rem; }
+}
+
 /* ===== HARDWARE SUB-SECTIONS ===== */
 .sub-section {
   margin-bottom: 2.5rem;
