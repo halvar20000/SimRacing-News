@@ -346,39 +346,45 @@ main {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   background: var(--bg-card);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .comparison-table-wrapper h3 {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 600;
-  padding: 1rem 1.25rem 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.25rem 1.5rem 0.5rem;
   color: var(--text-primary);
+  border-bottom: none;
 }
 
 .comparison-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 0.85rem;
 }
 
 .comparison-table thead th {
-  background: rgba(230, 57, 70, 0.1);
+  background: rgba(230, 57, 70, 0.12);
   color: var(--accent-red);
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.1rem;
   text-align: left;
   white-space: nowrap;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid rgba(230, 57, 70, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .comparison-table tbody td {
-  padding: 0.65rem 1rem;
-  border-bottom: 1px solid rgba(42, 42, 62, 0.5);
+  padding: 0.7rem 1.1rem;
+  border-bottom: 1px solid rgba(42, 42, 62, 0.4);
   color: var(--text-secondary);
   white-space: nowrap;
 }
@@ -387,45 +393,72 @@ main {
   border-bottom: none;
 }
 
+.comparison-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
 .comparison-table tbody tr:hover {
-  background: rgba(230, 57, 70, 0.05);
+  background: rgba(230, 57, 70, 0.06);
+}
+
+.comparison-table tbody tr:hover td {
+  color: var(--text-primary);
 }
 
 .comparison-table tbody td:first-child {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.comparison-table tbody td:nth-child(2) {
   color: var(--text-primary);
   font-weight: 500;
 }
 
 .comparison-table .price {
   color: var(--accent-yellow);
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.comparison-table .tier-budget { border-left: 3px solid #00c878; }
-.comparison-table .tier-mid { border-left: 3px solid #0088ff; }
-.comparison-table .tier-high { border-left: 3px solid var(--accent-orange); }
-.comparison-table .tier-pro { border-left: 3px solid var(--accent-red); }
+/* Tier color bars - applied to first td of each row */
+.comparison-table .tier-budget td:first-child { border-left: 4px solid #00c878; padding-left: calc(1.1rem - 1px); }
+.comparison-table .tier-mid td:first-child { border-left: 4px solid #0088ff; padding-left: calc(1.1rem - 1px); }
+.comparison-table .tier-high td:first-child { border-left: 4px solid var(--accent-orange); padding-left: calc(1.1rem - 1px); }
+.comparison-table .tier-pro td:first-child { border-left: 4px solid var(--accent-red); padding-left: calc(1.1rem - 1px); }
+
+/* Tier row subtle background tinting */
+.comparison-table .tier-budget { background: rgba(0, 200, 120, 0.03); }
+.comparison-table .tier-mid { background: rgba(0, 136, 255, 0.03); }
+.comparison-table .tier-high { background: rgba(255, 107, 53, 0.03); }
+.comparison-table .tier-pro { background: rgba(230, 57, 70, 0.03); }
+
+.comparison-table .tier-budget:hover { background: rgba(0, 200, 120, 0.08); }
+.comparison-table .tier-mid:hover { background: rgba(0, 136, 255, 0.08); }
+.comparison-table .tier-high:hover { background: rgba(255, 107, 53, 0.08); }
+.comparison-table .tier-pro:hover { background: rgba(230, 57, 70, 0.08); }
 
 .table-legend {
   display: flex;
-  gap: 1.25rem;
-  padding: 0.5rem 1.25rem 0.75rem;
+  gap: 1.5rem;
+  padding: 0.6rem 1.5rem 1rem;
   flex-wrap: wrap;
 }
 
 .table-legend span {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.75rem;
-  color: var(--text-muted);
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 .table-legend span::before {
   content: '';
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
 }
 
 .legend-budget::before { background: #00c878 !important; }
@@ -434,8 +467,11 @@ main {
 .legend-pro::before { background: var(--accent-red) !important; }
 
 @media (max-width: 768px) {
-  .comparison-table { font-size: 0.8rem; }
-  .comparison-table thead th, .comparison-table tbody td { padding: 0.5rem 0.75rem; }
+  .comparison-table { font-size: 0.78rem; }
+  .comparison-table thead th { padding: 0.6rem 0.75rem; font-size: 0.72rem; }
+  .comparison-table tbody td { padding: 0.55rem 0.75rem; }
+  .comparison-table-wrapper h3 { font-size: 1.1rem; padding: 1rem 1rem 0.4rem; }
+  .table-legend { padding: 0.4rem 1rem 0.75rem; gap: 1rem; }
 }
 
 /* ===== HARDWARE SUB-SECTIONS ===== */
