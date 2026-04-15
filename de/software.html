@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software & Tools - SimRacing Hub</title>
-  <meta name="description" content="Essenzielle Sim-Racing-Software: Telemetrie, Coaching, Overlays, Setup-Tools und Hardware-Integration.">
+  <meta name="description" content="Essenzielle Sim-Racing-Software: Telemetrie, Coaching, Overlays, Dashboards, FFB-Abstimmung, Spotter und Community-Tools.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -34,116 +34,319 @@
   </header>
 
   <section class="hero">
-    <h1><span>Software</span> & Tools</h1>
-    <p>Die Apps, Overlays und Utilities, die dein Sim-Racing-Erlebnis perfekt machen.</p>
-    <div class="hero-date">14. April 2026</div>
+    <h1>Software <span>&amp; Tools</span></h1>
+    <p>Telemetrie, Overlays, Dashboards, FFB-Abstimmung, Coaching und Community-Tools f&uuml;r Sim-Racing.</p>
+    <div class="hero-date">15. April 2026</div>
   </section>
+
+  <!-- Section Jump Navigation -->
+  <div class="section-jump-nav" style="background: var(--bg-card); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1rem 0; position: sticky; top: 0; z-index: 90;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+      <a href="#telemetry" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,209,102,0.1); border: 1px solid rgba(255,209,102,0.3); color: var(--accent-yellow); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128200; Telemetrie</a>
+      <a href="#overlays" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,209,102,0.1); border: 1px solid rgba(255,209,102,0.3); color: var(--accent-yellow); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127912; Overlays</a>
+      <a href="#dashboards" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,209,102,0.1); border: 1px solid rgba(255,209,102,0.3); color: var(--accent-yellow); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128187; Dashboards</a>
+      <a href="#ffb" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,209,102,0.1); border: 1px solid rgba(255,209,102,0.3); color: var(--accent-yellow); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#9881; FFB &amp; Haptik</a>
+      <a href="#coaching" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,209,102,0.1); border: 1px solid rgba(255,209,102,0.3); color: var(--accent-yellow); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127891; Coaching</a>
+      <a href="#community" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,209,102,0.1); border: 1px solid rgba(255,209,102,0.3); color: var(--accent-yellow); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128101; Community &amp; Tools</a>
+    </div>
+  </div>
 
   <main>
 
-    <!-- Free Essential Tools -->
-    <div class="sub-section">
+    <!-- Telemetry & Analysis -->
+    <div class="sub-section" id="telemetry">
       <div class="section-header">
-        <h2><span class="icon">&#128295;</span> Kostenlose Basis-Tools</h2>
-        <p>Unverzichtbare Software, die jeder Sim-Racer installieren sollte</p>
+        <h2><span class="icon">&#128200;</span> Telemetrie &amp; Analyse</h2>
+        <p>Analysiere deine Fahrdaten, finde Rundenzeiten und optimiere deine Leistung</p>
       </div>
       <div class="card-grid">
         <div class="card">
-          <span class="card-tag software">Kostenlos</span>
-          <h3>SimHub</h3>
-          <p>Das ultimative Dashboard- und Telemetrie-Tool. SimHub erfasst Daten aus deinem Racing-Spiel und zeigt sie genau so an, wie du es m&ouml;chtest: externe Bildschirme, benutzerdefinierte Overlays und Hardware-Integration f&uuml;r Bass-Shaker und LED-Displays. Vollst&auml;ndig kostenlos und endlos konfigurierbar.</p>
-          <span class="card-date">Laufend aktualisiert</span>
+          <span class="card-tag software">Telemetrie</span>
+          <h3>Sim Racing Telemetry (SRT)</h3>
+          <p>Cross-Platform-Telemetrie mit Graphen, Zeit-Differenz-Analyse und Strecken-Overlays. Ein umfassendes Tool zum Verstehen, wo du Zeit gewinnst oder verlierst.</p>
+          <span class="card-date"><a href="https://www.simracingtelemetry.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">simracingtelemetry.com</a></span>
         </div>
         <div class="card">
-          <span class="card-tag software">Kostenlos</span>
-          <h3>Crew Chief</h3>
-          <p>Ein sprachgesteu erter Spotter und Race Engineer, der L&uuml;cken meldet, vor blauen Flaggen warnt, Reifen temperaturen &uuml;berwacht, Treibstoff sch&auml;tzt und Vorf&auml;lle kennzeichnet. Eine der beliebtesten Apps in der Community und vollst&auml;ndig kostenlos.</p>
-          <span class="card-date">Laufend aktualisiert</span>
+          <span class="card-tag software">Telemetrie</span>
+          <h3>Coach Dave Delta</h3>
+          <p>Telemetrie, Setups, Referenz-Rundenzeiten und KI-gest&uuml;tzte Einsichten f&uuml;r iRacing, ACC, F1-Spiele und mehr. Kombiniert Datenanalyse mit Coaching-Funktionen.</p>
+          <span class="card-date"><a href="https://coachdaveacademy.com/delta/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">coachdaveacademy.com</a></span>
         </div>
         <div class="card">
-          <span class="card-tag software">Kostenlos</span>
-          <h3>Content Manager (AC)</h3>
-          <p>Der essenzielle Begleiter f&uuml;r Assetto Corsa. Content Manager ersetzt den Standard-Launcher durch eine funktionsreiche Oberfl&auml;che zur Verwaltung von Mods, Servern, Auto-Setups und Grafikeinstellungen. Die Integration von Custom Shaders Patch ver&auml;ndert die visuellen M&ouml;glichkeiten von AC.</p>
-          <span class="card-date">Laufend</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- AI Coaching -->
-    <div class="sub-section">
-      <div class="section-header">
-        <h2><span class="icon">&#129302;</span> KI-Coaching & Leistung</h2>
-        <p>KI-gest&uuml;tzte Tools, die dir dabei helfen, diese letzten Zehntel zu finden</p>
-      </div>
-      <div class="card-grid">
-        <div class="card">
-          <span class="card-tag software">KI</span>
-          <h3>Delta</h3>
-          <p>Eine umfassende Plattform mit KI-Coaching, automatischen Setups, Bestenlisten, Datenanalyse und dem Never Lift Fahrkurs. Ein Abonnement deckt sieben Sim-Titel ab, was sie f&uuml;r Multi-Sim-Racer hervorragend geeignet macht.</p>
-          <span class="card-date">2026</span>
+          <span class="card-tag software">Telemetrie</span>
+          <h3>JRT (Joel Real Timing)</h3>
+          <p>Erweiterte Timing- und Race-Telemetrie-Analyse, besonders stark f&uuml;r Langstreckenrennen mit Reifenverschlei&szlig; und Stint-fokussierter Analytik.</p>
+          <span class="card-date"><a href="https://joel-real-timing.com/index_en.html" target="_blank" rel="noopener" style="color: var(--accent-yellow);">joel-real-timing.com</a></span>
         </div>
         <div class="card">
-          <span class="card-tag software">KI</span>
-          <h3>Track Titan</h3>
-          <p>Kurven-f&uuml;r-Kurven-KI-Analyse, die deine Fahrlinie, Bremspunkte und Gasanwendung mit schnelleren Fahrern vergleicht. Bietet spezifische, umsetzbare Ratschl&auml;ge f&uuml;r jede Kurve einer jeden Strecke.</p>
-          <span class="card-date">2026</span>
+          <span class="card-tag software">Telemetrie</span>
+          <h3>VRS Telemetry Logger</h3>
+          <p>iRacing-Telemetrie-Logger, der in die Virtual Racing School-Analyseplattform f&uuml;r detaillierte Runden- und Session-Auswertungen f&uuml;ttert.</p>
+          <span class="card-date"><a href="https://virtualracingschool.com/faq/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">virtualracingschool.com</a></span>
         </div>
         <div class="card">
-          <span class="card-tag software">KI</span>
-          <h3>Trophi.ai</h3>
-          <p>Der neueste Eintrag im KI-Coaching-Bereich konzentriert sich auf Echtzeit-Feedback w&auml;hrend der Fahrsessions. Analysiert deine Telemetrie und gibt Vorschl&auml;ge w&auml;hrend du f&auml;hrst, um die Lernkurve zu beschleunigen.</p>
-          <span class="card-date">2026</span>
+          <span class="card-tag software">Telemetrie</span>
+          <h3>Garage61</h3>
+          <p>iRacing-fokussierte Telemetrie und Overlay-artige Daten auf einen zweiten Bildschirm oder ein Telefon. Hervorragend f&uuml;r schnellen Datenzugriff w&auml;hrend Sessions.</p>
+          <span class="card-date"><a href="https://garage61.net" target="_blank" rel="noopener" style="color: var(--accent-yellow);">garage61.net</a></span>
         </div>
-      </div>
-    </div>
-
-    <!-- Data Analysis -->
-    <div class="sub-section">
-      <div class="section-header">
-        <h2><span class="icon">&#128200;</span> Datenanalyse</h2>
-        <p>Professionelle Telemetrie und Leistungsanalyse</p>
-      </div>
-      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag software">Telemetrie</span>
+          <h3>Popometer</h3>
+          <p>Visuelle Telemetrie mit starken Linienschnitt-Analysem&ouml;glichkeiten f&uuml;r ACC, LMU und andere Simulationen. Hilft dir, deine Fahrlinie im Detail zu verstehen.</p>
+          <span class="card-date"><a href="https://popometer.io" target="_blank" rel="noopener" style="color: var(--accent-yellow);">popometer.io</a></span>
+        </div>
         <div class="card">
           <span class="card-tag software">Pro</span>
           <h3>MoTeC i2</h3>
-          <p>Der Industriestandard, der im echten Motorsport verwendet wird. MoTeC i2 bietet umfassende Telemetrie-Analyse mit Channel Math, &Uuml;berlagerungs vergleichen und benutzerdefinierten Arbeitsfl&auml;chen. Das m&auml;chtigste verf&uuml;gbare Tool mit einer entsprechenden Lernkurve.</p>
-          <span class="card-date">Industriestandard</span>
+          <p>Professionelle Race-Telemetrie-Software, die von vielen Pro-Sim-Racern und echten Motorsport-Teams verwendet wird. Der Goldstandard f&uuml;r Datenanalyse.</p>
+          <span class="card-date"><a href="https://www.motec.com.au/i2/i2downloads/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">motec.com.au</a></span>
         </div>
         <div class="card">
-          <span class="card-tag software">Partnerschaft</span>
-          <h3>Cosworth Pi Toolbox - Partner von iRacing</h3>
-          <p>Cosworth's Pi Toolbox ist jetzt ein offizieller Datenanalyse-Partner von iRacing und bringt professionelle Telemetrie f&uuml;r &uuml;ber 350.000 aktive Sim-Racer. Live Remote-Telemetrie-Support erm&ouml;glicht kritische Daten&uuml;bertragung w&auml;hrend Sessions f&uuml;r sofortige Engineering-Unterst&uuml;tzung.</p>
-          <span class="card-date">2026</span>
-        </div>
-        <div class="card">
-          <span class="card-tag software">Tool</span>
-          <h3>Second Monitor / RaceLab</h3>
-          <p>Overlay- und HUD-Tools, die Race-Informationen auf einem zweiten Bildschirm anzeigen: Standings, relative L&uuml;cken, Treibstoffberechnungen, Reifen daten und Boxen strategie. Unverzichtbar f&uuml;r kompetitives Langstrecken-Racing.</p>
-          <span class="card-date">2026</span>
+          <span class="card-tag software">Open Source</span>
+          <h3>Stint Analyzer</h3>
+          <p>Einfaches Open-Source-Tool f&uuml;r Race-Stint- und Reifenverschlei&szlig;-Planung. Essentiell f&uuml;r Langstreckenrennen-Strategie.</p>
+          <span class="card-date"><a href="https://github.com/stintanalyzer/stintanalyzer/releases" target="_blank" rel="noopener" style="color: var(--accent-yellow);">GitHub</a></span>
         </div>
       </div>
     </div>
 
-    <!-- Hardware Integration -->
-    <div class="sub-section">
+    <!-- Overlays -->
+    <div class="sub-section" id="overlays">
       <div class="section-header">
-        <h2><span class="icon">&#128268;</span> Hardware-Integration</h2>
-        <p>Software, die deine Hardware und Simulationen verbindet</p>
+        <h2><span class="icon">&#127912;</span> Overlays</h2>
+        <p>In-Game-Overlays f&uuml;r St&auml;nde, Kraftstoffberechnungen, Radar und mehr</p>
       </div>
       <div class="card-grid">
         <div class="card">
-          <span class="card-tag software">Integration</span>
-          <h3>Sim Racing Studio</h3>
-          <p>Die f&uuml;hrende Software, die Motion Simulatoren, Shaker Kits, Wind Kits und VR Motion Compensation in einem Tool kombiniert. Schnelle Einrichtung mit Feinjustierung pro Effekt f&uuml;r das ultimative immersive Erlebnis.</p>
-          <span class="card-date">2026</span>
+          <span class="card-tag software">Overlay</span>
+          <h3>RaceLab</h3>
+          <p>Modernes Overlay-Set f&uuml;r iRacing, ACC, F1, AMS2, rF2, LMU mit Positionen, St&auml;nden, Kraftstoffberechnung, Radar, Boostbox, Input-Diagramm und Head-to-Head-Vergleichen.</p>
+          <span class="card-date"><a href="https://racelab.app" target="_blank" rel="noopener" style="color: var(--accent-yellow);">racelab.app</a></span>
         </div>
         <div class="card">
-          <span class="card-tag software">Integration</span>
-          <h3>Cool Performance CP-S</h3>
-          <p>Von echten F1-Fahrern f&uuml;r das Training verwendet bietet CP-S realistische Sim-Racing-Software, die die L&uuml;cke zwischen virtuellem und realen Fahren schl&auml;gt. Professionelle Simulations physik und Feedback-Systeme.</p>
-          <span class="card-date">2026</span>
+          <span class="card-tag software">Overlay</span>
+          <h3>iOverlay</h3>
+          <p>iRacing-Overlay-Sammlung mit Positionen, Multiclass-St&auml;nden, Boost, Kraftstoffverwaltung, Twitch-Chat-Integration und In-Game-Timern.</p>
+          <span class="card-date"><a href="https://ioverlay.app" target="_blank" rel="noopener" style="color: var(--accent-yellow);">ioverlay.app</a></span>
         </div>
+        <div class="card">
+          <span class="card-tag software">Overlay</span>
+          <h3>Kapps Overlays</h3>
+          <p>Alternative iRacing-Overlay-Infrastruktur mit vielen anpassbaren Widgets. Flexibel und leichtgewichtig.</p>
+          <span class="card-date"><a href="https://kapps.kutu.ru" target="_blank" rel="noopener" style="color: var(--accent-yellow);">kapps.kutu.ru</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Overlay</span>
+          <h3>RacePulse</h3>
+          <p>Echtzeit-Telemetrie-Overlays f&uuml;r iRacing, LMU, F1-24/25 mit Drehzahlleuchten, Positionsverfolgung und Input-Diagrammen.</p>
+          <span class="card-date"><a href="https://racepulse.racing" target="_blank" rel="noopener" style="color: var(--accent-yellow);">racepulse.racing</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Overlay</span>
+          <h3>SIMRacingApps</h3>
+          <p>Web-basiertes Second-Screen- und Overlay-System f&uuml;r iRacing, ACC, AMS2 und F1-Titel. Browser-basiert f&uuml;r einfaches Setup.</p>
+          <span class="card-date"><a href="https://simracingapps.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">simracingapps.com</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Open Source</span>
+          <h3>Bo2-Official Overlays</h3>
+          <p>Community-Overlay-Pack f&uuml;r iRacing, das in SimHub von benofficial2 gebaut ist. Einfach zu teilen und mit dem SimHub-&Ouml;kosystem anpassbar.</p>
+          <span class="card-date"><a href="https://github.com/fixfactory/bo2-official-overlays" target="_blank" rel="noopener" style="color: var(--accent-yellow);">GitHub</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboards & SimHub -->
+    <div class="sub-section" id="dashboards">
+      <div class="section-header">
+        <h2><span class="icon">&#128187;</span> Dashboards &amp; Anzeigesoftware</h2>
+        <p>Dashboard-Apps, HUD-Anzeigen und das SimHub-&Ouml;kosystem</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag software">Essentiell</span>
+          <h3>SimHub</h3>
+          <p>Das Schweizer Messer der Sim-Racing-Software. Dashboards, Overlays, Haptik, Drehzahlleuchten, LED-Streifen, Arduino/Pi-Integration, Button-Box-Emulatoren und Streaming-Overlays. Unterst&uuml;tzt viele Simulationen.</p>
+          <span class="card-date"><a href="https://www.simhubdash.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">simhubdash.com</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Dashboard</span>
+          <h3>RS-Dash</h3>
+          <p>Mobile (iOS/Android) und Windows-App f&uuml;r Telemetrie und Dash/HUD-Ansichten. Unterst&uuml;tzt ACC, AC, AMS2 und F1-Titel.</p>
+          <span class="card-date"><a href="https://www.rsdash.com/rs-dash" target="_blank" rel="noopener" style="color: var(--accent-yellow);">rsdash.com</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Open Source</span>
+          <h3>Lovely Dashboard</h3>
+          <p>Dashboard-Infrastruktur f&uuml;r mehrere Simulationen, oft mit SimHub kombiniert. Community-getrieben mit vielen verf&uuml;gbaren benutzerdefinierten Layouts.</p>
+          <span class="card-date"><a href="https://github.com/LovelyDashboard/LovelyDashboard" target="_blank" rel="noopener" style="color: var(--accent-yellow);">GitHub</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FFB & Haptics -->
+    <div class="sub-section" id="ffb">
+      <div class="section-header">
+        <h2><span class="icon">&#9881;</span> FFB-Abstimmung &amp; Haptik</h2>
+        <p>Kraftr&uuml;ckkopplungs-Optimierung, haptisches Feedback und Lenker-Abstimmungstools</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag software">FFB</span>
+          <h3>irFFB</h3>
+          <p>FFB-Abstimmungsprofile f&uuml;r iRacing, die Griff- und Gef&uuml;hlsinformation sch&auml;rfen. Feinabstimmung deiner Kraftr&uuml;ckkopplung f&uuml;r bessere Oberfl&auml;chenkommunikation.</p>
+          <span class="card-date"><a href="https://github.com/ianrrees/irffb" target="_blank" rel="noopener" style="color: var(--accent-yellow);">GitHub</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">FFB</span>
+          <h3>MAIRA (Marvin's Awesome iRacing App)</h3>
+          <p>iRacing-spezifisches Tool, das bei der Analyse und Abstimmung von Kraftr&uuml;ckkopplungseinstellungen hilft. Oft zusammen mit deinem Lenker-Abstimmer f&uuml;r optimale FFB-Gef&uuml;hle verwendet.</p>
+          <span class="card-date"><a href="https://mairapp.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">mairapp.com</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Haptik</span>
+          <h3>Resize Raccoon</h3>
+          <p>Suite f&uuml;r haptische Feedback-Optimierung, FFB-Abstimmung und LED-Kontrolle. Verbessertes physisches Feedback von deinem Sim-Rig.</p>
+          <span class="card-date"><a href="https://github.com/mistenkt/resize-raccoon" target="_blank" rel="noopener" style="color: var(--accent-yellow);">GitHub</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Offiziell</span>
+          <h3>MOZA Tuner</h3>
+          <p>Offizielles FFB-Abstimmungstool f&uuml;r MOZA Direct-Drive-Lenkr&auml;der. Passe Kraftkurven, D&auml;mpfung und andere Parameter f&uuml;r deinen MOZA-Lenker an.</p>
+          <span class="card-date"><a href="https://www.mozaracing.com/support" target="_blank" rel="noopener" style="color: var(--accent-yellow);">mozaracing.com</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Offiziell</span>
+          <h3>Simagic Tuner</h3>
+          <p>Offizielles Abstimmungstool f&uuml;r Simagic Direct-Drive-Lenkr&auml;der. Konfiguriere FFB-Profile und feinabgestimmtes Fahrerlebnis.</p>
+          <span class="card-date"><a href="https://www.simagic.cc" target="_blank" rel="noopener" style="color: var(--accent-yellow);">simagic.cc</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Offiziell</span>
+          <h3>Fanatec DD-Tooling</h3>
+          <p>Offizielle Direct-Drive-Abstimmungsdienstprogramme von Fanatec zur Feinabstimmung von FFB auf Fanatec-Lenkr&auml;dern.</p>
+          <span class="card-date"><a href="https://www.fanatec.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">fanatec.com</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coaching & AI -->
+    <div class="sub-section" id="coaching">
+      <div class="section-header">
+        <h2><span class="icon">&#127891;</span> Coaching &amp; Schulung</h2>
+        <p>KI-Coaching, Spotter, Trainingsplattformen und Kommunikationstools</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag software">KI-Coach</span>
+          <h3>Track Titan</h3>
+          <p>KI-basiertes Overlay f&uuml;r ACC/LMU, das hervorhebt, wo du Zeit verlierst. Echtzeit-Coaching zur Verbesserung deiner Rundenzeiten.</p>
+          <span class="card-date"><a href="https://www.tracktitan.io" target="_blank" rel="noopener" style="color: var(--accent-yellow);">tracktitan.io</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Schulung</span>
+          <h3>VRS (Virtual Racing School)</h3>
+          <p>Coaching-Plattform mit Schulungsmodulen, Telemetrie-Integration und Referenzdaten. Ein komplettes Lernumfeld zur Verbesserung deines Fahrstils.</p>
+          <span class="card-date"><a href="https://virtualracingschool.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">virtualracingschool.com</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Spotter</span>
+          <h3>CrewChief</h3>
+          <p>Text-zu-Sprache-Spotter, der Positionen, &Uuml;berholwarnungen und Nachrichten f&uuml;r iRacing, AMS2, ACC, rF2 und mehr ansagt. Dein virtueller Rennleiter.</p>
+          <span class="card-date"><a href="https://thecrewchief.org" target="_blank" rel="noopener" style="color: var(--accent-yellow);">thecrewchief.org</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">KI-Abstimmung</span>
+          <h3>Garage61 / Coach Dave / Popometer</h3>
+          <p>Diese Tools bieten teilweise KI-artige Setup- und FFB-Vorschl&auml;ge, die sich deinem Fahrstil anpassen und Telemetrie-Analyse mit Coaching kombinieren.</p>
+          <span class="card-date"><a href="https://garage61.net" target="_blank" rel="noopener" style="color: var(--accent-yellow);">garage61.net</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Kommunikation</span>
+          <h3>Discord</h3>
+          <p>Die Hauptplattform f&uuml;r Team- und Ligakommunikation, Sprachchat w&auml;hrend Rennen und Live-Coaching-Sessions im Sim-Racing.</p>
+          <span class="card-date"><a href="https://discord.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">discord.com</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community & Utilities -->
+    <div class="sub-section" id="community">
+      <div class="section-header">
+        <h2><span class="icon">&#128101;</span> Community &amp; Dienstprogramme</h2>
+        <p>Lackierungen, Content-Manager, Kraftstoffrechner und andere essenzielle Tools</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag software">Lackierungen</span>
+          <h3>Trading Paints</h3>
+          <p>Browser-basiertes Tool zur Verwaltung, zum Hochladen und Herunterladen benutzerdefinierter Lackierungen &uuml;ber viele Simulationen. Die Go-To-Plattform f&uuml;r benutzerdefinierte Autowerkst&auml;tten.</p>
+          <span class="card-date"><a href="https://www.tradingpaints.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">tradingpaints.com</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Mod-Manager</span>
+          <h3>Content Manager (Assetto Corsa)</h3>
+          <p>Der essenzielle Mod- und Content-Manager f&uuml;r Assetto Corsa. Verwaltet Autos, Strecken, Wetter und Mods mit einer polierten Oberfl&auml;che.</p>
+          <span class="card-date"><a href="https://assettocorsa.club/content-manager.html" target="_blank" rel="noopener" style="color: var(--accent-yellow);">assettocorsa.club</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Rechner</span>
+          <h3>Kraftstoffrechner</h3>
+          <p>Online-Tools f&uuml;r F1, AMS2 und andere Simulationen zur Planung von Kraftstoffmengen und Stints. Essentiell f&uuml;r Rennstrategie bei Langstreckenrennen.</p>
+          <span class="card-date"><a href="https://www.simracingtelemetry.com/games/F12024/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">simracingtelemetry.com</a></span>
+        </div>
+        <div class="card">
+          <span class="card-tag software">Setup</span>
+          <h3>FOV-Rechner-Tools</h3>
+          <p>Web-Rechner f&uuml;r Sichtfeld-Einstellungen in vielen Renn-Simulationen. Erhalte die korrekte FOV f&uuml;r deine Bildschirmgr&ouml;&szlig;e und Sitzdistanz.</p>
+          <span class="card-date"><a href="https://simracing-pc.de" target="_blank" rel="noopener" style="color: var(--accent-yellow);">simracing-pc.de</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Tools Table -->
+    <div class="sub-section">
+      <div class="comparison-table-wrapper">
+        <h3>&#128187; Komplettes Software- &amp; Tools-Verzeichnis</h3>
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Werkzeug</th><th>Kategorie</th><th>Beschreibung</th><th>Webseite</th></tr>
+          </thead>
+          <tbody>
+            <tr class="tier-mid"><td>Sim Racing Telemetry</td><td>Telemetrie</td><td>Cross-Platform-Telemetrie mit Graphen, Zeit-Differenz-Analyse, Strecken-Overlays</td><td><a href="https://www.simracingtelemetry.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>Coach Dave Delta</td><td>Telemetrie</td><td>Telemetrie, Setups, Referenz-Rundenzeiten, KI-Einsichten f&uuml;r iRacing, ACC, F1</td><td><a href="https://coachdaveacademy.com/delta/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>JRT</td><td>Telemetrie</td><td>Erweiterte Timing-, Reifenverschlei&szlig;- und Stint-fokussierte Analyse</td><td><a href="https://joel-real-timing.com/index_en.html" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>VRS Telemetry Logger</td><td>Telemetrie</td><td>iRacing-Telemetrie-Logger f&uuml;r VRS-Analyseplattform</td><td><a href="https://virtualracingschool.com/faq/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>Garage61</td><td>Telemetrie</td><td>iRacing-fokussierte Telemetrie, Second-Screen/Phone-Anzeige</td><td><a href="https://garage61.net" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>Popometer</td><td>Telemetrie</td><td>Visuelle Telemetrie mit Linienanalyse f&uuml;r ACC, LMU</td><td><a href="https://popometer.io" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-pro"><td>MoTeC i2</td><td>Telemetrie</td><td>Professionelle Race-Telemetrie, Industriestandard</td><td><a href="https://www.motec.com.au/i2/i2downloads/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-budget"><td>Stint Analyzer</td><td>Telemetrie</td><td>Open-Source-Stint- und Reifenverschlei&szlig;-Planung</td><td><a href="https://github.com/stintanalyzer/stintanalyzer/releases" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-high"><td>RaceLab</td><td>Overlay</td><td>Moderne Overlays: Positionen, St&auml;nde, Kraftstoff, Radar, Head-to-Head</td><td><a href="https://racelab.app" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-high"><td>iOverlay</td><td>Overlay</td><td>iRacing-Overlays: Positionen, Multiclass, Kraftstoff, Twitch-Chat</td><td><a href="https://ioverlay.app" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>Kapps Overlays</td><td>Overlay</td><td>Anpassbare iRacing-Overlay-Widgets</td><td><a href="https://kapps.kutu.ru" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>RacePulse</td><td>Overlay</td><td>Echtzeit-Telemetrie-Overlays f&uuml;r iRacing, LMU, F1</td><td><a href="https://racepulse.racing" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>SIMRacingApps</td><td>Overlay</td><td>Web-basierte Second-Screen-Overlays f&uuml;r mehrere Simulationen</td><td><a href="https://simracingapps.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-budget"><td>Bo2-Official Overlays</td><td>Overlay</td><td>Community-SimHub-Overlay-Pack f&uuml;r iRacing</td><td><a href="https://github.com/fixfactory/bo2-official-overlays" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-pro"><td>SimHub</td><td>Dashboard</td><td>Dashboards, Overlays, Haptik, LEDs, Arduino &mdash; unterst&uuml;tzt viele Simulationen</td><td><a href="https://www.simhubdash.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>RS-Dash</td><td>Dashboard</td><td>Mobile &amp; Windows-Telemetrie-Dash/HUD f&uuml;r ACC, AC, AMS2, F1</td><td><a href="https://www.rsdash.com/rs-dash" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-budget"><td>Lovely Dashboard</td><td>Dashboard</td><td>Open-Source-Dashboard-Infrastruktur, SimHub-kompatibel</td><td><a href="https://github.com/LovelyDashboard/LovelyDashboard" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>irFFB</td><td>FFB</td><td>FFB-Abstimmungsprofile f&uuml;r iRacing Grip und Gef&uuml;hl</td><td><a href="https://github.com/ianrrees/irffb" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>MAIRA</td><td>FFB</td><td>iRacing-FFB-Analyse- und Abstimmungstool</td><td><a href="https://mairapp.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>Resize Raccoon</td><td>Haptik</td><td>Haptische Feedback-Optimierung, FFB-Abstimmung, LED-Steuerung</td><td><a href="https://github.com/mistenkt/resize-raccoon" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>MOZA Tuner</td><td>FFB</td><td>Offizielle FFB-Abstimmung f&uuml;r MOZA Direct-Drive-Lenkr&auml;der</td><td><a href="https://www.mozaracing.com/support" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>Simagic Tuner</td><td>FFB</td><td>Offizielle Abstimmung f&uuml;r Simagic Direct-Drive-Lenkr&auml;der</td><td><a href="https://www.simagic.cc" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>Fanatec DD-Tooling</td><td>FFB</td><td>Offizielle DD-Abstimmungsdienstprogramme von Fanatec</td><td><a href="https://www.fanatec.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-high"><td>Track Titan</td><td>Coaching</td><td>KI-basiertes Overlay, das zeigt, wo du Zeit verlierst</td><td><a href="https://www.tracktitan.io" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-high"><td>VRS</td><td>Coaching</td><td>Schulungsmodule, Telemetrie und Referenzdaten</td><td><a href="https://virtualracingschool.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-pro"><td>CrewChief</td><td>Spotter</td><td>Sprachspotter f&uuml;r Positionen, Warnungen, Nachrichten</td><td><a href="https://thecrewchief.org" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-mid"><td>Discord</td><td>Kommunikation</td><td>Team/Ligen-Sprachchat und Community-Plattform</td><td><a href="https://discord.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-high"><td>Trading Paints</td><td>Lackierungen</td><td>Benutzerdefinierte Lackierungsverwaltung und Freigabeplattform</td><td><a href="https://www.tradingpaints.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-high"><td>Content Manager</td><td>Mod-Manager</td><td>Essentieller Mod/Content-Manager f&uuml;r Assetto Corsa</td><td><a href="https://assettocorsa.club/content-manager.html" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-budget"><td>Kraftstoffrechner</td><td>Dienstprogramm</td><td>Online-Werkzeuge f&uuml;r Kraftstoffmenge- und Stint-Planung</td><td><a href="https://www.simracingtelemetry.com/games/F12024/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+            <tr class="tier-budget"><td>FOV-Rechner</td><td>Dienstprogramm</td><td>Sichtfeld-Rechner f&uuml;r korrekte Sim-Einstellungen</td><td><a href="https://simracing-pc.de" target="_blank" rel="noopener" style="color: var(--accent-yellow);">Link</a></td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -165,6 +368,33 @@
       <span class="last-updated"></span>
     </div>
   </footer>
+
+  <!-- Smooth scrolling for jump nav -->
+  <script>
+    document.querySelectorAll('.jump-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const navHeight = document.querySelector('.section-jump-nav').offsetHeight;
+          const y = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 10;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      });
+    });
+    const sections = document.querySelectorAll('.sub-section[id]');
+    const jumpBtns = document.querySelectorAll('.jump-btn');
+    window.addEventListener('scroll', () => {
+      const navH = document.querySelector('.section-jump-nav')?.offsetHeight || 60;
+      let current = '';
+      sections.forEach(s => {
+        if (window.pageYOffset >= s.offsetTop - navH - 20) current = s.id;
+      });
+      jumpBtns.forEach(b => {
+        b.style.background = b.getAttribute('href') === '#' + current ? 'rgba(255,209,102,0.3)' : '';
+      });
+    });
+  </script>
 
   <script src="../js/main.js"></script>
 </body>
