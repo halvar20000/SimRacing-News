@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIY SimRacing Projects - SimRacing Hub</title>
+  <meta name="description" content="DIY sim racing projects for every skill level — button boxes, pedals, dashboards, rigs, haptics, motion platforms, and 3D printing projects.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">SR</div>
+        <div class="logo-text">SimRacing <span>Hub</span></div>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <nav>
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulations</a>
+        <a href="software.html">Software & Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html" class="active">DIY</a>
+        <div class="lang-switch">
+          <a href="diy.html" class="active-lang" title="English">&#127468;&#127463;</a>
+          <a href="de/diy.html" title="Deutsch">&#127465;&#127466;</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>DIY <span>SimRacing</span> Projects</h1>
+    <p>Build your own gear &mdash; from simple weekend projects to advanced motion platforms. Sorted by skill level.</p>
+    <div class="hero-date">April 15, 2026</div>
+  </section>
+
+  <!-- Section Jump Navigation -->
+  <div class="section-jump-nav" style="background: var(--bg-card); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1rem 0; position: sticky; top: 0; z-index: 90;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+      <a href="#beginner" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(46,204,113,0.1); border: 1px solid rgba(46,204,113,0.3); color: #2ecc71; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127793; Beginner</a>
+      <a href="#intermediate" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,209,102,0.1); border: 1px solid rgba(255,209,102,0.3); color: var(--accent-yellow); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128295; Intermediate</a>
+      <a href="#advanced" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128640; Advanced</a>
+      <a href="#3dprinting" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(155,89,182,0.1); border: 1px solid rgba(155,89,182,0.3); color: #9b59b6; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#129518; 3D Printing</a>
+      <a href="#resources" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128279; Resources</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ==================== BEGINNER ==================== -->
+    <div class="sub-section" id="beginner">
+      <div class="section-header">
+        <h2><span class="icon">&#127793;</span> Beginner Projects</h2>
+        <p>No soldering or coding required &mdash; perfect weekend projects to get started</p>
+      </div>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="card-tag" style="background: #2ecc71;">Easy</span>
+          <h3>Bass Shaker Setup</h3>
+          <p>Add tactile vibrations to your rig for engine rumble, curbs, gear shifts, and road texture. Mount a tactile transducer under your seat, connect to a cheap amplifier, and configure SimHub ShakeIt. Instantly transforms immersion.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$80&ndash;120</span>
+            <span style="color: #2ecc71; font-weight: 600;">No soldering</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: #2ecc71;">Easy</span>
+          <h3>DIY Wind Simulator</h3>
+          <p>PC case fans or small desk fans connected to a USB fan controller driven by SimHub speed telemetry. Fans increase speed proportionally as you accelerate, adding a surprisingly effective layer of immersion for very little money.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$30&ndash;60</span>
+            <span style="color: #2ecc71; font-weight: 600;">No soldering</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: #2ecc71;">Easy</span>
+          <h3>Tablet/Phone Dashboard</h3>
+          <p>Use an old tablet or phone as a telemetry dashboard via SimHub. Mount it to your rig with a 3D-printed or purchased holder. Shows RPM, speed, tyre temps, lap times &mdash; instant second screen for zero additional electronics.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Free (reuse old device)</span>
+            <span style="color: #2ecc71; font-weight: 600;">No soldering</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: #2ecc71;">Easy</span>
+          <h3>Arduino LED Shift Indicator</h3>
+          <p>A WS2812B LED strip connected to an Arduino Nano, powered via USB and controlled by SimHub. Mount it on your monitor or wheelbase for a visual RPM indicator with color-coded shift lights. A great first Arduino project.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$15&ndash;25</span>
+            <span style="color: #2ecc71; font-weight: 600;">Basic wiring</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: #2ecc71;">Easy</span>
+          <h3>Monitor / TV Mount</h3>
+          <p>Build a sturdy monitor arm from aluminum profile, a VESA mount bracket, and a few T-slot nuts. Adjustable height and angle for the perfect viewing position. Much cheaper than commercial sim racing monitor stands.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$40&ndash;80</span>
+            <span style="color: #2ecc71; font-weight: 600;">Basic tools</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: #2ecc71;">Easy</span>
+          <h3>Keyboard / Peripheral Tray</h3>
+          <p>A simple sliding tray mounted to your rig's aluminum profile for your keyboard and mouse. Slides out when needed, tucks away when racing. Made from a shelf board, drawer slides, and profile brackets.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$20&ndash;40</span>
+            <span style="color: #2ecc71; font-weight: 600;">Basic tools</span>
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== INTERMEDIATE ==================== -->
+    <div class="sub-section" id="intermediate">
+      <div class="section-header">
+        <h2><span class="icon">&#128295;</span> Intermediate Projects</h2>
+        <p>Some soldering, basic Arduino coding, or mechanical work required</p>
+      </div>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-yellow); color: #1a1a2e;">Medium</span>
+          <h3>Arduino Button Box</h3>
+          <p>Arduino Pro Micro + toggle switches, rotary encoders, and momentary push buttons in a custom enclosure (3D printed or aluminum). Recognized as a USB joystick by Windows. Map ignition, pit limiter, wipers, lights, TC, ABS, and more.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$30&ndash;50</span>
+            <span style="color: var(--accent-yellow); font-weight: 600;">Soldering + code</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-yellow); color: #1a1a2e;">Medium</span>
+          <h3>VoCore SimHub Dashboard</h3>
+          <p>A 5" or 6.8" VoCore screen in a 3D-printed housing with optional WS2812 RGB LEDs for shift lights and flags. Driven by SimHub, it displays real-time telemetry, lap deltas, and tyre data. The most popular DIY dashboard project.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$70&ndash;120</span>
+            <span style="color: var(--accent-yellow); font-weight: 600;">Soldering + 3D print</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-yellow); color: #1a1a2e;">Medium</span>
+          <h3>DIY Sequential Shifter</h3>
+          <p>Magnetic or spring-loaded detent mechanism in a 3D-printed or machined housing. Satisfying click on each shift. Uses a microcontroller or connects directly to a button box. Several proven designs available on Thingiverse.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$25&ndash;60</span>
+            <span style="color: var(--accent-yellow); font-weight: 600;">3D print + wiring</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-yellow); color: #1a1a2e;">Medium</span>
+          <h3>DIY Handbrake (Load Cell)</h3>
+          <p>A hydraulic-feel handbrake using a load cell sensor rated to 50&ndash;100kg. 3D-printed or CNC-machined lever arm with adjustable throw. Essential for rally and drift sim racing. CAD plans available from DIY Sim Studio.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$40&ndash;80</span>
+            <span style="color: var(--accent-yellow); font-weight: 600;">Soldering + assembly</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-yellow); color: #1a1a2e;">Medium</span>
+          <h3>Pedal Haptic Feedback (ABS/TC)</h3>
+          <p>Vibration motors mounted on your brake and throttle pedals, triggered by ABS and traction control telemetry from SimHub. Gives you physical feedback when the car is at the limit. A small vibration motor, Arduino, and SimHub is all you need.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$20&ndash;40</span>
+            <span style="color: var(--accent-yellow); font-weight: 600;">Soldering + SimHub</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-yellow); color: #1a1a2e;">Medium</span>
+          <h3>80/20 Aluminum Profile Rig</h3>
+          <p>Build a fully custom cockpit from 40-series aluminum extrusions. Full modularity, T-slot mounting for any hardware. Open-source plans on GitHub and Open Sim Rigs. Costs around 350&ndash;450 EUR for profiles alone. The ultimate upgrade from desk mounts.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$400&ndash;600</span>
+            <span style="color: var(--accent-yellow); font-weight: 600;">Assembly + planning</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-yellow); color: #1a1a2e;">Medium</span>
+          <h3>DIY H-Pattern Shifter</h3>
+          <p>A USB gearbox with mechanical gates using Arduino Leonardo. 3D-printed or machined shift gate with spring-return mechanism. Full 6+R pattern with satisfying gate feel. Open-source project on Hackaday with build guides.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$40&ndash;80</span>
+            <span style="color: var(--accent-yellow); font-weight: 600;">Soldering + mechanics</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-yellow); color: #1a1a2e;">Medium</span>
+          <h3>Multi-Zone Bass Shaker Rig</h3>
+          <p>Upgrade from a single bass shaker to a 4-channel setup: front, rear, left, right. Each zone gets separate SimHub effects &mdash; feel the curb on the correct side, engine in the back, road bumps everywhere. Requires a multi-channel amp.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$200&ndash;400</span>
+            <span style="color: var(--accent-yellow); font-weight: 600;">Wiring + SimHub config</span>
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== ADVANCED ==================== -->
+    <div class="sub-section" id="advanced">
+      <div class="section-header">
+        <h2><span class="icon">&#128640;</span> Advanced Projects</h2>
+        <p>Serious electronics, firmware, mechanical engineering &mdash; the ultimate challenges</p>
+      </div>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-orange);">Expert</span>
+          <h3>Arduino Load Cell Pedals</h3>
+          <p>Full pedal set with Arduino Leonardo, HX711 load cell amplifier for the brake (200kg), and Hall-effect sensors for throttle and clutch. Reads as USB joystick via the ArduinoJoystickLibrary. Tip: upgrade HX711 to 80Hz by cutting the trace on the Sparkfun board.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$50&ndash;100</span>
+            <span style="color: var(--accent-orange); font-weight: 600;">Electronics + code</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-orange);">Expert</span>
+          <h3>SFX-100 Motion Platform</h3>
+          <p>The legendary open-source motion platform. Four linear actuators with BLDC motors, ball screws, and Arduino-controlled firmware, driven by SimFeedback software. 3DOF (heave, pitch, roll) with performance rivaling systems costing 5&ndash;10x more. Active community at opensfx.com.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$1,500&ndash;2,500</span>
+            <span style="color: var(--accent-orange); font-weight: 600;">Full engineering</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-orange);">Expert</span>
+          <h3>Velocitas Imperium DDU Dashboard</h3>
+          <p>Premium DIY dashboard kits (B5-DDU, B7-DDU, NOVA Evo) with VoCore screen, programmable RGB LEDs, custom PCB, CNC-cut enclosure, and comprehensive build guide. SimHub compatible. A step up from basic VoCore builds with professional-level results.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$150&ndash;300</span>
+            <span style="color: var(--accent-orange); font-weight: 600;">Soldering + assembly</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-orange);">Expert</span>
+          <h3>Custom Steering Wheel with Display</h3>
+          <p>Design and build your own steering wheel with integrated display, carbon fiber faceplate, CNC-machined grips, and custom PCB for buttons and encoders. Requires CAD design, 3D printing, CNC machining, and electronics skills. The ultimate showcase project.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$200&ndash;500+</span>
+            <span style="color: var(--accent-orange); font-weight: 600;">Full engineering</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-orange);">Expert</span>
+          <h3>3DOF Motion Rig (Linear Actuators)</h3>
+          <p>Three linear actuators with NEMA stepper motors for heave, pitch, and roll. Uses SimTools or FlyPT Mover software to process sim telemetry into motion cues. Each actuator should be rated for 150% of a third of the total system weight.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$800&ndash;1,500</span>
+            <span style="color: var(--accent-orange); font-weight: 600;">Mechanics + electronics</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: var(--accent-orange);">Expert</span>
+          <h3>Active Pedal with Force Feedback</h3>
+          <p>A servo-driven brake pedal that simulates ABS pulsing, lock-up vibration, and progressive resistance. Uses a high-torque servo or linear actuator controlled by an ESP32 reading SimHub telemetry. The DIY answer to Simucube ActivePedals.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>~$150&ndash;300</span>
+            <span style="color: var(--accent-orange); font-weight: 600;">Full engineering</span>
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 3D PRINTING ==================== -->
+    <div class="sub-section" id="3dprinting">
+      <div class="section-header">
+        <h2><span class="icon">&#129518;</span> 3D Printing Projects</h2>
+        <p>Fire up your printer &mdash; STL files, enclosures, adapters, and full functional parts</p>
+      </div>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="card-tag sim">Enclosures</span>
+          <h3>Button Box Enclosures</h3>
+          <p>Custom enclosures for Arduino button boxes with cutouts for toggle switches, rotary encoders, and push buttons. Multiple designs available on Printables and Thingiverse &mdash; from simple rectangular boxes to GT3-car-inspired shapes.</p>
+          <span class="card-date"><a href="https://www.printables.com/search/models?q=tag:simracing" target="_blank" rel="noopener" style="color: #9b59b6;">&#9654; Printables.com</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag sim">Functional</span>
+          <h3>Sequential Shifter (Full Print)</h3>
+          <p>Fully 3D-printed sequential shifter with magnetic detents and spring return. Uses magnets and microswitches for clean up/down shifting. Multiple proven designs with satisfying mechanical feel. Popular project on Thingiverse with over 100k downloads.</p>
+          <span class="card-date"><a href="https://www.thingiverse.com/thing:4159745" target="_blank" rel="noopener" style="color: #9b59b6;">&#9654; Thingiverse</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag sim">Functional</span>
+          <h3>Handbrake Housing</h3>
+          <p>3D-printed lever arm and housing for a load cell handbrake. Adjustable throw angle and mounting points for aluminum profile rigs. Print in PETG or ABS for durability. Combine with a 50kg load cell and Arduino for a complete unit.</p>
+          <span class="card-date"><a href="https://www.thingiverse.com/search?q=sim+racing+handbrake" target="_blank" rel="noopener" style="color: #9b59b6;">&#9654; Thingiverse</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag sim">Dashboard</span>
+          <h3>VoCore Dashboard Housing</h3>
+          <p>Housings for 4", 5", and 6.8" VoCore screens with integrated LED strip channels and mounting brackets. Designed to attach to your wheelbase or rig profile. Many designs include snap-fit assembly for tool-free installation.</p>
+          <span class="card-date"><a href="https://cults3d.com/en/tags/simracing" target="_blank" rel="noopener" style="color: #9b59b6;">&#9654; Cults3D</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag sim">Adapters</span>
+          <h3>Quick Release &amp; Wheel Adapters</h3>
+          <p>Adapters between different wheel and base ecosystems. Print a 50mm-to-70mm PCD adapter, a Fanatec-to-universal hub, or a custom wheel spacer. Also available: phone/tablet holders for your rig or wheelbase.</p>
+          <span class="card-date"><a href="https://cults3d.com/en/tags/sim+racing" target="_blank" rel="noopener" style="color: #9b59b6;">&#9654; Cults3D</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag sim">Pedals</span>
+          <h3>3D Printed Pedal Set</h3>
+          <p>Full pedal set with printed enclosures, pedal arms, and mounting brackets. Uses Hall-effect sensors for throttle/clutch and a load cell for the brake. CAD plans available from DIY Sim Studio. Print in PETG for strength.</p>
+          <span class="card-date"><a href="https://www.diysimstudio.com/product/diy-sim-racing-pedals/" target="_blank" rel="noopener" style="color: #9b59b6;">&#9654; DIY Sim Studio</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag sim">Mounts</span>
+          <h3>Rig Accessories &amp; Mounts</h3>
+          <p>Cup holders, headphone hooks, keyboard trays, cable management clips, shifter plates, and handbrake mounts &mdash; all designed for aluminum profile rigs. T-slot compatible brackets that snap into your 40-series extrusions.</p>
+          <span class="card-date"><a href="https://www.printables.com/search/models?q=sim+racing+mount" target="_blank" rel="noopener" style="color: #9b59b6;">&#9654; Printables.com</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag sim">Advanced</span>
+          <h3>Custom Steering Wheel Parts</h3>
+          <p>Print your own wheel grips, button plates, encoder knobs, paddle shifters, and magnetic shifter mechanisms. Over 1,300 sim racing STL files available on Cults3D alone &mdash; from simple Logitech adapters to full GT3 wheel replicas.</p>
+          <span class="card-date"><a href="https://cults3d.com/en/collections/ultimate-sim-racing-stl-collection-steering-wheels-pedal-mods-and-3d-cockpit-accessories" target="_blank" rel="noopener" style="color: #9b59b6;">&#9654; STL Collection</a></span>
+        </div>
+
+      </div>
+
+      <!-- Print Material Guide -->
+      <div class="section-header" style="margin-top: 2rem;">
+        <h2><span class="icon">&#128214;</span> Printing Material Guide</h2>
+        <p>Which filament to use for sim racing parts</p>
+      </div>
+      <ul class="feature-list">
+        <li>
+          <span class="bullet"></span>
+          <div>
+            <strong>PLA &mdash; Cosmetic parts only</strong>
+            <span>Good for mounts, cable clips, and decorative pieces. Not suitable for anything under mechanical stress or near heat sources.</span>
+          </div>
+        </li>
+        <li>
+          <span class="bullet"></span>
+          <div>
+            <strong>PETG &mdash; The all-rounder</strong>
+            <span>Best balance of strength, flexibility, and ease of printing. Recommended for button boxes, dashboard housings, and pedal enclosures. Good layer adhesion and decent heat resistance.</span>
+          </div>
+        </li>
+        <li>
+          <span class="bullet"></span>
+          <div>
+            <strong>ABS / ASA &mdash; High-stress parts</strong>
+            <span>Shifter mechanisms, handbrake levers, and anything under repeated mechanical load. Stronger than PETG but requires an enclosed printer. ASA is the UV-stable variant.</span>
+          </div>
+        </li>
+        <li>
+          <span class="bullet"></span>
+          <div>
+            <strong>Nylon (PA) &mdash; Maximum durability</strong>
+            <span>Gears, bearings, and high-wear components. Extremely tough and flexible. Requires dry storage and a capable printer with an enclosure and high temp nozzle.</span>
+          </div>
+        </li>
+        <li>
+          <span class="bullet"></span>
+          <div>
+            <strong>Carbon Fiber Composites &mdash; Stiffness</strong>
+            <span>CF-PETG or CF-Nylon for wheel button plates and structural brackets. Adds rigidity without weight. Requires a hardened steel nozzle.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ==================== RESOURCES ==================== -->
+    <div class="sub-section" id="resources">
+      <div class="section-header">
+        <h2><span class="icon">&#128279;</span> Resources &amp; Communities</h2>
+        <p>Where to find plans, parts, help, and inspiration</p>
+      </div>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="card-tag software">Plans</span>
+          <h3>DIY Sim Studio</h3>
+          <p>Comprehensive CAD plans and build guides for pedals, shifters, handbrakes, and rigs. The go-to resource for well-documented, proven DIY sim racing projects with step-by-step instructions.</p>
+          <span class="card-date"><a href="https://www.diysimstudio.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">diysimstudio.com</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Plans</span>
+          <h3>Open Sim Rigs</h3>
+          <p>Open-source aluminum profile rig plans and CNC cut files. Metal chassis designs for various cockpit styles. Community-driven with active support and regularly updated plans.</p>
+          <span class="card-date"><a href="https://opensimracing.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">opensimracing.com</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Motion</span>
+          <h3>OpenSFX (SFX-100)</h3>
+          <p>The home of the SFX-100 open-source motion platform. Forums, build guides, firmware downloads, SimFeedback software, and an active community of motion sim builders sharing their experiences.</p>
+          <span class="card-date"><a href="https://opensfx.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">opensfx.com</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Community</span>
+          <h3>XSimulator Forum</h3>
+          <p>The largest community for DIY motion simulation. Build logs, component sourcing, troubleshooting, and inspiration. Covers everything from 2DOF seat movers to full 6DOF platforms.</p>
+          <span class="card-date"><a href="https://www.xsimulator.net" target="_blank" rel="noopener" style="color: var(--accent-yellow);">xsimulator.net</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Parts</span>
+          <h3>The French Simracer</h3>
+          <p>DIY component kits and parts for sim racing projects. Sells pre-cut parts, PCBs, and hardware kits that pair with open-source designs. Bridges the gap between fully DIY and off-the-shelf.</p>
+          <span class="card-date"><a href="https://thefrenchsimracer.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">thefrenchsimracer.com</a></span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Software</span>
+          <h3>SimHub</h3>
+          <p>The backbone of most DIY sim racing projects. Dashboards, LED control, haptic feedback, fan control, motion output &mdash; SimHub connects your DIY hardware to any sim. Free (or pay what you want for premium). Supports 80+ sims.</p>
+          <span class="card-date"><a href="https://www.simhubdash.com" target="_blank" rel="noopener" style="color: var(--accent-yellow);">simhubdash.com</a></span>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulations</a>
+        <a href="software.html">Software & Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="impressum.html">Imprint</a>
+      </div>
+      <p>SimRacing Hub &mdash; AI-curated sim racing news, updated daily.</p>
+      <span class="last-updated"></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
