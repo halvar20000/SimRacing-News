@@ -681,11 +681,11 @@
     </div>
   </footer>
 
-  <!-- Visitor Counter -->
+  <!-- Visitor Counter (Cloudflare Worker) -->
   <script>
     (function() {
       var el = document.getElementById('visitor-count');
-      fetch('https://api.counterapi.dev/v1/simracing-hub/hardware/up')
+      fetch('https://simracing-hub.workers.dev/?page=hardware')
         .then(function(r) { return r.json(); })
         .then(function(data) {
           el.innerHTML = '\uD83D\uDC41 ' + data.count.toLocaleString() + ' page views';
