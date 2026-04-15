@@ -61,6 +61,11 @@ header {
   color: var(--text-primary);
 }
 
+.logo-img {
+  height: 42px;
+  width: auto;
+}
+
 .logo-icon {
   width: 42px;
   height: 42px;
