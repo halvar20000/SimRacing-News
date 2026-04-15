@@ -303,6 +303,40 @@
           <span class="card-date">Profi-Tipps</span>
         </div>
       </div>
+
+      <div class="comparison-table-wrapper">
+        <h3>&#128737; CPI-Skalierung nach Lizenzklasse</h3>
+        <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">Der ben&ouml;tigte CPI-Wert (Kurven pro Zwischenfall) f&uuml;r eine bestimmte SR steigt mit jeder Lizenzklasse. H&ouml;here Lizenzen erfordern saubereres Fahren &uuml;ber ein gr&ouml;&szlig;eres Kurven-Fenster.</p>
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Lizenz</th><th>Kurven-Fenster</th><th>CPI f&uuml;r SR 3.0</th><th>CPI f&uuml;r SR 4.0</th><th>Bedeutung</th></tr>
+          </thead>
+          <tbody>
+            <tr class="tier-budget"><td><strong>Rookie</strong></td><td>~1.125 Kurven</td><td>15</td><td>20</td><td>1 Zwischenfall pro 15 Kurven f&uuml;r SR 3.0 &mdash; am nachsichtigsten</td></tr>
+            <tr class="tier-mid"><td><strong>Klasse D</strong></td><td>~1.350 Kurven</td><td>22,5</td><td>30</td><td>50% sauberer fahren als im Rookie f&uuml;r gleiche SR</td></tr>
+            <tr class="tier-mid"><td><strong>Klasse C</strong></td><td>~1.620 Kurven</td><td>33,8</td><td>45</td><td>Ein 4x-Incident braucht mehr Kurven zur Erholung</td></tr>
+            <tr class="tier-high"><td><strong>Klasse B</strong></td><td>~1.944 Kurven</td><td>50,5</td><td>67,5</td><td>Deutlich saubereres Fahren &uuml;ber mehr Kurven n&ouml;tig</td></tr>
+            <tr class="tier-high"><td><strong>Klasse A</strong></td><td>~2.333 Kurven</td><td>76</td><td>101</td><td>Sehr wenige Zwischenf&auml;lle &uuml;ber gro&szlig;es Fenster toleriert</td></tr>
+            <tr class="tier-pro"><td><strong>Pro</strong></td><td>~2.600 Kurven</td><td>114</td><td>152</td><td>Elite-sauberes Fahren &uuml;ber das gr&ouml;&szlig;te Fenster</td></tr>
+          </tbody>
+        </table>
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem; margin-top: 0.5rem;">Hinweis: iRacing ver&ouml;ffentlicht die exakte Formel nicht. Diese Werte sind von der Community abgeleitete N&auml;herungswerte und k&ouml;nnen sich mit Updates &auml;ndern. CPI = Gesamtkurven &divide; Gesamt-Strafpunkte &uuml;ber das rollierende Fenster.</p>
+      </div>
+
+      <div class="card-grid" style="margin-top: 1.5rem;">
+        <div class="card">
+          <span class="card-tag iracing">Wichtige Erkenntnis</span>
+          <h3>Warum CPI-Skalierung wichtig ist</h3>
+          <p>Ein Rookie mit 1 Zwischenfall pro 15 Kurven erreicht SR 3.0. Aber ein Klasse-A-Fahrer braucht 1 Zwischenfall pro 76 Kurven f&uuml;r die gleiche SR. Das bedeutet: Eine einzige 4x-Kollision in Klasse A braucht ca. <strong>300 saubere Kurven</strong> zur Erholung, verglichen mit nur 60 im Rookie. Das System belohnt konstant sauberes Fahren.</p>
+          <span class="card-date">CPI verstehen</span>
+        </div>
+        <div class="card">
+          <span class="card-tag iracing">Kurven-Fenster</span>
+          <h3>Der gleitende Durchschnitt erkl&auml;rt</h3>
+          <p>iRacing trackt deine letzten ~1.125 bis ~2.600 Kurven (je nach Lizenz). &Auml;ltere Kurven fallen raus wenn neue hinzukommen. Ein schlechtes Rennen verfolgt dich nicht ewig &mdash; aber ein gutes allein repariert keine niedrige SR. L&auml;ngere Rennen auf Strecken mit vielen Kurven f&uuml;gen mehr Datenpunkte hinzu und gl&auml;tten einzelne Zwischenf&auml;lle schneller.</p>
+          <span class="card-date">Wie es mittelt</span>
+        </div>
+      </div>
     </div>
 
     <!-- iRating -->

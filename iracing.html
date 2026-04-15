@@ -303,6 +303,40 @@
           <span class="card-date">Pro Tips</span>
         </div>
       </div>
+
+      <div class="comparison-table-wrapper">
+        <h3>&#128737; CPI Scaling by License Class</h3>
+        <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">The CPI (Corners Per Incident) required for a given SR value increases with each license class. Higher licenses demand cleaner driving over a larger rolling window of corners.</p>
+        <table class="comparison-table">
+          <thead>
+            <tr><th>License</th><th>Corner Window</th><th>CPI for SR 3.0</th><th>CPI for SR 4.0</th><th>What This Means</th></tr>
+          </thead>
+          <tbody>
+            <tr class="tier-budget"><td><strong>Rookie</strong></td><td>~1,125 corners</td><td>15</td><td>20</td><td>1 incident every 15 corners for SR 3.0 &mdash; most forgiving</td></tr>
+            <tr class="tier-mid"><td><strong>Class D</strong></td><td>~1,350 corners</td><td>22.5</td><td>30</td><td>Must drive 50% cleaner than Rookie for same SR</td></tr>
+            <tr class="tier-mid"><td><strong>Class C</strong></td><td>~1,620 corners</td><td>33.8</td><td>45</td><td>One 4x incident takes more corners to recover from</td></tr>
+            <tr class="tier-high"><td><strong>Class B</strong></td><td>~1,944 corners</td><td>50.5</td><td>67.5</td><td>Significantly cleaner driving required over more corners</td></tr>
+            <tr class="tier-high"><td><strong>Class A</strong></td><td>~2,333 corners</td><td>76</td><td>101</td><td>Very few incidents tolerated over a large window</td></tr>
+            <tr class="tier-pro"><td><strong>Pro</strong></td><td>~2,600 corners</td><td>114</td><td>152</td><td>Elite-level clean driving over the largest window</td></tr>
+          </tbody>
+        </table>
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem; margin-top: 0.5rem;">Note: iRacing does not publicly disclose the exact formula. These values are community-derived approximations and may change with updates. CPI = total corners &divide; total incident points over the rolling window.</p>
+      </div>
+
+      <div class="card-grid" style="margin-top: 1.5rem;">
+        <div class="card">
+          <span class="card-tag iracing">Key Insight</span>
+          <h3>Why CPI Scaling Matters</h3>
+          <p>A Rookie with 1 incident per 15 corners earns SR 3.0. But a Class A driver needs 1 incident per 76 corners for the same SR. This means a single 4x collision in Class A takes roughly <strong>300 clean corners</strong> to recover from, compared to about 60 in Rookie. The system rewards consistently clean driving and gets progressively stricter as you advance.</p>
+          <span class="card-date">Understanding CPI</span>
+        </div>
+        <div class="card">
+          <span class="card-tag iracing">Corner Window</span>
+          <h3>The Rolling Average Explained</h3>
+          <p>iRacing tracks your last ~1,125 to ~2,600 corners (depending on license). Older corners gradually drop off as new ones are added. This means a bad race won't haunt you forever &mdash; but it also means a good race alone won't fix a low SR. Longer races at tracks with many corners add more data points, smoothing out individual incidents faster.</p>
+          <span class="card-date">How It Averages</span>
+        </div>
+      </div>
     </div>
 
     <!-- iRating -->
