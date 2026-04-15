@@ -685,7 +685,7 @@
   <script>
     (function() {
       var el = document.getElementById('visitor-count');
-      fetch('https://simracing-hub.workers.dev/?page=hardware')
+      fetch('https://simracing-page-counter.simracing-hub.workers.dev/?page=hardware')
         .then(function(r) { return r.json(); })
         .then(function(data) {
           el.innerHTML = '\uD83D\uDC41 ' + data.count.toLocaleString() + ' page views';
