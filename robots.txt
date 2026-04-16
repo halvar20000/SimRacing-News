@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Don't waste crawl budget on the legal page
+Disallow: /impressum.html
+Disallow: /de/impressum.html
+
+Sitemap: https://simracing-hub.com/sitemap.xml
