@@ -758,3 +758,196 @@ footer .footer-links a:hover { color: var(--accent-red); }
 .card:nth-child(4) { animation-delay: 0.2s; }
 .card:nth-child(5) { animation-delay: 0.25s; }
 .card:nth-child(6) { animation-delay: 0.3s; }
+
+/* ===== FEATURED REVIEW ===== */
+/* Editorial block for surfacing third-party hardware/software reviews. */
+/* Privacy-first: video card is a styled link to YouTube — no iframe embed, */
+/* so no YouTube cookies are set until the user actively clicks through. */
+.featured-review {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.featured-review-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 400px) 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.review-video-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-video-card a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 107, 53, 0.4);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.video-placeholder {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 50%, #1a1a2e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 107, 53, 0.18), transparent 60%);
+}
+
+.video-play-icon {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(230, 57, 70, 0.92);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  padding-left: 0.3rem;
+  box-shadow: 0 10px 24px rgba(230, 57, 70, 0.4);
+}
+
+.video-overlay-text {
+  position: absolute;
+  bottom: 0.9rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.video-title {
+  padding: 1rem 1.2rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.35;
+}
+
+.review-summary {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.review-pullquote {
+  margin: 0 0 1.5rem;
+  padding: 1.4rem 1.6rem;
+  border-left: 3px solid var(--accent-orange);
+  background: rgba(255, 107, 53, 0.06);
+  border-radius: 0 8px 8px 0;
+  font-size: 1.12rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.review-pullquote cite {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  font-style: normal;
+  color: var(--accent-orange);
+  font-family: var(--font-heading);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.review-section-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 1.75rem 0 0.6rem;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.review-list {
+  margin: 0 0 1rem;
+  padding: 0 0 0 1.2rem;
+}
+
+.review-list li {
+  margin-bottom: 0.55rem;
+}
+
+.review-list strong {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.editor-take {
+  margin: 1.6rem 0 1.4rem;
+  padding: 1rem 1.2rem;
+  background: rgba(0, 200, 120, 0.08);
+  border-left: 3px solid #00c878;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.editor-take strong {
+  color: #00c878;
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+}
+
+.review-watch-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  background: var(--accent-red);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.review-watch-button:hover {
+  background: #ff5565;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 860px) {
+  .featured-review-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .review-video-card {
+    max-width: 480px;
+  }
+}
