@@ -197,13 +197,40 @@ nav a.active {
 .hero p {
   color: var(--text-secondary);
   font-size: 1.1rem;
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
+}
+
+/* Hero badge pills */
+.hero-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.hero-badge:last-child {
+  background: rgba(230, 57, 70, 0.1);
+  border-color: rgba(230, 57, 70, 0.25);
+  color: var(--accent-red);
 }
 
 .hero-date {
   display: inline-block;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
   padding: 0.4rem 1rem;
   background: rgba(230, 57, 70, 0.1);
   border: 1px solid rgba(230, 57, 70, 0.2);
@@ -259,6 +286,39 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 1.25rem;
   margin-bottom: 3rem;
+}
+
+/* Top story: first card in today's highlights spans full width */
+.card-grid.has-lead .card:first-child {
+  grid-column: 1 / -1;
+  border-color: rgba(230, 57, 70, 0.25);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(230, 57, 70, 0.06) 100%);
+}
+
+.card-grid.has-lead .card:first-child::before {
+  opacity: 1;
+}
+
+.card-grid.has-lead .card:first-child h3 {
+  font-size: 1.4rem;
+}
+
+:lang(en) .card-grid.has-lead .card:first-child .card-tag::after {
+  content: " — TOP STORY";
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+:lang(de) .card-grid.has-lead .card:first-child .card-tag::after {
+  content: " — TOP-MELDUNG";
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .card-grid.has-lead .card:first-child h3 {
+    font-size: 1.25rem;
+  }
 }
 
 .card {
@@ -616,6 +676,15 @@ footer .footer-links a {
 }
 
 footer .footer-links a:hover { color: var(--accent-red); }
+
+.footer-trust {
+  color: var(--accent-orange) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 0.75rem;
+  opacity: 0.85;
+}
 
 .last-updated {
   display: inline-block;

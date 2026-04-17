@@ -29,11 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Update last-updated timestamp
+  // Detect language from <html lang="...">
+  const lang = document.documentElement.lang || 'en';
+  const isDE = lang === 'de';
+
+  // Update hero date dynamically (homepage only)
+  const heroDate = document.querySelector('.hero-date');
+  if (heroDate) {
+    const now = new Date();
+    const locale = isDE ? 'de-DE' : 'en-US';
+    const dateStr = now.toLocaleDateString(locale, {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+    });
+    const timeStr = now.toLocaleTimeString(locale, {
+      hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+    });
+    const prefix = isDE ? 'Aktualisiert' : 'Updated';
+    heroDate.textContent = prefix + ' ' + dateStr + ' \u2022 ' + timeStr;
+  }
+
+  // Update last-updated timestamp in footer
   const lastUpdated = document.querySelector('.last-updated');
   if (lastUpdated) {
     const now = new Date();
+    const locale = isDE ? 'de-DE' : 'en-US';
     const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-    lastUpdated.textContent = 'Last updated: ' + now.toLocaleDateString('en-US', options);
+    const prefix = isDE ? 'Zuletzt aktualisiert: ' : 'Last updated: ';
+    lastUpdated.textContent = prefix + now.toLocaleDateString(locale, options);
   }
 });
