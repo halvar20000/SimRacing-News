@@ -951,3 +951,43 @@ footer .footer-links a:hover { color: var(--accent-red); }
     max-width: 480px;
   }
 }
+
+/* ===== CAS Schedule: Next-Up row highlight ===== */
+.comparison-table tbody tr.next-up {
+  background: rgba(230, 57, 70, 0.10);
+  position: relative;
+}
+
+.comparison-table tbody tr.next-up:hover {
+  background: rgba(230, 57, 70, 0.16);
+}
+
+.comparison-table tbody tr.next-up td {
+  color: #fff;
+  font-weight: 600;
+}
+
+.comparison-table tbody tr.next-up td:first-child {
+  position: relative;
+  border-left: 4px solid var(--accent-red);
+  padding-left: calc(1.1rem - 1px);
+}
+
+.comparison-table tbody tr.next-up td:first-child::after {
+  content: "NEXT";
+  position: absolute;
+  right: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-red);
+  background: rgba(230, 57, 70, 0.18);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+/* Smooth scroll for hash anchors (e.g. #sched-cc from the banner button) */
+html { scroll-behavior: smooth; }
