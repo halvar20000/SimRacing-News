@@ -2,6 +2,7 @@
   "$schema": "https://simracing-hub.com/data/cas-results.schema.json",
   "season": "2026",
   "lastUpdated": "2026-04-18",
+  "changelog": "2026-04-18: PCCD R3 Spa-Francorchamps — Silvio Foth clean sweep (win / pole / FL).",
   "notes": "Populate the winner / pole / fastestLap fields per round once a race has been completed. Leave empty strings for races that have not yet taken place — the UI will show an em-dash placeholder. Keys match the series IDs in cas-community.html (sched-wct, sched-cc, sched-sfl, sched-pccd, sched-gt4, sched-iec).",
   "results": {
     "sched-wct": {
@@ -45,7 +46,7 @@
     "sched-pccd": {
       "1": { "winner": "", "pole": "", "fastestLap": "" },
       "2": { "winner": "", "pole": "", "fastestLap": "" },
-      "3": { "winner": "", "pole": "", "fastestLap": "" },
+      "3": { "winner": "Silvio Foth", "pole": "Silvio Foth", "fastestLap": "Silvio Foth" },
       "4": { "winner": "", "pole": "", "fastestLap": "" },
       "5": { "winner": "", "pole": "", "fastestLap": "" },
       "6": { "winner": "", "pole": "", "fastestLap": "" },
