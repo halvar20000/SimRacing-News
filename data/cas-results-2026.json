@@ -44,8 +44,8 @@
       "8": { "winner": "", "pole": "", "fastestLap": "" }
     },
     "sched-pccd": {
-      "1": { "winner": "", "pole": "", "fastestLap": "" },
-      "2": { "winner": "", "pole": "", "fastestLap": "" },
+      "1": { "winner": "Silvio Foth", "pole": "Silvio Foth", "fastestLap": "Andre Rajkovic" },
+      "2": { "winner": "Silvio Foth", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
       "3": { "winner": "Silvio Foth", "pole": "Silvio Foth", "fastestLap": "Silvio Foth" },
       "4": { "winner": "", "pole": "", "fastestLap": "" },
       "5": { "winner": "", "pole": "", "fastestLap": "" },
