@@ -257,5 +257,39 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sid) downloadICS(sid);
       });
     });
+
+    // ===== Results: fetch cas-results-2026.json and populate Winner/Pole/FL cells =====
+    // Uses absolute path so it works from both EN root and DE subdirectory.
+    fetch('/data/cas-results-2026.json', { cache: 'no-cache' })
+      .then(res => res.ok ? res.json() : null)
+      .then(data => {
+        if (!data || !data.results) return;
+        const isDE = (document.documentElement.lang || '').toLowerCase().startsWith('de');
+        const labelTBA = isDE ? '—' : '—';
+        document.querySelectorAll('tr[data-series][data-round]').forEach(tr => {
+          const series = tr.getAttribute('data-series');
+          const round = tr.getAttribute('data-round');
+          const seriesResults = data.results[series];
+          if (!seriesResults) return;
+          const r = seriesResults[round];
+          if (!r) return;
+          const cells = tr.querySelectorAll('td.result-cell');
+          if (cells.length < 3) return;
+          const vals = [r.winner || '', r.pole || '', r.fastestLap || ''];
+          const hasAny = vals.some(v => v && v.trim().length > 0);
+          cells.forEach((td, i) => {
+            const v = vals[i];
+            if (v && v.trim().length > 0) {
+              td.textContent = v;
+              td.classList.add('filled');
+            } else {
+              td.innerHTML = '&mdash;';
+              td.classList.remove('filled');
+            }
+          });
+          if (hasAny) tr.classList.add('completed');
+        });
+      })
+      .catch(() => { /* silently ignore — cells already show em-dash placeholders */ });
   }
 });

@@ -991,3 +991,35 @@ footer .footer-links a:hover { color: var(--accent-red); }
 
 /* Smooth scroll for hash anchors (e.g. #sched-cc from the banner button) */
 html { scroll-behavior: smooth; }
+
+/* ===== CAS Schedule: Result columns (Winner / Pole / Fastest Lap) ===== */
+.comparison-table td.result-cell {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.comparison-table td.result-cell.filled {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Completed rounds: subtle check mark on the round number column */
+.comparison-table tbody tr.completed td:first-child {
+  color: #7fd18b;
+}
+
+.comparison-table tbody tr.completed td:first-child::before {
+  content: "\2713 ";
+  color: #7fd18b;
+  font-weight: 700;
+  margin-right: 0.2rem;
+}
+
+/* Horizontal scroll fallback on narrow screens so 6-7 column tables stay readable */
+@media (max-width: 820px) {
+  .comparison-table-wrapper { overflow-x: auto; }
+  .comparison-table { min-width: 720px; }
+}
