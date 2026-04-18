@@ -68,6 +68,13 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/diy.html"/>
   </url>
   <url>
+    <loc>https://simracing-hub.com/simhub-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/simhub-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simhub-guide.html"/>
+  </url>
+  <url>
     <loc>https://simracing-hub.com/buying-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -147,6 +154,13 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/diy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/diy.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/de/simhub-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/simhub-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simhub-guide.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/buying-guide.html</loc>

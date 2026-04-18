@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- BEGIN SEO-MANAGED -->
+    <title>SimHub Anfänger-Guide 2026 – Installation, Dashboards &amp; Setup | SimRacing Hub</title>
+    <meta name="description" content="Anfängerfreundlicher SimHub-Setup-Guide: SimHub installieren, Dashboards hinzufügen, LEDs, Arduino, Windsimulatoren und Shaker konfigurieren. SimHub ist das Zentrum des Sim Racings.">
+    <link rel="canonical" href="https://simracing-hub.com/de/simhub-guide.html">
+    <link rel="alternate" hreflang="en" href="https://simracing-hub.com/simhub-guide.html">
+    <link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simhub-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/simhub-guide.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="SimRacing Hub">
+    <meta property="og:title" content="SimHub Anfänger-Guide 2026 – Installation, Dashboards &amp; Setup | SimRacing Hub">
+    <meta property="og:description" content="Anfängerfreundlicher SimHub-Setup-Guide: SimHub installieren, Dashboards hinzufügen, LEDs, Arduino, Windsimulatoren und Shaker konfigurieren. SimHub ist das Zentrum des Sim Racings.">
+    <meta property="og:url" content="https://simracing-hub.com/de/simhub-guide.html">
+    <meta property="og:image" content="https://simracing-hub.com/img/logo.svg">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SimHub Anfänger-Guide 2026 – Installation, Dashboards &amp; Setup | SimRacing Hub">
+    <meta name="twitter:description" content="Anfängerfreundlicher SimHub-Setup-Guide: SimHub installieren, Dashboards hinzufügen, LEDs, Arduino, Windsimulatoren und Shaker konfigurieren. SimHub ist das Zentrum des Sim Racings.">
+    <meta name="twitter:image" content="https://simracing-hub.com/img/logo.svg">
+  <!-- END SEO-MANAGED -->
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="../img/logo.svg" alt="SimRacing Hub" class="logo-img">
+      </a>
+      <button class="menu-toggle" aria-label="Menü umschalten">&#9776;</button>
+      <nav>
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulationen</a>
+        <a href="software.html">Software &amp; Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="simhub-guide.html" class="active">Anfänger-Guide</a>
+        <a href="buying-guide.html">Kaufberatung</a>
+        <a href="about.html">Über</a>
+        <div class="lang-switch">
+          <a href="../simhub-guide.html" title="English">&#127468;&#127463;</a>
+          <a href="simhub-guide.html" class="active-lang" title="Deutsch">&#127465;&#127466;</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>SimHub <span>Anfänger-Guide</span></h1>
+    <p>SimHub ist das Zentrum des Sim Racings &mdash; Dashboards, RPM-Lights, Wind, Bass-Shaker, Pedal-Rumble, Arduino. Das ist der freundliche Einstiegs-Walkthrough, um alles zum Laufen zu bringen.</p>
+    <div class="hero-date">Aktualisiert April 2026</div>
+  </section>
+
+  <!-- Section Jump Navigation -->
+  <div class="section-jump-nav" style="background: var(--bg-card); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1rem 0; position: sticky; top: 0; z-index: 90;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+      <a href="#what" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#10071;&#65039; Was ist SimHub</a>
+      <a href="#install" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128229; Installation</a>
+      <a href="#dashboard" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128200; Dashboard</a>
+      <a href="#car" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#9881;&#65039; Auto-Einstellungen</a>
+      <a href="#devices" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128187; Geräte</a>
+      <a href="#dashboards" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128251; Dashboards</a>
+      <a href="#leds" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128161; LED-Profile</a>
+      <a href="#arduino" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128295; Arduino</a>
+      <a href="#shakers" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127788; Wind &amp; Shaker</a>
+      <a href="#wrap" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127937; Fazit</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- Was ist SimHub -->
+    <div class="sub-section" id="what">
+      <div class="section-header">
+        <h2><span class="icon">&#10071;&#65039;</span> Was ist SimHub &mdash; und warum es zählt</h2>
+        <p>Der Klebstoff, der ein modernes Sim Racing Rig zusammenhält</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+        <p>SimHub ist <em>die</em> Anwendung, um deine Sim-Racing-Peripherie zu verwalten &mdash; von RPM-Lights, Dashboards und DDUs bis hin zu Windsimulatoren, Bass-Shakern und Pedal-Rumble-Kits. Über die Jahre hat es sich von einem Hobbyprojekt zu <strong style="color: var(--accent-orange);">dem Zentrum des Sim Racings</strong> entwickelt, mit einer stark überarbeiteten, intuitiven Oberfläche und breiter Unterstützung von allen ernstzunehmenden Herstellern in diesem Bereich (mit der bemerkenswerten Ausnahme einiger weniger Marken, die bewusst auf ein geschlossenes Ökosystem setzen).</p>
+        <p>Wenn ein Gerät SimHub unterstützt, liefert der Hersteller ein <em>Device-Profil</em> mit allen wichtigen Einstellungen aus, sodass das Gerät von Haus aus vorkonfiguriert ist. Das heißt: anschließen, Profil laden und einfach losfahren. Du kannst tief in die Einstellungen eintauchen &mdash; oder einfach an der Oberfläche bleiben und trotzdem ein großartiges Erlebnis haben.</p>
+        <p>Dieser Guide führt durch einen typischen ersten Installationsvorgang &mdash; Dashboard, Auto-Einstellungen, Geräte, LED-Profile, Arduino, Windsim und Shaker. Am Ende hast du eine voll eingerichtete SimHub-Installation, die deine DDU, LED-Flag, Pedal-Rumble-Kit, Windsim und das Lenkrad steuert.</p>
+      </div>
+    </div>
+
+    <!-- Installation -->
+    <div class="sub-section" id="install">
+      <div class="section-header">
+        <h2><span class="icon">&#128229;</span> Installation</h2>
+        <p>Download, entpacken, installieren &mdash; drei Minuten und du bist durch</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag software">Schritt 1</span>
+          <h3>SimHub herunterladen</h3>
+          <p>Gehe zu <a href="https://www.simhubdash.com/download-2/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">simhubdash.com/download-2</a> und hol dir die aktuelle Version. Der Download ist eine Zip-Datei &mdash; entpacke sie an einem Ort, den du wiederfindest (Desktop reicht).</p>
+          <span class="card-date">simhubdash.com</span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Schritt 2</span>
+          <h3>Installer ausführen</h3>
+          <p>Öffne den entpackten Installer, akzeptiere die Lizenzbedingungen und stelle sicher, dass <strong>alle Checkboxen aktiviert sind</strong> &mdash; besonders .NET und Bildschirm-Treiber. Wenn du eine DDU oder ein Lenkrad mit Display betreiben willst, kosten dich diese Häkchen sonst später Stunden an Frust.</p>
+          <span class="card-date">Alles anhaken</span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Schritt 3</span>
+          <h3>Erster Start</h3>
+          <p>SimHub startet automatisch, wenn die Installation fertig ist. Falls nicht, findest du es im Startmenü oder bei den ausgeblendeten Symbolen in der Taskleiste. Gute Nachricht bei einem Update einer bestehenden Installation: <strong>deine Einstellungen bleiben erhalten</strong>.</p>
+          <span class="card-date">Bereit zum Fahren</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Übersicht -->
+    <div class="sub-section" id="dashboard">
+      <div class="section-header">
+        <h2><span class="icon">&#128200;</span> Das SimHub-Dashboard</h2>
+        <p>Deine Kommandozentrale &mdash; was welcher Bereich macht</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+        <p>Der Hauptbildschirm in SimHub gibt dir einen Überblick über dein Rig und lässt dich die "Feedback"-Geräte steuern &mdash; Bass-Shaker, Pedal-Rumble-Motoren, Windsim. Hier aktivierst du außerdem das Spiel, das du gleich spielen willst.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag software">Panel</span>
+          <h3>Meine Geräte</h3>
+          <p>Listet jedes in SimHub registrierte Gerät auf, das mit deinem PC verbunden ist &mdash; Lenkräder mit Display, Bass-Shaker, DDUs, RPM/Flag-LED-Bars. Das Zahnrad-Icon neben jedem Gerät ist eine Abkürzung zur vollen Konfiguration. Du kannst ein Gerät aus einer Datei importieren oder ein vorkonfiguriertes Profil aus SimHubs Bibliothek wählen.</p>
+          <span class="card-date">Geräte-Zentrale</span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Panel</span>
+          <h3>Feedback</h3>
+          <p>Schnellzugriff auf Bass-Shaker-Lautstärke, Rumble-Motor-Amplitude, Windsim-Maximalleistung im Leerlauf (Motor aus) und im Rennen (Motor an). Dieses Panel wirst du am häufigsten nutzen &mdash; abends leiser, fürs Rennen auf Anschlag.</p>
+          <span class="card-date">Bass, Wind, Rumble</span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Panel</span>
+          <h3>Meine bevorzugten Simulatoren</h3>
+          <p>Thumbnails deiner meistgenutzten Rennspiele. Ein Klick aktiviert das jeweilige Spiel &mdash; SimHub liest dann die Telemetrie dieses Titels und steuert alle deine Geräte entsprechend. iRacing, LMU, AC EVO, ACC, AMS2, rFactor 2 und viele mehr werden unterstützt.</p>
+          <span class="card-date">Auswählen &amp; losfahren</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Auto-Einstellungen -->
+    <div class="sub-section" id="car">
+      <div class="section-header">
+        <h2><span class="icon">&#9881;&#65039;</span> Auto-Einstellungen</h2>
+        <p>Redline, Schaltlichter, Kraftstoff-Alarm &mdash; pro Auto einstellen oder einfach SimHub synchronisieren lassen</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+        <p>Die Auto-Einstellungen sind zweigeteilt: <strong>Standard-Auto-Einstellungen (für das aktuelle Spiel)</strong> und <strong>Steuerung</strong>. Für 95 % der Sim Racer ist die wichtigste Option der Schalter ganz unten: <em>"Redline synchronisieren, wenn das Spiel sie liefert"</em> &mdash; damit aktiviert, holt sich SimHub die Redline direkt aus der Sim, und du musst nichts weiter anfassen.</p>
+
+        <p style="margin-top: 1rem;">Wenn du doch tiefer einsteigen willst:</p>
+        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; line-height: 1.85;">
+          <li><strong>Redline &amp; Schaltlichter</strong> &mdash; drei Stufen (Shift 1 bei 90 %, Shift 2 bei 95 %, Redline bei 96 % der maximalen Drehzahl als Standard). Feintuning der Auslöse-Prozentsätze je Stufe möglich.</li>
+          <li><strong>Kraftstoff-Alarm</strong> &mdash; setze den Schwellwert in Restrunden und die Drehzahl, bei der der Alarm abgespielt wird.</li>
+          <li><strong>Redline pro Gang</strong> &mdash; fortgeschritten: definiere eine eigene Redline pro Gang, wenn das Automodell erkannt wird. Nützlich, wenn du das Drehmoment-Verhalten beim Peak verstehst, sonst Overkill.</li>
+          <li><strong>Tasten-Zuweisungen</strong> &mdash; Redline mit einer Dreh- oder Drucktaste im laufenden Betrieb erhöhen / senken.</li>
+        </ul>
+        <p style="margin-top: 1rem;">Ehrlich gesagt? Auto-Sync an, losfahren. Genau das ist die Schönheit von SimHub &mdash; es belohnt Tüftelei, aber verlangt sie nicht.</p>
+      </div>
+    </div>
+
+    <!-- Geräte-Einstellungen -->
+    <div class="sub-section" id="devices">
+      <div class="section-header">
+        <h2><span class="icon">&#128187;</span> Geräte-Einstellungen</h2>
+        <p>Helligkeit, Hardware, Dashboard-Playlists &mdash; Kontrolle pro Gerät</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+        <p>Klicke auf ein Gerät (z. B. eine DDU oder eine RPM-Bar) in "Meine Geräte", um die zugehörige Einstellungsseite zu öffnen. Das Layout ist bei allen SimHub-unterstützten Geräten einheitlich und teilt sich in vier Bereiche:</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag software">Einstellung</span>
+          <h3>Helligkeit</h3>
+          <p>Ein Slider von 0-100 % für Displays und LEDs. Nützlich für Nachtsessions oder helle Räume &mdash; die meisten DDUs sind bei 100 % in einer dunklen Höhle blendend.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Einstellung</span>
+          <h3>Hardware</h3>
+          <p>Weise SimHub den richtigen Bildschirm zu (HDMI-Monitor, internes Lenkrad-Display usw.) und setze Rotation / Bildrate. Ein kleines HDMI-Dash wie das Grid DDU5 muss hier korrekt eingestellt sein, sonst zeigt es schlicht nichts an.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Einstellung</span>
+          <h3>Haupt-Dashboard &amp; Idle-Verhalten</h3>
+          <p>Wähle das Dashboard-Layout fürs aktive Fahren und entscheide, was passiert, wenn das Spiel nicht läuft &mdash; ausschalten oder auf ein Idle-Dash umschalten. Tipp: Lass ein Uhren-Dash im Idle, und deine DDU wird zum schicken Schreibtisch-Timer, wenn du nicht fährst.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">Einstellung</span>
+          <h3>Dashboard-Playlists &amp; Zuweisung pro Auto</h3>
+          <p>Das Killer-Feature: lade automatisch ein anderes Dashboard <em>pro Auto</em>. GT3s bekommen ein Telemetrie-Dash, LMP-Fahrzeuge ein Hybrid-Info-Overlay, F1-Boliden ein F1-Lenkrad-Layout. Klick auf "Playlist hinzufügen", Auto wählen, Dash wählen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboards installieren -->
+    <div class="sub-section" id="dashboards">
+      <div class="section-header">
+        <h2><span class="icon">&#128251;</span> Dashboards installieren &amp; aktualisieren</h2>
+        <p>Drop-in-Dashboards aus der Community &mdash; und wie du dein eigenes baust</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+        <p>Eine der Superkräfte von SimHub: Dashboards sind einzelne Dateien, die du einfach per Doppelklick installierst. Die Community-Szene ist riesig. Ein paar Startpunkte:</p>
+        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; line-height: 1.85;">
+          <li><strong>Lovely Dashboard</strong> &mdash; weithin als das Universal-Dashboard schlechthin anerkannt, mit mehreren Editionen (u. a. einer "TK Edition") und starkem laufenden Support. Sauber, extrem gut lesbar, "funktioniert einfach".</li>
+          <li><strong>Race Sim Studio's Ultimate SimHub Dashboard</strong> &mdash; wenn du RSS-Autos besitzt, deckt das praktisch jedes Modell aus deren Palette bis hoch zur Formula H ab.</li>
+          <li><strong>Hersteller-Downloads</strong> &mdash; die meisten DDU- / Lenkrad-Hersteller (Grid, Ascher, Cube Controls, Simagic usw.) stellen offizielle Dashboards auf ihren eigenen Websites bereit.</li>
+        </ul>
+        <p style="margin-top: 1rem;"><strong>Installation:</strong> Dashboard-Datei herunterladen, benötigte Fonts installieren (Lovely Dashboard braucht die Roboto-Font-Family), dann bei laufendem SimHub die heruntergeladene <code>.simhubdash</code>-Datei per Doppelklick öffnen. Der Import läuft automatisch. SimHub fragt eventuell nach einem Neustart, oft ist das aber gar nicht nötig. Sim starten, und das neue Dash erscheint.</p>
+        <p style="margin-top: 1rem;">Pro Auto zuweisen (siehe "Geräte-Einstellungen" oben) &mdash; fertig.</p>
+
+        <div style="margin-top: 1.5rem; padding: 1.2rem 1.5rem; background: rgba(255, 107, 53, 0.08); border-left: 3px solid var(--accent-orange); border-radius: 0 8px 8px 0;">
+          <strong style="color: var(--accent-orange);">Eigenes Dashboard bauen:</strong> ein altes Tablet oder Handy in der Schublade? SimHub kann ein Dashboard darüber via Netzwerk ausspielen &mdash; Hardwarekosten null, und du hast einen zweiten Bildschirm mit Kraftstoff, Delta, Reifentemperaturen, Rundenzeiten usw. Perfektes Wochenend-Projekt.
+        </div>
+      </div>
+    </div>
+
+    <!-- LED-Profile -->
+    <div class="sub-section" id="leds">
+      <div class="section-header">
+        <h2><span class="icon">&#128161;</span> LED-Profile</h2>
+        <p>RPM-Bars, Brows, iFlag-Geräte &mdash; vorkonfiguriert oder eigen</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+        <p>Die meisten SimHub-unterstützten LED-Geräte (RPM-Bars, Brows, iFlags) liefern ein ordentliches Standardprofil des Herstellers mit. Wenn du etwas Individuelleres willst &mdash; oder ein community-optimiertes Profil mit besserem Flag-Handling &mdash; ist die Installation einfach:</p>
+        <ol style="margin-top: 0.5rem; padding-left: 1.5rem; line-height: 1.85;">
+          <li>Öffne dein Gerät in SimHub und klicke auf den Reiter <strong>LEDs</strong>.</li>
+          <li>Lade ein Profil herunter (z. B. die kostenlosen LED-Profile von <strong>Daniel Newman Racing</strong>) und entpacke es.</li>
+          <li>Du brauchst die <code>.LEDSPROFILE</code>-Datei. Speichere sie an einem Ort, den du wiederfindest.</li>
+          <li>Klicke in SimHub auf <strong>Profil importieren</strong> und wähle die Datei aus. SimHub bestätigt die Installation.</li>
+        </ol>
+        <p style="margin-top: 1rem;">Von da an kannst du das Profil so lassen, verändern oder von Grund auf neu aufbauen. Hersteller-Standards sind in der Regel am einfachsten zu ändern; Community-Profile wie die von Daniel Newman sind reichhaltiger, aber auch komplexer im Innenleben.</p>
+      </div>
+    </div>
+
+    <!-- Arduino -->
+    <div class="sub-section" id="arduino">
+      <div class="section-header">
+        <h2><span class="icon">&#128295;</span> Arduino &amp; LED-Matrix</h2>
+        <p>DIY-Ganganzeigen, iFlags und Schaltwarnungen</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+        <p>Im Arduino-Bereich spricht SimHub mit selbstgebauter Hardware &mdash; am häufigsten eine LED-Matrix als Ganganzeige oder ein iFlag-Flag-Warngerät (beliebt: das ReaperWare iFlag). Die Seite teilt sich in <em>Effekte</em>, und jeder Effekt hat eine Menge Einstellknöpfe.</p>
+        <p style="margin-top: 1rem;">Speziell beim Effekt <strong>GEAR</strong> findest du:</p>
+        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; line-height: 1.85;">
+          <li><strong>Aktuellen Gang anzeigen</strong> &mdash; An/Aus-Schalter.</li>
+          <li><strong>Position</strong> &mdash; Matrix-Start, Start X, Start Y, um die Ziffer exakt zu platzieren.</li>
+          <li><strong>Gang-Dropdown</strong> &mdash; wähle einen bestimmten Gang, um ihn zu individualisieren.</li>
+          <li><strong>Font &amp; Farbe</strong> &mdash; beides wählbar, inklusive einer separaten <strong>Redline-Farbe</strong> fürs Schalt-Blinken.</li>
+          <li><strong>Redline-Blinken</strong> &mdash; aktivieren und Blink-Delay setzen.</li>
+        </ul>
+        <p style="margin-top: 1rem;">Mit <strong>+ Effekt hinzufügen</strong> und <strong>+ Gruppe hinzufügen</strong> lassen sich Flaggen, Schaltwarnungen, Gang und mehr auf derselben Matrix stapeln. Hier wird SimHub wirklich tief &mdash; ideal für ein Wochenende aus 3D-Druck + Arduino-Bau.</p>
+      </div>
+    </div>
+
+    <!-- ShakeIt Wind & Motoren -->
+    <div class="sub-section" id="shakers">
+      <div class="section-header">
+        <h2><span class="icon">&#127788;</span> ShakeIt Wind &amp; Motoren</h2>
+        <p>Immersionsschicht &mdash; Windsim, Pedal-Rumble-Kits und Bass-Shaker</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag software">ShakeIt Wind</span>
+          <h3>Wind-Simulator</h3>
+          <p>Konfiguriere tempoabhängige Wind-Kurven für Windsim-Geräte wie die SIM3D oder jedes Arduino-kompatible Lüfter-Kit. Du setzt Minimal- und Maximaldrehzahlen, Tempo-Schwellen und Idle-Verhalten. Gerade auf Triples oder in VR ein starkes Immersions-Upgrade.</p>
+          <span class="card-date">ShakeIt &rarr; Wind</span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag software">ShakeIt Motoren</span>
+          <h3>Pedal-Rumble &amp; Bass-Shaker</h3>
+          <p>Weise Physik-Events (Gaslupfen, ABS, Blockierer, Curb, Einschlag, Motor-Brummen) den Motor-Kanälen von Pedal-Rumble-Kits und Bass-Shakern unterm Sitz zu. SimHub mischt alle Kanäle automatisch &mdash; du steuerst die Balance. Das SIM3D-Pedal-Rumble-Kit ist hier eine beliebte Kombination.</p>
+          <span class="card-date">ShakeIt &rarr; Motoren</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fazit -->
+    <div class="sub-section" id="wrap">
+      <div class="section-header">
+        <h2><span class="icon">&#127937;</span> Fazit</h2>
+        <p>Wie es weitergeht</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+        <p>Du hast jetzt die mentale Landkarte: SimHub ist das Zentrum, das Dashboard, LEDs, Rumble, Wind und Shaker miteinander verbindet. Einmal installieren, ein Dashboard laden, Device-Profil importieren &mdash; und du bist zu 90 % bei einem fantastischen Rig. Die restlichen 10 % sind der spaßige Teil: Farben tweaken, Playlists bauen, Effekt-Mixe verfeinern und mit der Zeit eigene DIY-Arduino-Projekte ergänzen.</p>
+        <p style="margin-top: 1rem;">Ein paar nächste Schritte:</p>
+        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; line-height: 1.85;">
+          <li>Lies die Seite <a href="software.html" style="color: var(--accent-yellow);">Software &amp; Tools</a> für eine breitere Sicht auf das Sim-Racing-Software-Ökosystem über SimHub hinaus.</li>
+          <li>Schau in die <a href="hardware.html" style="color: var(--accent-yellow);">Hardware</a>-Seite für Wheelbases, Pedale und Rigs, die sauber mit SimHub zusammenarbeiten.</li>
+          <li>Wenn du dein Rig noch baust, hilft die <a href="buying-guide.html" style="color: var(--accent-yellow);">Kaufberatung</a> dabei herauszufinden, wo dein Geld wirklich zählt.</li>
+          <li>Und für die Maker: unsere <a href="diy.html" style="color: var(--accent-yellow);">DIY</a>-Seite hat Arduino- und 3D-Druck-Projekte, die sich perfekt mit SimHub ergänzen.</li>
+        </ul>
+        <p style="margin-top: 1.2rem; font-size: 0.9rem; color: rgba(255,255,255,0.6);"><em>Dieser Guide ist ein community-orientierter Walkthrough. Die tiefste Referenz zu einzelnen Features liefert die offizielle SimHub-Dokumentation auf <a href="https://github.com/SHWotever/SimHub" target="_blank" rel="noopener" style="color: var(--accent-yellow);">github.com/SHWotever/SimHub</a> und die <a href="https://www.simhubdash.com/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">offizielle SimHub-Seite</a>. Der Einsteiger-Walkthrough-Stil ist inspiriert von Richard Baxters ausgezeichnetem "SimHub Setup: A First Timer's Guide to Getting Started" auf Boosted Media.</em></p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulationen</a>
+        <a href="software.html">Software &amp; Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="simhub-guide.html">Anfänger-Guide</a>
+        <a href="buying-guide.html">Kaufberatung</a>
+        <a href="about.html">Über</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+      <p>SimRacing Hub &mdash; KI-kuratierte Sim Racing News, täglich aktualisiert.</p>
+      <p class="footer-trust">Unabhängig. Keine Werbung. Keine Sponsorings. Keine Affiliate-Links. Kein Tracking.</p>
+      <span class="last-updated"></span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
