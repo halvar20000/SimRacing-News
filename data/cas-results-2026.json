@@ -6,10 +6,10 @@
   "notes": "Populate the winner / pole / fastestLap fields per round once a race has been completed. Leave empty strings for races that have not yet taken place — the UI will show an em-dash placeholder. Keys match the series IDs in cas-community.html (sched-wct, sched-cc, sched-sfl, sched-pccd, sched-gt4, sched-iec).",
   "results": {
     "sched-wct": {
-      "1":  { "winner": "", "pole": "", "fastestLap": "" },
-      "2":  { "winner": "", "pole": "", "fastestLap": "" },
-      "3":  { "winner": "", "pole": "", "fastestLap": "" },
-      "4":  { "winner": "", "pole": "", "fastestLap": "" },
+      "1":  { "winner": "Yannick Wonnenberg", "pole": "Yannick Wonnenberg", "fastestLap": "Yannick Wonnenberg" },
+      "2":  { "winner": "Maurice Becker", "pole": "Luca-Maximilian Stein", "fastestLap": "Carl Sören Schober" },
+      "3":  { "winner": "Dennis Ulli Richter", "pole": "Yannick Wonnenberg", "fastestLap": "Dennis Ulli Richter" },
+      "4":  { "winner": "Yannick Wonnenberg", "pole": "Yannick Wonnenberg", "fastestLap": "Yannick Wonnenberg" },
       "5":  { "winner": "", "pole": "", "fastestLap": "" },
       "6":  { "winner": "", "pole": "", "fastestLap": "" },
       "7":  { "winner": "", "pole": "", "fastestLap": "" },
@@ -20,10 +20,10 @@
       "12": { "winner": "", "pole": "", "fastestLap": "" }
     },
     "sched-cc": {
-      "1":  { "winner": "", "pole": "", "fastestLap": "" },
-      "2":  { "winner": "", "pole": "", "fastestLap": "" },
-      "3":  { "winner": "", "pole": "", "fastestLap": "" },
-      "4":  { "winner": "", "pole": "", "fastestLap": "" },
+      "1":  { "winner": "Willi Brand", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
+      "2":  { "winner": "Willi Brand", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
+      "3":  { "winner": "Andreas Wuschnakowski	", "pole": "Andreas Wuschnakowski	", "fastestLap": "Andreas Wuschnakowski	" },
+      "4":  { "winner": "Willi Brand", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
       "5":  { "winner": "", "pole": "", "fastestLap": "" },
       "6":  { "winner": "", "pole": "", "fastestLap": "" },
       "7":  { "winner": "", "pole": "", "fastestLap": "" },
@@ -34,11 +34,11 @@
       "12": { "winner": "", "pole": "", "fastestLap": "" }
     },
     "sched-sfl": {
-      "1": { "winner": "", "pole": "", "fastestLap": "" },
-      "2": { "winner": "", "pole": "", "fastestLap": "" },
-      "3": { "winner": "", "pole": "", "fastestLap": "" },
-      "4": { "winner": "", "pole": "", "fastestLap": "" },
-      "5": { "winner": "", "pole": "", "fastestLap": "" },
+      "1": { "winner": "Raphael Böhmer", "pole": "Raphael Böhmer", "fastestLap": "Raphael Böhmer" },
+      "2": { "winner": "Nigel Reichert", "pole": "Nigel Reichert", "fastestLap": "Nigel Reichert" },
+      "3": { "winner": "Michael Kelnberger", "pole": "Nigel Reichert", "fastestLap": "Dawid Dlugokecki" },
+      "4": { "winner": "Kevin Chmielewski", "pole": "Kevin Chmielewski", "fastestLap": "Kevin Chmielewski" },
+      "5": { "winner": " Marcus Rothe", "pole": "Michael Kelnberger", "fastestLap": "Michael Kelnberger" },
       "6": { "winner": "", "pole": "", "fastestLap": "" },
       "7": { "winner": "", "pole": "", "fastestLap": "" },
       "8": { "winner": "", "pole": "", "fastestLap": "" }
@@ -54,13 +54,13 @@
       "8": { "winner": "", "pole": "", "fastestLap": "" }
     },
     "sched-gt4": {
-      "1": { "winner": "", "pole": "", "fastestLap": "" },
-      "2": { "winner": "", "pole": "", "fastestLap": "" },
-      "3": { "winner": "", "pole": "", "fastestLap": "" },
-      "4": { "winner": "", "pole": "", "fastestLap": "" },
-      "5": { "winner": "", "pole": "", "fastestLap": "" },
-      "6": { "winner": "", "pole": "", "fastestLap": "" },
-      "7": { "winner": "", "pole": "", "fastestLap": "" },
+      "1": { "winner": "Matthias Beer", "pole": "Alexander Hoche", "fastestLap": "Philip Eckert" },
+      "2": { "winner": "Matthias Beer", "pole": "Matthias Beer", "fastestLap": "Philip Eckert" },
+      "3": { "winner": "Pit Venanzi", "pole": "Matthias Beer", "fastestLap": "Pit Venanzi" },
+      "4": { "winner": "Matthias Beer", "pole": "Maurice Becker", "fastestLap": "Maurice Becker" },
+      "5": { "winner": "Kevin Hilgenhövel", "pole": "Kevin Hilgenhövel", "fastestLap": "Kevin Hilgenhövel" },
+      "6": { "winner": "Kevin Hilgenhövel", "pole": "Kevin Hilgenhövel", "fastestLap": "Kevin Hilgenhövel" },
+      "7": { "winner": "Philip Eckert", "pole": "Kevin Hilgenhövel", "fastestLap": "Matthias Beer" },
       "8": { "winner": "", "pole": "", "fastestLap": "" }
     },
     "sched-iec": {
