@@ -68,6 +68,13 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/diy.html"/>
   </url>
   <url>
+    <loc>https://simracing-hub.com/beyond-the-sim.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/beyond-the-sim.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/beyond-the-sim.html"/>
+  </url>
+  <url>
     <loc>https://simracing-hub.com/simhub-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -154,6 +161,13 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/diy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/diy.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/de/beyond-the-sim.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/beyond-the-sim.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/beyond-the-sim.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/simhub-guide.html</loc>
