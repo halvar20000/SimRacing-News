@@ -79,11 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
     rows.forEach(tr => {
       const dateStr = tr.getAttribute('data-date');
       const series  = tr.getAttribute('data-series');
-      const tds = tr.querySelectorAll('td');
-      const round   = tds[0] ? tds[0].textContent.trim() : '';
-      const circuit = tds[tds.length - 1] ? tds[tds.length - 1].textContent.trim() : '';
+      const tds = Array.from(tr.querySelectorAll('td'));
+      const round = tds[0] ? tds[0].textContent.trim() : '';
+      // Circuit is the last cell that is NOT a result cell (Winner / Pole / FL).
+      // Different series have different column counts (some include a Class column),
+      // so filter out result-cells and take the last remaining cell.
+      const nonResultCells = tds.filter(td => !td.classList.contains('result-cell'));
+      const circuitCell = nonResultCells[nonResultCells.length - 1];
+      const circuit = circuitCell ? circuitCell.textContent.trim() : '';
+      const circuitHTML = circuitCell ? circuitCell.innerHTML.trim() : '';
       const date = new Date(dateStr + 'T00:00:00');
-      races.push({ dateStr, date, series, round, circuit, tr });
+      races.push({ dateStr, date, series, round, circuit, circuitHTML, tr });
     });
 
     // Sort by date ascending
@@ -126,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         +     '<div style="display:inline-block; font-family: var(--font-heading); font-size: 0.7rem; letter-spacing: 1.5px; font-weight: 700; color: var(--accent-red); padding: 0.2rem 0.55rem; background: rgba(230,57,70,0.18); border-radius: 4px; margin-bottom: 0.55rem;">' + labelNext + ' \u2022 ' + countdown + '</div>'
         +     '<h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; color: #fff; margin: 0 0 0.35rem;">' + (meta.icon ? (meta.icon + ' ') : '') + name + '</h3>'
         +     '<p style="margin: 0; font-size: 0.95rem; color: rgba(255,255,255,0.85);">'
-        +       '<strong>' + labelRound + ' ' + next.round + '</strong> \u2014 ' + next.circuit
+        +       '<strong>' + labelRound + ' ' + next.round + '</strong> \u2014 ' + next.circuitHTML
         +     '</p>'
         +     '<p style="margin: 0.35rem 0 0; font-size: 0.85rem; color: rgba(255,255,255,0.6);">' + dateFmt + ' \u2022 ' + rd + ' \u2022 ' + season + '</p>'
         +   '</div>'
@@ -134,6 +140,75 @@ document.addEventListener('DOMContentLoaded', () => {
         + '</div>';
       nextRaceBanner.style.display = '';
     }
+
+    // ===== CAS-SIM TV: auto-populate the "Next Broadcast" notice from the WCT schedule =====
+    // The Twitch channel cas_sim_tv is the official broadcaster for the CAS GT3 World
+    // Championship Tour. This finds the next upcoming WCT round and renders a notice
+    // below the channel description, so the page always shows the right race without
+    // any manual editing. Hidden automatically when the season ends.
+    function getEuropeParisTzLabel(date) {
+      // Returns 'CEST' during European summer time (last Sun of March → last Sun of October),
+      // 'CET' otherwise. Used for human-readable broadcast time labels.
+      const y = date.getFullYear();
+      const lastSundayOfMarch = new Date(y, 2, 31);
+      lastSundayOfMarch.setDate(31 - lastSundayOfMarch.getDay());
+      lastSundayOfMarch.setHours(2, 0, 0, 0);
+      const lastSundayOfOctober = new Date(y, 9, 31);
+      lastSundayOfOctober.setDate(31 - lastSundayOfOctober.getDay());
+      lastSundayOfOctober.setHours(3, 0, 0, 0);
+      return (date >= lastSundayOfMarch && date < lastSundayOfOctober) ? 'CEST' : 'CET';
+    }
+
+    // Per-series broadcast metadata for cas_sim_tv. Add entries here to add more
+    // "Next Broadcast" cards in the future (e.g. cas-sim-tv-next-broadcast--pccd).
+    const BROADCAST_META = {
+      'sched-wct': {
+        elementId: 'cas-sim-tv-next-broadcast',
+        seriesEN: 'CAS GT3 World Championship Tour',
+        seriesDE: 'CAS GT3 World Championship Tour',
+        seasonEN: 'Season 12',
+        seasonDE: 'Saison 12',
+        roundEN: 'Round',
+        roundDE: 'Lauf',
+        timeLocal: '19:00'
+      }
+    };
+
+    Object.keys(BROADCAST_META).forEach(seriesKey => {
+      const cfg = BROADCAST_META[seriesKey];
+      const el = document.getElementById(cfg.elementId);
+      if (!el) return;
+      const upcomingThisSeries = races.filter(r => r.series === seriesKey && r.date >= today);
+      if (upcomingThisSeries.length === 0) {
+        // No more rounds — hide the notice (e.g. season finished, or series paused after last shown date).
+        el.style.display = 'none';
+        return;
+      }
+      const r = upcomingThisSeries[0];
+      const seriesName = isDE ? cfg.seriesDE : cfg.seriesEN;
+      const seasonName = isDE ? cfg.seasonDE : cfg.seasonEN;
+      const roundLabel = isDE ? cfg.roundDE  : cfg.roundEN;
+      const locale = isDE ? 'de-DE' : 'en-US';
+      const dateFmtLong = r.date.toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+      const tzLabel = getEuropeParisTzLabel(r.date);
+      const timeStr = cfg.timeLocal + '\u00A0' + tzLabel + (isDE ? '\u00A0Uhr' : '');
+      const liveLabel = isDE ? 'Live' : 'Live';
+      const nextLabel = isDE ? 'N\u00E4chste \u00DCbertragung' : 'Next Broadcast';
+
+      el.innerHTML = ''
+        + '<div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.45rem;">'
+        +   '<span style="display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.15rem 0.55rem; background: var(--accent-red); color: #fff; border-radius: 4px; font-family: var(--font-heading); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">'
+        +     '<span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #fff;"></span>' + liveLabel
+        +   '</span>'
+        +   '<strong style="color: #9146FF; font-family: var(--font-heading); letter-spacing: 0.5px;">' + nextLabel + '</strong>'
+        + '</div>'
+        + '<p style="margin: 0; line-height: 1.5;">'
+        +   '<strong>' + seriesName + ' \u2014 ' + seasonName + ', ' + roundLabel + '\u00A0' + r.round + '</strong><br>'
+        +   r.circuitHTML + ' \u00A0\u00B7\u00A0 ' + dateFmtLong + ' \u00A0\u00B7\u00A0 ' + timeStr
+        + '</p>';
+      el.style.display = '';
+      console.info('[CAS-SIM TV] Next ' + seriesKey + ' broadcast set: R' + r.round + ' (' + r.dateStr + ') ' + r.circuit);
+    });
 
     // ===== .ics calendar export =====
     function icsEscape(s) {
