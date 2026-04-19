@@ -260,12 +260,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== Results: fetch cas-results-2026.json and populate Winner/Pole/FL cells =====
     // Uses absolute path so it works from both EN root and DE subdirectory.
-    fetch('/data/cas-results-2026.json', { cache: 'no-cache' })
-      .then(res => res.ok ? res.json() : null)
+    // Errors are logged to the browser console so issues like invalid JSON,
+    // a 404, or a parse failure are visible in DevTools instead of silently
+    // leaving the result cells as em-dash placeholders.
+    const RESULTS_URL = '/data/cas-results-2026.json';
+    fetch(RESULTS_URL, { cache: 'no-cache' })
+      .then(res => {
+        if (!res.ok) {
+          console.warn('[CAS results] HTTP ' + res.status + ' fetching ' + RESULTS_URL + ' — result cells will stay as placeholders.');
+          return null;
+        }
+        // Parse manually so we can log the file content on parse failure.
+        return res.text().then(text => {
+          try {
+            return JSON.parse(text);
+          } catch (err) {
+            console.error('[CAS results] Failed to parse JSON from ' + RESULTS_URL + ':', err.message);
+            console.error('[CAS results] Hint: this is usually a literal control character (TAB / newline) inside a string, or a trailing comma. Validate locally with: python3 -m json.tool ' + RESULTS_URL.replace(/^\//, ''));
+            return null;
+          }
+        });
+      })
       .then(data => {
         if (!data || !data.results) return;
         const isDE = (document.documentElement.lang || '').toLowerCase().startsWith('de');
         const labelTBA = isDE ? '—' : '—';
+        let filledCount = 0;
         document.querySelectorAll('tr[data-series][data-round]').forEach(tr => {
           const series = tr.getAttribute('data-series');
           const round = tr.getAttribute('data-round');
@@ -287,9 +307,12 @@ document.addEventListener('DOMContentLoaded', () => {
               td.classList.remove('filled');
             }
           });
-          if (hasAny) tr.classList.add('completed');
+          if (hasAny) { tr.classList.add('completed'); filledCount++; }
         });
+        console.info('[CAS results] Loaded ' + RESULTS_URL + ' (lastUpdated: ' + (data.lastUpdated || 'unknown') + ') — ' + filledCount + ' rows populated.');
       })
-      .catch(() => { /* silently ignore — cells already show em-dash placeholders */ });
+      .catch(err => {
+        console.error('[CAS results] Network error fetching ' + RESULTS_URL + ':', err);
+      });
   }
 });

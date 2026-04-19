@@ -1,8 +1,8 @@
 {
   "$schema": "https://simracing-hub.com/data/cas-results.schema.json",
   "season": "2026",
-  "lastUpdated": "2026-04-18",
-  "changelog": "2026-04-18: PCCD R3 Spa-Francorchamps — Silvio Foth clean sweep (win / pole / FL).",
+  "lastUpdated": "2026-04-19",
+  "changelog": "2026-04-19: Fixed invalid control characters (literal tabs in 'Andreas Wuschnakowski', leading space in 'Marcus Rothe') that prevented the browser from parsing this file — the page now correctly renders all populated rounds. | 2026-04-18: PCCD R3 Spa-Francorchamps — Silvio Foth clean sweep (win / pole / FL).",
   "notes": "Populate the winner / pole / fastestLap fields per round once a race has been completed. Leave empty strings for races that have not yet taken place — the UI will show an em-dash placeholder. Keys match the series IDs in cas-community.html (sched-wct, sched-cc, sched-sfl, sched-pccd, sched-gt4, sched-iec).",
   "results": {
     "sched-wct": {
@@ -22,7 +22,7 @@
     "sched-cc": {
       "1":  { "winner": "Willi Brand", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
       "2":  { "winner": "Willi Brand", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
-      "3":  { "winner": "Andreas Wuschnakowski	", "pole": "Andreas Wuschnakowski	", "fastestLap": "Andreas Wuschnakowski	" },
+      "3":  { "winner": "Andreas Wuschnakowski", "pole": "Andreas Wuschnakowski", "fastestLap": "Andreas Wuschnakowski" },
       "4":  { "winner": "Willi Brand", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
       "5":  { "winner": "", "pole": "", "fastestLap": "" },
       "6":  { "winner": "", "pole": "", "fastestLap": "" },
@@ -38,7 +38,7 @@
       "2": { "winner": "Nigel Reichert", "pole": "Nigel Reichert", "fastestLap": "Nigel Reichert" },
       "3": { "winner": "Michael Kelnberger", "pole": "Nigel Reichert", "fastestLap": "Dawid Dlugokecki" },
       "4": { "winner": "Kevin Chmielewski", "pole": "Kevin Chmielewski", "fastestLap": "Kevin Chmielewski" },
-      "5": { "winner": " Marcus Rothe", "pole": "Michael Kelnberger", "fastestLap": "Michael Kelnberger" },
+      "5": { "winner": "Marcus Rothe", "pole": "Michael Kelnberger", "fastestLap": "Michael Kelnberger" },
       "6": { "winner": "", "pole": "", "fastestLap": "" },
       "7": { "winner": "", "pole": "", "fastestLap": "" },
       "8": { "winner": "", "pole": "", "fastestLap": "" }
