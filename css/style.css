@@ -94,16 +94,17 @@ header {
   background-clip: text;
 }
 
-nav { display: flex; align-items: center; gap: 0.25rem; }
+nav { display: flex; align-items: center; gap: 0.1rem; }
 
 /* ===== LANGUAGE SWITCHER ===== */
 .lang-switch {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  margin-left: 0.75rem;
-  padding-left: 0.75rem;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
   border-left: 1px solid var(--border-color);
+  flex-shrink: 0;
 }
 
 .lang-switch a {
@@ -134,9 +135,9 @@ nav { display: flex; align-items: center; gap: 0.25rem; }
 nav a {
   color: var(--text-secondary);
   text-decoration: none;
-  padding: 0.5rem 0.9rem;
+  padding: 0.4rem 0.65rem;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 500;
   transition: all var(--transition);
   white-space: nowrap;
@@ -873,8 +874,11 @@ footer .footer-links a:hover { color: var(--accent-red); }
   font-size: 0.75rem;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE =====
+   Mobile menu kicks in at 1024px because we have 13+ nav items that
+   won't fit on a narrow desktop / tablet even with tight spacing.
+   Above 1024px the full horizontal nav is shown. */
+@media (max-width: 1024px) {
   .menu-toggle { display: block; }
 
   nav {
