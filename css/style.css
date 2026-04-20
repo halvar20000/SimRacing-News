@@ -1129,10 +1129,14 @@ footer .footer-links a:hover { color: var(--accent-red); }
   }
 }
 
-/* ===== CAS Schedule: Next-Up row highlight ===== */
+/* ===== CAS Schedule: Next-Up row highlight =====
+   The row gets a red background tint + red left-border on the Rd cell.
+   The "NEXT" pill used to live on the Rd cell (60px) and overlapped the
+   round number — it now sits on the last cell (Fastest Lap result-cell),
+   which on an upcoming row only contains an em-dash placeholder, so the
+   pill has clear space on the right edge. */
 .comparison-table tbody tr.next-up {
   background: rgba(230, 57, 70, 0.10);
-  position: relative;
 }
 
 .comparison-table tbody tr.next-up:hover {
@@ -1145,15 +1149,19 @@ footer .footer-links a:hover { color: var(--accent-red); }
 }
 
 .comparison-table tbody tr.next-up td:first-child {
-  position: relative;
   border-left: 4px solid var(--accent-red);
   padding-left: calc(1.1rem - 1px);
 }
 
-.comparison-table tbody tr.next-up td:first-child::after {
+.comparison-table tbody tr.next-up td:last-child {
+  position: relative;
+  padding-right: 3.5rem; /* reserve room for the NEXT pill on the right */
+}
+
+.comparison-table tbody tr.next-up td:last-child::after {
   content: "NEXT";
   position: absolute;
-  right: 0.35rem;
+  right: 0.5rem;
   top: 50%;
   transform: translateY(-50%);
   font-family: var(--font-heading);
@@ -1162,8 +1170,9 @@ footer .footer-links a:hover { color: var(--accent-red); }
   letter-spacing: 0.1em;
   color: var(--accent-red);
   background: rgba(230, 57, 70, 0.18);
-  padding: 0.1rem 0.35rem;
+  padding: 0.1rem 0.45rem;
   border-radius: 3px;
+  pointer-events: none;
 }
 
 /* Smooth scroll for hash anchors (e.g. #sched-cc from the banner button) */
