@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/style.css">
   <!-- BEGIN SEO-MANAGED -->
-    <title>SimHub Anfänger-Guide 2026 – Installation, Dashboards &amp; Setup | SimRacing Hub</title>
+    <title>Sim-Racing Anfänger-Guides 2026 – iRacing &amp; SimHub | SimRacing Hub</title>
     <meta name="description" content="Anfängerfreundlicher SimHub-Setup-Guide: SimHub installieren, Dashboards hinzufügen, LEDs, Arduino, Windsimulatoren und Shaker konfigurieren. SimHub ist das Zentrum des Sim Racings.">
     <link rel="canonical" href="https://simracing-hub.com/de/simhub-guide.html">
     <link rel="alternate" hreflang="en" href="https://simracing-hub.com/simhub-guide.html">
@@ -58,9 +58,13 @@
   </header>
 
   <section class="hero">
-    <h1>SimHub <span>Anfänger-Guide</span></h1>
-    <p>SimHub ist das Zentrum des Sim Racings &mdash; Dashboards, RPM-Lights, Wind, Bass-Shaker, Pedal-Rumble, Arduino. Das ist der freundliche Einstiegs-Walkthrough, um alles zum Laufen zu bringen.</p>
+    <h1>Sim-Racing <span>Anf&auml;nger-Guides</span></h1>
+    <p>Verst&auml;ndliche Walkthroughs f&uuml;r die Tools und Plattformen, mit denen neue Sim-Racer zuerst konfrontiert werden. Einstieg in iRacing, SimHub einrichten, weitere Guides folgen.</p>
     <div class="hero-date">Aktualisiert April 2026</div>
+    <div style="max-width: 860px; margin: 1.5rem auto 0; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
+      <a href="#iracing-guide" style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.9rem 1.5rem; border-radius: 10px; background: linear-gradient(135deg, rgba(0,136,255,0.18), rgba(0,136,255,0.06)); border: 1px solid rgba(0,136,255,0.45); color: #66b6ff; text-decoration: none; font-family: var(--font-heading); font-size: 1rem; font-weight: 700; letter-spacing: 0.5px;">&#127937; iRacing &mdash; Von der Anmeldung zum ersten Rennen</a>
+      <a href="#simhub-guide" style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.9rem 1.5rem; border-radius: 10px; background: linear-gradient(135deg, rgba(255,107,53,0.18), rgba(255,107,53,0.06)); border: 1px solid rgba(255,107,53,0.45); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 1rem; font-weight: 700; letter-spacing: 0.5px;">&#127916; SimHub &mdash; Installation, Dashboards &amp; Setup</a>
+    </div>
   </section>
 
   <!-- Section Jump Navigation -->
@@ -80,6 +84,166 @@
   </div>
 
   <main>
+
+    <!-- ================================================================= -->
+    <!-- iRacing Anf&auml;nger-Guide                                           -->
+    <!-- Quelle: Transkript eines deutschsprachigen YouTube-Einsteiger-     -->
+    <!-- Guides (Creator / Link bitte eintragen).                           -->
+    <!-- ================================================================= -->
+    <article id="iracing-guide" style="border-bottom: 1px solid var(--border-color); padding-bottom: 2rem; margin-bottom: 2rem;">
+
+      <div class="sub-section">
+        <div class="section-header">
+          <h2><span class="icon">&#127937;</span> iRacing Anf&auml;nger-Guide &mdash; von der Anmeldung zum ersten Rennen</h2>
+          <p>Das Video-Guide, das wir uns beim Einstieg in iRacing gew&uuml;nscht h&auml;tten</p>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+          <p>iRacing kann am Anfang ganz sch&ouml;n &uuml;berfordernd sein &mdash; das Abo- und Kostenmodell, das Interface, die riesige Auswahl an Serien, die Ratings. Dieser Guide f&uuml;hrt dich durch alles, was du f&uuml;r einen gelungenen Start brauchst, damit du dich hoffentlich einfach auf deine Rookie-Klasse und auf Fahrspa&szlig; konzentrieren kannst.</p>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 1rem; padding: 0.8rem 1rem; background: rgba(0,136,255,0.06); border-left: 3px solid #0088ff; border-radius: 0 6px 6px 0;"><em>Dieser Guide basiert auf dem Transkript eines deutschsprachigen YouTube-Einsteiger-Guides. <strong style="color:#66b6ff;">Creator / Link hier eintragen</strong> &mdash; Kanalname und Video-URL bitte erg&auml;nzen, um dem urspr&uuml;nglichen Ersteller die Credits zu geben.</em></p>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="section-header">
+          <h2><span class="icon">&#128221;</span> 1. Anmeldung &amp; Abo</h2>
+          <p>Warum iRacing.com besser ist als Steam &mdash; und was du wirklich zahlst</p>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+          <p><strong>Anmeldung auf iRacing.com, nicht &uuml;ber Steam.</strong> Steam ist zwar manchmal kurzfristig ein paar Cent g&uuml;nstiger &mdash; vor allem bei Aktionen &mdash; aber auf die Dauer sind die Angebote auf iRacing.com (Mengenrabatt bei Autos, Black-Friday-Deals bei Verl&auml;ngerungen) deutlich besser.</p>
+          <p><strong>Abo-Modell.</strong> Im Gegensatz zu den meisten Sims ist iRacing <em>kein</em> einmaliger Kauf, sondern ein Abo. F&uuml;r Neumitglieder gibt es oft 30&nbsp;% Rabatt. Aktuell kostet der Monat rund <strong>9,10&nbsp;$</strong>, aufs Jahr gerechnet nur <strong>6,42&nbsp;$&nbsp;/&nbsp;Monat</strong> &mdash; das ergibt mit Steuern ca.&nbsp;<strong>91&nbsp;$&nbsp;/&nbsp;Jahr</strong>.</p>
+          <p><strong>Black-Friday-Tipp.</strong> Zum Black Friday sind Jahres-Mitgliedschaften bis zu 50&nbsp;% g&uuml;nstiger f&uuml;r neue Mitglieder; Bestandsmitglieder sparen bei der Verl&auml;ngerung bis zu 25&nbsp;%. Viele Langj&auml;hrige verl&auml;ngern deshalb immer im November.</p>
+          <p><strong>Klarnamenpflicht.</strong> Der bei Vor- und Nachname eingetragene Name wird dein Name in der Simulation. iRacing setzt auf Klarnamen.</p>
+          <p>Der anfangs angezeigte Preis ist ohne Steuern. Bezahlen kannst du per Kreditkarte, PayPal oder Venmo &mdash; auch zuk&uuml;nftige K&auml;ufe von Autos und Strecken.</p>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="section-header">
+          <h2><span class="icon">&#128187;</span> 2. Member Site &amp; erster Blick ins UI</h2>
+          <p>Wo du dein Konto verwaltest und den Client herunterl&auml;dst</p>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+          <p>Nach der Anmeldung landest du auf der <strong>Member Site</strong>. Hier l&auml;uft alles rund um deine Mitgliedschaft zusammen: eigene Daten, Passwort- und E-Mail-Wechsel, Order History (gekaufte Inhalte), Subscription &mdash; und der Download des iRacing-Clients.</p>
+          <p>(Es gibt noch eine Browser-Version aus alten Zeiten. Praktisch niemand benutzt sie mehr &mdash; lade einfach den richtigen Client herunter.)</p>
+          <p>Beim ersten Blick ins iRacing-UI ist es viel auf einmal. Wir gehen nicht auf alles ein &mdash; vieles brauchst du erst sp&auml;ter. Aber du solltest wissen, wo deine Rennen liegen und wo deine Ergebnisse auftauchen.</p>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="section-header">
+          <h2><span class="icon">&#128269;</span> 3. Rennen finden &mdash; erst den Rookie-Filter setzen</h2>
+          <p>Der wichtigste Tipp f&uuml;r Neueinsteiger im UI</p>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+          <p>In der linken Men&uuml;leiste &ouml;ffnest du <strong>Official</strong>. Hier sind alle offiziellen Serien gelistet &mdash; Oval, Formel, Sportscar, Dirt, NASCAR. Um es &uuml;bersichtlich zu halten, klickst du rechts oben auf <strong>Tags</strong> und aktivierst <strong>Rookie</strong>. Jetzt siehst du nur noch Serien, die du als Rookie tats&auml;chlich fahren darfst.</p>
+          <p>Jede Zeile zeigt: einen Stern zum Favorisieren, einen Countdown bis zum n&auml;chsten Event, die Anzahl registrierter Fahrer, die Lizenz, den Seriennamen, das Auto, die aktuelle Strecke, ob es ein Team-Event ist, ob das Setup fix oder frei ist &mdash; und einen gr&uuml;nen Haken, wenn du teilnehmen darfst.</p>
+          <p><strong>Tipp:</strong> registriere dich nicht direkt &uuml;ber die Liste, sondern klicke den Seriennamen an. Auf der Detailseite findest du deutlich mehr n&uuml;tzliche Infos &mdash; Renndauer, Wetter, n&auml;chste Sessions.</p>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="section-header">
+          <h2><span class="icon">&#127937;</span> 4. Training: Test Drive vs. Practice Server</h2>
+          <p>Zwei Wege, die Strecke vor dem Rennen zu lernen</p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <span class="card-tag iracing">Test Drive</span>
+            <h3>Allein, unter Rennbedingungen</h3>
+            <p><strong>More Ways to Race &rarr; Test Drive.</strong> Ein privater Server mit den echten Rennbedingungen der Woche &mdash; nur f&uuml;r dich. Perfekt f&uuml;r die ersten Runden auf einer neuen Strecke, wenn du niemanden um dich herum haben willst.</p>
+          </div>
+          <div class="card">
+            <span class="card-tag iracing">Practice Server</span>
+            <h3>Training mit anderen</h3>
+            <p>Auf der Serien-Detailseite ein St&uuml;ck nach unten scrollen &mdash; dort findest du die Live-Practice-Server. Nimm einen Server passend zu deiner Region &mdash; Ping z&auml;hlt. Beispiel: 17&nbsp;ms in Europa vs. 117&nbsp;ms in den USA macht einen echten Unterschied.</p>
+          </div>
+        </div>
+        <div style="max-width: 900px; margin: 1rem auto 0; padding: 0 1.5rem; font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+          <p>Im rechten Men&uuml; der Serienseite stehen weitere n&uuml;tzliche Infos: Renndauer, minimale und maximale Starterzahl (damit das Rennen z&auml;hlt), wie viele Incident Points (<strong>X</strong>) du sammeln darfst, bevor du disqualifiziert wirst, ob ein Fast Repair verf&uuml;gbar ist und welcher Startmodus (Standing oder Rolling).</p>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="section-header">
+          <h2><span class="icon">&#127938;</span> 5. Renntag &mdash; Schritt f&uuml;r Schritt</h2>
+          <p>Von <em>Register</em> bis zur Zielflagge</p>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+          <p>Die Registrierung &ouml;ffnet sich <strong>30&nbsp;Minuten</strong> vor Rennstart. Nach Klick auf <strong>Register</strong> wird der Button zu <strong>Withdraw</strong> &mdash; du kannst dich jederzeit wieder abmelden, solange das Fenster offen ist.</p>
+          <p>W&auml;hrend sich das Rennen f&uuml;llt, erscheint oben rechts <strong>Join Practice</strong>. Klick drauf, um dich auf dem Practice-Server warmzufahren (Laden kann einen Moment dauern). Achte auf den Briefing-Kasten auf dem Bildschirm &mdash; er zeigt dir die Off-Track-Zonen, die du unbedingt meiden solltest.</p>
+          <p>Wenn dein Rennen startet, wirst du automatisch in die Session geportet &mdash; oder du dr&uuml;ckst lange <strong>Escape</strong> und klickst oben rechts auf <strong>Race</strong>.</p>
+          <p>Die Session besteht aus drei Teilen: kurzes <strong>Practice</strong> (~3&nbsp;min, damit alle in Ruhe joinen k&ouml;nnen), <strong>Qualifying</strong> (~8&nbsp;min, zwei gewertete Runden), dann das <strong>Rennen</strong>. F&uuml;r die Startaufstellung musst du <strong>Grid</strong> klicken &mdash; sonst startest du aus der Box.</p>
+          <p>Die <strong>wei&szlig;e Flagge</strong> markiert die letzte Runde, die <strong>Zielflagge</strong> das Ziel. <strong>Bleib nach der Ziellinie nicht sofort stehen</strong> &mdash; das kostet Safety Rating und andere k&ouml;nnen in dich reinfahren. Rolle noch ein St&uuml;ck vorsichtig aus, dann halte an.</p>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="section-header">
+          <h2><span class="icon">&#128200;</span> 6. Ergebnisse richtig lesen</h2>
+          <p>Wo du iRating, Safety Rating und Rundendaten nach dem Rennen findest</p>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+          <p>Nach jedem Rennen bekommst du ein Pop-up, dass deine Results bereitliegen. Klick es an oder geh &uuml;ber <strong>Results &amp; Stats</strong> unten links im Men&uuml;.</p>
+          <p>Rufst du die Ergebnisse &uuml;ber die Serienseite auf, siehst du alle parallelen <em>Splits</em> &mdash; hilfreich bei gro&szlig;en Starterfeldern, aber du musst deinen eigenen Split erst suchen.</p>
+          <p>Die Ergebnisseite zeigt deine Rundenzeiten, die Durchschnittszeit, gefahrene Runden, die St&auml;rke des Feldes &mdash; und vor allem die <strong>Ver&auml;nderung deines Safety Ratings</strong> und deines <strong>iRatings</strong>. Scroll zu deinem Namen f&uuml;r deine Best Lap und die Anzahl der X (Incident Points).</p>
+          <p>F&uuml;r die kommenden Wochen der gleichen Serie klickst du oben auf <strong>Schedule</strong>. Hier kannst du dich schon vorbereiten und sogar Test Drives starten (Multiplayer-Practice-Server gibt es immer erst ab Dienstag, wenn die neue Woche offiziell startet).</p>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="section-header">
+          <h2><span class="icon">&#128663;</span> 7. Rookie-Autos &amp; Serien &mdash; alles kostenlos dabei</h2>
+          <p>Am Anfang musst du nichts kaufen</p>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+          <p>Mit gesetztem Rookie-Filter wirkt die Liste erst lang &mdash; sie teilt sich in Oval, Formel, Sportscar, Dirt Oval und NASCAR auf. Und nein: genau wie im echten Leben startest du nicht mit einem 700-PS-GT3, sondern klein.</p>
+          <p>Im Bereich <strong>Sportscar</strong> gibt es zwei Autos zur Auswahl: den <strong>BMW M2</strong> und den <strong>Mazda MX-5</strong>. Beide extrem beliebte Einstiegsserien. Der Mazda ist der klassische Rookie-Starter seit Jahren; der BMW ist erst seit Kurzem dabei.</p>
+          <p>In <strong>Formel</strong> gibt es ebenfalls zwei Auto/Strecken-Kombinationen. Dirt Oval bietet etwas mehr, NASCAR etwas weniger.</p>
+          <p><strong>Alle Rookie-Autos sind im Abo kostenlos enthalten.</strong> Auch die 12 Strecken, die &uuml;ber eine Saison rotieren, sind dabei. Erst nach dem Aufstieg aus der Rookie-Lizenz musst du &uuml;berhaupt Autos oder Strecken kaufen.</p>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="section-header">
+          <h2><span class="icon">&#128202;</span> 8. Das Rating-System: SR &amp; iR</h2>
+          <p>Wie du aus der Rookie-Klasse rauskommst &mdash; und was jedes Rating bedeutet</p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <span class="card-tag iracing">Safety Rating (SR)</span>
+            <h3>Wie sauber du f&auml;hrst</h3>
+            <p>Der SR misst, wie sicher du im Rennen unterwegs bist. Kontakt mit anderen Autos und Track-Limits-Verst&ouml;&szlig;e kosten Incident Points (<strong>X</strong>). Zu viele X in einem Rennen &rarr; Disqualifikation. Viele X &uuml;ber die Zeit &rarr; SR-Verlust. Sauberes Rennen &rarr; SR-Gewinn. Die genaue Formel h&auml;lt iRacing geheim, aber Kurvenanzahl und Renndauer spielen eine gro&szlig;e Rolle.</p>
+          </div>
+          <div class="card">
+            <span class="card-tag iracing">Aufstieg aus Rookie</span>
+            <h3>Wege aus der Rookie-Klasse</h3>
+            <p><strong>SR &ge; 3,0 zum Saisonende</strong> &rarr; automatischer Aufstieg mit Saisonwechsel.<br><strong>SR &ge; 4,0 w&auml;hrend der Saison</strong> &rarr; sofortiger Aufstieg, ohne Warten.<br>(Abstieg gibt es bei h&ouml;heren Lizenzen: F&auml;llst du zum Saisonende unter 2,0 oder w&auml;hrend der Saison unter 1,0, geht's runter. Rookies k&ouml;nnen nicht absteigen.)</p>
+          </div>
+          <div class="card">
+            <span class="card-tag iracing">iRating (iR)</span>
+            <h3>Skill-Niveau &amp; Matchmaking</h3>
+            <p>Das iRating spiegelt deine Leistungsst&auml;rke wider &mdash; man kann es sich wie skillbasiertes Matchmaking vorstellen. Du wirst Fahrern zugeteilt, die &auml;hnliches iR haben. Starker Finish gegen die Strength of Field (<strong>SOF</strong>) &rarr; iR-Gewinn. Schwach &rarr; iR-Verlust. <strong>Achte am Anfang nicht zu verbissen aufs iRating.</strong> Fokus auf sauberes, kontrolliertes Fahren &mdash; das iR regelt sich mit der Zeit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="section-header">
+          <h2><span class="icon">&#128170;</span> 9. Bleib dran</h2>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+          <p>Die ersten Wochen k&ouml;nnen ern&uuml;chternd sein &mdash; du drehst dich raus, jemand f&auml;hrt dich an, du landest weiter hinten als gehofft. Bleib dran. In der Rookie-Klasse sind alle Anf&auml;nger. Manche kommen von anderen Sims und sind bereits schnell; andere haben noch nie Sim-Racing gemacht und lernen gerade erst alles. Das gleicht sich schnell aus.</p>
+          <p>Rush nicht durch zu den GT3. Lerne die Autos, die Linien, das Verteidigen, das Wettersystem. Genie&szlig; den Prozess, ein besserer Fahrer zu werden &mdash; darum geht's eigentlich.</p>
+          <p style="margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(255,107,53,0.08); border-left: 3px solid var(--accent-orange); border-radius: 0 8px 8px 0; font-size: 0.95rem; color: rgba(255,255,255,0.85);"><strong style="color: var(--accent-orange);">Bereit f&uuml;r Dashboards &amp; RPM-Lights?</strong> Sobald iRacing l&auml;uft, wollen die meisten Sim-Racer schnell <strong>SimHub</strong> dazu &mdash; f&uuml;r richtige DDU-Dashboards, RPM-Bars, Wind-Sim und Bass-Shaker. Einfach weiter scrollen oder direkt zum <a href="#simhub-guide" style="color: var(--accent-orange); text-decoration: underline;">SimHub Anf&auml;nger-Guide unten</a>.</p>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- ================================================================= -->
+    <!-- SimHub Anf&auml;nger-Guide                                           -->
+    <!-- ================================================================= -->
+    <article id="simhub-guide">
 
     <!-- Was ist SimHub -->
     <div class="sub-section" id="what">
@@ -330,6 +494,9 @@
         <p style="margin-top: 1.2rem; font-size: 0.9rem; color: rgba(255,255,255,0.6);"><em>Dieser Guide ist ein community-orientierter Walkthrough. Die tiefste Referenz zu einzelnen Features liefert die offizielle SimHub-Dokumentation auf <a href="https://github.com/SHWotever/SimHub" target="_blank" rel="noopener" style="color: var(--accent-yellow);">github.com/SHWotever/SimHub</a> und die <a href="https://www.simhubdash.com/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">offizielle SimHub-Seite</a>. Der Einsteiger-Walkthrough-Stil ist inspiriert von Richard Baxters ausgezeichnetem "SimHub Setup: A First Timer's Guide to Getting Started" auf Boosted Media.</em></p>
       </div>
     </div>
+
+    </article>
+    <!-- Ende #simhub-guide -->
 
   </main>
 
