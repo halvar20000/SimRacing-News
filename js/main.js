@@ -357,34 +357,117 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       })
       .then(data => {
-        if (!data || !data.results) return;
-        const isDE = (document.documentElement.lang || '').toLowerCase().startsWith('de');
-        const labelTBA = isDE ? '—' : '—';
+        if (!data) return;
+        const isDE2 = (document.documentElement.lang || '').toLowerCase().startsWith('de');
+
+        // ----- Results (per-round winner/pole/FL cells) -----
+        // Two shapes are supported:
+        //   Flat:    { "1": { winner, pole, fastestLap } }                  — used by CC, SFL, PCCD, GT4, IEC
+        //   Classed: { "1": { pro: {...}, am: {...} } }                    — used by WCT (Pro + AM)
+        function escapeHTML(s) {
+          return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+        function isClassed(r) {
+          return r && typeof r === 'object' && (('pro' in r) || ('am' in r));
+        }
+        function flatHasAny(r) {
+          return ((r.winner||'').trim() || (r.pole||'').trim() || (r.fastestLap||'').trim());
+        }
         let filledCount = 0;
-        document.querySelectorAll('tr[data-series][data-round]').forEach(tr => {
-          const series = tr.getAttribute('data-series');
-          const round = tr.getAttribute('data-round');
-          const seriesResults = data.results[series];
-          if (!seriesResults) return;
-          const r = seriesResults[round];
-          if (!r) return;
-          const cells = tr.querySelectorAll('td.result-cell');
-          if (cells.length < 3) return;
-          const vals = [r.winner || '', r.pole || '', r.fastestLap || ''];
-          const hasAny = vals.some(v => v && v.trim().length > 0);
-          cells.forEach((td, i) => {
-            const v = vals[i];
-            if (v && v.trim().length > 0) {
-              td.textContent = v;
-              td.classList.add('filled');
+        if (data.results) {
+          document.querySelectorAll('tr[data-series][data-round]').forEach(tr => {
+            const series = tr.getAttribute('data-series');
+            const round = tr.getAttribute('data-round');
+            const seriesResults = data.results[series];
+            if (!seriesResults) return;
+            const r = seriesResults[round];
+            if (!r) return;
+            const cells = tr.querySelectorAll('td.result-cell');
+            if (cells.length < 3) return;
+
+            let rowHasAny = false;
+            if (isClassed(r)) {
+              const pro = r.pro || {};
+              const am  = r.am  || {};
+              const keys = ['winner', 'pole', 'fastestLap'];
+              rowHasAny = flatHasAny(pro) || flatHasAny(am);
+              cells.forEach((td, i) => {
+                const key = keys[i];
+                const pv = (pro[key] || '').trim();
+                const av = (am[key]  || '').trim();
+                td.innerHTML =
+                    '<span class="class-line"><span class="class-label pro">Pro</span>' + (pv ? escapeHTML(pv) : '&mdash;') + '</span>'
+                  + '<span class="class-line"><span class="class-label am">AM</span>'  + (av ? escapeHTML(av) : '&mdash;') + '</span>';
+                if (pv || av) td.classList.add('filled'); else td.classList.remove('filled');
+              });
             } else {
-              td.innerHTML = '&mdash;';
-              td.classList.remove('filled');
+              // Flat shape — original behavior.
+              const vals = [r.winner || '', r.pole || '', r.fastestLap || ''];
+              rowHasAny = vals.some(v => v && v.trim().length > 0);
+              cells.forEach((td, i) => {
+                const v = vals[i];
+                if (v && v.trim().length > 0) {
+                  td.textContent = v;
+                  td.classList.add('filled');
+                } else {
+                  td.innerHTML = '&mdash;';
+                  td.classList.remove('filled');
+                }
+              });
+            }
+            if (rowHasAny) { tr.classList.add('completed'); filledCount++; }
+          });
+        }
+        console.info('[CAS results] Loaded ' + RESULTS_URL + ' (lastUpdated: ' + (data.lastUpdated || 'unknown') + ') — ' + filledCount + ' rows populated.');
+
+        // ----- Standings (Top 5 per series) -----
+        // HTML: <div class="standings-section" data-series="sched-xxx">
+        //         <table class="standings-table" [data-class="pro"|"am"]><tbody>...</tbody></table>
+        //       </div>
+        // JSON: data.standings[series] is either a flat array or { pro: [], am: [] }
+        const emptyRowText = isDE2
+          ? 'Noch keine Daten \u2014 wird nach dem Rennen aktualisiert.'
+          : 'No data yet \u2014 will update after the next race.';
+        function renderStandingsRows(tbody, entries) {
+          if (!entries || entries.length === 0) {
+            tbody.innerHTML = '<tr class="empty"><td colspan="3">' + emptyRowText + '</td></tr>';
+            return 0;
+          }
+          // Sort defensively by explicit pos if provided, else by points desc.
+          const sorted = entries.slice().sort((a, b) => {
+            if (typeof a.pos === 'number' && typeof b.pos === 'number') return a.pos - b.pos;
+            return (b.points || 0) - (a.points || 0);
+          });
+          const top = sorted.slice(0, 5);
+          tbody.innerHTML = top.map((e, i) => {
+            const pos = (typeof e.pos === 'number' ? e.pos : i + 1);
+            const driver = escapeHTML(e.driver || '');
+            const points = (e.points != null ? e.points : '');
+            return '<tr><td class="pos">' + pos + '</td><td>' + driver + '</td><td class="pts">' + points + '</td></tr>';
+          }).join('');
+          return top.length;
+        }
+
+        let standingsRendered = 0;
+        if (data.standings) {
+          document.querySelectorAll('.standings-section[data-series]').forEach(section => {
+            const series = section.getAttribute('data-series');
+            const block = data.standings[series];
+            if (block === undefined) return;
+            if (Array.isArray(block)) {
+              // Flat array → single table.
+              const tbody = section.querySelector('table.standings-table tbody');
+              if (tbody) standingsRendered += renderStandingsRows(tbody, block);
+            } else if (block && typeof block === 'object') {
+              // Classed: { pro: [...], am: [...] }
+              Object.keys(block).forEach(classKey => {
+                const tbl = section.querySelector('table.standings-table[data-class="' + classKey + '"] tbody');
+                if (tbl) standingsRendered += renderStandingsRows(tbl, block[classKey]);
+              });
             }
           });
-          if (hasAny) { tr.classList.add('completed'); filledCount++; }
-        });
-        console.info('[CAS results] Loaded ' + RESULTS_URL + ' (lastUpdated: ' + (data.lastUpdated || 'unknown') + ') — ' + filledCount + ' rows populated.');
+        }
+        console.info('[CAS standings] Rendered ' + standingsRendered + ' driver rows across series tables.');
       })
       .catch(err => {
         console.error('[CAS results] Network error fetching ' + RESULTS_URL + ':', err);

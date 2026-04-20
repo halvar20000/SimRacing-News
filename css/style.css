@@ -371,6 +371,111 @@ main {
 .card-tag.cas { background: rgba(231, 76, 60, 0.15); color: #e74c3c; }
 .card-tag.real { background: rgba(212, 175, 55, 0.15); color: #d4af37; }
 
+/* ===== MULTI-CLASS RESULT CELLS (WCT Pro / AM) ===== */
+.result-cell .class-line {
+  display: block;
+  line-height: 1.55;
+}
+.result-cell .class-line + .class-line {
+  margin-top: 0.15rem;
+}
+.class-label {
+  display: inline-block;
+  min-width: 2.2em;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.05rem 0.35rem;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.class-label.pro { background: rgba(255, 107, 53, 0.18); color: var(--accent-orange); }
+.class-label.am  { background: rgba(255, 209, 102, 0.18); color: var(--accent-yellow); }
+
+/* ===== STANDINGS TABLES ===== */
+.standings-section {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  padding: 1.25rem 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+}
+.standings-section .standings-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+}
+.standings-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.standings-grid.dual {
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 720px) {
+  .standings-grid.dual { grid-template-columns: 1fr; }
+}
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: rgba(18, 18, 26, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.standings-table caption {
+  caption-side: top;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-red);
+  padding: 0 0 0.55rem;
+  text-align: left;
+}
+.standings-table th {
+  text-align: left;
+  padding: 0.55rem 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(10, 10, 15, 0.4);
+}
+.standings-table td {
+  padding: 0.5rem 0.85rem;
+  border-bottom: 1px solid rgba(42, 42, 62, 0.4);
+  color: var(--text-primary);
+}
+.standings-table tbody tr:last-child td { border-bottom: 0; }
+.standings-table tbody tr:first-child td { color: #fff; font-weight: 600; }
+.standings-table .pos { width: 40px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.standings-table .pts {
+  width: 70px;
+  text-align: right;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--accent-orange);
+  font-variant-numeric: tabular-nums;
+}
+.standings-table tr.empty td {
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: 1rem 0.85rem;
+}
+
 /* ===== TRIBUTE / MEMORIAL BLOCK ===== */
 .tribute {
   background: linear-gradient(180deg, #14141e 0%, #0f0f18 100%);
