@@ -1183,6 +1183,34 @@ footer .footer-links a:hover { color: var(--accent-red); }
 /* Smooth scroll for hash anchors (e.g. #sched-cc from the banner button) */
 html { scroll-behavior: smooth; }
 
+/* ===== Hero jump button (iRacing page "Jump to This Week's Schedule") ===== */
+.jump-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0088ff, #0066cc);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 12px rgba(0, 136, 255, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jump-button:hover {
+  background: linear-gradient(135deg, #33a0ff, #0088ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 136, 255, 0.45);
+}
+
+/* Extra breathing room so anchor-jumps don't hide the heading behind the sticky header */
+#this-week { scroll-margin-top: 90px; }
+
 /* ===== CAS Schedule: Result columns (Winner / Pole / Fastest Lap) ===== */
 .comparison-table td.result-cell {
   color: rgba(255, 255, 255, 0.35);
