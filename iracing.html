@@ -99,6 +99,63 @@
       </div>
     </div>
 
+    <!-- Spark Graphics Engine -->
+    <div class="sub-section" id="spark-engine">
+      <div class="section-header">
+        <h2><span class="icon">&#10024;</span> The Future: iRacing&rsquo;s New &ldquo;Spark&rdquo; Graphics Engine</h2>
+        <p>A ground-up rewrite happening quietly beneath a service that never stops racing</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto 2rem; padding: 0 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+        <p>While millions of laps are being completed every week, iRacing is carrying out one of the most ambitious &mdash; and most invisible &mdash; transformations in its history: a complete rewrite of its graphics engine and a large part of its internal architecture. The new engine is called <strong style="color: var(--accent-orange);">Spark</strong>, and it is not a patch, not a visual update, not a tweak. It is open-heart surgery on a live, competitive simulator.</p>
+        <p>Unlike most studios, iRacing has deliberately chosen <em>not</em> to move to Unreal or Unity. Professional simulation needs very low latency, extremely high-frequency physics, millimeter-precise surface data, and absolute stability under heavy load &mdash; trade-offs that general-purpose engines cannot always make cleanly. Spark&rsquo;s design philosophy is blunt: <strong>performance first, aesthetics second</strong>. And a major milestone has already been reached &mdash; the so-called <em>vertical slice</em>, where the engine can load a circuit, integrate a car, process the simulation and render the full scene end to end. It doesn&rsquo;t have all its final polish yet, but it works. In engineering terms, that&rsquo;s the moment a promising idea becomes a real foundation.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag iracing">Nighttime Lighting</span>
+          <h3>Hundreds of Dynamic Lights, Properly</h3>
+          <p>Night has always been one of iRacing&rsquo;s weaker visual areas &mdash; not for lack of ambition, but because the old engine simply couldn&rsquo;t juggle dozens of cars with multiple dynamic light sources each. Spark changes that radically. Hundreds of dynamic lights can now be handled efficiently: brake lights, headlights, reflections on wet tarmac, projected shadows &mdash; all coherent parts of the scene rather than approximations. Night stops being a technical obstacle and becomes a visual opportunity.</p>
+          <span class="card-date">Spark Engine &middot; 2026</span>
+        </div>
+        <div class="card">
+          <span class="card-tag iracing">Environment</span>
+          <h3>Vegetation Finally Part of the Lighting System</h3>
+          <p>In the old engine, trees and vegetation existed but weren&rsquo;t truly integrated into global lighting &mdash; no consistent shadows, no real response to the surrounding scene. With Spark, vegetation receives light, casts shadows, and adds real depth. It&rsquo;s not something anyone points to specifically, but the brain notices. Realism stops being a deliberate effort and starts being a natural sensation.</p>
+          <span class="card-date">Spark Engine &middot; 2026</span>
+        </div>
+        <div class="card">
+          <span class="card-tag iracing">Performance</span>
+          <h3>Genuine Multi-Threading, Finally</h3>
+          <p>For years, iRacing&rsquo;s biggest limitation wasn&rsquo;t your GPU &mdash; it was its dependence on a single CPU thread. In complex situations (race starts, pile-ups, heavy traffic) that one core saturated and dragged everything down with it. Spark brings a proper multi-threaded architecture: physics and rendering work in parallel across multiple cores, freeing the main thread. The result is not just higher frame rates &mdash; it&rsquo;s much better stability and consistency, especially when things get chaotic.</p>
+          <span class="card-date">Spark Engine &middot; 2026</span>
+        </div>
+        <div class="card">
+          <span class="card-tag iracing">Audio</span>
+          <h3>Spatial Reverb &mdash; 50% Less Audio Load</h3>
+          <p>A welcome side-effect of the optimisation work: the audio system&rsquo;s computational load has been reduced by <strong>more than 50%</strong>. The headroom has been used to add spatial reverberation &mdash; engines that sound different depending on their surroundings, real echoes in street circuits, far more nuanced mechanical detail. It&rsquo;s not a checkbox feature, but you feel it the moment everything starts to sound right.</p>
+          <span class="card-date">Spark Engine &middot; 2026</span>
+        </div>
+        <div class="card">
+          <span class="card-tag iracing">VR</span>
+          <h3>Foveated Rendering with Eye Tracking</h3>
+          <p>In VR, every millisecond matters. Spark integrates one of the most advanced techniques available: <strong>foveated rendering with eye tracking</strong>. The system detects where you&rsquo;re looking and concentrates maximum visual quality there, reducing detail in the periphery where your eye can&rsquo;t tell the difference. The result is a massive optimisation with no perceptible quality loss &mdash; the difference between an acceptable VR experience and a truly immersive one.</p>
+          <span class="card-date">Spark Engine &middot; 2026</span>
+        </div>
+        <div class="card">
+          <span class="card-tag iracing">Tire Model</span>
+          <h3>New Tire Model: Asymmetric Asperity Pressure</h3>
+          <p>Underneath the visuals, the simulation itself is evolving. A new tire model introduces concepts like <em>asymmetric asperity pressure</em>. Translated from engineering-speak: more predictable response, more coherent thermal behaviour, fewer abrupt grip-loss cliffs. In short, cars that behave more logically. You can have the best graphics in the world, but if the car doesn&rsquo;t inspire confidence, none of it matters &mdash; and this is where the real simulation upgrade lives.</p>
+          <span class="card-date">Spark Engine &middot; 2026</span>
+        </div>
+      </div>
+
+      <div style="max-width: 900px; margin: 2rem auto 0; padding: 1rem 1.5rem; font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.8); background: rgba(0,200,120,0.08); border-left: 4px solid #00c878; border-radius: 0 8px 8px 0;">
+        <p style="margin: 0 0 0.6rem;"><strong style="color: #00c878;">When will we see it?</strong> Spark won&rsquo;t land in a single dramatic drop. iRacing is integrating it progressively, making sure each step is stable before the next &mdash; slower, but much safer for a service thousands of people depend on every day. If everything goes right, nobody will eventually talk about &ldquo;Spark&rdquo;: it will simply be taken for granted that the sim looks better, runs better, and feels more real. And that might be the greatest achievement possible &mdash; all this complexity dissolving into the simple sensation of being inside the car.</p>
+        <p style="margin: 0; font-size: 0.85rem; color: rgba(255,255,255,0.55);">Source: <a href="https://boxthislap.org/iracing-everything-we-know-about-iracings-new-graphics-engine-in-2026/" target="_blank" rel="noopener" style="color: var(--accent-orange);">BoxThisLap &mdash; Everything We Know About iRacing&rsquo;s New Graphics Engine in 2026</a>. Summary written by SimRacing Hub; no affiliation with BoxThisLap or iRacing.</p>
+      </div>
+    </div>
+
     <!-- AI & Features -->
     <div class="sub-section">
       <div class="section-header">
