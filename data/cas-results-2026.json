@@ -1,122 +1,542 @@
 {
   "$schema": "https://simracing-hub.com/data/cas-results.schema.json",
   "season": "2026",
-  "lastUpdated": "2026-04-19",
-  "changelog": "2026-04-19: Schema upgrade — WCT now supports Pro+AM classes (existing R1-R4 results migrated to .pro; .am empty for backfill). Added top-level standings block (Top 5 per series) — empty for backfill. Combined Cup standings preserved across the paused season. | 2026-04-19: Fixed invalid control characters (literal tabs in 'Andreas Wuschnakowski', leading space in 'Marcus Rothe') that prevented the browser from parsing this file. | 2026-04-18: PCCD R3 Spa-Francorchamps — Silvio Foth clean sweep (win / pole / FL).",
+  "lastUpdated": "2026-04-22",
+  "changelog": "2026-04-22: WCT auto-update — standings + round results refreshed from iRLeagueManager API. | 2026-04-19: Schema upgrade — WCT now supports Pro+AM classes (existing R1-R4 results migrated to .pro; .am empty for backfill). Added top-level standings block (Top 5 per series) — empty for backfill. Combined Cup standings preserved across the paused season. | 2026-04-19: Fixed invalid control characters (literal tabs in 'Andreas Wuschnakowski', leading space in 'Marcus Rothe') that prevented the browser from parsing this file. | 2026-04-18: PCCD R3 Spa-Francorchamps — Silvio Foth clean sweep (win / pole / FL).",
   "notes": "RESULTS — Per round, populate winner / pole / fastestLap. WCT uses nested classes: { 'pro': {...}, 'am': {...} } since the series runs Pro and AM together. Other series use the flat shape: { 'winner': '...', 'pole': '...', 'fastestLap': '...' }. STANDINGS — Top 5 per series, columns Pos / Driver / Points. WCT uses nested { 'pro': [...], 'am': [...] }; other series use a flat array. Leave empty arrays/strings for data not yet known — the UI shows an em-dash placeholder.",
   "results": {
     "sched-wct": {
-      "1":  { "pro": { "winner": "Yannick Wonnenberg", "pole": "Yannick Wonnenberg", "fastestLap": "Yannick Wonnenberg" }, "am": { "winner": "Klaus Oberlaender", "pole": "Klaus Oberlaender", "fastestLap": "Justin Christiansen" } },
-      "2":  { "pro": { "winner": "Maurice Becker",     "pole": "Luca-Maximilian Stein", "fastestLap": "Carl Sören Schober" }, "am": { "winner": "Christoph Kiesel", "pole": "Benjamin Warnow", "fastestLap": "Christoph Kiesel" } },
-      "3":  { "pro": { "winner": "Dennis Ulli Richter", "pole": "Yannick Wonnenberg", "fastestLap": "Dennis Ulli Richter" }, "am": { "winner": "Fritz Morawetz", "pole": "Klaus Oberlaender", "fastestLap": "Klaus Oberlaender" } },
-      "4":  { "pro": { "winner": "Yannick Wonnenberg", "pole": "Yannick Wonnenberg", "fastestLap": "Yannick Wonnenberg" }, "am": { "winner": "Max Coldron", "pole": "Christoph Kiesel", "fastestLap": "Christoph Kiesel" } },
-      "5":  { "pro": { "winner": "", "pole": "", "fastestLap": "" }, "am": { "winner": "", "pole": "", "fastestLap": "" } },
-      "6":  { "pro": { "winner": "", "pole": "", "fastestLap": "" }, "am": { "winner": "", "pole": "", "fastestLap": "" } },
-      "7":  { "pro": { "winner": "", "pole": "", "fastestLap": "" }, "am": { "winner": "", "pole": "", "fastestLap": "" } },
-      "8":  { "pro": { "winner": "", "pole": "", "fastestLap": "" }, "am": { "winner": "", "pole": "", "fastestLap": "" } },
-      "9":  { "pro": { "winner": "", "pole": "", "fastestLap": "" }, "am": { "winner": "", "pole": "", "fastestLap": "" } },
-      "10": { "pro": { "winner": "", "pole": "", "fastestLap": "" }, "am": { "winner": "", "pole": "", "fastestLap": "" } },
-      "11": { "pro": { "winner": "", "pole": "", "fastestLap": "" }, "am": { "winner": "", "pole": "", "fastestLap": "" } },
-      "12": { "pro": { "winner": "", "pole": "", "fastestLap": "" }, "am": { "winner": "", "pole": "", "fastestLap": "" } }
+      "1": {
+        "pro": {
+          "winner": "Yannick Wonnenberg",
+          "pole": "Yannick Wonnenberg",
+          "fastestLap": "Yannick Wonnenberg"
+        },
+        "am": {
+          "winner": "Klaus Oberlaender",
+          "pole": "Klaus Oberlaender",
+          "fastestLap": "Justin Christiansen"
+        }
+      },
+      "2": {
+        "pro": {
+          "winner": "Maurice Becker",
+          "pole": "Luca-Maximilian Stein",
+          "fastestLap": "Carl Sören Schober"
+        },
+        "am": {
+          "winner": "Christoph Kiesel",
+          "pole": "Benjamin Warnow",
+          "fastestLap": "Christoph Kiesel"
+        }
+      },
+      "3": {
+        "pro": {
+          "winner": "Dennis Ulli Richter",
+          "pole": "Yannick Wonnenberg",
+          "fastestLap": "Dennis Ulli Richter"
+        },
+        "am": {
+          "winner": "Fritz Morawetz",
+          "pole": "Klaus Oberlaender",
+          "fastestLap": "Klaus Oberlaender"
+        }
+      },
+      "4": {
+        "pro": {
+          "winner": "Yannick Wonnenberg",
+          "pole": "Yannick Wonnenberg",
+          "fastestLap": "Yannick Wonnenberg"
+        },
+        "am": {
+          "winner": "Max Coldron",
+          "pole": "Christoph Kiesel",
+          "fastestLap": "Christoph Kiesel"
+        }
+      },
+      "5": {
+        "pro": {
+          "winner": "Yannick Wonnenberg",
+          "pole": "Yannick Wonnenberg",
+          "fastestLap": "Yannick Wonnenberg"
+        },
+        "am": {
+          "winner": "Max Coldron",
+          "pole": "Max Coldron",
+          "fastestLap": "Klaus Oberlaender"
+        }
+      },
+      "6": {
+        "pro": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        },
+        "am": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        }
+      },
+      "7": {
+        "pro": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        },
+        "am": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        }
+      },
+      "8": {
+        "pro": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        },
+        "am": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        }
+      },
+      "9": {
+        "pro": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        },
+        "am": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        }
+      },
+      "10": {
+        "pro": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        },
+        "am": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        }
+      },
+      "11": {
+        "pro": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        },
+        "am": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        }
+      },
+      "12": {
+        "pro": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        },
+        "am": {
+          "winner": "",
+          "pole": "",
+          "fastestLap": ""
+        }
+      }
     },
     "sched-cc": {
-      "1":  { "winner": "Willi Brand", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
-      "2":  { "winner": "Willi Brand", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
-      "3":  { "winner": "Andreas Wuschnakowski", "pole": "Andreas Wuschnakowski", "fastestLap": "Andreas Wuschnakowski" },
-      "4":  { "winner": "Willi Brand", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
-      "5":  { "winner": "", "pole": "", "fastestLap": "" },
-      "6":  { "winner": "", "pole": "", "fastestLap": "" },
-      "7":  { "winner": "", "pole": "", "fastestLap": "" },
-      "8":  { "winner": "", "pole": "", "fastestLap": "" },
-      "9":  { "winner": "", "pole": "", "fastestLap": "" },
-      "10": { "winner": "", "pole": "", "fastestLap": "" },
-      "11": { "winner": "", "pole": "", "fastestLap": "" },
-      "12": { "winner": "", "pole": "", "fastestLap": "" }
+      "1": {
+        "winner": "Willi Brand",
+        "pole": "Willi Brand",
+        "fastestLap": "Willi Brand"
+      },
+      "2": {
+        "winner": "Willi Brand",
+        "pole": "Willi Brand",
+        "fastestLap": "Willi Brand"
+      },
+      "3": {
+        "winner": "Andreas Wuschnakowski",
+        "pole": "Andreas Wuschnakowski",
+        "fastestLap": "Andreas Wuschnakowski"
+      },
+      "4": {
+        "winner": "Willi Brand",
+        "pole": "Willi Brand",
+        "fastestLap": "Willi Brand"
+      },
+      "5": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "6": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "7": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "8": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "9": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "10": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "11": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "12": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      }
     },
     "sched-sfl": {
-      "1": { "winner": "Raphael Böhmer", "pole": "Raphael Böhmer", "fastestLap": "Raphael Böhmer" },
-      "2": { "winner": "Nigel Reichert", "pole": "Nigel Reichert", "fastestLap": "Nigel Reichert" },
-      "3": { "winner": "Michael Kelnberger", "pole": "Nigel Reichert", "fastestLap": "Dawid Dlugokecki" },
-      "4": { "winner": "Kevin Chmielewski", "pole": "Kevin Chmielewski", "fastestLap": "Kevin Chmielewski" },
-      "5": { "winner": "Marcus Rothe", "pole": "Michael Kelnberger", "fastestLap": "Michael Kelnberger" },
-      "6": { "winner": "", "pole": "", "fastestLap": "" },
-      "7": { "winner": "", "pole": "", "fastestLap": "" },
-      "8": { "winner": "", "pole": "", "fastestLap": "" }
+      "1": {
+        "winner": "Raphael Böhmer",
+        "pole": "Raphael Böhmer",
+        "fastestLap": "Raphael Böhmer"
+      },
+      "2": {
+        "winner": "Nigel Reichert",
+        "pole": "Nigel Reichert",
+        "fastestLap": "Nigel Reichert"
+      },
+      "3": {
+        "winner": "Michael Kelnberger",
+        "pole": "Nigel Reichert",
+        "fastestLap": "Dawid Dlugokecki"
+      },
+      "4": {
+        "winner": "Kevin Chmielewski",
+        "pole": "Kevin Chmielewski",
+        "fastestLap": "Kevin Chmielewski"
+      },
+      "5": {
+        "winner": "Marcus Rothe",
+        "pole": "Michael Kelnberger",
+        "fastestLap": "Michael Kelnberger"
+      },
+      "6": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "7": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "8": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      }
     },
     "sched-pccd": {
-      "1": { "winner": "Silvio Foth", "pole": "Silvio Foth", "fastestLap": "Andre Rajkovic" },
-      "2": { "winner": "Silvio Foth", "pole": "Willi Brand", "fastestLap": "Willi Brand" },
-      "3": { "winner": "Silvio Foth", "pole": "Silvio Foth", "fastestLap": "Silvio Foth" },
-      "4": { "winner": "", "pole": "", "fastestLap": "" },
-      "5": { "winner": "", "pole": "", "fastestLap": "" },
-      "6": { "winner": "", "pole": "", "fastestLap": "" },
-      "7": { "winner": "", "pole": "", "fastestLap": "" },
-      "8": { "winner": "", "pole": "", "fastestLap": "" }
+      "1": {
+        "winner": "Silvio Foth",
+        "pole": "Silvio Foth",
+        "fastestLap": "Andre Rajkovic"
+      },
+      "2": {
+        "winner": "Silvio Foth",
+        "pole": "Willi Brand",
+        "fastestLap": "Willi Brand"
+      },
+      "3": {
+        "winner": "Silvio Foth",
+        "pole": "Silvio Foth",
+        "fastestLap": "Silvio Foth"
+      },
+      "4": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "5": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "6": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "7": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "8": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      }
     },
     "sched-gt4": {
-      "1": { "winner": "Matthias Beer", "pole": "Alexander Hoche", "fastestLap": "Philip Eckert" },
-      "2": { "winner": "Matthias Beer", "pole": "Matthias Beer", "fastestLap": "Philip Eckert" },
-      "3": { "winner": "Pit Venanzi", "pole": "Matthias Beer", "fastestLap": "Pit Venanzi" },
-      "4": { "winner": "Matthias Beer", "pole": "Maurice Becker", "fastestLap": "Maurice Becker" },
-      "5": { "winner": "Kevin Hilgenhövel", "pole": "Kevin Hilgenhövel", "fastestLap": "Kevin Hilgenhövel" },
-      "6": { "winner": "Kevin Hilgenhövel", "pole": "Kevin Hilgenhövel", "fastestLap": "Kevin Hilgenhövel" },
-      "7": { "winner": "Philip Eckert", "pole": "Kevin Hilgenhövel", "fastestLap": "Matthias Beer" },
-      "8": { "winner": "", "pole": "", "fastestLap": "" }
+      "1": {
+        "winner": "Matthias Beer",
+        "pole": "Alexander Hoche",
+        "fastestLap": "Philip Eckert"
+      },
+      "2": {
+        "winner": "Matthias Beer",
+        "pole": "Matthias Beer",
+        "fastestLap": "Philip Eckert"
+      },
+      "3": {
+        "winner": "Pit Venanzi",
+        "pole": "Matthias Beer",
+        "fastestLap": "Pit Venanzi"
+      },
+      "4": {
+        "winner": "Matthias Beer",
+        "pole": "Maurice Becker",
+        "fastestLap": "Maurice Becker"
+      },
+      "5": {
+        "winner": "Kevin Hilgenhövel",
+        "pole": "Kevin Hilgenhövel",
+        "fastestLap": "Kevin Hilgenhövel"
+      },
+      "6": {
+        "winner": "Kevin Hilgenhövel",
+        "pole": "Kevin Hilgenhövel",
+        "fastestLap": "Kevin Hilgenhövel"
+      },
+      "7": {
+        "winner": "Philip Eckert",
+        "pole": "Kevin Hilgenhövel",
+        "fastestLap": "Matthias Beer"
+      },
+      "8": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      }
     },
     "sched-iec": {
-      "1": { "winner": "", "pole": "", "fastestLap": "" },
-      "2": { "winner": "", "pole": "", "fastestLap": "" },
-      "3": { "winner": "", "pole": "", "fastestLap": "" },
-      "4": { "winner": "", "pole": "", "fastestLap": "" },
-      "5": { "winner": "", "pole": "", "fastestLap": "" },
-      "6": { "winner": "", "pole": "", "fastestLap": "" }
+      "1": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "2": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "3": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "4": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "5": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      },
+      "6": {
+        "winner": "",
+        "pole": "",
+        "fastestLap": ""
+      }
     }
   },
   "standings": {
     "sched-wct": {
-		"pro": [
-		      { "pos": 1, "driver": "Gregor Micewski", "points": 132 },
-		      { "pos": 2, "driver": "Hendrik Stanzel",     "points": 128 },
-		      { "pos": 3, "driver": "Yannick Wonnenberg","points": 124 },
-		      { "pos": 4, "driver": "Dennis Ulli Richter","points": 122 },
-		      { "pos": 5, "driver": "Yannick Wonnenberg", "points": 116 }
-		    ],
-      "am":  [
-		      { "pos": 1, "driver": "Max Coldron", "points": 142 },
-		      { "pos": 2, "driver": "Klaus Oberlaender",     "points": 138 },
-		      { "pos": 3, "driver": "Justin Christiansen","points": 126 },
-		      { "pos": 4, "driver": "Christoph Kiesel","points": 118 },
-		      { "pos": 5, "driver": "Dirk Bolte", "points": 116 }
-		    ]
+      "pro": [
+        {
+          "pos": 1,
+          "driver": "Gregor Micewski",
+          "points": 166
+        },
+        {
+          "pos": 2,
+          "driver": "Mike Zocher",
+          "points": 162
+        },
+        {
+          "pos": 3,
+          "driver": "Yannick Wonnenberg",
+          "points": 156
+        },
+        {
+          "pos": 4,
+          "driver": "Dennis Ulli Richter",
+          "points": 152
+        },
+        {
+          "pos": 5,
+          "driver": "Hendrik Stanzel",
+          "points": 128
+        }
+      ],
+      "am": [
+        {
+          "pos": 1,
+          "driver": "Max Coldron",
+          "points": 182
+        },
+        {
+          "pos": 2,
+          "driver": "Klaus Oberlaender",
+          "points": 158
+        },
+        {
+          "pos": 3,
+          "driver": "Justin Christiansen",
+          "points": 158
+        },
+        {
+          "pos": 4,
+          "driver": "Fritz Morawetz",
+          "points": 147
+        },
+        {
+          "pos": 5,
+          "driver": "Christoph Kiesel",
+          "points": 146
+        }
+      ]
     },
-    "sched-cc":   [
-		      { "pos": 1, "driver": "Andreas Wuschnakowski", "points": 225 },
-		      { "pos": 2, "driver": "Willi Brand",     "points": 198 },
-		      { "pos": 3, "driver": "Thomas Herbrig","points": 108 },
-		      { "pos": 4, "driver": "Thomas Kuebler","points": 52 },
-		      { "pos": 5, "driver": "Daniel Brandt", "points": 0 }
-		    ],
-    "sched-sfl":  [
-		      { "pos": 1, "driver": "Kevin Chmielewski", "points": 197 },
-		      { "pos": 2, "driver": "Riccardo Cavoto",     "points": 194 },
-		      { "pos": 3, "driver": "Andreas Wuschnakowski","points": 188 },
-		      { "pos": 4, "driver": "Bernhard Wlach","points": 175 },
-		      { "pos": 5, "driver": "Michael Kelnberger", "points": 163 }
-		    ],
+    "sched-cc": [
+      {
+        "pos": 1,
+        "driver": "Andreas Wuschnakowski",
+        "points": 225
+      },
+      {
+        "pos": 2,
+        "driver": "Willi Brand",
+        "points": 198
+      },
+      {
+        "pos": 3,
+        "driver": "Thomas Herbrig",
+        "points": 108
+      },
+      {
+        "pos": 4,
+        "driver": "Thomas Kuebler",
+        "points": 52
+      },
+      {
+        "pos": 5,
+        "driver": "Daniel Brandt",
+        "points": 0
+      }
+    ],
+    "sched-sfl": [
+      {
+        "pos": 1,
+        "driver": "Kevin Chmielewski",
+        "points": 197
+      },
+      {
+        "pos": 2,
+        "driver": "Riccardo Cavoto",
+        "points": 194
+      },
+      {
+        "pos": 3,
+        "driver": "Andreas Wuschnakowski",
+        "points": 188
+      },
+      {
+        "pos": 4,
+        "driver": "Bernhard Wlach",
+        "points": 175
+      },
+      {
+        "pos": 5,
+        "driver": "Michael Kelnberger",
+        "points": 163
+      }
+    ],
     "sched-pccd": [
-		      { "pos": 1, "driver": "Silvio Foth", "points": 228 },
-		      { "pos": 2, "driver": "Andre Rajkovic",     "points": 199 },
-		      { "pos": 3, "driver": "Sean Pfennig","points": 127 },
-		      { "pos": 4, "driver": "Thomas Felix","points": 124 },
-		      { "pos": 5, "driver": "Benjamin Schlosser", "points": 123 }
-		    ],
-    "sched-gt4":  [
-		      { "pos": 1, "driver": "Matthias Beer", "points": 217 },
-		      { "pos": 2, "driver": "Pit Venanzi",     "points": 187 },
-		      { "pos": 3, "driver": "Philip Eckert","points": 179 },
-		      { "pos": 4, "driver": "Jürgen Raab","points": 114 },
-		      { "pos": 5, "driver": "Felix Löhner", "points": 97 }
-		    ],
-    "sched-iec":  []
+      {
+        "pos": 1,
+        "driver": "Silvio Foth",
+        "points": 228
+      },
+      {
+        "pos": 2,
+        "driver": "Andre Rajkovic",
+        "points": 199
+      },
+      {
+        "pos": 3,
+        "driver": "Sean Pfennig",
+        "points": 127
+      },
+      {
+        "pos": 4,
+        "driver": "Thomas Felix",
+        "points": 124
+      },
+      {
+        "pos": 5,
+        "driver": "Benjamin Schlosser",
+        "points": 123
+      }
+    ],
+    "sched-gt4": [
+      {
+        "pos": 1,
+        "driver": "Matthias Beer",
+        "points": 217
+      },
+      {
+        "pos": 2,
+        "driver": "Pit Venanzi",
+        "points": 187
+      },
+      {
+        "pos": 3,
+        "driver": "Philip Eckert",
+        "points": 179
+      },
+      {
+        "pos": 4,
+        "driver": "Jürgen Raab",
+        "points": 114
+      },
+      {
+        "pos": 5,
+        "driver": "Felix Löhner",
+        "points": 97
+      }
+    ],
+    "sched-iec": []
   }
 }

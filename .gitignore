@@ -1,6 +1,13 @@
 .deploy-key/
 push-to-github.sh
-.deploy-key/
-push-to-github.sh
-.deploy-key/
-push-to-github.sh
+
+# iRLeague puller — local artefacts that must never reach the repo
+scripts/__pycache__/
+scripts/*.env
+scripts/.env
+scripts/.env.*
+*.pyc
+
+# Python virtual environment for scripts/ — never push to GitHub
+.venv/
+venv/
