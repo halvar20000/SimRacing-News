@@ -334,9 +334,9 @@
         "fastestLap": "Matthias Beer"
       },
       "8": {
-        "winner": "",
-        "pole": "",
-        "fastestLap": ""
+        "winner": "Pit Venanzi",
+        "pole": "Matthias Beer",
+        "fastestLap": "Philip Eckert"
       }
     },
     "sched-iec": {
@@ -519,22 +519,22 @@
       {
         "pos": 2,
         "driver": "Pit Venanzi",
-        "points": 187
+        "points": 201
       },
       {
         "pos": 3,
         "driver": "Philip Eckert",
-        "points": 179
+        "points": 192
       },
       {
         "pos": 4,
         "driver": "Jürgen Raab",
-        "points": 114
+        "points": 137
       },
       {
         "pos": 5,
-        "driver": "Felix Löhner",
-        "points": 97
+        "driver": "Thomas Kuebler",
+        "points": 114
       }
     ],
     "sched-iec": []
