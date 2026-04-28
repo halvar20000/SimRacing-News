@@ -63,9 +63,23 @@
     <div class="hero-date">28. April 2026</div>
     <div style="margin-top: 1.2rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
       <a href="https://cas-community.com/" target="_blank" rel="noopener" style="display:inline-block; padding: 0.7rem 1.6rem; background: linear-gradient(135deg, #e74c3c, #c0392b); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: transform 0.2s;">&#127760; Besuche cas-community.com</a>
-      <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" style="display:inline-block; padding: 0.7rem 1.6rem; background: linear-gradient(135deg, var(--accent-orange), #d35400); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: transform 0.2s;">&#128202; League Manager &mdash; Live-Stand</a>
+      <!-- League-Manager-Button ausgeblendet, bis alle Ergebnisse hochgeladen sind -->
+      <!-- <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" style="display:inline-block; padding: 0.7rem 1.6rem; background: linear-gradient(135deg, var(--accent-orange), #d35400); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: transform 0.2s;">&#128202; League Manager &mdash; Live-Stand</a> -->
     </div>
   </section>
+
+  <!-- Section Jump Navigation -->
+  <div class="section-jump-nav" style="background: var(--bg-card); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1rem 0; position: sticky; top: 0; z-index: 90;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+      <a href="#sched-wct" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127942; GT3 WCT</a>
+      <a href="#sched-iec" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#9201;&#65039; IEC Endurance</a>
+      <a href="#sched-cc" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128260; Combined Cup</a>
+      <a href="#sched-sfl" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127953; SFL Cup</a>
+      <a href="#sched-pccd" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127937; PCCD</a>
+      <a href="#sched-gt4" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127939; TSS GT4</a>
+      <a href="#race-report" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128221; Renn-Bericht</a>
+    </div>
+  </div>
 
   <main>
 
@@ -789,5 +803,21 @@
   </footer>
 
   <script src="../js/main.js"></script>
+
+  <!-- Smooth scrolling for jump nav -->
+  <script>
+    document.querySelectorAll('.jump-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const navHeight = document.querySelector('.section-jump-nav').offsetHeight;
+        const y = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 10;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
