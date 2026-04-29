@@ -41,7 +41,10 @@
   <section class="hero" style="padding: 3rem 1.5rem;">
     <h1><span>Impressum</span></h1>
     <p>Angaben gem&auml;&szlig; &sect; 5 TMG (Telemediengesetz)</p>
-  </section>
+      <div class="visitor-counter" style="margin-top: 1.2rem; display: inline-block; padding: 0.5rem 1.5rem; border-radius: 8px; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3);">
+      <span id="visitor-count" style="font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--accent-orange);">&#128065; Lade Aufrufe gesamt...</span>
+    </div>
+</section>
 
   <main>
     <div class="sub-section" style="max-width: 800px; margin: 0 auto;">
@@ -122,5 +125,23 @@
   </footer>
 
   <script src="../js/main.js"></script>
+
+  <!-- Visitor Counter (Cloudflare Worker) -->
+  <script>
+    (function() {
+      var el = document.getElementById('visitor-count');
+      if (!el) return;
+      fetch('https://simracing-page-counter.simracing-hub.workers.dev/?page=site')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          el.innerHTML = '\uD83D\uDC41 ' + data.count.toLocaleString() + ' Aufrufe gesamt';
+        })
+        .catch(function() {
+          el.innerHTML = '\uD83D\uDC41 Aufrufe nicht verfügbar';
+          el.style.opacity = '0.5';
+        });
+    })();
+  </script>
+
 </body>
 </html>

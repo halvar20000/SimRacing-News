@@ -65,7 +65,10 @@
       <a href="#iracing-guide" style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.9rem 1.5rem; border-radius: 10px; background: linear-gradient(135deg, rgba(0,136,255,0.18), rgba(0,136,255,0.06)); border: 1px solid rgba(0,136,255,0.45); color: #66b6ff; text-decoration: none; font-family: var(--font-heading); font-size: 1rem; font-weight: 700; letter-spacing: 0.5px;">&#127937; iRacing &mdash; Sign Up to First Race</a>
       <a href="#simhub-guide" style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.9rem 1.5rem; border-radius: 10px; background: linear-gradient(135deg, rgba(255,107,53,0.18), rgba(255,107,53,0.06)); border: 1px solid rgba(255,107,53,0.45); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 1rem; font-weight: 700; letter-spacing: 0.5px;">&#127916; SimHub &mdash; Install, Dashboards &amp; Setup</a>
     </div>
-  </section>
+      <div class="visitor-counter" style="margin-top: 1.2rem; display: inline-block; padding: 0.5rem 1.5rem; border-radius: 8px; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3);">
+      <span id="visitor-count" style="font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--accent-orange);">&#128065; Loading site views...</span>
+    </div>
+</section>
 
   <!-- Section Jump Navigation -->
   <div class="section-jump-nav" style="background: var(--bg-card); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1rem 0; position: sticky; top: 0; z-index: 90;">
@@ -524,5 +527,23 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- Visitor Counter (Cloudflare Worker) -->
+  <script>
+    (function() {
+      var el = document.getElementById('visitor-count');
+      if (!el) return;
+      fetch('https://simracing-page-counter.simracing-hub.workers.dev/?page=site')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          el.innerHTML = '\uD83D\uDC41 ' + data.count.toLocaleString() + ' site views';
+        })
+        .catch(function() {
+          el.innerHTML = '\uD83D\uDC41 site views unavailable';
+          el.style.opacity = '0.5';
+        });
+    })();
+  </script>
+
 </body>
 </html>
