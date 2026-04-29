@@ -1,8 +1,8 @@
 {
   "$schema": "https://simracing-hub.com/data/cas-results.schema.json",
   "season": "2026",
-  "lastUpdated": "2026-04-22",
-  "changelog": "2026-04-22: WCT auto-update — standings + round results refreshed from iRLeagueManager API. | 2026-04-19: Schema upgrade — WCT now supports Pro+AM classes (existing R1-R4 results migrated to .pro; .am empty for backfill). Added top-level standings block (Top 5 per series) — empty for backfill. Combined Cup standings preserved across the paused season. | 2026-04-19: Fixed invalid control characters (literal tabs in 'Andreas Wuschnakowski', leading space in 'Marcus Rothe') that prevented the browser from parsing this file. | 2026-04-18: PCCD R3 Spa-Francorchamps — Silvio Foth clean sweep (win / pole / FL).",
+  "lastUpdated": "2026-04-29",
+  "changelog": "2026-04-29: WCT R6 Fuji — manual entry of round results (Pro: Becker win / Severn pole / Becker FL · AM: Krieger win / Endres pole / Krieger FL). Standings to be refreshed via scripts/update_cas.sh once API has Fuji data. | 2026-04-22: WCT auto-update — standings + round results refreshed from iRLeagueManager API. | 2026-04-19: Schema upgrade — WCT now supports Pro+AM classes (existing R1-R4 results migrated to .pro; .am empty for backfill). Added top-level standings block (Top 5 per series) — empty for backfill. Combined Cup standings preserved across the paused season. | 2026-04-19: Fixed invalid control characters (literal tabs in 'Andreas Wuschnakowski', leading space in 'Marcus Rothe') that prevented the browser from parsing this file. | 2026-04-18: PCCD R3 Spa-Francorchamps — Silvio Foth clean sweep (win / pole / FL).",
   "notes": "RESULTS — Per round, populate winner / pole / fastestLap. WCT uses nested classes: { 'pro': {...}, 'am': {...} } since the series runs Pro and AM together. Other series use the flat shape: { 'winner': '...', 'pole': '...', 'fastestLap': '...' }. STANDINGS — Top 5 per series, columns Pos / Driver / Points. WCT uses nested { 'pro': [...], 'am': [...] }; other series use a flat array. Leave empty arrays/strings for data not yet known — the UI shows an em-dash placeholder.",
   "results": {
     "sched-wct": {
@@ -68,14 +68,14 @@
       },
       "6": {
         "pro": {
-          "winner": "",
-          "pole": "",
-          "fastestLap": ""
+          "winner": "Maurice Becker",
+          "pole": "Maurice Becker",
+          "fastestLap": "Maurice Becker"
         },
         "am": {
-          "winner": "",
-          "pole": "",
-          "fastestLap": ""
+          "winner": "Michael Krieger",
+          "pole": "Michael Endres",
+          "fastestLap": "Michael Krieger"
         }
       },
       "7": {
