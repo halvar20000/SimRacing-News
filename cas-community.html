@@ -250,6 +250,78 @@
       </details>
     </div>
 
+    <!-- Post-Race Briefing -->
+    <div class="sub-section" id="post-briefing">
+      <div class="section-header">
+        <h2><span class="icon">&#127908;</span> Post-Race Briefing &mdash; Fuji R6</h2>
+        <p>The Speed Monkeys&rsquo; Wednesday community debrief &mdash; drivers review the incidents together, share cockpit perspectives and agree on how to race cleaner next week</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag cas">Lap&nbsp;1, Daichi Corner</span>
+          <h3>Holding the inside line under braking</h3>
+          <p>A T1 contact between two drivers triggered the longest racecraft discussion of the evening. The driver who came inside felt he held his line and braked at his usual marker; the front car ahead drifted across and braked early in front of him. The room&rsquo;s consensus: if you commit to the inside under braking, <strong>stay there, hold the line, accelerate out</strong>. Drifting back across is technically &ldquo;moving under braking&rdquo; and creates exactly this kind of contact.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-tag cas">Last-Lap Contact</span>
+          <h3>Penultimate-corner touch and a retaliation push</h3>
+          <p>The same two drivers met again on the last lap &mdash; this time the chasing car was on the <em>outside</em>, the front car braked towards the outside, and contact let the chaser through. What turned the room serious wasn&rsquo;t the contact itself but the <em>aftermath</em>: a deliberate push at the start-finish line. Yannick&rsquo;s appeal: emotion is normal, but no one in the league deserves an intentional ramming &mdash; especially with the strong direct-drive wheels in use.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-tag cas">iRaceControl Edge Cases</span>
+          <h3>Blue-flag tool: real-world tuning needed</h3>
+          <p>The new 0.5&nbsp;s blue-flag whisper system worked for clear cases, but produced odd results in two real situations: a recovering driver who, after a spin, kept being told to yield to a lapper he was actually faster than; and the 0.5&nbsp;s threshold resetting awkwardly when the lapping car sits in slipstream rather than passing. Open ideas: time-window tuning, lap-time-aware logic, or simply leaving it off if the next races confirm it isn&rsquo;t solving a real problem.</p>
+        </div>
+      </div>
+
+      <details style="max-width: 1200px; margin: 1.5rem auto 0; padding: 1.25rem 1.5rem; background: rgba(18, 18, 26, 0.6); border: 1px solid var(--border-color); border-radius: 10px;">
+        <summary style="font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--accent-red); cursor: pointer; padding: 0.25rem 0; letter-spacing: 0.5px;">&#128203; Full briefing notes</summary>
+        <div style="margin-top: 1.25rem; font-size: 0.95rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+
+          <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 0.5rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">The Daichi Corner T1 incident &mdash; full breakdown</h4>
+          <p>The driver on the inside described it cleanly: hooked up behind the leading car at the start, oriented as far right as possible (with wheels still inside the white line), held his line into the braking zone, and braked at his standard marker. From his cockpit view, the front car drifted across in front of him and then hit the brakes earlier than expected &mdash; with only a couple of metres&rsquo; gap, there was no realistic way to react.</p>
+          <p>Mike&rsquo;s technical advice for the room:</p>
+          <ul style="padding-left: 1.5rem;">
+            <li>If you commit inside under braking, the safer choice is to <strong>stay there</strong>. Even if the spotter says left is clear, drifting across at the last moment is unexpected to the car behind and easy to read as moving-under-braking.</li>
+            <li>Accept the slightly worse apex, accelerate out cleanly, take the position back in the next sector if you can.</li>
+            <li>This applies in reverse too: if you&rsquo;re the chasing inside car, hold <em>your</em> line and don&rsquo;t change last-second either.</li>
+          </ul>
+
+          <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">The last-lap contact and the line about retaliation</h4>
+          <p>By the end of the race, one of the drivers had picked up a drive-through penalty in the Mercedes and had been wheel-to-wheel with the same opponent for most of the lap. At the penultimate corner the chasing car came round the outside; the front car braked outward; light contact let the chaser through.</p>
+          <p>Yannick was clear about the principle: the contact itself was a racing incident &mdash; how stewards rule it is up to them. What is <em>not</em> okay is what happened after the line: a deliberate retaliation push. &ldquo;You can be a bit angry, but you don&rsquo;t intentionally drive into someone&rsquo;s car or brake-test them.&rdquo; The league is small enough that everyone can talk it out afterwards instead. With strong direct-drive wheels in active use, this isn&rsquo;t a small risk &mdash; a heavy spike in FFB can hurt a hand.</p>
+
+          <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">When the blue-flag tool gets it wrong</h4>
+          <p>Two specific patterns came out of the discussion:</p>
+          <ul style="padding-left: 1.5rem;">
+            <li><strong>Recovery loop.</strong> A spun driver re-passes the lapper as he gets back on track; the system detects a 0.5&nbsp;s gap and tells him to let the lapper through; he does, then catches and re-passes a corner later, gets the warning again, repeats. Both drivers lose time for nothing &mdash; even though the &ldquo;lapped&rdquo; car was the faster of the two on raw pace.</li>
+            <li><strong>Slipstream artefact.</strong> If the lapping car is sitting deliberately in the tow of the car ahead (and not actually attempting to pass), the 0.5&nbsp;s gap registers as &ldquo;catching&rdquo; even though no overtake is in play.</li>
+          </ul>
+          <p>Open questions for the next two races: should the system look at recent lap-time delta, not just gap? Should there be a one-warning-per-lap cap? Or do we simply not need automation given how few real complaints have come up so far?</p>
+
+          <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Lapping etiquette &mdash; the Nordschleife principle</h4>
+          <p>Borrowed from the VLN/NLS rule of thumb: <strong>the slower car holds the racing line; the faster car finds its way around.</strong> That removes the &ldquo;making space&rdquo; ambiguity that causes most lapping crashes. A practical refinement everyone agreed on:</p>
+          <ul style="padding-left: 1.5rem;">
+            <li>If you have a blue flag, lift cleanly <em>before</em> the braking zone &mdash; not in mid-corner.</li>
+            <li>Hold your normal line. Don&rsquo;t make sudden moves to &ldquo;help&rdquo; the lapper.</li>
+            <li>Optionally feather the brake to give a clear signal that you&rsquo;ve seen the car behind.</li>
+            <li>One driver shared a cautionary tale from a GT4 Cup race where he tried to make space for a teammate, badly underestimated the closing speed, and almost wiped both of them out.</li>
+          </ul>
+
+          <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">The bigger picture &mdash; situational judgement</h4>
+          <p>Several drivers pushed back against blanket rules. There are situations &mdash; e.g. when a Pro driver is fighting for the lead and being stuck behind an AM costs him real time &mdash; where the AM should clearly let him through quickly. There are also situations where a Pro on his own deep in the field shouldn&rsquo;t be inserting himself into a different class&rsquo;s on-track battle. The honest answer is that it&rsquo;s situational and the only thing that scales is good judgement.</p>
+
+          <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Looking ahead</h4>
+          <p>Brands Hatch GP next week is a relatively short lap, which means lapping situations will arise quickly &mdash; and could be a good real-world test of whether the iRaceControl tool needs further tuning before we keep it. Two more races of data, then a community decision.</p>
+
+          <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(255,255,255,0.55); font-style: italic;">Summary of the Wednesday post-race briefing hosted by the Speed Monkeys team. Specific driver names have been omitted where the situation may still be under stewards&rsquo; review.</p>
+        </div>
+      </details>
+    </div>
+
     <!-- Season Schedules -->
     <div class="sub-section" id="schedules">
       <div class="section-header">
