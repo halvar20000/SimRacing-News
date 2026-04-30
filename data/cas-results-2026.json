@@ -240,9 +240,9 @@
         "fastestLap": "Michael Kelnberger"
       },
       "6": {
-        "winner": "",
-        "pole": "",
-        "fastestLap": ""
+        "winner": "Michael Kelnberger",
+        "pole": "Andreas Wuschnakowski",
+        "fastestLap": "Michael Kelnberger"
       },
       "7": {
         "winner": "",
@@ -459,28 +459,28 @@
     "sched-sfl": [
       {
         "pos": 1,
+        "driver": "Andreas Wuschnakowski",
+        "points": 236
+      },
+      {
+        "pos": 2,
+        "driver": "Bernhard Wlach",
+        "points": 226
+      },
+      {
+        "pos": 3,
+        "driver": "Michael Kelnberger",
+        "points": 215
+      },
+      {
+        "pos": 4,
         "driver": "Kevin Chmielewski",
         "points": 197
       },
       {
-        "pos": 2,
+        "pos": 5,
         "driver": "Riccardo Cavoto",
         "points": 194
-      },
-      {
-        "pos": 3,
-        "driver": "Andreas Wuschnakowski",
-        "points": 188
-      },
-      {
-        "pos": 4,
-        "driver": "Bernhard Wlach",
-        "points": 175
-      },
-      {
-        "pos": 5,
-        "driver": "Michael Kelnberger",
-        "points": 163
       }
     ],
     "sched-pccd": [
