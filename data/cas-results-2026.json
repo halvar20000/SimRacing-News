@@ -73,7 +73,7 @@
           "fastestLap": "Maurice Becker"
         },
         "am": {
-          "winner": "Michael Krieger5",
+          "winner": "Michael Krieger",
           "pole": "Michael Endres",
           "fastestLap": "Alexander Thieme2"
         }
@@ -85,9 +85,9 @@
           "fastestLap": "Maurice Becker"
         },
         "am": {
-          "winner": "Michael Krieger5",
+          "winner": "Michael Krieger",
           "pole": "Christoph Kiesel",
-          "fastestLap": "Michael Krieger5"
+          "fastestLap": "Michael Krieger"
         }
       },
       "8": {
@@ -377,55 +377,55 @@
       "pro": [
         {
           "pos": 1,
-          "driver": "Gregor Micewski",
-          "points": 196
+          "driver": "Yannick Wonnenberg",
+          "points": 230
         },
         {
           "pos": 2,
-          "driver": "Yannick Wonnenberg",
-          "points": 192
+          "driver": "Gregor Micewski",
+          "points": 120
         },
         {
           "pos": 3,
           "driver": "Dennis Ulli Richter",
-          "points": 178
+          "points": 204
         },
         {
           "pos": 4,
-          "driver": "Mike Zocher",
-          "points": 162
+          "driver": "Hendrik Stanzel",
+          "points": 194
         },
         {
           "pos": 5,
           "driver": "Lukas Zörlaut",
-          "points": 160
+          "points": 192
         }
       ],
       "am": [
         {
           "pos": 1,
           "driver": "Max Coldron",
-          "points": 196
+          "points": 226
         },
         {
           "pos": 2,
           "driver": "Fritz Morawetz",
-          "points": 183
+          "points": 217
         },
         {
           "pos": 3,
           "driver": "Justin Christiansen",
-          "points": 180
+          "points": 206
         },
         {
           "pos": 4,
           "driver": "Christoph Kiesel",
-          "points": 162
+          "points": 200
         },
         {
           "pos": 5,
           "driver": "Klaus Oberlaender",
-          "points": 158
+          "points": 180
         }
       ]
     },
