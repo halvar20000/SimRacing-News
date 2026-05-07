@@ -486,28 +486,28 @@
   "sched-pccd": [
    {
     "pos": 1,
+    "driver": "Andre Rajkovic",
+    "points": 340
+   },
+   {
+    "pos": 2,
     "driver": "Silvio Foth",
     "points": 310
    },
    {
-    "pos": 2,
-    "driver": "Andre Rajkovic",
-    "points": 269
-   },
-   {
     "pos": 3,
     "driver": "Willi Brand",
-    "points": 170
+    "points": 240
    },
    {
     "pos": 4,
     "driver": "Benjamin Schlosser",
-    "points": 159
+    "points": 216
    },
    {
     "pos": 5,
-    "driver": "Jan Tobias Schrader",
-    "points": 154
+    "driver": "Sean Pfennig",
+    "points": 202
    }
   ],
   "sched-gt4": [
