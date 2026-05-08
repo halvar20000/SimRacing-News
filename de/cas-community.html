@@ -48,6 +48,7 @@
         <a href="beyond-the-sim.html">Jenseits</a>
         <a href="simhub-guide.html">Anfänger-Guide</a>
         <a href="buying-guide.html">Kaufberatung</a>
+        <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" title="CAS Community League Manager &mdash; Live-Standings, Kalender, Ergebnisse">CAS League &#8599;</a>
         <a href="about.html">&Uuml;ber</a>
         <div class="lang-switch">
           <a href="../cas-community.html" title="English">&#127468;&#127463;</a>
@@ -73,12 +74,9 @@
   <!-- Section Jump Navigation -->
   <div class="section-jump-nav" style="background: var(--bg-card); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1rem 0; position: sticky; top: 0; z-index: 90;">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
-      <a href="#sched-wct" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127942; GT3 WCT</a>
-      <a href="#sched-iec" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#9201;&#65039; IEC Endurance</a>
-      <a href="#sched-cc" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128260; Combined Cup</a>
-      <a href="#sched-sfl" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127953; SFL Cup</a>
-      <a href="#sched-pccd" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127937; PCCD</a>
-      <a href="#sched-gt4" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127939; TSS GT4</a>
+      <a href="#schedules" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.18); border: 1px solid rgba(255,107,53,0.45); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128202; Live-Standings &amp; Ergebnisse</a>
+      <a href="#race-report" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: #ff6b7a; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128221; Letzter Renn-Bericht</a>
+      <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.12); border: 1px solid rgba(255,107,53,0.35); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127942; CAS League Manager &#8599;</a>
     </div>
   </div>
 
@@ -342,473 +340,69 @@
       </details>
     </div>
 
-    <!-- Saison-Kalender -->
+    <!-- Season Schedules &amp; Live Standings (powered by league.simracing-hub.com) -->
     <div class="sub-section" id="schedules">
       <div class="section-header">
-        <h2><span class="icon">&#128197;</span> Saison-Kalender 2026</h2>
-        <p>Rennkalender der aktuellen CAS-Community-Ligen &amp; Cups</p>
+        <h2><span class="icon">&#128202;</span> Live-Standings, Kalender &amp; Ergebnisse</h2>
+        <p>Alle sechs CAS-Meisterschaften — nächstes Rennen, letzte Ergebnisse, Tabellenführer, komplette Wertung.</p>
       </div>
 
-      <!-- Next Race Banner (populated by JS) -->
-      <div id="next-race-banner" class="next-race-banner" style="display:none; max-width: 900px; margin: 0 auto 1.75rem; padding: 1.25rem 1.5rem; border-radius: 12px; background: linear-gradient(135deg, rgba(230,57,70,0.18), rgba(255,107,53,0.12)); border: 1px solid rgba(230,57,70,0.45); box-shadow: 0 6px 24px rgba(230,57,70,0.15);"></div>
-
-      <!-- Jump pills -->
-      <div style="max-width: 1200px; margin: 0 auto 2rem; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
-        <a href="#sched-wct" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: var(--accent-red); text-decoration: none; font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600;">&#127941; WCT GT3</a>
-        <a href="#sched-cc" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: var(--accent-red); text-decoration: none; font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600;">&#128663; Combined Cup</a>
-        <a href="#sched-sfl" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: var(--accent-red); text-decoration: none; font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600;">&#127937; SFL Cup</a>
-        <a href="#sched-pccd" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: var(--accent-red); text-decoration: none; font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600;">&#127936; PCCD</a>
-        <a href="#sched-gt4" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: var(--accent-red); text-decoration: none; font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600;">&#128668; GT4 Masters</a>
-        <a href="#sched-iec" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.35); color: var(--accent-red); text-decoration: none; font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600;">&#9201;&#65039; IEC Langstrecke</a>
+      <div style="max-width: 900px; margin: 0 auto 2rem; padding: 0 1.5rem; font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.85);">
+        <p>Kalender, Ergebnisse und Tabellen aller CAS-Meisterschaften liegen jetzt im dedizierten <strong>SimRacing Hub League Manager</strong> auf <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" style="color: var(--accent-orange);">league.simracing-hub.com</a>. Jede Karte unten führt direkt zur jeweiligen Meisterschafts-Seite — nächstes Rennen mit Countdown, aktuelles Podium, Tabellenführer und komplette Wertung, alles live durch das League-System aktualisiert.</p>
       </div>
 
-      <!-- CAS GT3 WCT -->
-      <div id="sched-wct" class="comparison-table-wrapper" style="max-width: 1200px; margin: 0 auto 2rem;">
-        <h3>CAS GT3 &ndash; World Championship Tour &mdash; 12. Saison</h3>
-        <p style="padding: 0 1.5rem 1rem; margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);"><strong>Renntag:</strong> Dienstag &middot; 18:00&ndash;21:00 CET/CEST &nbsp;&middot;&nbsp; <strong>Format:</strong> GT Sprint, 12 Rennen, Pro &amp; AM</p>
-        <table class="comparison-table">
-          <thead>
-            <tr><th style="width: 60px;">Rd</th><th style="width: 110px;">Datum</th><th>Strecke</th><th style="width: 110px;">Sieger</th><th style="width: 110px;">Pole</th><th style="width: 110px;">Fastest Lap</th></tr>
-          </thead>
-          <tbody>
-            <tr data-date="2026-03-24" data-series="sched-wct" data-round="1"><td>1</td><td>24. M&auml;r</td><td>&#127482;&#127480; St. Petersburg</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-03-31" data-series="sched-wct" data-round="2"><td>2</td><td>31. M&auml;r</td><td>&#127482;&#127480; Sebring International</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-07" data-series="sched-wct" data-round="3"><td>3</td><td>07. Apr</td><td>&#127482;&#127480; Summit Point</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-14" data-series="sched-wct" data-round="4"><td>4</td><td>14. Apr</td><td>&#127463;&#127466; Circuit de Spa-Francorchamps</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-21" data-series="sched-wct" data-round="5"><td>5</td><td>21. Apr</td><td>&#127470;&#127481; Mugello GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-28" data-series="sched-wct" data-round="6"><td>6</td><td>28. Apr</td><td>&#127471;&#127477; Fuji GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-05-05" data-series="sched-wct" data-round="7"><td>7</td><td>05. Mai</td><td>&#127468;&#127463; Brands Hatch GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-05-12" data-series="sched-wct" data-round="8"><td>8</td><td>12. Mai</td><td>&#127462;&#127482; Adelaide Street Circuit</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-05-19" data-series="sched-wct" data-round="9"><td>9</td><td>19. Mai</td><td>&#127471;&#127477; Suzuka GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-05-26" data-series="sched-wct" data-round="10"><td>10</td><td>26. Mai</td><td>&#127467;&#127479; Magny-Cours GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-06-02" data-series="sched-wct" data-round="11"><td>11</td><td>02. Jun</td><td>&#127468;&#127463; Thruxton Circuit</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-06-08" data-series="sched-wct" data-round="12"><td>12</td><td>08. Jun</td><td>&#127775; Special Event</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-          </tbody>
-        </table>
-        <div class="standings-section" data-series="sched-wct">
-          <h4 class="standings-title">Meisterschaftsstand &mdash; Top 5</h4>
-          <div class="standings-grid dual">
-            <table class="standings-table" data-class="pro">
-              <caption>Pro</caption>
-              <thead><tr><th class="pos">Pos</th><th>Fahrer</th><th class="pts">Punkte</th></tr></thead>
-              <tbody><tr class="empty"><td colspan="3">Noch keine Daten — wird nach dem Rennen aktualisiert.</td></tr></tbody>
-            </table>
-            <table class="standings-table" data-class="am">
-              <caption>AM</caption>
-              <thead><tr><th class="pos">Pos</th><th>Fahrer</th><th class="pts">Punkte</th></tr></thead>
-              <tbody><tr class="empty"><td colspan="3">Noch keine Daten — wird nach dem Rennen aktualisiert.</td></tr></tbody>
-            </table>
-          </div>
-        </div>
+      <div class="card-grid">
+        <a class="card" href="https://league.simracing-hub.com/leagues/cas-gt3-wct" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s;">
+          <span class="card-tag cas">&#127942; GT3 WCT</span>
+          <h3>CAS GT3 WCT</h3>
+          <p style="margin-bottom: 0.6rem;"><strong>Saison:</strong> 12. Saison — World Championship Tour</p>
+          <p style="margin-bottom: 0.4rem; font-size: 0.95rem;"><strong>Renntag:</strong> Dienstag · 18:00–21:00 CET</p>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem;"><strong>Format:</strong> GT3 Sprint, 12 Rennen, Pro &amp; AM</p>
+          <p style="margin: 0; padding-top: 0.6rem; border-top: 1px solid rgba(255,107,53,0.25); font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; color: var(--accent-orange);">Live-Standings, Kalender &amp; Ergebnisse &#8599;</p>
+        </a>
+        <a class="card" href="https://league.simracing-hub.com/leagues/cas-combined-cup" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s;">
+          <span class="card-tag cas">&#128663; Combined Cup</span>
+          <h3>CAS Combined Cup</h3>
+          <p style="margin-bottom: 0.6rem;"><strong>Saison:</strong> 10. Saison</p>
+          <p style="margin-bottom: 0.4rem; font-size: 0.95rem;"><strong>Renntag:</strong> Freitag · 19:00–21:00 CET</p>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem;"><strong>Format:</strong> Mehrklassen, wechselnde Autos</p>
+          <p style="margin: 0; padding-top: 0.6rem; border-top: 1px solid rgba(255,107,53,0.25); font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; color: var(--accent-orange);">Live-Standings, Kalender &amp; Ergebnisse &#8599;</p>
+        </a>
+        <a class="card" href="https://league.simracing-hub.com/leagues/cas-sfl-cup" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s;">
+          <span class="card-tag cas">&#127953; SFL Cup</span>
+          <h3>CAS SFL Cup</h3>
+          <p style="margin-bottom: 0.6rem;"><strong>Saison:</strong> 7. Saison — Super Formula Lights</p>
+          <p style="margin-bottom: 0.4rem; font-size: 0.95rem;"><strong>Renntag:</strong> Mittwoch · 19:00–21:00 CET</p>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem;"><strong>Format:</strong> Open-Wheel-Einheits-Sprint</p>
+          <p style="margin: 0; padding-top: 0.6rem; border-top: 1px solid rgba(255,107,53,0.25); font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; color: var(--accent-orange);">Live-Standings, Kalender &amp; Ergebnisse &#8599;</p>
+        </a>
+        <a class="card" href="https://league.simracing-hub.com/leagues/cas-pccd" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s;">
+          <span class="card-tag cas">&#127937; PCCD</span>
+          <h3>CAS PCCD</h3>
+          <p style="margin-bottom: 0.6rem;"><strong>Saison:</strong> 5. Saison — Porsche Community Cup</p>
+          <p style="margin-bottom: 0.4rem; font-size: 0.95rem;"><strong>Renntag:</strong> Siehe CAS-Kalender</p>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem;"><strong>Format:</strong> Porsche 911 Cup Einheits-Cup</p>
+          <p style="margin: 0; padding-top: 0.6rem; border-top: 1px solid rgba(255,107,53,0.25); font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; color: var(--accent-orange);">Live-Standings, Kalender &amp; Ergebnisse &#8599;</p>
+        </a>
+        <a class="card" href="https://league.simracing-hub.com/leagues/cas-tss-gt4" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s;">
+          <span class="card-tag cas">&#127939; TSS GT4</span>
+          <h3>CAS TSS GT4</h3>
+          <p style="margin-bottom: 0.6rem;"><strong>Saison:</strong> 4. Saison — GT4 Masters</p>
+          <p style="margin-bottom: 0.4rem; font-size: 0.95rem;"><strong>Renntag:</strong> Montag · 18:45 CET</p>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem;"><strong>Format:</strong> GT4 Sprint</p>
+          <p style="margin: 0; padding-top: 0.6rem; border-top: 1px solid rgba(255,107,53,0.25); font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; color: var(--accent-orange);">Live-Standings, Kalender &amp; Ergebnisse &#8599;</p>
+        </a>
+        <a class="card" href="https://league.simracing-hub.com/leagues/cas-iec" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s;">
+          <span class="card-tag cas">&#9201;&#65039; IEC</span>
+          <h3>CAS IEC</h3>
+          <p style="margin-bottom: 0.6rem;"><strong>Saison:</strong> Saison 4 — International Endurance</p>
+          <p style="margin-bottom: 0.4rem; font-size: 0.95rem;"><strong>Renntag:</strong> Samstag · 17:30–20:30 CET</p>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem;"><strong>Format:</strong> Mehrklassen-Endurance, 3-Stunden-Runden</p>
+          <p style="margin: 0; padding-top: 0.6rem; border-top: 1px solid rgba(255,107,53,0.25); font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; color: var(--accent-orange);">Live-Standings, Kalender &amp; Ergebnisse &#8599;</p>
+        </a>
       </div>
 
-      <!-- Combined Cup -->
-      <div id="sched-cc" class="comparison-table-wrapper" style="max-width: 1200px; margin: 0 auto 2rem;">
-        <h3>Combined Cup &mdash; 10. Saison <span style="display: inline-block; margin-left: 0.5rem; padding: 0.15rem 0.55rem; border-radius: 4px; background: rgba(255, 209, 102, 0.15); color: #ffd166; font-family: var(--font-heading); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: middle;">Pausiert</span></h3>
-        <p style="padding: 0 1.5rem 1rem; margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);"><strong>Renntag:</strong> Freitag &middot; 19:00&ndash;21:00 CET/CEST &nbsp;&middot;&nbsp; <strong>Format:</strong> 3 Klassen &middot; 12 Rennen &middot; 2 Rennen je 20 Min. &middot; Reverse Grid Top 10 in Rennen 2. Fahrzeuge wechseln zwischen <strong>Ray FF1600</strong>, <strong>Radical SR8</strong> und <strong>TCR</strong>.</p>
-        <p style="margin: 0 1.5rem 1rem; padding: 0.75rem 1rem; background: rgba(255, 209, 102, 0.08); border-left: 3px solid #ffd166; border-radius: 0 6px 6px 0; font-size: 0.9rem; color: rgba(255,255,255,0.85);"><strong style="color: #ffd166;">Saison nach Lauf&nbsp;4 pausiert:</strong> Die 10. Saison des Combined Cup wurde im April&nbsp;2026 wegen zu geringer Beteiligung der angemeldeten Mitglieder pausiert. Die L&auml;ufe&nbsp;5&ndash;12 unten sind der urspr&uuml;nglich geplante Kalender und werden in dieser Saison nicht mehr gefahren. Die Ergebnisse der L&auml;ufe&nbsp;1&ndash;4 bleiben zur Referenz dokumentiert.</p>
-        <table class="comparison-table">
-          <thead>
-            <tr><th style="width: 60px;">Rd</th><th style="width: 110px;">Datum</th><th style="width: 130px;">Klasse</th><th>Strecke</th><th style="width: 110px;">Sieger</th><th style="width: 110px;">Pole</th><th style="width: 110px;">Fastest Lap</th></tr>
-          </thead>
-          <tbody>
-            <tr data-date="2026-02-27" data-series="sched-cc" data-round="1"><td>1</td><td>27. Feb</td><td>Ray FF1600</td><td>&#127462;&#127482; Oran Park Raceway &mdash; South</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-03-13" data-series="sched-cc" data-round="2"><td>2</td><td>13. M&auml;r</td><td>Radical SR8</td><td>&#127462;&#127482; Mount Panorama Circuit</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-03-27" data-series="sched-cc" data-round="3"><td>3</td><td>27. M&auml;r</td><td>TCR</td><td>&#127462;&#127482; Winton Motor Raceway &mdash; NC</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-10" data-series="sched-cc" data-round="4"><td>4</td><td>10. Apr</td><td>Ray FF1600</td><td>&#127471;&#127477; Suzuka East</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-24" data-series="sched-cc" data-round="5"><td>5</td><td>24. Apr</td><td>Radical SR8</td><td>&#127465;&#127466; Oschersleben GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-05-08" data-series="sched-cc" data-round="6"><td>6</td><td>08. Mai</td><td>TCR</td><td>&#127465;&#127466; N&uuml;rburgring GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-05-22" data-series="sched-cc" data-round="7"><td>7</td><td>22. Mai</td><td>Ray FF1600</td><td>&#127466;&#127480; Circuito de Navarra &mdash; Medium</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-06-05" data-series="sched-cc" data-round="8"><td>8</td><td>05. Jun</td><td>Radical SR8</td><td>&#127475;&#127473; Zandvoort GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-06-19" data-series="sched-cc" data-round="9"><td>9</td><td>19. Jun</td><td>TCR</td><td>&#127482;&#127480; Laguna Seca &mdash; FC</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-07-10" data-series="sched-cc" data-round="10"><td>10</td><td>10. Jul</td><td>Ray FF1600</td><td>&#127468;&#127463; Snetterton Circuit 200</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-07-24" data-series="sched-cc" data-round="11"><td>11</td><td>24. Jul</td><td>Radical SR8</td><td>&#127470;&#127481; Imola GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-08-07" data-series="sched-cc" data-round="12"><td>12</td><td>07. Aug</td><td>TCR</td><td>&#127466;&#127480; Circuit de Barcelona</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-          </tbody>
-        </table>
-        <div class="standings-section" data-series="sched-cc">
-          <h4 class="standings-title">Meisterschaftsstand &mdash; Top 5</h4>
-          <div class="standings-grid">
-            <table class="standings-table">
-              <thead><tr><th class="pos">Pos</th><th>Fahrer</th><th class="pts">Punkte</th></tr></thead>
-              <tbody><tr class="empty"><td colspan="3">Noch keine Daten — wird nach dem Rennen aktualisiert.</td></tr></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- SFL Cup -->
-      <div id="sched-sfl" class="comparison-table-wrapper" style="max-width: 1200px; margin: 0 auto 2rem;">
-        <h3>CAS Super Formula Lights Cup &mdash; 7. Saison</h3>
-        <p style="padding: 0 1.5rem 1rem; margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);"><strong>Renntag:</strong> Mittwoch &middot; 19:00&ndash;21:00 CET/CEST &nbsp;&middot;&nbsp; <strong>Format:</strong> 2 Rennen je 20 Min. &middot; Reverse Grid Top 10 in Rennen 2 &middot; Max 3K iRating &middot; Silver-Class-Wertung</p>
-        <table class="comparison-table">
-          <thead>
-            <tr><th style="width: 60px;">Rd</th><th style="width: 110px;">Datum</th><th>Strecke</th><th style="width: 110px;">Sieger</th><th style="width: 110px;">Pole</th><th style="width: 110px;">Fastest Lap</th></tr>
-          </thead>
-          <tbody>
-            <tr data-date="2026-02-18" data-series="sched-sfl" data-round="1"><td>1</td><td>18. Feb</td><td>&#127462;&#127481; Red Bull Ring GP (Spielberg &mdash; 4,31 km)</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-03-04" data-series="sched-sfl" data-round="2"><td>2</td><td>04. M&auml;r</td><td>&#127466;&#127480; Circuit de Barcelona GP (Montmel&oacute; &mdash; 4,65 km)</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-03-18" data-series="sched-sfl" data-round="3"><td>3</td><td>18. M&auml;r</td><td>&#127482;&#127480; Circuit of the Americas GP (Austin &mdash; 5,51 km)</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-01" data-series="sched-sfl" data-round="4"><td>4</td><td>01. Apr</td><td>&#127470;&#127481; Imola GP (Emilia-Romagna &mdash; 4,97 km)</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-15" data-series="sched-sfl" data-round="5"><td>5</td><td>15. Apr</td><td>&#127464;&#127462; Circuit Gilles-Villeneuve (Montreal &mdash; 4,36 km)</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-29" data-series="sched-sfl" data-round="6"><td>6</td><td>29. Apr</td><td>&#127468;&#127463; Silverstone (Towcester &mdash; 5,89 km)</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-05-13" data-series="sched-sfl" data-round="7"><td>7</td><td>13. Mai</td><td>&#127475;&#127473; Circuit Zandvoort GP (Nordholland &mdash; 4,26 km)</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-05-27" data-series="sched-sfl" data-round="8"><td>8</td><td>27. Mai</td><td>&#127463;&#127466; Circuit de Spa GP (Francorchamps &mdash; 7,10 km)</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-          </tbody>
-        </table>
-        <div class="standings-section" data-series="sched-sfl">
-          <h4 class="standings-title">Meisterschaftsstand &mdash; Top 5</h4>
-          <div class="standings-grid">
-            <table class="standings-table">
-              <thead><tr><th class="pos">Pos</th><th>Fahrer</th><th class="pts">Punkte</th></tr></thead>
-              <tbody><tr class="empty"><td colspan="3">Noch keine Daten — wird nach dem Rennen aktualisiert.</td></tr></tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- SFL Cup Lauf 6 Silverstone — Rennbericht -->
-        <div class="sfl-race-report" style="margin: 0 1.5rem 0.5rem; padding: 1.25rem 1.5rem; background: rgba(18, 18, 26, 0.55); border: 1px solid var(--border-color); border-radius: 10px;">
-          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-            <span style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.7rem; border-radius: 4px; background: var(--accent-red); color: #fff; font-family: var(--font-heading); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">&#128221; Rennbericht</span>
-            <span style="font-family: var(--font-heading); font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.85);">Lauf&nbsp;6 &middot; &#127468;&#127463; Silverstone GP &middot; 29.&nbsp;April 2026 &middot; 2&times;20 Min, Reverse-Grid Rennen&nbsp;2</span>
-          </div>
-
-          <div class="card-grid" style="margin: 0;">
-            <div class="card">
-              <span class="card-tag cas">Rennen 1 Podium (Heat)</span>
-              <h3>&#127942; Wuschnakowski, Wlach, Felix</h3>
-              <p>
-                &#129351;&nbsp;<strong>Andreas Wuschnakowski</strong><br>
-                &#129352;&nbsp;Bernhard Wlach<br>
-                &#129353;&nbsp;Thomas Felix
-              </p>
-              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">Andreas hielt die F&uuml;hrung gegen den sp&auml;t aufkommenden Druck von Michael Kelnberger &middot; Kelnberger drehte sich nach Kontakt, fiel auf P4 zur&uuml;ck &middot; Ricardo Cavoto fr&uuml;hzeitig DNF</p>
-            </div>
-
-            <div class="card">
-              <span class="card-tag cas">Rennen 2 Podium (Reverse Grid)</span>
-              <h3>&#127942; Kelnberger, Herbrig, Wlach</h3>
-              <p>
-                &#129351;&nbsp;<strong>Michael Kelnberger</strong> &middot; schnellste Runde 1:51,1<br>
-                &#129352;&nbsp;Thomas Herbrig (Site-Owner)<br>
-                &#129353;&nbsp;Bernhard Wlach
-              </p>
-              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">Kelnberger st&uuml;rmte von P4 binnen weniger Runden in F&uuml;hrung &middot; Andreas drehte sich, Kontakt mit Felix, beide mit Schaden in die Box</p>
-            </div>
-
-            <div class="card">
-              <span class="card-tag cas">Meisterschaftsumbruch</span>
-              <h3>&#127941;&#65039; Andreas &uuml;bernimmt die F&uuml;hrung</h3>
-              <p>Combined-Sieger Lauf&nbsp;6: <strong>Michael Kelnberger</strong>, Bernhard Wlach P2, Andreas Wuschnakowski P3. Aber die gr&ouml;&szlig;ere Story ist die Meisterschaft: <strong>Andreas Wuschnakowski f&uuml;hrt jetzt den SFL Cup an</strong>, Bernhard Wlach klettert dank zweier fehlerfreier Podestpl&auml;tze auf P2. Kevin f&auml;llt von P1 auf P4, Ricardo von P2 auf P5.</p>
-              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">N&auml;chster Lauf: Zandvoort (NL), 13.&nbsp;Mai 2026 &mdash; klassische Steilkurven und hohe Geschwindigkeiten</p>
-            </div>
-          </div>
-
-          <details style="margin-top: 1.25rem; padding: 1.1rem 1.4rem; background: rgba(10, 10, 15, 0.5); border: 1px solid var(--border-color); border-radius: 8px;">
-            <summary style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: var(--accent-red); cursor: pointer; letter-spacing: 0.5px;">&#128203; Vollst&auml;ndiger Rennbericht</summary>
-            <div style="margin-top: 1.2rem; font-size: 0.95rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 0.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Hinweis zur Stream-&Uuml;bertragung</h4>
-              <p>Das Dienstags-Rennen sollte live gestreamt werden, aber ein realer Internet-Ausfall beim Streamer (Kabel bei Bauarbeiten gekappt) hat die &Uuml;bertragung verhindert. Thomas (Site-Owner) hat am n&auml;chsten Morgen ein Replay-Analyse-Video aufgenommen &mdash; unter anderem als Premiere f&uuml;r das neue Greenscreen-Setup und die mit Claude AI selbst gebauten Dashboards / Live-Charts-Overlays. Diese Zusammenfassung basiert auf diesem Replay.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Rennen&nbsp;1 (Heat) &mdash; 20 Minuten</h4>
-              <p>Andreas Wuschnakowski erwischte den saubersten Start aus der ersten Reihe und f&uuml;hrte das Feld in den ersten Runden. Hinter ihm steigerte sich <strong>Michael Kelnberger</strong> &mdash; der nur P3 qualifiziert hatte, weil er sehr sp&auml;t in die Session kam und ohne richtige Aufw&auml;rmphase unterwegs war &mdash; runde f&uuml;r Runde und holte Andreas ein. Beide tauschten an der Spitze mehrfach die Position in einem langen, harten, aber fairen Zweikampf. Kelnberger drehte sich anschlie&szlig;end aus eigener Kraft &mdash; ein Folgekontakt war nicht zu vermeiden, er fiel auf P4 zur&uuml;ck.</p>
-              <p>Im Mittelfeld hatte Thomas Herbrig (Quali-P3) zwei Solo-Dreher auf kalten Reifen in den ersten Runden und fiel ans Feldende zur&uuml;ck. Ricardo Cavoto schied fr&uuml;h aus nach einem Vorfall im Bereich Kurve 1. <strong>Bernhard Wlach</strong> fuhr ein leises, perfektes Rennen und sicherte sich P2 &mdash; das gleiche unspektakul&auml;re, fehlerfreie Muster, das inzwischen sein Markenzeichen ist.</p>
-              <p><strong>Ergebnis Rennen&nbsp;1:</strong> Wuschnakowski, Wlach, Felix, Kelnberger, Holger Meissner, Herbrig.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Rennen&nbsp;2 (Reverse Grid) &mdash; 20 Minuten</h4>
-              <p>Das Reverse-Grid-Format setzt die Schnellsten ans Feldende, und Kelnberger zeigte genau warum er das Tempo des Tages hatte: er machte in der Anfangsphase mehrere Pl&auml;tze gut und f&uuml;hrte ab der Rennmitte. Thomas Herbrig hielt nach starkem Start aus der Reverse-Pole P2 fast das gesamte Rennen.</p>
-              <p>Der entscheidende Vorfall kam in der Rennmitte im Kampf um P3&ndash;P4: <strong>Andreas drehte sich vor Thomas Felix</strong>, der keine Zeit zum Ausweichen hatte. Beide Wagen besch&auml;digt, beide muss in die Box. Andreas mit sichtbarem Karosserie-Schaden (Heckspoiler weg) f&auml;llt auf P6 zur&uuml;ck; Thomas Felix k&auml;mpft sich nach dem Stopp auf P5.</p>
-              <p>Bernhard Wlach fuhr erneut ein gleichm&auml;&szlig;iges Rennen in freier Luft und sicherte sich P3. Holger Meissner profitierte von den sp&auml;ten Vorf&auml;llen und schob sich auf P4.</p>
-              <p><strong>Ergebnis Rennen&nbsp;2:</strong> Kelnberger, Herbrig, Wlach, Meissner, Felix, Wuschnakowski.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Combined-Ergebnis Lauf&nbsp;6</h4>
-              <p>P1 Michael Kelnberger, P2 Bernhard Wlach, P3 Andreas Wuschnakowski, P4 Thomas Herbrig, P5 Thomas Felix, P6 Holger Meissner. Kelnberger war der klar schnellste Fahrer &uuml;ber beide Rennen; Bernhards niedrige Streuung (P2 + P3) reicht f&uuml;r das zweitbeste Gesamtergebnis.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Meisterschaft nach Lauf&nbsp;6 &mdash; die neuen Top 6</h4>
-              <ol style="padding-left: 1.5rem;">
-                <li><strong>Andreas Wuschnakowski</strong> &mdash; &uuml;bernimmt die Gesamtf&uuml;hrung</li>
-                <li><strong>Bernhard Wlach</strong> &mdash; klettert auf P2 dank Konstanz</li>
-                <li>Michael Kelnberger</li>
-                <li>Kevin (verliert P1)</li>
-                <li>Ricardo Cavoto (verliert P2)</li>
-                <li>Markus Rothe (Sieger des letzten Laufs in Montreal)</li>
-              </ol>
-              <p>Einige Stammfahrer fehlten an diesem Lauf, was die Tabelle ohnehin durcheinanderwirft &mdash; aber das gr&ouml;&szlig;ere Bild ist, dass Bernhards zwei fehlerfreie Rennen an einem Tag, an dem viele Vorf&auml;lle hatten, ihn aus der Verfolgergruppe direkt auf den zweiten Gesamtrang gehoben haben. Mit dem Streichresultat-Reglement (eines wird gestrichen) k&ouml;nnen Kevin und Ricardo noch einiges aufholen, aber die Tabelle r&uuml;ckt deutlich n&auml;her zusammen.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Ausblick</h4>
-              <p><strong>Lauf 7 ist Zandvoort (NL) am 13.&nbsp;Mai 2026.</strong> Ikonische Steilkurven, fl&uuml;ssiger High-Speed-Flow &mdash; belohnt Fahrer, die saubere Mindestgeschwindigkeiten halten k&ouml;nnen. Hoffentlich macht das Internet beim Streamer diesmal mit und es gibt einen Live-Stream. Lauf&nbsp;8 ist Spa-Francorchamps am 27.&nbsp;Mai zum Saisonabschluss.</p>
-
-              <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(255,255,255,0.55); font-style: italic;">Zusammenfassung auf Basis von Thomas Herbrigs Replay-Analyse-Stream. Live-&Uuml;bertragungen von CAS-Rennen laufen &uuml;blicherweise auf dem <strong>sim_racing_broadcast</strong> Twitch-Kanal.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-
-      <!-- Porsche Community Cup Deutschland -->
-      <div id="sched-pccd" class="comparison-table-wrapper" style="max-width: 1200px; margin: 0 auto 2rem;">
-        <h3>CAS Porsche Community Cup Deutschland &mdash; 4. Saison</h3>
-        <p style="padding: 0 1.5rem 1rem; margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);"><strong>Format:</strong> 8 L&auml;ufe mit je 2 Rennen &agrave; 25 Minuten &middot; Fixed Setup &middot; Reverse Grid der Top 8 in Rennen 2 &middot; Silverclass-Wertung</p>
-
-        <!-- Stream-Replay-Banner: Lauf 5 Barcelona (Rennen bereits gelaufen) -->
-        <div class="pccd-stream-announce" style="margin: 0 1.5rem 1.5rem; padding: 1.1rem 1.4rem; border-radius: 10px; background: linear-gradient(135deg, rgba(145, 70, 255, 0.18) 0%, rgba(145, 70, 255, 0.06) 50%, rgba(230, 57, 70, 0.08) 100%); border: 1px solid rgba(145, 70, 255, 0.45); box-shadow: 0 6px 20px rgba(145, 70, 255, 0.12);">
-          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-            <span style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.7rem; border-radius: 4px; background: #9146FF; color: #fff; font-family: var(--font-heading); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">&#128250; VOD auf Twitch &amp; YouTube</span>
-            <span style="font-family: var(--font-heading); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent-orange);">Lauf&nbsp;5 &middot; Gesendet am 7.&nbsp;Mai</span>
-          </div>
-          <h4 style="margin: 0.2rem 0 0.5rem; font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: rgba(255,255,255,0.98); letter-spacing: 0.01em;">&#127937; Barcelona Lauf&nbsp;5 als Replay ansehen</h4>
-          <p style="margin: 0 0 0.8rem; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.85);">
-            Zwei enge Rennen auf der Catalunya-GP-Variante in der Abendd&auml;mmerung &mdash; Silvio Foth fehlte, Andr&eacute; Rajkovic gewann Rennen&nbsp;1, Benjamin Schlosser drehte die Reverse-Grid-Pole in seinen ersten PCCD-Sieg, und Andr&eacute;s sensationelle Aufholjagd nach einem Lap-1-Dreher lieferte das Highlight des Abends. Das komplette Replay ist auf Thomas Herbrigs <strong style="color: #9146FF;">sim_racing_broadcast</strong> Twitch-Kanal und auf YouTube verf&uuml;gbar.
-          </p>
-          <a href="https://www.twitch.tv/sim_racing_broadcast" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.1rem; border-radius: 6px; background: #9146FF; color: #fff; text-decoration: none; font-family: var(--font-heading); font-weight: 700; font-size: 0.88rem; letter-spacing: 0.04em;">&#9654; Replay ansehen auf sim_racing_broadcast</a>
-        </div>
-
-        <table class="comparison-table">
-          <thead>
-            <tr><th style="width: 60px;">Rd</th><th style="width: 110px;">Datum</th><th>Strecke</th><th style="width: 110px;">Sieger</th><th style="width: 110px;">Pole</th><th style="width: 110px;">Fastest Lap</th></tr>
-          </thead>
-          <tbody>
-            <tr data-date="2026-03-12" data-series="sched-pccd" data-round="1"><td>1</td><td>12. M&auml;r</td><td>&#127482;&#127480; Watkins Glen</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-03-26" data-series="sched-pccd" data-round="2"><td>2</td><td>26. M&auml;r</td><td>&#127470;&#127481; Mugello GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-09" data-series="sched-pccd" data-round="3"><td>3</td><td>09. Apr</td><td>&#127463;&#127466; Spa-Francorchamps</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-23" data-series="sched-pccd" data-round="4"><td>4</td><td>23. Apr</td><td>&#127470;&#127481; Monza GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-05-07" data-series="sched-pccd" data-round="5"><td>5</td><td>07. Mai</td><td>&#127466;&#127480; Barcelona GP</td><td class="result-cell">Andre Rajkovic</td><td class="result-cell">Willi Brand</td><td class="result-cell">Willi Brand</td></tr>
-            <tr data-date="2026-05-21" data-series="sched-pccd" data-round="6"><td>6</td><td>21. Mai</td><td>&#127468;&#127463; Silverstone GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-06-04" data-series="sched-pccd" data-round="7"><td>7</td><td>04. Jun</td><td>&#127465;&#127466; Hockenheim GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-06-18" data-series="sched-pccd" data-round="8"><td>8</td><td>18. Jun</td><td>&#127471;&#127477; Okayama FC</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-          </tbody>
-        </table>
-        <div class="standings-section" data-series="sched-pccd">
-          <h4 class="standings-title">Meisterschaftsstand &mdash; Top 5</h4>
-          <div class="standings-grid">
-            <table class="standings-table">
-              <thead><tr><th class="pos">Pos</th><th>Fahrer</th><th class="pts">Punkte</th></tr></thead>
-              <tbody><tr class="empty"><td colspan="3">Noch keine Daten — wird nach dem Rennen aktualisiert.</td></tr></tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- PCCD Lauf 5 Barcelona — Rennbericht -->
-        <div class="pccd-race-report" style="margin: 0 1.5rem 0.5rem; padding: 1.25rem 1.5rem; background: rgba(18, 18, 26, 0.55); border: 1px solid var(--border-color); border-radius: 10px;">
-          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-            <span style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.7rem; border-radius: 4px; background: var(--accent-red); color: #fff; font-family: var(--font-heading); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">&#128221; Rennbericht</span>
-            <span style="font-family: var(--font-heading); font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.85);">Lauf&nbsp;5 &middot; &#127466;&#127480; Barcelona-Catalunya GP &middot; 7.&nbsp;Mai 2026 &middot; 9 Fahrer</span>
-          </div>
-
-          <div class="card-grid" style="margin: 0;">
-            <div class="card">
-              <span class="card-tag cas">Rennen 1 Podium</span>
-              <h3>&#127942; Rajkovic, Brand, Pfennig</h3>
-              <p>
-                &#129351;&nbsp;<strong>Andr&eacute; Rajkovic</strong><br>
-                &#129352;&nbsp;Willi Brand<br>
-                &#129353;&nbsp;Sean Pfennig
-              </p>
-              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">Pole: Willi Brand 1:45.2 &middot; Entschieden durch ein Windschatten-&Uuml;berholman&ouml;ver auf der Start-Ziel-Geraden &middot; Klaus Oberl&auml;nder schied aus ungekl&auml;rten Gr&uuml;nden aus</p>
-            </div>
-
-            <div class="card">
-              <span class="card-tag cas">Rennen 2 Podium</span>
-              <h3>&#127942; Schlosser, Brand, Rajkovic</h3>
-              <p>
-                &#129351;&nbsp;<strong>Benjamin Schlosser</strong><br>
-                &#129352;&nbsp;Willi Brand<br>
-                &#129353;&nbsp;Andr&eacute; Rajkovic
-              </p>
-              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">Reverse-Grid-Start &middot; Schlosser drehte die Pole in den Sieg &middot; Rajkovic von P8 bis P3 nach einem Lap-1-Dreher</p>
-            </div>
-
-            <div class="card">
-              <span class="card-tag cas">Meisterschaft</span>
-              <h3>&#127941;&#65039; Silvio fehlte &mdash; Rajkovic verk&uuml;rzt</h3>
-              <p>Ohne den f&uuml;hrenden Silvio Foth am Start sammelt Andr&eacute; Rajkovic einen Sieg und ein Podium und knabbert am Vorsprung. Willi Brand holte still und leise zweimal P2 sowie die schnellste Runde im ersten Rennen. Die Performance des Abends: Rajkovics Aufholjagd in Rennen&nbsp;2 vom Lap-1-Turn-1-Dreher zur&uuml;ck aufs Podium.</p>
-              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">Schnellste Runde R1: <strong>Willi Brand, 1:45.07</strong> &middot; Schnellste Runde R2: <strong>Benjamin Schlosser, 1:45.45</strong> &middot; N&auml;chster Lauf: Silverstone GP, Mittwoch 21.&nbsp;Mai</p>
-            </div>
-          </div>
-
-          <details style="margin-top: 1.25rem; padding: 1.1rem 1.4rem; background: rgba(10, 10, 15, 0.5); border: 1px solid var(--border-color); border-radius: 8px;">
-            <summary style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: var(--accent-red); cursor: pointer; letter-spacing: 0.5px;">&#128203; Vollst&auml;ndiger Rennbericht</summary>
-            <div style="margin-top: 1.2rem; font-size: 0.95rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 0.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Schauplatz</h4>
-              <p>Circuit de Barcelona-Catalunya &mdash; 4,65&nbsp;km, 16 Kurven, die GP-Variante mit der engen letzten Schikane. Lange Zeit Test-Heimat der Formel&nbsp;1, ber&uuml;hmt daf&uuml;r, Aero-Balance und Reifenaufw&auml;rmung zu belohnen. Streckentemperatur 21&nbsp;&deg;C, im Lauf des Abends einsetzende D&auml;mmerung &mdash; in den Schlussstints fuhren die Autos mit Scheinwerfern. <strong>Neun Fahrer am Start.</strong> Tabellenf&uuml;hrer <strong>Silvio Foth</strong> fehlte, Olli sagte ebenfalls kurzfristig ab.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Qualifying</h4>
-              <p>6&nbsp;Minuten, 3 gezeitete Runden. Mit warm werdenden Reifen purzelten die Zeiten. <strong>Willi Brand</strong> &uuml;berraschte die Kabine mit einer 1:45.2 und holte sich die Pole &mdash; der Moderator nannte es schlicht &bdquo;sensationell". Sean Pfennig fuhr eine 1:45 und sicherte sich P2; Rajkovic, sonst der Mann, den es zu schlagen gilt, fand sich mit 1:45.4 nur auf P3 wieder. Startaufstellung: Brand, Pfennig, Rajkovic, Oberl&auml;nder, Schlosser, Felix, Cavoto, Mielke, Schrader.</p>
-              <p>Erw&auml;hnenswert: <strong>Ralph Mielke</strong> sprang als dritter CAS-Tech-Performance-Pilot ein (Olli sagte ab) und qualifizierte sich mit 1:47.8 auf P8.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Rennen&nbsp;1 &mdash; 25 Minuten, normale Startaufstellung</h4>
-              <p>Au&szlig;ergew&ouml;hnlich saubere Er&ouml;ffnung &mdash; neun Autos unbeschadet durch Kurve&nbsp;1, in den ersten zehn Minuten kein einziger Inzidenz-Report. Brand f&uuml;hrte von der Pole; Rajkovic klebte ein paar Runden lang am Heck, ehe er die F&uuml;hrung mit einem klassischen Windschatten-&Uuml;berholman&ouml;ver auf der Start-Ziel-Geraden &uuml;bernahm &mdash; perfekter Ausgang aus der letzten Schikane.</p>
-              <p>Dahinter fuhr Pfennig einsam auf P3, und das zweite Pulk &mdash; Mielke, Cavoto, Schrader, Felix, Schlosser &mdash; tauschte &uuml;ber die lange Runde immer wieder Pl&auml;tze. Thomas Felix lieferte einen der Moves des Rennens: ein weit gezogener Au&szlig;enrum-&Uuml;berholmanner gegen Schrader an der letzten Schikane &mdash; nur um den Platz die n&auml;chste Runde wieder herzugeben.</p>
-              <p>Der einzige echte Ausfall des Abends kam von <strong>Klaus Oberl&auml;nder</strong>, der in die Box rollte und das Auto abstellte &mdash; aus Gr&uuml;nden, die nicht auf den Stream gelangten. Auch das Inzidenz-Overlay der Kabine zeigte nichts an. M&ouml;glicherweise ein technisches Problem, m&ouml;glicherweise etwas anderes. Auch Benjamin Schlosser hatte irgendwo im Feld einen Vorfall, den das Inzidenz-Overlay des Streams nicht erfasste; er fiel deutlich zur&uuml;ck.</p>
-              <p><strong>Ergebnis Rennen&nbsp;1:</strong> Rajkovic, Brand, Pfennig, Mielke, Cavoto, Schrader, Felix, Schlosser, Oberl&auml;nder (DNF). <strong>Schnellste Runde:</strong> Willi Brand 1:45.07.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Rennen&nbsp;2 &mdash; 25 Minuten, Reverse Grid Top 8</h4>
-              <p>Das Reverse Grid setzte Schlosser auf die Pole und Rajkovic zur&uuml;ck auf P8. Lichter aus &mdash; und das Drehbuch zerriss sich an Kurve&nbsp;1: <strong>Rajkovic wurde in einen Halbdreher gesto&szlig;en</strong> und fiel ans Ende. Einsch&auml;tzung der Kabine: &bdquo;eine Ber&uuml;hrung, mit hoher Wahrscheinlichkeit unbeabsichtigt." Ein zweiter, kleinerer Kontakt weiter hinten brachte auch das Verfolgerfeld durcheinander.</p>
-              <p>Schlosser nutzte das Chaos und baute mit freier Strecke einen Vorsprung von 1,6&nbsp;Sekunden auf. Die definierende Story des Rennens wurde Rajkovics Aufholjagd: durchs Feld, in die Punkte, dann auf den Podiumsfight innerhalb von zehn Minuten &mdash; bei Rennmitte schon P2, mit Brand direkt dahinter. Die Worte des Moderators: &bdquo;unglaubliche Leistung, kein Frust, einfach Kopf runter und durch."</p>
-              <p>An der Spitze blieb Schlosser diszipliniert. W&auml;hrend Brand und Rajkovic ein privates Duell um P2 fochten, stabilisierten sich Schlossers Rundenzeiten genau auf dem n&ouml;tigen Niveau, und der Abstand &ouml;ffnete sich wieder auf die zwei Sekunden, die er ins Ziel bringen w&uuml;rde. Hinten drehte sich Klaus Oberl&auml;nder allein und verlor wieder die Pl&auml;tze, die er zur&uuml;ckerobert hatte; auch Jan Tobias Schrader leistete sich einen kostspieligen Dreher. Felix und Cavoto tauschten in der zweiten Rennh&auml;lfte mehrfach Pl&auml;tze.</p>
-              <p>In der allerletzten Runde fand Brand schlie&szlig;lich noch den Weg an Rajkovic vorbei f&uuml;r P2 &mdash; aber der Sieg war l&auml;ngst weg. <strong>Benjamin Schlosser holte seinen ersten PCCD-Sieg</strong> und obendrauf die schnellste Rennrunde (1:45.45). Trotz Dreher rettete Rajkovic noch P3.</p>
-              <p><strong>Ergebnis Rennen&nbsp;2:</strong> Schlosser, Brand, Rajkovic, Pfennig, Felix, Schrader, Oberl&auml;nder, Cavoto. (Mielke ging nicht zum Restart.) <strong>Schnellste Runde:</strong> Benjamin Schlosser 1:45.45.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Notizen aus der Kabine</h4>
-              <ul style="padding-left: 1.5rem;">
-                <li>Zwei CAS-Tech-Performance-Porsches am Start: <strong>Willi Brand</strong> (P2/P2) und Ralph Mielke (P4 in R1, kein Start in R2). Olli sagte ab.</li>
-                <li>Ohne Tabellenf&uuml;hrer Silvio Foth wurde der Abend zur Auseinandersetzung zwischen Rajkovic, Brand und Schlosser &mdash; und der Tabellen-Abstand schmilzt leicht, bleibt vor den letzten drei L&auml;ufen aber substantiell.</li>
-                <li>Klaus Oberl&auml;nder schied in Rennen&nbsp;1 ohne &ouml;ffentliche Erkl&auml;rung aus &mdash; das Inzidenz-Overlay des Streams erfasste den Vorfall nicht, und die Ursache kam auch im Stream nicht zur Sprache. Zu Rennen&nbsp;2 war er wieder am Start.</li>
-                <li>Der hauseigene Race-Manager des Streams (gebaut von Thomas Herbrig zusammen mit Claude) verpasste an diesem Abend ein paar Flaggen &mdash; an der Empfindlichkeit muss noch geschraubt werden.</li>
-                <li><strong>N&auml;chster Lauf:</strong> Silverstone GP, Mittwoch 21.&nbsp;Mai 2026. Danach Hockenheim GP und Okayama (Full Course) zum Saisonabschluss.</li>
-              </ul>
-
-              <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(255,255,255,0.55); font-style: italic;">Zusammenfassung des vollst&auml;ndigen sim_racing_broadcast-Streams von Thomas Herbrig. Offizielle Ergebnisse werden zeitnah in den iRLeagueManager-Standings ver&ouml;ffentlicht.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-
-      <!-- TSS GT4 Masters -->
-      <div id="sched-gt4" class="comparison-table-wrapper" style="max-width: 1200px; margin: 0 auto 2rem;">
-        <h3>TSS GT4 Masters &mdash; 3. Saison</h3>
-        <p style="padding: 0 1.5rem 1rem; margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);"><strong>Renntag:</strong> Montag &middot; 18:45 CET/CEST &nbsp;&middot;&nbsp; <strong>Format:</strong> 60 Min. Practice, 10 Min. Lone-Qualy, 5 Min. Warmup, 45 Min. Rennen &middot; Fixed Setup &middot; Liga-Wertung &middot; 1 Fast Repair</p>
-        <table class="comparison-table">
-          <thead>
-            <tr><th style="width: 60px;">Rd</th><th style="width: 110px;">Datum</th><th>Strecke</th><th style="width: 110px;">Sieger</th><th style="width: 110px;">Pole</th><th style="width: 110px;">Fastest Lap</th></tr>
-          </thead>
-          <tbody>
-            <tr data-date="2026-01-19" data-series="sched-gt4" data-round="1"><td>1</td><td>19. Jan</td><td>&#127470;&#127481; Autodromo Nazionale Monza</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-02-02" data-series="sched-gt4" data-round="2"><td>2</td><td>02. Feb</td><td>&#127463;&#127466; Circuit de Spa-Francorchamps</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-02-16" data-series="sched-gt4" data-round="3"><td>3</td><td>16. Feb</td><td>&#127475;&#127473; Circuit Zandvoort</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-03-02" data-series="sched-gt4" data-round="4"><td>4</td><td>02. M&auml;r</td><td>&#127468;&#127463; Donington Park Racing Circuit</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-03-16" data-series="sched-gt4" data-round="5"><td>5</td><td>16. M&auml;r</td><td>&#127468;&#127463; Oulton Park Circuit</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-03-30" data-series="sched-gt4" data-round="6"><td>6</td><td>30. M&auml;r</td><td>&#127465;&#127466; N&uuml;rburgring GP</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-13" data-series="sched-gt4" data-round="7"><td>7</td><td>13. Apr</td><td>&#127462;&#127482; Mount Panorama Circuit</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-04-27" data-series="sched-gt4" data-round="8"><td>8</td><td>27. Apr</td><td>&#127482;&#127480; Road Atlanta</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-          </tbody>
-        </table>
-        <div class="standings-section" data-series="sched-gt4">
-          <h4 class="standings-title">Meisterschaftsstand &mdash; Top 5</h4>
-          <div class="standings-grid">
-            <table class="standings-table">
-              <thead><tr><th class="pos">Pos</th><th>Fahrer</th><th class="pts">Punkte</th></tr></thead>
-              <tbody><tr class="empty"><td colspan="3">Noch keine Daten — wird nach dem Rennen aktualisiert.</td></tr></tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- GT4 Lauf 8 Road Atlanta — Saisonfinale Rennbericht -->
-        <div class="gt4-race-report" style="margin: 0 1.5rem 0.5rem; padding: 1.25rem 1.5rem; background: rgba(18, 18, 26, 0.55); border: 1px solid var(--border-color); border-radius: 10px;">
-          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-            <span style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.7rem; border-radius: 4px; background: var(--accent-red); color: #fff; font-family: var(--font-heading); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">&#128221; Saisonfinale</span>
-            <span style="font-family: var(--font-heading); font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.85);">Lauf&nbsp;8 &middot; &#127482;&#127480; Road Atlanta &middot; 27.&nbsp;April 2026 &middot; 8 Fahrer &middot; 45-Minuten-Rennen</span>
-          </div>
-
-          <div class="card-grid" style="margin: 0;">
-            <div class="card">
-              <span class="card-tag cas">Rennen-Podium</span>
-              <h3>&#127942; Venanzi, Eckert, Beer</h3>
-              <p>
-                &#129351;&nbsp;<strong>Pitt Venanzi</strong> &mdash; Heavy Metal Racing<br>
-                &#129352;&nbsp;Philipp Eckert &mdash; Firefly E-Racing (heute unter Heavy Metal)<br>
-                &#129353;&nbsp;Matthias Beer &mdash; Melanani Racing
-              </p>
-              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">Pole: Beer 1:26.x &middot; 53&deg;C Streckentemperatur &mdash; ein echtes Reifenmanagement-Rennen</p>
-            </div>
-
-            <div class="card">
-              <span class="card-tag cas">2026er Champion</span>
-              <h3>&#127941;&#65039; Matthias Beer &mdash; neuer TSS-GT4-Champion</h3>
-              <p>Beer holt Saison&nbsp;3 mit einem kontrollierten dritten Platz und entthront damit den amtierenden Champion Pitt Venanzi. Beide fuhren den Gro&szlig;teil des Rennens Sto&szlig;stange an Sto&szlig;stange an der Spitze; in der Schlussphase nahm Beer das Tempo bewusst raus, um den Titel ohne Risiko nach Hause zu fahren &mdash; und lie&szlig; Eckert sogar f&uuml;r P2 vorbei.</p>
-              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">Endstand Meisterschaft: Beer &mdash; Venanzi &mdash; Eckert &mdash; Raab</p>
-            </div>
-
-            <div class="card">
-              <span class="card-tag cas">Strategie des Tages</span>
-              <h3>&#128293; Eckerts Halbsatz-Reifen-Wette</h3>
-              <p>Bei 53&deg;C Streckentemperatur und Reifen, die Runde f&uuml;r Runde starben, traf <strong>Philipp Eckert</strong> in der Boxengasse die kurzfristige Entscheidung, <em>nur</em> die Reifen auf der linken Seite zu wechseln &mdash; vorne links und hinten links. Der Stopp dauerte l&auml;nger, aber in der zweiten Rennh&auml;lfte fuhr er <strong>1:26er-Rundenzeiten, die niemand sonst halten konnte</strong>, schloss die L&uuml;cke und &uuml;berholte Raab in die Schikane f&uuml;r P2.</p>
-              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">Venanzis Sieg basierte auf eiserner Sprit-Disziplin &mdash; er &uuml;berfuhr die Ziellinie mit nur noch 0,1&nbsp;Liter im Tank.</p>
-            </div>
-          </div>
-
-          <details style="margin-top: 1.25rem; padding: 1.1rem 1.4rem; background: rgba(10, 10, 15, 0.5); border: 1px solid var(--border-color); border-radius: 8px;">
-            <summary style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: var(--accent-red); cursor: pointer; letter-spacing: 0.5px;">&#128203; Vollst&auml;ndiger Rennbericht</summary>
-            <div style="margin-top: 1.2rem; font-size: 0.95rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 0.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Schauplatz</h4>
-              <p>Road Atlanta &mdash; 4,06&nbsp;km, schnell und welliges Streckenprofil. Lufttemperatur 22&deg;C, aber eine Strecke, die zu Rennbeginn auf <strong>53&deg;C</strong> hochkletterte, machte das ganze Rennen zu einer Reifen- und Sprit-Management-&Uuml;bung &mdash; die Autos &bdquo;wie auf Seife&ldquo;, in den Worten des Moderators. Acht Fahrer am Start; viele Stammfahrer haben das Finale ausgesetzt, nachdem die Meisterschaft im Wesentlichen entschieden war.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Vor dem Rennen</h4>
-              <ul style="padding-left: 1.5rem;">
-                <li><strong>Kevin Hilkenh&ouml;fel aus der Liga ausgeschlossen</strong> nach dem unsportlichen Vorfall mit Pitt Venanzi am vorigen Lauf; das Thema ist abgeschlossen.</li>
-                <li><strong>Marcel (MarcellyanX-Kommentator)</strong> kommentierte heute zum vorerst letzten Mal &mdash; er bricht am 12.&nbsp;Mai zu einer 3.500&nbsp;km langen Fahrradtour zum Nordkap auf (gesch&auml;tzt 8&ndash;10&nbsp;Wochen). Andreas &uuml;bernimmt zwischenzeitlich die Kommentation.</li>
-              </ul>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Qualifying</h4>
-              <p>10-Minuten Lone Quali. Spannung bis zum Schluss: J&uuml;rgen Raab f&uuml;hrte die Session lange an und sah aus wie der sichere Pole-Mann &mdash; bis Matthias Beer in der <strong>letzten Runde noch einmal alles auspackte</strong> (genau wie 14&nbsp;Tage zuvor) und sich die Pole mit nur 0,066&nbsp;s Vorsprung sicherte. Startaufstellung: Beer, Raab, Eckert, Venanzi, K&uuml;bler, Olli Utz, Cavoto, Felix.</p>
-              <p>Olli Utz hatte ein technisches Problem und musste aus der Boxengasse starten.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Rennen &mdash; erste H&auml;lfte</h4>
-              <p>Beim Start gelang Venanzi der Schachzug des Tages auf der Anfahrt zu Kurve&nbsp;1: er ging an Raab und Eckert in einer Bewegung vorbei und sprang von P4 auf P2 hinter Beer. Leichter Kontakt zwischen Raab und Eckert in dem Gedr&auml;nge, beide kamen aber durch.</p>
-              <p>Olli Utz verlor beim Verlassen der Box das Heck und schlug heftig in die Mauer ein &mdash; Rennen sofort gelaufen, sp&auml;ter kam er aber zur&uuml;ck, um eine Zielposition zu kassieren.</p>
-              <p>Das Spitzentrio &mdash; Beer, Venanzi, Eckert &mdash; bildete eine enge Gruppe, mit Venanzi bewusst im Windschatten von Beer, Sprit und Reifen schonend statt anzugreifen. Raab fiel innerhalb von zehn Minuten aus dem Windschattenfenster auf P4. Ricardo Cavoto rutschte mehrfach &uuml;bers Vorderrad ab und kassierte mehrere Slow-Down-Zonen; Thomas K&uuml;bler stand am Ende 1:10&nbsp;Minuten in der Box und fiel ans Feldende.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Die Boxenphase &mdash; Taktik entscheidet</h4>
-              <ul style="padding-left: 1.5rem;">
-                <li><strong>J&uuml;rgen Raab</strong> kam als Erster rein und versuchte einen Undercut auf Eckert. Es funktionierte &mdash; er stand 1,7&nbsp;s k&uuml;rzer und kam vor Eckert auf P3 raus.</li>
-                <li><strong>Eckert</strong> traf die Entscheidung, die das Rennen pr&auml;gen sollte: Wechsel <strong>nur der linken Reifen</strong> (vorne und hinten links). L&auml;ngerer Stopp, aber die frischen Pneus sollten den Unterschied machen.</li>
-                <li><strong>Beer und Venanzi</strong> kamen in derselben Runde rein. Keiner wechselte Reifen. Venanzi stand etwas k&uuml;rzer &mdash; dank der Sprit-Ersparnis aus dem ersten Stint &mdash; und kam auf P1 raus, Positionswechsel mit Beer.</li>
-              </ul>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Rennen &mdash; zweite H&auml;lfte</h4>
-              <p>Auf der Strecke entfaltete sich Eckerts Strategie. Mit den frischen linken Reifen fuhr er pl&ouml;tzlich <strong>1:26er-Runden, die niemand halten konnte</strong>, und fra&szlig; sich an Raab heran. Holte ihn wenige Runden sp&auml;ter ein, ging innen rein in die Schikane, fuhr Side-by-Side durch die n&auml;chste Rechtskurve und war auf P3.</p>
-              <p>Raabs Rennen kippte dann: ein selbstverschuldeter Einschlag in die Mauer brachte ihm eine Meatball-Flagge und kostete ihn die Spitzengruppe. Er rettete sich auf P4 ins Ziel.</p>
-              <p>Eckert dr&uuml;ckte weiter Richtung Spitze und machte aus dem Zweikampf einen Dreikampf. Drei Minuten vor Schluss nahm Beer &mdash; der designierte Champion &mdash; sichtbar das Tempo raus: eine Sprit-Spar-Runde, m&ouml;glicherweise auch eine bewusste Risiko-Reduzierung. Er lie&szlig; Eckert f&uuml;r P2 vorbei und cruiste als Champion auf P3 ins Ziel.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Endergebnis &amp; Meisterschaft</h4>
-              <p>P1 Venanzi, P2 Eckert, P3 Beer, P4 Raab, P5 K&uuml;bler, P6 Olli Utz, P7 Cavoto, P8 Felix.</p>
-              <p><strong>2026 TSS GT4 Masters Champion: Matthias Beer</strong> (Melanani Racing). Vize: Pitt Venanzi (Heavy Metal Racing). P3: Philipp Eckert (Firefly E-Racing). P4: J&uuml;rgen Raab.</p>
-
-              <h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Stimmen aus den Interviews nach dem Rennen</h4>
-              <ul style="padding-left: 1.5rem;">
-                <li><strong>Pitt Venanzi:</strong> &bdquo;Plan war von Anfang an, mich hinter Matthias zu h&auml;ngen und Sprit zu sparen &mdash; w&auml;re ich mitgefahren, h&auml;tte ich die Reifen in zwei Runden zerst&ouml;rt. Ich kam mit 0,1&nbsp;l &uuml;ber die Linie. Wirklich knapp."</li>
-                <li><strong>Philipp Eckert:</strong> &bdquo;Das Rennen war brutal. Ich habe in der Box kurzfristig entschieden, nur die linken Reifen zu wechseln. In der zweiten H&auml;lfte fuhr ich Zeiten, von denen ich vorher nicht geglaubt habe, dass ich sie bei der Streckentemperatur fahren kann. H&auml;tte gerne gegen Matthias um den Sieg gek&auml;mpft, aber er hat einfach abgebremst und mich vorbeigewinkt &mdash; ich wei&szlig; nicht genau warum."</li>
-                <li><strong>Matthias Beer:</strong> nahm in den Schlussrunden bewusst das Tempo raus, um den Titel ohne Risiko nach Hause zu fahren &mdash; Sprit-Fenster knapp, kein Anreiz f&uuml;r einen Risiko-Fight.</li>
-              </ul>
-
-              <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(255,255,255,0.55); font-style: italic;">Zusammenfassung basierend auf Marcels MarcellyanX-Twitch-Stream. Saison&nbsp;4 der TSS GT4 Masters ist bereits in Planung &mdash; Details folgen, sobald der Kalender steht.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-
-      <!-- IEC International Endurance Championship -->
-      <div id="sched-iec" class="comparison-table-wrapper" style="max-width: 1200px; margin: 0 auto 2rem;">
-        <h3>IEC &ndash; International Endurance Championship &mdash; 4. Saison</h3>
-        <p style="padding: 0 1.5rem 1rem; margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);"><strong>Renntag:</strong> Samstag &middot; Rennstart 17:30 CET/CEST &nbsp;&middot;&nbsp; <strong>Format:</strong> 3h Multiclass-Langstrecke &middot; Porsche Cup / LMP2 / GT3 &middot; 6 L&auml;ufe &middot; Max. 5K iRating (LMP mind. 1,5K)</p>
-        <p style="padding: 0 1.5rem 1rem; margin: 0; font-size: 0.85rem; color: rgba(255,255,255,0.55);">Server&ouml;ffnung 16:00 &middot; Training 16:00&ndash;17:00 &middot; Quali 17:00 (Lone, 15 min &middot; 4 Runden) &middot; Warmup 10 min</p>
-        <table class="comparison-table">
-          <thead>
-            <tr><th style="width: 60px;">Rd</th><th style="width: 130px;">Datum</th><th style="width: 80px;">Dauer</th><th>Strecke</th><th style="width: 110px;">Sieger</th><th style="width: 110px;">Pole</th><th style="width: 110px;">Fastest Lap</th></tr>
-          </thead>
-          <tbody>
-            <tr data-date="2026-09-05" data-series="sched-iec" data-round="1"><td>1</td><td>05. Sep 2026</td><td>3h</td><td>&#127482;&#127480; Sebring</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-10-03" data-series="sched-iec" data-round="2"><td>2</td><td>03. Okt 2026</td><td>3h</td><td>&#127471;&#127477; Fuji</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-10-31" data-series="sched-iec" data-round="3"><td>3</td><td>31. Okt 2026</td><td>3h</td><td>&#127467;&#127479; Le Mans</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2026-11-28" data-series="sched-iec" data-round="4"><td>4</td><td>28. Nov 2026</td><td>3h</td><td>&#127482;&#127480; Road Atlanta</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2027-01-23" data-series="sched-iec" data-round="5"><td>5</td><td>23. Jan 2027</td><td>3h</td><td>&#127465;&#127466; N&uuml;rburgring GP (BES/WEC)</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-            <tr data-date="2027-03-06" data-series="sched-iec" data-round="6"><td>6</td><td>06. M&auml;r 2027</td><td>3h</td><td>&#127482;&#127480; Daytona Road Course</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td><td class="result-cell">&mdash;</td></tr>
-          </tbody>
-        </table>
-        <div class="standings-section" data-series="sched-iec">
-          <h4 class="standings-title">Meisterschaftsstand &mdash; Top 5</h4>
-          <div class="standings-grid">
-            <table class="standings-table">
-              <thead><tr><th class="pos">Pos</th><th>Fahrer</th><th class="pts">Punkte</th></tr></thead>
-              <tbody><tr class="empty"><td colspan="3">Noch keine Daten — wird nach dem Rennen aktualisiert.</td></tr></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <p style="max-width: 900px; margin: 1rem auto 0; padding: 0 1.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.55); text-align: center;">Die Kalender basieren auf den offiziellen CAS-Community-Terminen. Sieger / Pole / Fastest Lap und die Top-5-Tabellen werden automatisch aus dem <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" style="color: var(--accent-orange);">SimRacing Hub League Manager</a> synchronisiert &mdash; abgeschlossene L&auml;ufe sind mit &#10003; markiert. F&uuml;r kurzfristige &Auml;nderungen, Fahrerbesprechungen und Server-Infos immer die <a href="https://cas-community.com/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">CAS-Website</a> oder Discord pr&uuml;fen.</p>
+      <p style="max-width: 900px; margin: 1.5rem auto 0; padding: 0 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.6); text-align: center;">Für Driver-Briefings, kurzfristige Kalenderaenderungen und Discord-Chat geht es zu <a href="https://cas-community.com/" target="_blank" rel="noopener" style="color: var(--accent-yellow);">cas-community.com</a>.</p>
     </div>
 
     <!-- Community Ressourcen -->

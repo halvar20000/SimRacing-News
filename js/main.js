@@ -58,7 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
     lastUpdated.textContent = prefix + now.toLocaleDateString(locale, options);
   }
 
-  // ===== CAS Schedules: Next Race banner + per-series row highlight + .ics export =====
+  // ===== CAS Schedules: legacy code kept as a no-op =====
+  // As of May 2026 the CAS schedule, results and standings live exclusively on
+  // league.simracing-hub.com. The schedule tables, #next-race-banner element and
+  // /data/cas-results-2026.json file have all been removed from cas-community.html.
+  // The block below is wrapped in `if (nextRaceBanner)` and therefore silently
+  // does nothing on the new page. Do NOT re-add an element with id="next-race-banner"
+  // unless you also restore the schedule tables — otherwise this code will start
+  // making a (now 404) fetch to /data/cas-results-2026.json.
   const nextRaceBanner = document.getElementById('next-race-banner');
   if (nextRaceBanner) {
     // Metadata for each series
