@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- BEGIN SEO-MANAGED -->
+    <title>CAS Race Center – Telemetrie-Ergebnisse, Replays &amp; Statistiken | SimRacing Hub</title>
+    <meta name="description" content="Datengetriebene Rennergebnisse, animierte 2D-Replays und Statistiken aus der CAS-Community-Sim-Racing-Liga — direkt aus der In-Sim-Telemetrie.">
+    <link rel="canonical" href="https://simracing-hub.com/de/race-center.html">
+    <link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center.html">
+    <link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center.html">
+    <link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SimRacing Hub">
+    <meta property="og:title" content="CAS Race Center – Telemetrie-Ergebnisse, Replays &amp; Statistiken | SimRacing Hub">
+    <meta property="og:description" content="Datengetriebene Rennergebnisse, animierte 2D-Replays und Statistiken aus der CAS-Community-Sim-Racing-Liga.">
+    <meta property="og:url" content="https://simracing-hub.com/de/race-center.html">
+    <meta property="og:image" content="https://simracing-hub.com/img/logo.svg">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CAS Race Center – Telemetrie-Ergebnisse, Replays &amp; Statistiken | SimRacing Hub">
+    <meta name="twitter:description" content="Datengetriebene Rennergebnisse, animierte 2D-Replays und Statistiken aus der CAS-Community-Sim-Racing-Liga.">
+    <meta name="twitter:image" content="https://simracing-hub.com/img/logo.svg">
+  <!-- END SEO-MANAGED -->
+  <style>
+    /* ===== RACE CENTER ===== */
+    .race-intro {
+      max-width: 820px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: center;
+    }
+    .race-intro a { color: var(--accent-orange); }
+    .race-entry {
+      max-width: var(--max-width);
+      margin: 0 auto 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .race-entry:last-of-type { border-bottom: 0; }
+    .race-entry-head { margin-bottom: 1.5rem; }
+    .race-round {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      background: rgba(255, 107, 53, 0.12);
+      border: 1px solid rgba(255, 107, 53, 0.35);
+      border-radius: 5px;
+      padding: 0.3rem 0.7rem;
+      margin-bottom: 0.75rem;
+    }
+    .race-entry-head h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .race-meta {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.35rem;
+    }
+    .race-meta a { color: var(--accent-orange); text-decoration: none; white-space: nowrap; }
+    .race-meta a:hover { text-decoration: underline; }
+    .race-replay {
+      margin: 0 auto 2.25rem;
+      max-width: 960px;
+    }
+    .race-replay video {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: #000;
+    }
+    .replay-caption {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 0.6rem;
+    }
+    .race-block-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-primary);
+      margin: 2rem 0 1.1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .race-highlights {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+    .race-highlights p { margin-bottom: 0.9rem; }
+    .race-highlights p:last-child { margin-bottom: 0; }
+    .race-highlights strong { color: var(--text-primary); }
+    /* results table */
+    .results-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .race-results-table {
+      min-width: 760px;
+      font-variant-numeric: tabular-nums;
+    }
+    .race-results-table td.pos { font-family: var(--font-heading); font-weight: 700; color: var(--text-secondary); }
+    .race-results-table td.num { color: var(--text-muted); }
+    .race-results-table td.drv { color: #fff; }
+    .race-results-table td.car { color: var(--text-secondary); font-size: 0.85rem; }
+    .race-results-table td.res { font-size: 0.82rem; color: var(--text-secondary); }
+    .race-results-table tbody tr:first-child td.pos { color: var(--accent-yellow); }
+    .race-results-table td.best.flap { color: var(--accent-yellow); font-weight: 600; }
+    .flap-badge {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      background: rgba(255, 209, 102, 0.18);
+      color: var(--accent-yellow);
+      border-radius: 3px;
+      padding: 0.05rem 0.3rem;
+      vertical-align: middle;
+    }
+    .race-results-table tr.row-dnf td { color: var(--text-muted); }
+    .race-results-table tr.row-dnf td.drv { color: var(--text-secondary); }
+    .data-note {
+      max-width: var(--max-width);
+      margin: 1.75rem auto 0;
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .race-entry-head h2 { font-size: 1.5rem; }
+      .race-meta a { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="../img/logo.svg" alt="SimRacing Hub" class="logo-img">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <nav>
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulationen</a>
+        <a href="software.html">Software & Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html" class="active">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="beyond-the-sim.html">Jenseits</a>
+        <a href="simhub-guide.html">Anfänger-Guide</a>
+        <a href="buying-guide.html">Kaufberatung</a>
+        <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" title="CAS League Scoring (CLS) &mdash; Live-Standings, Kalender, Ergebnisse">CAS League Scoring (CLS) &#8599;</a>
+        <a href="about.html">&Uuml;ber</a>
+        <div class="lang-switch">
+          <a href="../race-center.html" title="English">&#127468;&#127463;</a>
+          <a href="race-center.html" class="active-lang" title="Deutsch">&#127465;&#127466;</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1><span>CAS</span> Race Center</h1>
+    <p>Datengetriebene Ergebnisse, animierte Replays und Statistiken &mdash; eine Seite pro CAS-Rennen.</p>
+    <div class="hero-date">Aktuell: Suzuka GP &middot; Lauf 9 &middot; 19. Mai 2026</div>
+  </section>
+
+  <main>
+
+    <div class="sub-section">
+      <div class="section-header">
+        <h2><span class="icon">&#127937;</span> Rennarchiv</h2>
+        <p>Jedes CAS-Rennen, rekonstruiert aus dem In-Sim-Telemetrie-Log</p>
+      </div>
+
+      <p class="race-intro">
+        Das Race Center ist die datengetriebene Ergänzung zu den CAS-Community-Rennanalysen. Jeder Eintrag
+        entsteht direkt aus einer Live-Telemetrie-Aufzeichnung des Rennens: ein animiertes 2D-Replay, die
+        komplette Wertung und die wichtigsten Zahlen. Für die erzählerische Seite &mdash; die Broadcast-Geschichte,
+        Qualifying- und Meisterschaftskontext &mdash; siehe die <a href="cas-community.html#race-report">CAS-Community-Rennanalyse</a>
+        und die offiziellen <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener">CAS League Scoring (CLS)</a>-Standings.
+        Neuestes Rennen zuerst.
+      </p>
+
+      <!-- RACE-ENTRIES-START (newest first — Skill inserts new entries directly below this line) -->
+    <article class="race-entry" id="suzuka-r9">
+      <div class="race-entry-head">
+        <span class="race-round">CAS GT3 WCT &middot; Saison 12 &middot; Lauf 9</span>
+        <h2>Grand Prix von Suzuka</h2>
+        <p class="race-meta">19. Mai 2026 &middot; 32 Teilnehmer &middot; 25 Runden &middot; nass &mdash; Starkregen &middot; <a href="cas-community.html#race-report">Komplette Rennanalyse &#8599;</a></p>
+      </div>
+      <div class="race-replay">
+        <video controls preload="none" playsinline poster="../races/suzuka-r9-poster.jpg">
+          <source src="../races/suzuka-r9-replay.mp4" type="video/mp4">
+        </video>
+        <p class="replay-caption">2D-Telemetrie-Replay &mdash; das 68-Minuten-Rennen auf rund 3&frac12; Minuten gerafft.</p>
+      </div>
+      <h3 class="race-block-title">In Zahlen</h3>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag cas">Rennsieger</span>
+          <h3>Maurice Becker</h3>
+          <p>Gewinnt mit +41.85s Vorsprung nach 25 Runden &mdash; seine schnellste Runde war 2:22.193.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Schnellste Runde</span>
+          <h3>Mike Zocher</h3>
+          <p>Fuhr die schnellste Rennrunde: 2:21.669 in Runde 16.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Ausfälle</span>
+          <h3>7 Ausfälle</h3>
+          <p>Nur 25 von 32 Startern waren bei Rennende noch im Rennen.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Sauberste Fahrt</span>
+          <h3>Mike Girenz</h3>
+          <p>Die sauberste gewertete Fahrt des Tages &mdash; nur 3 Incident-Punkte, Ziel auf P5.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Härtestes Rennen</span>
+          <h3>Christoph Kiesel</h3>
+          <p>Ein brutaler Nachmittag &mdash; 52 Incident-Punkte und 8 Boxenstopps, dennoch P24 gewertet.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Box &amp; Flaggen</span>
+          <h3>69 Boxenbesuche</h3>
+          <p>29 Strafen und 4 Gelbphasen in rund einer Stunde Rennzeit.</p>
+        </div>
+      </div>
+      <h3 class="race-block-title">Rennhighlights</h3>
+      <div class="race-highlights">
+        <p>Suzuka lieferte das Rennen, das die Vorhersage versprochen hatte &mdash; eine komplett nasse Stunde. Das Qualifying lief im Trockenen, doch die Regenfront traf fast punktgenau zur grünen Flagge ein, und die Rundenzeiten stiegen von trockenen 1:57ern auf rund 2:22. Nicht der Grip, sondern die Sicht bestimmte das gesamte Rennen.</p>
+        <p><strong>Maurice Becker</strong> fuhr dem Feld schlicht davon und baute einen Vorsprung von über einer halben Minute auf &mdash; sein dritter Sieg in Folge nach Fuji und Brands Hatch. <strong>Marius Becker</strong> &mdash; nicht verwandt &mdash; brachte den einzigen Speed-Monkeys-Mustang auf Platz zwei, und <strong>Mike Zocher</strong> machte das reine Speed-Monkeys-Podium perfekt und fuhr zugleich die schnellste Rennrunde. Dahinter forderte der Regen seinen Tribut: Sieben Autos fielen früh genug aus, dass die Liga sie als DSQ wertete, und das Incident-Log füllte sich rasant.</p>
+      </div>
+      <h3 class="race-block-title">Komplette Wertung</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Fahrer</th><th>Fahrzeug</th><th>Rdn</th><th>Beste Rd.</th><th>Rückstand</th><th>Inc</th><th>Box</th><th>Ergebnis</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">49</td><td class="drv">Maurice Becker</td><td class="car">Porsche 911 GT3 R (992)</td><td>25</td><td class="best">2:22.193</td><td>&mdash;</td><td>6</td><td>2</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">2</td><td class="num">14</td><td class="drv">Marius Becker</td><td class="car">Ford Mustang GT3</td><td>25</td><td class="best">2:22.614</td><td>+41.85s</td><td>6</td><td>2</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">3</td><td class="num">26</td><td class="drv">Mike Zocher</td><td class="car">Porsche 911 GT3 R (992)</td><td>25</td><td class="best flap">2:21.669 <span class="flap-badge">SR</span></td><td>+51.43s</td><td>14</td><td>3</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">4</td><td class="num">02</td><td class="drv">Yannick Wonnenberg</td><td class="car">Lamborghini GT3</td><td>25</td><td class="best">2:22.808</td><td>+90.30s</td><td>18</td><td>2</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">5</td><td class="num">33</td><td class="drv">Mike Girenz</td><td class="car">Porsche 911 GT3 R (992)</td><td>25</td><td class="best">2:25.313</td><td>+98.81s</td><td>3</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">6</td><td class="num">89</td><td class="drv">Lukas Zörlaut</td><td class="car">Mercedes GT3 2020</td><td>25</td><td class="best">2:25.740</td><td>+99.42s</td><td>4</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">7</td><td class="num">63</td><td class="drv">Dennis Ulli Richter</td><td class="car">AMR Vantage GT3 EVO</td><td>25</td><td class="best">2:24.993</td><td>+103.08s</td><td>13</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">8</td><td class="num">08</td><td class="drv">Gregor Micewski</td><td class="car">Mercedes GT3 2020</td><td>25</td><td class="best">2:24.964</td><td>+108.05s</td><td>11</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">9</td><td class="num">116</td><td class="drv">Justin Christiansen</td><td class="car">BMW M4 GT3 EVO</td><td>25</td><td class="best">2:25.671</td><td>+114.58s</td><td>12</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">10</td><td class="num">45</td><td class="drv">Hendrik Stanzel</td><td class="car">Porsche 911 GT3 R (992)</td><td>25</td><td class="best">2:23.975</td><td>+116.24s</td><td>17</td><td>2</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">11</td><td class="num">860</td><td class="drv">Klaus Oberlaender</td><td class="car">BMW M4 GT3 EVO</td><td>25</td><td class="best">2:26.332</td><td>+120.66s</td><td>10</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">12</td><td class="num">479</td><td class="drv">Michael Krieger</td><td class="car">Porsche 911 GT3 R (992)</td><td>25</td><td class="best">2:26.389</td><td>+139.87s</td><td>8</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">13</td><td class="num">16</td><td class="drv">Kevin Osiewacz</td><td class="car">Porsche 911 GT3 R (992)</td><td>25</td><td class="best">2:24.827</td><td>+150.21s</td><td>26</td><td>3</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">14</td><td class="num">112</td><td class="drv">Benjamin Warnow</td><td class="car">Audi R8 LMS EVO II GT3</td><td>24</td><td class="best">2:27.227</td><td>+177.01s</td><td>12</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">15</td><td class="num">198</td><td class="drv">Michael Endres</td><td class="car">Ford Mustang GT3</td><td>24</td><td class="best">2:28.197</td><td>+180.61s</td><td>14</td><td>2</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">16</td><td class="num">334</td><td class="drv">Max Coldron</td><td class="car">Ford Mustang GT3</td><td>24</td><td class="best">2:24.765</td><td>+186.52s</td><td>14</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">17</td><td class="num">626</td><td class="drv">Fritz Morawetz</td><td class="car">Ford Mustang GT3</td><td>24</td><td class="best">2:27.869</td><td>+187.28s</td><td>19</td><td>2</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">18</td><td class="num">05</td><td class="drv">Andy Weber</td><td class="car">Ford Mustang GT3</td><td>24</td><td class="best">2:26.849</td><td>+189.30s</td><td>10</td><td>2</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">19</td><td class="num">46</td><td class="drv">Michael Gessner</td><td class="car">BMW M4 GT3 EVO</td><td>24</td><td class="best">2:28.218</td><td>+230.10s</td><td>10</td><td>3</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">20</td><td class="num">73</td><td class="drv">Thomas Kuebler</td><td class="car">Ferrari 296 GT3</td><td>24</td><td class="best">2:26.857</td><td>+237.56s</td><td>10</td><td>3</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">21</td><td class="num">118</td><td class="drv">Bernhard Wlach</td><td class="car">Porsche 911 GT3 R (992)</td><td>24</td><td class="best">2:27.092</td><td>+323.35s</td><td>21</td><td>3</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">22</td><td class="num">666</td><td class="drv">Björn Krumpschmied</td><td class="car">Ferrari 296 GT3</td><td>23</td><td class="best">2:33.576</td><td>+310.37s</td><td>13</td><td>2</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">23</td><td class="num">69</td><td class="drv">Mario Severn</td><td class="car">Porsche 911 GT3 R (992)</td><td>23</td><td class="best">2:26.271</td><td>+340.85s</td><td>23</td><td>2</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">24</td><td class="num">146</td><td class="drv">Christoph Kiesel</td><td class="car">Ford Mustang GT3</td><td>23</td><td class="best">2:27.977</td><td>+421.42s</td><td>52</td><td>8</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">25</td><td class="num">968</td><td class="drv">Thomas Herbrig</td><td class="car">McLaren 720S GT3 EVO</td><td>21</td><td class="best">2:36.007</td><td>+644.76s</td><td>23</td><td>3</td><td class="res">Im Ziel</td></tr>
+          <tr class="row-dnf"><td class="pos">26</td><td class="num">555</td><td class="drv">Antonio Cursio</td><td class="car">McLaren 720S GT3 EVO</td><td>15</td><td class="best">2:27.970</td><td>&mdash;</td><td>18</td><td>3</td><td class="res">Ausfall</td></tr>
+          <tr class="row-dnf"><td class="pos">27</td><td class="num">674</td><td class="drv">Chistian Schlosser</td><td class="car">Ford Mustang GT3</td><td>11</td><td class="best">2:32.713</td><td>&mdash;</td><td>15</td><td>1</td><td class="res">Ausfall</td></tr>
+          <tr class="row-dnf"><td class="pos">28</td><td class="num">181</td><td class="drv">Djavit Segashi</td><td class="car">Mercedes GT3 2020</td><td>9</td><td class="best">2:31.223</td><td>&mdash;</td><td>15</td><td>2</td><td class="res">Ausfall</td></tr>
+          <tr class="row-dnf"><td class="pos">29</td><td class="num">812</td><td class="drv">Alexander Thieme</td><td class="car">BMW M4 GT3 EVO</td><td>7</td><td class="best">2:37.186</td><td>&mdash;</td><td>21</td><td>6</td><td class="res">Ausfall</td></tr>
+          <tr class="row-dnf"><td class="pos">30</td><td class="num">83</td><td class="drv">Benjamin Schlosser</td><td class="car">Ford Mustang GT3</td><td>6</td><td class="best">3:05.324</td><td>&mdash;</td><td>16</td><td>1</td><td class="res">Ausfall</td></tr>
+          <tr class="row-dnf"><td class="pos">31</td><td class="num">581</td><td class="drv">Manfred Baar</td><td class="car">BMW M4 GT3 EVO</td><td>4</td><td class="best">&mdash;</td><td>&mdash;</td><td>9</td><td>2</td><td class="res">Ausfall</td></tr>
+          <tr class="row-dnf"><td class="pos">32</td><td class="num">134</td><td class="drv">Dirk Bolte</td><td class="car">Porsche 911 GT3 R (992)</td><td>0</td><td class="best">&mdash;</td><td>&mdash;</td><td>4</td><td>1</td><td class="res">Ausfall</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="data-note">Ergebnisse, Rundenzeiten, Rückstände, Incident-Punkte und Boxenstopps auf dieser Seite stammen direkt aus der Live-Telemetrie des eigenen iRacing-Race-Loggers von SimRacing Hub. Startaufstellung und die offiziellen DSQ-Wertungen der Liga kommen aus dem CAS League Scoring (CLS). Das Replay ist eine 2D-Rekonstruktion aus Positionsdaten im Sekundentakt.</p>
+    </article>
+      <!-- RACE-ENTRIES-END -->
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulationen</a>
+        <a href="software.html">Software & Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="beyond-the-sim.html">Jenseits</a>
+        <a href="simhub-guide.html">Anfänger-Guide</a>
+        <a href="buying-guide.html">Kaufberatung</a>
+        <a href="about.html">&Uuml;ber</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+      <p>SimRacing Hub &mdash; KI-kuratierte Sim-Racing News, t&auml;glich aktualisiert.</p>
+      <p class="footer-trust">Unabh&auml;ngig. Keine Werbung. Keine Sponsoren. Keine Affiliate-Links. Kein Tracking.</p>
+      <span class="last-updated"></span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+</body>
+</html>
