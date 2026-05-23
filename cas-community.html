@@ -468,7 +468,99 @@
       </div>
 
       <div style="max-width: 900px; margin: 0 auto 2rem; padding: 0 1.5rem; font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.85);">
-        <p>The schedule, results and standings for every CAS championship now live on the dedicated <strong>CAS League Scoring (CLS)</strong> at <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" style="color: var(--accent-orange);">league.simracing-hub.com</a>. Each card below jumps directly to that championship’s page — next race countdown, latest podium, championship leader and full standings, all updated live by the league system.</p>
+        <p>The schedule, results and standings for every CAS championship live on the dedicated <strong>CAS League Scoring (CLS)</strong> system at <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" style="color: var(--accent-orange);">league.simracing-hub.com</a>. The current championship standings are shown below; each card further down jumps directly to that championship’s CLS page — next race countdown, latest podium, full standings and per-round results, all updated live by the league system.</p>
+      </div>
+
+      <!-- ===== CLS Championship Standings — table rows auto-filled by scripts/refresh_cas_from_cls.py ===== -->
+      <div class="standings-section" style="border-top: none; padding-top: 0;">
+        <p class="standings-title">Championship Standings &mdash; Top 10
+          <span style="font-weight: 400; text-transform: none; letter-spacing: 0; color: rgba(255,255,255,0.45);">&middot; live from CAS League Scoring &middot; <!-- CLS:updated -->23 May 2026<!-- /CLS:updated --></span>
+        </p>
+
+        <h3 style="font-family: var(--font-heading); font-size: 1.05rem; margin: 0.4rem 0 0.9rem; color: #fff;">&#127942; CAS GT3 WCT</h3>
+        <div class="standings-grid dual">
+          <table class="standings-table">
+            <caption>Pro Class</caption>
+            <thead><tr><th class="pos">#</th><th>Driver</th><th class="pts">Pts</th></tr></thead>
+            <tbody>
+            <!-- CLS:wct-pro -->
+            <tr><td class="pos">1</td><td>Yannick Wonnenberg</td><td class="pts">304</td></tr>
+            <tr><td class="pos">2</td><td>Gregor Micewski</td><td class="pts">276</td></tr>
+            <tr><td class="pos">3</td><td>Lukas Zörlaut</td><td class="pts">254</td></tr>
+            <tr><td class="pos">4</td><td>Maurice Becker</td><td class="pts">249</td></tr>
+            <tr><td class="pos">5</td><td>Hendrik Stanzel</td><td class="pts">246</td></tr>
+            <tr><td class="pos">6</td><td>Dennis Richter</td><td class="pts">232</td></tr>
+            <tr><td class="pos">7</td><td>Mike Zocher</td><td class="pts">224</td></tr>
+            <tr><td class="pos">8</td><td>Marius Becker</td><td class="pts">186</td></tr>
+            <tr><td class="pos">9</td><td>Mario Severn</td><td class="pts">172</td></tr>
+            <tr><td class="pos">10</td><td>Benjamin Schlosser</td><td class="pts">156</td></tr>
+            <!-- /CLS:wct-pro -->
+            </tbody>
+          </table>
+          <table class="standings-table">
+            <caption>AM Class</caption>
+            <thead><tr><th class="pos">#</th><th>Driver</th><th class="pts">Pts</th></tr></thead>
+            <tbody>
+            <!-- CLS:wct-am -->
+            <tr><td class="pos">1</td><td>Justin Christiansen</td><td class="pts">276</td></tr>
+            <tr><td class="pos">2</td><td>Fritz Morawetz</td><td class="pts">273</td></tr>
+            <tr><td class="pos">3</td><td>Max Coldron</td><td class="pts">256</td></tr>
+            <tr><td class="pos">4</td><td>Christoph Kiesel</td><td class="pts">256</td></tr>
+            <tr><td class="pos">5</td><td>Klaus Oberlaender</td><td class="pts">254</td></tr>
+            <tr><td class="pos">6</td><td>Benjamin Warnow</td><td class="pts">210</td></tr>
+            <tr><td class="pos">7</td><td>Dirk Bolte</td><td class="pts">206</td></tr>
+            <tr><td class="pos">8</td><td>Michael Krieger</td><td class="pts">203</td></tr>
+            <tr><td class="pos">9</td><td>Björn Krumpschmied</td><td class="pts">200</td></tr>
+            <tr><td class="pos">10</td><td>Manfred Baar</td><td class="pts">188</td></tr>
+            <!-- /CLS:wct-am -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="standings-grid dual" style="margin-top: 1.6rem;">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.05rem; margin: 0 0 0.9rem; color: #fff;">&#127937; CAS PCCD</h3>
+            <table class="standings-table">
+              <thead><tr><th class="pos">#</th><th>Driver</th><th class="pts">Pts</th></tr></thead>
+              <tbody>
+              <!-- CLS:pccd -->
+            <tr><td class="pos">1</td><td>Andre Rajkovic</td><td class="pts">407</td></tr>
+            <tr><td class="pos">2</td><td>Silvio Foth</td><td class="pts">386</td></tr>
+            <tr><td class="pos">3</td><td>Willi Brand</td><td class="pts">300</td></tr>
+            <tr><td class="pos">4</td><td>Sean Pfennig</td><td class="pts">260</td></tr>
+            <tr><td class="pos">5</td><td>Benjamin Schlosser</td><td class="pts">216</td></tr>
+            <tr><td class="pos">6</td><td>Klaus Oberlaender</td><td class="pts">201</td></tr>
+            <tr><td class="pos">7</td><td>Jan Tobias Schrader</td><td class="pts">194</td></tr>
+            <tr><td class="pos">8</td><td>Thomas Felix</td><td class="pts">188</td></tr>
+            <tr><td class="pos">9</td><td>Don Utz</td><td class="pts">160</td></tr>
+            <tr><td class="pos">10</td><td>Riccardo Cavoto</td><td class="pts">147</td></tr>
+            <!-- /CLS:pccd -->
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.05rem; margin: 0 0 0.9rem; color: #fff;">&#127953; CAS SFL Cup</h3>
+            <table class="standings-table">
+              <thead><tr><th class="pos">#</th><th>Driver</th><th class="pts">Pts</th></tr></thead>
+              <tbody>
+              <!-- CLS:sfl -->
+            <tr><td class="pos">1</td><td>Andreas Wuschnakowski</td><td class="pts">282</td></tr>
+            <tr><td class="pos">2</td><td>Bernhard Wlach</td><td class="pts">273</td></tr>
+            <tr><td class="pos">3</td><td>Kevin Chmielewski</td><td class="pts">254</td></tr>
+            <tr><td class="pos">4</td><td>Riccardo Cavoto</td><td class="pts">226</td></tr>
+            <tr><td class="pos">5</td><td>Michael Kelnberger</td><td class="pts">215</td></tr>
+            <tr><td class="pos">6</td><td>Marcus Rothe</td><td class="pts">200</td></tr>
+            <tr><td class="pos">7</td><td>Dominic Waack</td><td class="pts">166</td></tr>
+            <tr><td class="pos">8</td><td>Thomas Herbrig</td><td class="pts">166</td></tr>
+            <tr><td class="pos">9</td><td>Dawid Dlugokecki</td><td class="pts">123</td></tr>
+            <tr><td class="pos">10</td><td>Thomas Felix</td><td class="pts">87</td></tr>
+            <!-- /CLS:sfl -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p style="max-width: 900px; margin: 1.4rem auto 0; font-size: 0.85rem; color: rgba(255,255,255,0.55);">Top 10 of each active championship, sourced directly from <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" style="color: var(--accent-orange);">CAS League Scoring (CLS)</a>. Combined Cup and TSS GT4 are between seasons; IEC Season&nbsp;4 starts in September. Full standings, schedules and per-round results on the championship pages below.</p>
       </div>
 
       <div class="card-grid">
