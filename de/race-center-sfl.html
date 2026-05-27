@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- BEGIN SEO-MANAGED -->
+    <title>CAS SFL Cup Race Center – Spa-Finale &amp; Saison-7-Endstand | SimRacing Hub</title>
+    <meta name="description" content="Telemetrie-getriebene Ergebnisse, animierte 2D-Replays und Endstand der CAS-Community Super Formula Lights Cup Saison 7.">
+    <link rel="canonical" href="https://simracing-hub.com/de/race-center-sfl.html">
+    <link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-sfl.html">
+    <link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-sfl.html">
+    <link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-sfl.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SimRacing Hub">
+    <meta property="og:title" content="CAS SFL Cup Race Center – Spa-Finale &amp; Saison-7-Endstand | SimRacing Hub">
+    <meta property="og:description" content="Telemetrie-getriebene Ergebnisse, animierte 2D-Replays und Endstand der CAS-Community Super Formula Lights Cup Saison 7.">
+    <meta property="og:url" content="https://simracing-hub.com/de/race-center-sfl.html">
+    <meta property="og:image" content="https://simracing-hub.com/img/logo.svg">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CAS SFL Cup Race Center – Spa-Finale &amp; Saison-7-Endstand | SimRacing Hub">
+    <meta name="twitter:description" content="Telemetrie-getriebene Ergebnisse, animierte 2D-Replays und Endstand der CAS-Community Super Formula Lights Cup Saison 7.">
+    <meta name="twitter:image" content="https://simracing-hub.com/img/logo.svg">
+  <!-- END SEO-MANAGED -->
+  <style>
+    /* ===== RACE CENTER ===== */
+    .race-intro {
+      max-width: 820px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: center;
+    }
+    .race-intro a { color: var(--accent-orange); }
+    .race-entry {
+      max-width: var(--max-width);
+      margin: 0 auto 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .race-entry:last-of-type { border-bottom: 0; }
+    .race-entry-head { margin-bottom: 1.5rem; }
+    .race-round {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      background: rgba(255, 107, 53, 0.12);
+      border: 1px solid rgba(255, 107, 53, 0.35);
+      border-radius: 5px;
+      padding: 0.3rem 0.7rem;
+      margin-bottom: 0.75rem;
+    }
+    .race-entry-head h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .race-meta {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.35rem;
+    }
+    .race-meta a { color: var(--accent-orange); text-decoration: none; white-space: nowrap; }
+    .race-meta a:hover { text-decoration: underline; }
+    .race-replay {
+      margin: 0 auto 2.25rem;
+      max-width: 960px;
+    }
+    .race-replay video {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: #000;
+    }
+    .replay-caption {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 0.6rem;
+    }
+    .race-block-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-primary);
+      margin: 2rem 0 1.1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .race-highlights {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+    .race-highlights p { margin-bottom: 0.9rem; }
+    .race-highlights p:last-child { margin-bottom: 0; }
+    .race-highlights strong { color: var(--text-primary); }
+    /* results table */
+    .results-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .race-results-table {
+      min-width: 760px;
+      font-variant-numeric: tabular-nums;
+    }
+    .race-results-table td.pos { font-family: var(--font-heading); font-weight: 700; color: var(--text-secondary); }
+    .race-results-table td.num { color: var(--text-muted); }
+    .race-results-table td.drv { color: #fff; }
+    .race-results-table td.car { color: var(--text-secondary); font-size: 0.85rem; }
+    .race-results-table td.res { font-size: 0.82rem; color: var(--text-secondary); }
+    .race-results-table tbody tr:first-child td.pos { color: var(--accent-yellow); }
+    .race-results-table td.best.flap { color: var(--accent-yellow); font-weight: 600; }
+    .flap-badge {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      background: rgba(255, 209, 102, 0.18);
+      color: var(--accent-yellow);
+      border-radius: 3px;
+      padding: 0.05rem 0.3rem;
+      vertical-align: middle;
+    }
+    .race-results-table tr.row-dnf td { color: var(--text-muted); }
+    .race-results-table tr.row-dnf td.drv { color: var(--text-secondary); }
+    .data-note {
+      max-width: var(--max-width);
+      margin: 1.75rem auto 0;
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .race-entry-head h2 { font-size: 1.5rem; }
+      .race-meta a { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="../img/logo.svg" alt="SimRacing Hub" class="logo-img">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <nav>
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulationen</a>
+        <a href="software.html">Software & Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html" class="active">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="beyond-the-sim.html">Jenseits</a>
+        <a href="simhub-guide.html">Anfänger-Guide</a>
+        <a href="buying-guide.html">Kaufberatung</a>
+        <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" title="CAS League Scoring (CLS) &mdash; Live-Standings, Kalender, Ergebnisse">CAS League Scoring (CLS) &#8599;</a>
+        <a href="about.html">&Uuml;ber</a>
+        <div class="lang-switch">
+          <a href="../race-center-sfl.html" title="English">&#127468;&#127463;</a>
+          <a href="race-center-sfl.html" class="active-lang" title="Deutsch">&#127465;&#127466;</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1><span>CAS SFL Cup</span> Race Center</h1>
+    <p>Datengetriebene Ergebnisse, animierte Replays und Statistiken &mdash; eine Seite pro CAS-Rennen.</p>
+    <div class="hero-date">Aktuell: Suzuka GP &middot; Lauf 9 &middot; 19. Mai 2026</div>
+  </section>
+
+  <main>
+
+    <div class="sub-section">
+      <div class="section-header">
+        <h2><span class="icon">&#127937;</span> Rennarchiv</h2>
+        <p>Jedes CAS-Rennen, rekonstruiert aus dem In-Sim-Telemetrie-Log</p>
+      </div>
+
+      <p class="race-intro">
+        Das Race Center ist die datengetriebene Ergänzung zu den CAS-Community-Rennanalysen. Jeder Eintrag
+        entsteht direkt aus einer Live-Telemetrie-Aufzeichnung des Rennens: ein animiertes 2D-Replay, die
+        komplette Wertung und die wichtigsten Zahlen. Für die erzählerische Seite &mdash; die Broadcast-Geschichte,
+        Qualifying- und Meisterschaftskontext &mdash; siehe die <a href="cas-community.html#race-report">CAS-Community-Rennanalyse</a>
+        und die offiziellen <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener">CAS League Scoring (CLS)</a>-Standings.
+        Neuestes Rennen zuerst.
+      </p>
+
+<div style="max-width: var(--max-width); margin: -1rem auto 2rem; text-align: center;"><a href="race-center.html" style="display: inline-block; padding: 0.55rem 1.2rem; background: rgba(255,107,53,0.12); border: 1px solid rgba(255,107,53,0.35); color: var(--accent-orange); border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 0.95rem;">Du suchst das GT3 WCT Race Center? &rarr;</a></div>
+
+      <!-- RACE-ENTRIES-START (newest first — Skill inserts new entries directly below this line) -->
+
+    <!-- Saison 7 Endstand -->
+    <article class="race-entry" id="sfl-season-7-final" style="border-top: 2px solid var(--accent-orange); padding-top: 1rem;">
+      <div class="race-entry-head">
+        <span class="race-round" style="background: rgba(255, 209, 102, 0.18); color: #ffd166; border-color: rgba(255, 209, 102, 0.45);">&#127942; Saison 7 &middot; Endstand</span>
+        <h2>Super Formula Lights Cup &mdash; Saison 7 endet in Spa</h2>
+        <p class="race-meta">Lauf 8 (Spa-Francorchamps) war das Saisonfinale &middot; Champion gek&uuml;rt</p>
+      </div>
+
+      <div class="card-grid" style="margin-bottom: 1.5rem;">
+        <!-- Fahrer-Podium -->
+        <div class="card" style="grid-column: span 2; background: linear-gradient(135deg, #12121a 0%, #1a1a25 100%); border: 1px solid rgba(255, 209, 102, 0.3);">
+          <span class="card-tag cas" style="background: rgba(255, 209, 102, 0.15); color: #ffd166;">Fahrer-Meisterschaft</span>
+          <h3 style="color: #ffd166;">&#127942; Bernhard Wlach</h3>
+          <p style="font-size: 1.05rem; line-height: 1.9;">
+            &#129351;&nbsp;<strong style="color: #ffd166;">Bernhard Wlach</strong> &mdash; Saison-7-Meister<br>
+            &#129352;&nbsp;Andreas Wuschnakowski<br>
+            &#129353;&nbsp;Kevin Chmielewski
+          </p>
+          <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">8-L&auml;ufe-Saison, Doppel-Sprint-Format. Im heutigen Spa-Finale: Chmielewski holt Rennen 1, Wuschnakowski Rennen 2 mit doppelt schnellster Runde. Die Punktef&uuml;hrung hielt &uuml;ber beide Sprints, um den Titel zu besiegeln.</p>
+        </div>
+        <!-- Team-Podium -->
+        <div class="card" style="background: linear-gradient(135deg, #12121a 0%, #1a1a25 100%); border: 1px solid rgba(255, 209, 102, 0.3);">
+          <span class="card-tag cas" style="background: rgba(255, 209, 102, 0.15); color: #ffd166;">Team-Meisterschaft</span>
+          <h3 style="color: #ffd166;">&#127942; CAS Tech Performance Gr&uuml;n</h3>
+          <p style="font-size: 0.95rem; line-height: 1.8;">
+            &#129351;&nbsp;<strong style="color: #ffd166;">CAS Tech Performance Gr&uuml;n</strong><br>
+            &#129352;&nbsp;Duck Knife x Sundi Company Team Sauer<br>
+            &#129353;&nbsp;DAN K&uuml;chen Motorsport
+          </p>
+        </div>
+      </div>
+
+      <div style="max-width: 1200px; margin: 0 auto 1rem; padding: 0.8rem 1.2rem; background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent-orange); border-radius: 0 6px 6px 0;">
+        <p style="margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.8);"><strong style="color: var(--accent-orange);">Aus dem Stream:</strong> Saison 8 des SFL Cup ist bereits in Planung mit neuem Kalender &mdash; Details werden auf den CAS-Community-Kan&auml;len bekanntgegeben.</p>
+      </div>
+    </article>
+
+    <article class="race-entry" id="spa-sfl-r2">
+      <div class="race-entry-head">
+        <span class="race-round">CAS SFL Cup &middot; Saison 7 &middot; Lauf 8 &middot; Rennen 2</span>
+        <h2>Spa-Francorchamps GP &mdash; Rennen 2 (Feature)</h2>
+        <p class="race-meta">27. Mai 2026 &middot; 6 Fahrer &middot; 10-Runden-Sprint &middot; SF Lights 324 &middot; <a href="#spa-sfl-r1">Rennen 1 Ergebnisse &darr;</a></p>
+      </div>
+      <div class="race-replay">
+        <video controls preload="none" playsinline poster="../races/spa-sfl-r2-poster.jpg">
+          <source src="../races/spa-sfl-r2-replay.mp4" type="video/mp4">
+        </video>
+        <p class="replay-caption">2D-Telemetrie-Replay &mdash; der 20-min&uuml;tige Sprint komprimiert auf 60&nbsp;Sekunden.</p>
+      </div>
+
+      <h3 class="race-block-title">In Zahlen</h3>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag cas">Rennsieger</span>
+          <h3>Andreas Wuschnakowski</h3>
+          <p>Der Streamer-turned-Racer holt sich Rennen&nbsp;2 von P4 Grid (nach seinem R1-R&uuml;ckschlag) &mdash; Pole-bis-Flagge-Pace, <strong>schnellste Runde</strong> 2:10.508 und 6,56&nbsp;s Vorsprung auf Thomas Felix.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Aufholjagd des Tages</span>
+          <h3>Thomas Herbrig P6 &rarr; P3</h3>
+          <p>Vom Letzten in Rennen&nbsp;1 (eine Runde im R&uuml;ckstand) auf P3 Podium in Rennen&nbsp;2 &mdash; gr&ouml;sster Positionsgewinn beider Sprints.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Umgekehrtes Schicksal</span>
+          <h3>Chmielewski P1 &rarr; P6</h3>
+          <p>Rennen-1-Sieger Kevin Chmielewski schied aus dem K&auml;mpfen aus &mdash; P6 mit +119&nbsp;s.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Daten-Views</h3>
+      <div class="card-grid">
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Abstand zur Spitze</span>
+          <a href="../races/spa-sfl-r2-chart-gap.png" target="_blank" style="display:block;">
+            <img src="../races/spa-sfl-r2-chart-gap.png" alt="Abstand-zur-Spitze-Chart Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Wuschnakowski und Felix vorne, w&auml;hrend Chmielewski und Wlach gleich am Start Probleme bekommen.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Renn-Pace</span>
+          <a href="../races/spa-sfl-r2-chart-pace.png" target="_blank" style="display:block;">
+            <img src="../races/spa-sfl-r2-chart-pace.png" alt="Race-pace-Konsistenz Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Trotz P6-Finish zeigte Chmielewski das engste Pace-Fenster &mdash; konsistente Recovery-Runden nach seinem fr&uuml;hen Vorfall.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Boxenstopps</span>
+          <a href="../races/spa-sfl-r2-chart-pits.png" target="_blank" style="display:block;">
+            <img src="../races/spa-sfl-r2-chart-pits.png" alt="Boxenstopps Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Sprint-Format hat keinen Pflichtstopp. Sichtbare Pit-Besuche sind Reparaturen nach Vorf&auml;llen.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Vollst&auml;ndige Wertung</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Fahrer</th><th>Auto</th><th>Runden</th><th>Beste Runde</th><th>R&uuml;ckstand</th><th>Inz</th><th>Ergebnis</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">15</td><td class="drv">Andreas Wuschnakowski</td><td class="car">SF Lights 324</td><td>10</td><td class="best flap">2:10.508 <span class="flap-badge">FL</span></td><td>&mdash;</td><td>6</td><td class="res">Beendet</td></tr>
+          <tr><td class="pos">2</td><td class="num">773</td><td class="drv">Thomas Felix</td><td class="car">SF Lights 324</td><td>10</td><td class="best">2:10.840</td><td>+6,56s</td><td>2</td><td class="res">Beendet</td></tr>
+          <tr><td class="pos">3</td><td class="num">67</td><td class="drv">Thomas Herbrig</td><td class="car">SF Lights 324</td><td>10</td><td class="best">2:11.412</td><td>+12,13s</td><td>4</td><td class="res">Beendet</td></tr>
+          <tr><td class="pos">4</td><td class="num">21</td><td class="drv">Marcus Rothe</td><td class="car">SF Lights 324</td><td>10</td><td class="best">2:11.949</td><td>+92,31s</td><td>2</td><td class="res">Beendet</td></tr>
+          <tr><td class="pos">5</td><td class="num">118</td><td class="drv">Bernhard Wlach</td><td class="car">SF Lights 324</td><td>10</td><td class="best">2:11.139</td><td>+117,53s</td><td>3</td><td class="res">Beendet</td></tr>
+          <tr><td class="pos">6</td><td class="num">27</td><td class="drv">Kevin Chmielewski</td><td class="car">SF Lights 324</td><td>10</td><td class="best">2:10.694</td><td>+119,05s</td><td>2</td><td class="res">Beendet</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="race-entry" id="spa-sfl-r1">
+      <div class="race-entry-head">
+        <span class="race-round">CAS SFL Cup &middot; Saison 7 &middot; Lauf 8 &middot; Rennen 1</span>
+        <h2>Spa-Francorchamps GP &mdash; Rennen 1 (Sprint)</h2>
+        <p class="race-meta">27. Mai 2026 &middot; 6 Fahrer &middot; 10-Runden-Sprint &middot; SF Lights 324 &middot; <a href="#spa-sfl-r2">Rennen 2 Ergebnisse &uarr;</a></p>
+      </div>
+      <div class="race-replay">
+        <video controls preload="none" playsinline poster="../races/spa-sfl-r1-poster.jpg">
+          <source src="../races/spa-sfl-r1-replay.mp4" type="video/mp4">
+        </video>
+        <p class="replay-caption">2D-Telemetrie-Replay &mdash; der 20-min&uuml;tige Sprint komprimiert auf 60&nbsp;Sekunden.</p>
+      </div>
+
+      <h3 class="race-block-title">In Zahlen</h3>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag cas">Rennsieger</span>
+          <h3>Kevin Chmielewski</h3>
+          <p>Sieg mit +10,60&nbsp;s vor Marcus Rothe nach 10 Runden &mdash; nur 2 Incident-Points und eine beste Runde von 2:10.683.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Schnellste Runde</span>
+          <h3>Andreas Wuschnakowski</h3>
+          <p>Fuhr die schnellste Runde des Rennens mit <strong>2:10.474</strong> &mdash; aber fr&uuml;here Verluste dr&uuml;ckten ihn auf P4 gesamt.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Enge Top 3</span>
+          <h3>Innerhalb von 15 Sekunden</h3>
+          <p>Chmielewski, Rothe und Felix alle innerhalb von 15&nbsp;s nach 10 Runden &mdash; enger Kampf an der Spitze.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Daten-Views</h3>
+      <div class="card-grid">
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Abstand zur Spitze</span>
+          <a href="../races/spa-sfl-r1-chart-gap.png" target="_blank" style="display:block;">
+            <img src="../races/spa-sfl-r1-chart-gap.png" alt="Abstand-zur-Spitze-Chart Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Die Top 3 ordnen sich in den ersten 4 Runden. Chmielewski gibt die F&uuml;hrung nie ab. Wlach f&auml;llt fr&uuml;h nach einem Vorfall zur&uuml;ck.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Renn-Pace</span>
+          <a href="../races/spa-sfl-r1-chart-pace.png" target="_blank" style="display:block;">
+            <img src="../races/spa-sfl-r1-chart-pace.png" alt="Race-pace-Konsistenz Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Verteilung der sauberen Rundenzeiten. Die Top 3 sind im Pace-Fenster nur Zehntel voneinander entfernt.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Boxenstopps</span>
+          <a href="../races/spa-sfl-r1-chart-pits.png" target="_blank" style="display:block;">
+            <img src="../races/spa-sfl-r1-chart-pits.png" alt="Boxenstopps Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Sprint-Format &mdash; kein Pflichtstopp. Sichtbare Balken sind Reparaturen nach Off-Tracks.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Vollst&auml;ndige Wertung</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Fahrer</th><th>Auto</th><th>Runden</th><th>Beste Runde</th><th>R&uuml;ckstand</th><th>Inz</th><th>Ergebnis</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">27</td><td class="drv">Kevin Chmielewski</td><td class="car">SF Lights 324</td><td>10</td><td class="best">2:10.683</td><td>&mdash;</td><td>2</td><td class="res">Beendet</td></tr>
+          <tr><td class="pos">2</td><td class="num">21</td><td class="drv">Marcus Rothe</td><td class="car">SF Lights 324</td><td>10</td><td class="best">2:10.709</td><td>+10,60s</td><td>2</td><td class="res">Beendet</td></tr>
+          <tr><td class="pos">3</td><td class="num">773</td><td class="drv">Thomas Felix</td><td class="car">SF Lights 324</td><td>10</td><td class="best">2:11.133</td><td>+15,14s</td><td>2</td><td class="res">Beendet</td></tr>
+          <tr><td class="pos">4</td><td class="num">15</td><td class="drv">Andreas Wuschnakowski</td><td class="car">SF Lights 324</td><td>10</td><td class="best flap">2:10.474 <span class="flap-badge">FL</span></td><td>+39,87s</td><td>4</td><td class="res">Beendet</td></tr>
+          <tr><td class="pos">5</td><td class="num">118</td><td class="drv">Bernhard Wlach</td><td class="car">SF Lights 324</td><td>10</td><td class="best">2:11.196</td><td>+83,20s</td><td>2</td><td class="res">Beendet</td></tr>
+          <tr><td class="pos">6</td><td class="num">67</td><td class="drv">Thomas Herbrig</td><td class="car">SF Lights 324</td><td>9</td><td class="best">2:11.605</td><td>+1 Runde</td><td>4</td><td class="res">Beendet</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="data-note">Ergebnisse, Rundenzeiten, Abst&auml;nde und Incident-Counts werden direkt aus der live aufgezeichneten In-Sim-Telemetrie gelesen. Sprint-Rennen &mdash; kein Pflichtboxenstopp.</p>
+    </article>
+
+      <!-- RACE-ENTRIES-END -->
+
+    </div>
+
+    </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulationen</a>
+        <a href="software.html">Software & Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="beyond-the-sim.html">Jenseits</a>
+        <a href="simhub-guide.html">Anfänger-Guide</a>
+        <a href="buying-guide.html">Kaufberatung</a>
+        <a href="about.html">&Uuml;ber</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+      <p>SimRacing Hub &mdash; KI-kuratierte Sim-Racing News, t&auml;glich aktualisiert.</p>
+      <p class="footer-trust">Unabh&auml;ngig. Keine Werbung. Keine Sponsoren. Keine Affiliate-Links. Kein Tracking.</p>
+      <span class="last-updated"></span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+</body>
+</html>

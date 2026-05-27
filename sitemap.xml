@@ -103,6 +103,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center.html"/>
   </url>
+  <url>
+    <loc>https://simracing-hub.com/race-center-sfl.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-sfl.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-sfl.html"/>
+  </url>
 
   <!-- ================= GERMAN ================= -->
   <url>
@@ -203,6 +210,13 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/de/race-center-sfl.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-sfl.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-sfl.html"/>
   </url>
 
 </urlset>
