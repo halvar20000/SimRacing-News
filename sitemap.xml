@@ -110,6 +110,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-sfl.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-sfl.html"/>
   </url>
+  <url>
+    <loc>https://simracing-hub.com/race-center-pccd.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-pccd.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-pccd.html"/>
+  </url>
 
   <!-- ================= GERMAN ================= -->
   <url>
@@ -217,6 +224,13 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-sfl.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-sfl.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/de/race-center-pccd.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-pccd.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-pccd.html"/>
   </url>
 
 </urlset>

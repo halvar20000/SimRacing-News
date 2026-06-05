@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- BEGIN SEO-MANAGED -->
+    <title>CAS PCCD Race Center – Hockenheim Lauf 7 | SimRacing Hub</title>
+    <meta name="description" content="Telemetrie-getriebene Ergebnisse, animierte 2D-Replays und Statistiken aus dem CAS Porsche Community Cup (PCCD) — Lauf 7 auf dem Hockenheimring.">
+    <link rel="canonical" href="https://simracing-hub.com/de/race-center-pccd.html">
+    <link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-pccd.html">
+    <link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-pccd.html">
+    <link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-pccd.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SimRacing Hub">
+    <meta property="og:title" content="CAS PCCD Race Center – Hockenheim Lauf 7 | SimRacing Hub">
+    <meta property="og:description" content="Telemetrie-getriebene Ergebnisse, animierte 2D-Replays und Statistiken aus dem CAS Porsche Community Cup (PCCD) — Lauf 7 auf dem Hockenheimring.">
+    <meta property="og:url" content="https://simracing-hub.com/de/race-center-pccd.html">
+    <meta property="og:image" content="https://simracing-hub.com/img/logo.svg">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CAS PCCD Race Center – Hockenheim Lauf 7 | SimRacing Hub">
+    <meta name="twitter:description" content="Telemetrie-getriebene Ergebnisse, animierte 2D-Replays und Statistiken aus dem CAS Porsche Community Cup (PCCD) — Lauf 7 auf dem Hockenheimring.">
+    <meta name="twitter:image" content="https://simracing-hub.com/img/logo.svg">
+  <!-- END SEO-MANAGED -->
+  <style>
+    /* ===== RACE CENTER ===== */
+    .race-intro {
+      max-width: 820px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: center;
+    }
+    .race-intro a { color: var(--accent-orange); }
+    .race-entry {
+      max-width: var(--max-width);
+      margin: 0 auto 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .race-entry:last-of-type { border-bottom: 0; }
+    .race-entry-head { margin-bottom: 1.5rem; }
+    .race-round {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      background: rgba(255, 107, 53, 0.12);
+      border: 1px solid rgba(255, 107, 53, 0.35);
+      border-radius: 5px;
+      padding: 0.3rem 0.7rem;
+      margin-bottom: 0.75rem;
+    }
+    .race-entry-head h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .race-meta {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.35rem;
+    }
+    .race-meta a { color: var(--accent-orange); text-decoration: none; white-space: nowrap; }
+    .race-meta a:hover { text-decoration: underline; }
+    .race-replay {
+      margin: 0 auto 2.25rem;
+      max-width: 960px;
+    }
+    .race-replay video {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: #000;
+    }
+    .replay-caption {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 0.6rem;
+    }
+    .race-block-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-primary);
+      margin: 2rem 0 1.1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .race-highlights {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+    .race-highlights p { margin-bottom: 0.9rem; }
+    .race-highlights p:last-child { margin-bottom: 0; }
+    .race-highlights strong { color: var(--text-primary); }
+    /* results table */
+    .results-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .race-results-table {
+      min-width: 760px;
+      font-variant-numeric: tabular-nums;
+    }
+    .race-results-table td.pos { font-family: var(--font-heading); font-weight: 700; color: var(--text-secondary); }
+    .race-results-table td.num { color: var(--text-muted); }
+    .race-results-table td.drv { color: #fff; }
+    .race-results-table td.car { color: var(--text-secondary); font-size: 0.85rem; }
+    .race-results-table td.res { font-size: 0.82rem; color: var(--text-secondary); }
+    .race-results-table tbody tr:first-child td.pos { color: var(--accent-yellow); }
+    .race-results-table td.best.flap { color: var(--accent-yellow); font-weight: 600; }
+    .flap-badge {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      background: rgba(255, 209, 102, 0.18);
+      color: var(--accent-yellow);
+      border-radius: 3px;
+      padding: 0.05rem 0.3rem;
+      vertical-align: middle;
+    }
+    .race-results-table tr.row-dnf td { color: var(--text-muted); }
+    .race-results-table tr.row-dnf td.drv { color: var(--text-secondary); }
+    .data-note {
+      max-width: var(--max-width);
+      margin: 1.75rem auto 0;
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .race-entry-head h2 { font-size: 1.5rem; }
+      .race-meta a { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="../img/logo.svg" alt="SimRacing Hub" class="logo-img">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <nav>
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulationen</a>
+        <a href="software.html">Software & Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html" class="active">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="beyond-the-sim.html">Jenseits</a>
+        <a href="simhub-guide.html">Anfänger-Guide</a>
+        <a href="buying-guide.html">Kaufberatung</a>
+        <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" title="CAS League Scoring (CLS) &mdash; Live-Standings, Kalender, Ergebnisse">CAS League Scoring (CLS) &#8599;</a>
+        <a href="about.html">&Uuml;ber</a>
+        <div class="lang-switch">
+          <a href="../race-center-pccd.html" title="English">&#127468;&#127463;</a>
+          <a href="race-center-pccd.html" class="active-lang" title="Deutsch">&#127465;&#127466;</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1><span>CAS PCCD</span> Race Center</h1>
+    <p>Porsche Community Cup &mdash; Telemetrie-Replays, Doppelsprint-Ergebnisse und Meisterschaftskontext.</p>
+    <div class="hero-date">Aktuell: Hockenheim GP &middot; Lauf 7 &middot; 4. Juni 2026</div>
+  </section>
+
+  <main>
+
+    <div class="sub-section">
+      <div class="section-header">
+        <h2><span class="icon">&#127937;</span> Rennarchiv</h2>
+        <p>Jedes CAS-Rennen, rekonstruiert aus dem In-Sim-Telemetrie-Log</p>
+      </div>
+
+      <p class="race-intro">
+        Das PCCD Race Center ist die datengetriebene Ergänzung zu den CAS-Community-Rennanalysen. Jeder Eintrag
+        entsteht direkt aus einer Live-Telemetrie-Aufzeichnung des Rennens: ein animiertes 2D-Replay, die
+        komplette Wertung und die wichtigsten Zahlen. Für die erzählerische Seite &mdash; die Broadcast-Geschichte,
+        Qualifying- und Meisterschaftskontext &mdash; siehe die <a href="cas-community.html#pccd-hockenheim-review">CAS-Community-Rennanalyse</a>
+        und die offiziellen <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener">CAS League Scoring (CLS)</a>-Standings.
+        Neuestes Rennen zuerst.
+      </p>
+
+<div style="max-width: var(--max-width); margin: -1rem auto 2rem; text-align: center; display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap;"><a href="race-center.html" style="display: inline-block; padding: 0.55rem 1.2rem; background: rgba(255,107,53,0.12); border: 1px solid rgba(255,107,53,0.35); color: var(--accent-orange); border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 0.95rem;">GT3 WCT Race Center &rarr;</a><a href="race-center-sfl.html" style="display: inline-block; padding: 0.55rem 1.2rem; background: rgba(6,182,212,0.12); border: 1px solid rgba(6,182,212,0.35); color: #06b6d4; border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 0.95rem;">SFL Cup Race Center &rarr;</a></div>
+
+      <!-- RACE-ENTRIES-START (newest first — Skill inserts new entries directly below this line) -->
+
+    <article class="race-entry" id="hockenheim-pccd-r2">
+      <div class="race-entry-head">
+        <span class="race-round" style="background: rgba(212,175,55,0.12); color: #d4af37; border-color: rgba(212,175,55,0.4);">CAS PCCD &middot; Saison 4 &middot; Lauf 7 &middot; Rennen 2</span>
+        <h2>Hockenheim GP &mdash; Rennen 2 (Feature, Top 8 in umgekehrter Reihenfolge)</h2>
+        <p class="race-meta">4. Juni 2026 &middot; 12 Fahrer &middot; 16-Runden-Sprint &middot; Porsche 911 Cup (992.2) &middot; <a href="#hockenheim-pccd-r1">Ergebnisse Rennen 1 &darr;</a> &middot; <a href="cas-community.html#pccd-hockenheim-review">Vollst&auml;ndiger Rennbericht &#8599;</a></p>
+      </div>
+      <div class="race-replay">
+        <video controls preload="none" playsinline poster="../races/hockenheim-pccd-r2-poster.jpg">
+          <source src="../races/hockenheim-pccd-r2-replay.mp4" type="video/mp4">
+        </video>
+        <p class="replay-caption">2D-Telemetrie-Replay &mdash; der ~26-Minuten-Sprint komprimiert auf 60&nbsp;Sekunden.</p>
+      </div>
+
+      <h3 class="race-block-title">Die Zahlen</h3>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag cas">Rennsieger</span>
+          <h3>Silvio Foth</h3>
+          <p>Von Startplatz 6 im Reverse Grid in f&uuml;nf Runden an die Spitze &mdash; das entscheidende Man&ouml;ver gegen Jan Tobias Schrader kam per Windschatten auf der Parabolika. Kontrollierte den Vorsprung bis ins Ziel und konterte Andre Rajkovics Sieg aus Rennen&nbsp;1 im Titelkampf.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Fotofinish</span>
+          <h3>Rajkovic vs. Brand &mdash; gleicher Abstand</h3>
+          <p>P2 und P3 beide mit <strong>+3,02&nbsp;s</strong> gewertet &mdash; Willi Brand klebte in der letzten Runde an Rajkovics Getriebe und &uuml;berquerte die Linie fast neben ihm, inklusive der <strong>schnellsten Rennrunde (1:38.394)</strong> in der Aufholjagd.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Aufholjagd des Rennens</span>
+          <h3>Benjamin Schlosser P10 &rarr; P4</h3>
+          <p>Sechs Positionen von Startplatz zehn, inklusive eines sauberen Stichs innen durch die Sachskurve &mdash; die gr&ouml;&szlig;te Aufholjagd des Abends. Alle 12 Autos beendeten das Rennen in der F&uuml;hrungsrunde.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Daten-Ansichten</h3>
+      <div class="card-grid">
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Abstand zur Spitze</span>
+          <a href="../races/hockenheim-pccd-r2-chart-gap.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r2-chart-gap.png" alt="Abstand-zur-Spitze-Chart Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Foth kontrolliert ab Runde 5; Rajkovic und Brand laufen bis zur Flagge auf ~3 s zusammen &mdash; ihre beiden Linien enden &uuml;bereinander.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Race Pace</span>
+          <a href="../races/hockenheim-pccd-r2-chart-pace.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r2-chart-pace.png" alt="Race-Pace-Konsistenz Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Die Pace-Fenster der ersten Vier &uuml;berlappen fast vollst&auml;ndig &mdash; vier Fahrer im Bereich 1:38,4&ndash;1:38,5 in identischen Autos.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Boxenstopps</span>
+          <a href="../races/hockenheim-pccd-r2-chart-pits.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r2-chart-pits.png" alt="Boxenstopps Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Sprint-Format &mdash; kein Pflichtstopp. Die geloggten Boxeneinfahrten h&auml;ufen sich nach der Zielflagge (R&uuml;ckkehr an die Box), diese Ansicht also mit Vorsicht lesen.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Incident-Timeline</span>
+          <a href="../races/hockenheim-pccd-r2-chart-incidents.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r2-chart-incidents.png" alt="Incident-Timeline Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Jeder geloggte Zwischenfall mit exakter Rennzeit und Typ &mdash; ein ruhiges Rennen f&uuml;r 12 Autos, die Action konzentriert sich auf die ersten Runden.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Positionsverlauf</span>
+          <a href="../races/hockenheim-pccd-r2-chart-positions.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r2-chart-positions.png" alt="Positionsverlauf Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Das Reverse-Grid sortiert sich: Foth P6&rarr;P1, Rajkovic P8&rarr;P2, B.&nbsp;Schlosser P10&rarr;P4 &mdash; w&auml;hrend Andy Webers fr&uuml;her Dreher ihn in Runde&nbsp;1&ndash;2 von P2 ans Ende des Feldes wirft.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Netto-&Uuml;berholbilanz</span>
+          <a href="../races/hockenheim-pccd-r2-chart-overtakes.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r2-chart-overtakes.png" alt="Netto-&Uuml;berholbilanz Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Gr&uuml;n = auf der Strecke gewonnene Positionen, Rot = verlorene. Das Reverse Grid macht dies zum lebhaftesten &Uuml;berhol-Chart des Abends.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Zwischenf&auml;lle auf der Strecke</span>
+          <a href="../races/hockenheim-pccd-r2-chart-incidents-map.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r2-chart-incidents-map.png" alt="Incident-Orte Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Wo auf dem Hockenheimring jeder geloggte Zwischenfall passierte.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Rundenzeiten-Verlauf</span>
+          <a href="../races/hockenheim-pccd-r2-chart-stint-pace.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r2-chart-stint-pace.png" alt="Rundenzeiten-Verlauf Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Rundenzeiten aller 12 Fahrer &mdash; Brands sp&auml;te 1:38.394 in der Jagd auf Rajkovic sticht aus der sich beruhigenden Pace des Feldes heraus.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Battle-N&auml;he</span>
+          <a href="../races/hockenheim-pccd-r2-chart-battle.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r2-chart-battle.png" alt="Battle-N&auml;he Rennen 2" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Runden innerhalb von 1,5&nbsp;s zueinander &mdash; das Duo Rajkovic&ndash;Brand und das Mittelfeld-Cluster um Schrader leuchten in der Matrix auf.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Renn-Highlights</h3>
+      <div class="race-highlights">
+        <p><strong>Das Reverse Grid hat geliefert.</strong> Jan Tobias Schrader f&uuml;hrte souver&auml;n von der Reverse-Pole, w&auml;hrend sich die Titelanw&auml;rter von P6, P7 und P8 nach vorne arbeiteten. Foth brauchte nur f&uuml;nf Runden bis an die Spitze &mdash; das entscheidende Man&ouml;ver ein Windschatten-Zug auf der Parabolika gegen Schrader; Rajkovic folgte kurz darauf auf P2. Andy Webers Rennen war im Grunde nach Runde&nbsp;2 gelaufen &mdash; ein &Uuml;bersteuer-Schnapper warf ihn von P2 ans Ende des Feldes.</p>
+        <p><strong>Das Finish war die Geschichte:</strong> Brand fuhr in den Schlussrunden einen Mehrsekunden-R&uuml;ckstand auf Rajkovic zu &mdash; inklusive der schnellsten Rennrunde &mdash; und beide wurden mit identischen +3,02&nbsp;s gewertet. Dahinter hielten Benjamin Schlossers Sechs-Pl&auml;tze-Aufholjagd auf P4 und Klaus Oberlaenders &Uuml;berholman&ouml;ver au&szlig;en herum gegen Schrader am Eingang zum Motodrom (sp&auml;ter durch einen halben Dreher zunichtegemacht) das Mittelfeld bis zur Flagge lebendig. Alle 12 Autos beendeten das Rennen in der F&uuml;hrungsrunde &mdash; zum zweiten Mal an einem Abend.</p>
+      </div>
+
+      <h3 class="race-block-title">Komplette Wertung</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Fahrer</th><th>Auto</th><th>Runden</th><th>Beste Runde</th><th>Abstand</th><th>Inc</th><th>Ergebnis</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">117</td><td class="drv">Silvio Foth</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:38.526</td><td>&mdash;</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">2</td><td class="num">99</td><td class="drv">Andre Rajkovic</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:38.519</td><td>+3,02s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">3</td><td class="num">68</td><td class="drv">Willi Brand</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best flap">1:38.394 <span class="flap-badge">FL</span></td><td>+3,02s</td><td>3</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">4</td><td class="num">83</td><td class="drv">Benjamin Schlosser</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:38.483</td><td>+10,57s</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">5</td><td class="num">771</td><td class="drv">Jan Tobias Schrader</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.194</td><td>+14,10s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">6</td><td class="num">860</td><td class="drv">Klaus Oberlaender</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:38.862</td><td>+16,60s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">7</td><td class="num">773</td><td class="drv">Thomas Felix</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.328</td><td>+23,65s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">8</td><td class="num">74</td><td class="drv">Chistian Schlosser</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.012</td><td>+24,15s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">9</td><td class="num">775</td><td class="drv">Sean Pfennig</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.196</td><td>+25,17s</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">10</td><td class="num">101</td><td class="drv">Don Utz</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.417</td><td>+45,27s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">11</td><td class="num">772</td><td class="drv">Riccardo Cavoto</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:40.549</td><td>+50,30s</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">12</td><td class="num">305</td><td class="drv">Andy Weber</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.729</td><td>+69,90s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="data-note">Erstellt aus der iCASControl-In-Sim-Telemetrie-Aufzeichnung. Dieses Log enth&auml;lt kein Zielflaggen-Event, daher wurde das Rennfenster aus der letzten Runde des Siegers abgeleitet. Positionen, Abst&auml;nde und Runden abgeglichen mit der offiziellen CLS-Wertung f&uuml;r Lauf&nbsp;7 Hockenheim; &bdquo;Inc&ldquo; z&auml;hlt geloggte Telemetrie-Ereignisse, keine iRacing-Incident-Punkte.</p>
+    </article>
+
+    <article class="race-entry" id="hockenheim-pccd-r1">
+      <div class="race-entry-head">
+        <span class="race-round" style="background: rgba(212,175,55,0.12); color: #d4af37; border-color: rgba(212,175,55,0.4);">CAS PCCD &middot; Saison 4 &middot; Lauf 7 &middot; Rennen 1</span>
+        <h2>Hockenheim GP &mdash; Rennen 1 (Heat, stehender Start)</h2>
+        <p class="race-meta">4. Juni 2026 &middot; 12 Fahrer &middot; 16-Runden-Sprint &middot; Porsche 911 Cup (992.2) &middot; <a href="#hockenheim-pccd-r2">Ergebnisse Rennen 2 &uarr;</a> &middot; <a href="cas-community.html#pccd-hockenheim-review">Vollst&auml;ndiger Rennbericht &#8599;</a></p>
+      </div>
+      <div class="race-replay">
+        <video controls preload="none" playsinline poster="../races/hockenheim-pccd-r1-poster.jpg">
+          <source src="../races/hockenheim-pccd-r1-replay.mp4" type="video/mp4">
+        </video>
+        <p class="replay-caption">2D-Telemetrie-Replay &mdash; der ~26-Minuten-Sprint komprimiert auf 60&nbsp;Sekunden.</p>
+      </div>
+
+      <h3 class="race-block-title">Die Zahlen</h3>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag cas">Rennsieger</span>
+          <h3>Andre Rajkovic</h3>
+          <p>&Uuml;bernahm die F&uuml;hrung von Pole-Setter Willi Brand in der Anfangsphase an der Spitzkehre und verteidigte sie 16 Runden lang mit <strong>null geloggten Zwischenf&auml;llen</strong> &mdash; Endabstand nur <strong>0,50&nbsp;s</strong>.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Schnellste Runde</span>
+          <h3>Silvio Foth &mdash; 1:38.458</h3>
+          <p>Gefahren in Runde 11 auf P3 liegend &mdash; &uuml;ber eine halbe Sekunde schneller als seine eigene Qualifying-Zeit, und die schnellste Runde des gesamten Abends in beiden Rennen.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Engstes Podium</span>
+          <h3>Top 3 innerhalb von 1,02&nbsp;s</h3>
+          <p>Nach 26 Minuten Rennzeit lagen Rajkovic, Brand und Foth innerhalb einer Sekunde &mdash; und alle 12 Starter beendeten das Rennen in der F&uuml;hrungsrunde, null Ausf&auml;lle.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Daten-Ansichten</h3>
+      <div class="card-grid">
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Abstand zur Spitze</span>
+          <a href="../races/hockenheim-pccd-r1-chart-gap.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r1-chart-gap.png" alt="Abstand-zur-Spitze-Chart Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Die Linien des Podium-Trios trennen sich nie &mdash; 16 Runden innerhalb von etwa einer Sekunde, die engste Spitzengruppe der PCCD-Saison.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Race Pace</span>
+          <a href="../races/hockenheim-pccd-r1-chart-pace.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r1-chart-pace.png" alt="Race-Pace-Konsistenz Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Identisches Material, enge Fenster: Die ersten Vier trennt Konstanz, nicht Topspeed &mdash; B.&nbsp;Schlossers Pace sagt Podium, seine Platzierung sagt Dreher.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Boxenstopps</span>
+          <a href="../races/hockenheim-pccd-r1-chart-pits.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r1-chart-pits.png" alt="Boxenstopps Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Sprint-Format &mdash; kein Pflichtstopp, und Rennen&nbsp;1 blieb fast komplett aus der Boxengasse fern.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Incident-Timeline</span>
+          <a href="../races/hockenheim-pccd-r1-chart-incidents.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r1-chart-incidents.png" alt="Incident-Timeline Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Jeder geloggte Zwischenfall mit exakter Rennzeit und Typ &mdash; inklusive des fr&uuml;hen Kontakts in der F&uuml;hrungsgruppe an der Spitzkehre, der das Rennen entschied.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Positionsverlauf</span>
+          <a href="../races/hockenheim-pccd-r1-chart-positions.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r1-chart-positions.png" alt="Positionsverlauf Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Rajkovics P2&rarr;P1-Tausch mit Brand um Runde 5 und B.&nbsp;Schlossers Absturz aus der Spitzengruppe in Runde 7 sind die zwei entscheidenden Bewegungen; der Rest des Feldes sortiert sich fr&uuml;h.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Netto-&Uuml;berholbilanz</span>
+          <a href="../races/hockenheim-pccd-r1-chart-overtakes.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r1-chart-overtakes.png" alt="Netto-&Uuml;berholbilanz Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Gr&uuml;n = auf der Strecke gewonnene Positionen, Rot = verlorene.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Zwischenf&auml;lle auf der Strecke</span>
+          <a href="../races/hockenheim-pccd-r1-chart-incidents-map.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r1-chart-incidents-map.png" alt="Incident-Orte Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Wo auf dem Hockenheimring jeder geloggte Zwischenfall passierte &mdash; die Bremszone der Spitzkehre macht ihrem Ruf alle Ehre.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Rundenzeiten-Verlauf</span>
+          <a href="../races/hockenheim-pccd-r1-chart-stint-pace.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r1-chart-stint-pace.png" alt="Rundenzeiten-Verlauf Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Rundenzeiten aller 12 Fahrer &uuml;ber den 16-Runden-Sprint &mdash; Foths Angriff in Runde 11 ist klar erkennbar.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Battle-N&auml;he</span>
+          <a href="../races/hockenheim-pccd-r1-chart-battle.png" target="_blank" style="display:block;">
+            <img src="../races/hockenheim-pccd-r1-chart-battle.png" alt="Battle-N&auml;he Rennen 1" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Runden innerhalb von 1,5&nbsp;s zueinander &mdash; das Dreieck Rajkovic&ndash;Brand&ndash;Foth dominiert die gesamte Matrix.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Renn-Highlights</h3>
+      <div class="race-highlights">
+        <p><strong>Ein Dreikampf &uuml;ber 16 Runden.</strong> Pole-Setter Willi Brand verteidigte hart durch die ersten Runden, doch ein sp&auml;tes Bremsman&ouml;ver in der F&uuml;hrungsgruppe an der Spitzkehre brachte Andre Rajkovic eine F&uuml;hrung, die er nicht mehr hergab &mdash; auch wenn ihm nie mehr als etwa eine Sekunde Luft gelassen wurde. Benjamin Schlosser, starker Dritter im Qualifying, fuhr in der Spitzengruppe mit, bis ihn ein Solo-Dreher in Runde&nbsp;7 zur&uuml;ckwarf; er k&auml;mpfte sich auf P10 zur&uuml;ck &mdash; was ihm &uuml;ber die Reverse-Grid-Regel die Ausgangslage f&uuml;r seine Rennen-2-Aufholjagd verschaffte.</p>
+        <p><strong>Die Daten erz&auml;hlen die Enge:</strong> Neun von zw&ouml;lf Fahrern fuhren Zeiten im 1:38er- oder niedrigen 1:39er-Bereich, das Podium lag innerhalb von 1,02&nbsp;s, und jedes einzelne Auto absolvierte alle 16 Runden. Silvio Foths 1:38.458 von P3 aus war die schnellste Runde des Abends &mdash; Pace, die sich eine halbe Stunde sp&auml;ter auszahlen sollte.</p>
+      </div>
+
+      <h3 class="race-block-title">Komplette Wertung</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Fahrer</th><th>Auto</th><th>Runden</th><th>Beste Runde</th><th>Abstand</th><th>Inc</th><th>Ergebnis</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">99</td><td class="drv">Andre Rajkovic</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:38.800</td><td>&mdash;</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">2</td><td class="num">68</td><td class="drv">Willi Brand</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:38.803</td><td>+0,50s</td><td>3</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">3</td><td class="num">117</td><td class="drv">Silvio Foth</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best flap">1:38.458 <span class="flap-badge">FL</span></td><td>+1,02s</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">4</td><td class="num">860</td><td class="drv">Klaus Oberlaender</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:38.960</td><td>+7,55s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">5</td><td class="num">775</td><td class="drv">Sean Pfennig</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:38.772</td><td>+14,09s</td><td>3</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">6</td><td class="num">773</td><td class="drv">Thomas Felix</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.132</td><td>+16,60s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">7</td><td class="num">305</td><td class="drv">Andy Weber</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.526</td><td>+17,60s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">8</td><td class="num">771</td><td class="drv">Jan Tobias Schrader</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.530</td><td>+23,64s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">9</td><td class="num">101</td><td class="drv">Don Utz</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.515</td><td>+32,69s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">10</td><td class="num">83</td><td class="drv">Benjamin Schlosser</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:38.770</td><td>+35,70s</td><td>1</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">11</td><td class="num">74</td><td class="drv">Chistian Schlosser</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:39.310</td><td>+40,74s</td><td>0</td><td class="res">Im Ziel</td></tr>
+          <tr><td class="pos">12</td><td class="num">772</td><td class="drv">Riccardo Cavoto</td><td class="car">Porsche 911 Cup (992.2)</td><td>16</td><td class="best">1:40.639</td><td>+46,27s</td><td>1</td><td class="res">Im Ziel</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="data-note">Erstellt aus der iCASControl-In-Sim-Telemetrie-Aufzeichnung. Dieses Log enth&auml;lt kein Zielflaggen-Event, daher wurde das Rennfenster aus der letzten Runde des Siegers abgeleitet. Positionen, Abst&auml;nde und Runden abgeglichen mit der offiziellen CLS-Wertung f&uuml;r Lauf&nbsp;7 Hockenheim; &bdquo;Inc&ldquo; z&auml;hlt geloggte Telemetrie-Ereignisse, keine iRacing-Incident-Punkte.</p>
+    </article>
+
+      <!-- RACE-ENTRIES-END -->
+
+    </div>
+
+    </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulationen</a>
+        <a href="software.html">Software & Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="beyond-the-sim.html">Jenseits</a>
+        <a href="simhub-guide.html">Anfänger-Guide</a>
+        <a href="buying-guide.html">Kaufberatung</a>
+        <a href="about.html">&Uuml;ber</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+      <p>SimRacing Hub &mdash; KI-kuratierte Sim-Racing News, t&auml;glich aktualisiert.</p>
+      <p class="footer-trust">Unabh&auml;ngig. Keine Werbung. Keine Sponsoren. Keine Affiliate-Links. Kein Tracking.</p>
+      <span class="last-updated"></span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+</body>
+</html>
