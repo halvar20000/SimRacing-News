@@ -73,6 +73,7 @@
       <a href="#beginner" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(46,204,113,0.1); border: 1px solid rgba(46,204,113,0.3); color: #2ecc71; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#127793; Beginner</a>
       <a href="#intermediate" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,209,102,0.1); border: 1px solid rgba(255,209,102,0.3); color: var(--accent-yellow); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128295; Intermediate</a>
       <a href="#advanced" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent-orange); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128640; Advanced</a>
+      <a href="#software" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(52,152,219,0.1); border: 1px solid rgba(52,152,219,0.3); color: #3498db; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128250; Software &amp; Streaming</a>
       <a href="#3dprinting" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(155,89,182,0.1); border: 1px solid rgba(155,89,182,0.3); color: #9b59b6; text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#129518; 3D Printing</a>
       <a href="#resources" class="jump-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); text-decoration: none; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">&#128279; Resources</a>
     </div>
@@ -307,6 +308,89 @@
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
             <span>~$150&ndash;300</span>
             <span style="color: var(--accent-orange); font-weight: 600;">Full engineering</span>
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== SOFTWARE & STREAMING ==================== -->
+    <div class="sub-section" id="software">
+      <div class="section-header">
+        <h2><span class="icon">&#128250;</span> Software &amp; Streaming</h2>
+        <p>Free, self-hosted broadcast overlays for iRacing &mdash; a Python project built and run on this site</p>
+      </div>
+
+      <!-- Project highlight -->
+      <div class="card" style="border: 1px solid rgba(52,152,219,0.4); background: linear-gradient(135deg, rgba(52,152,219,0.10), rgba(52,152,219,0.02));">
+        <span class="card-tag" style="background: #3498db;">Our Project</span>
+        <h3>iRacing Overlays &mdash; the dashboard suite</h3>
+        <p>A collection of <strong>free, self-hosted broadcast overlays for iRacing</strong>, built with Python + Flask. Each overlay runs as a small local web server and is added to OBS Studio as a browser source &mdash; no subscriptions, no accounts, no cloud services. All telemetry is read locally from the iRacing SDK via <code>pyirsdk</code>; nothing leaves your machine unless you explicitly enable the optional public sharing feature. Thirteen overlays run in parallel, each on its own port, and a small GUI launcher starts and stops them with a click. We built this to broadcast the CAS Community races &mdash; it's the engine behind our race streams.</p>
+        <span class="card-date" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <span style="color: #3498db; font-weight: 600;">Python + Flask &middot; OBS &middot; Windows</span>
+          <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener" style="color: #3498db; font-weight: 600;">&#9654; GitHub: halvar20000/iracing-overlays</a>
+        </span>
+      </div>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="card-tag" style="background: #3498db;">Overlay</span>
+          <h3>Operator Dashboard</h3>
+          <p>The control center for the broadcast: live telemetry for every car, camera control, and automatic incident &amp; overtake detection with auto-replay. Lets a single director run the stream while the action plays out, catching the moments that matter without watching every car manually.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>localhost:5000</span>
+            <span style="color: #3498db; font-weight: 600;">iracing_dashboard.py</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: #3498db;">Overlay</span>
+          <h3>Standings, Grid &amp; Results</h3>
+          <p>Live standings with a session-info bar, manufacturer logos and pit info; a qualifying grid with colored car silhouettes; and full race results showing gaps, incidents and fastest lap. The bread-and-butter graphics every race broadcast needs, all driven from live telemetry.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>localhost:5001&ndash;5005</span>
+            <span style="color: #3498db; font-weight: 600;">standings / grid / results</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: #3498db;">Overlay</span>
+          <h3>Offline Track Map</h3>
+          <p>An SVG track map with live car dots that needs no iRacing login and no internet &mdash; geometry for ~300 track configurations is bundled as JSON. The overlay reads the track name from the SDK and loads the matching file. Sources: the SIMRacingApps track library and OpenStreetMap.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>localhost:5007</span>
+            <span style="color: #3498db; font-weight: 600;">iracing_trackmap.py</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: #3498db;">Overlay</span>
+          <h3>Race Logger + Live Charts</h3>
+          <p>Writes one JSONL file per race &mdash; laps, pit stops, flags, penalties, incidents and the final classification &mdash; and serves a full live race monitor with lap-time, position and gap charts you can add to OBS. Optional read-only public endpoints let Twitch/Discord viewers open a self-service chart via a free Cloudflare Tunnel, while all admin endpoints stay local.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>localhost:5009</span>
+            <span style="color: #3498db; font-weight: 600;">iracing_race_logger.py</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: #3498db;">Overlay</span>
+          <h3>Corner Cues &amp; More</h3>
+          <p>For sessions where iRacing disables the racing-line aid, an analysis of the bundled track geometry serves upcoming-corner cues: direction, turn number, severity and a distance countdown &mdash; on the stream or as a transparent, click-through desktop window. Rounding out the suite: 3D livery render, session-info bar, flag status, live championship projection and a LIVE/REPLAY badge.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>localhost:5012</span>
+            <span style="color: #3498db; font-weight: 600;">iracing_drivingline.py</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <span class="card-tag" style="background: #3498db;">Setup</span>
+          <h3>How to run it</h3>
+          <p>Clone the repo, <code>pip install -r requirements.txt</code> (Flask, pyirsdk, Pillow, requests, pywin32) and double-click the GUI launcher. In OBS, add each overlay as a browser source pointing at its <code>localhost</code> port, or use the self-healing loader pages so start order no longer matters. Runs on Windows alongside iRacing; a second PC on the LAN can reach the overlays too.</p>
+          <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Free &amp; open source</span>
+            <span style="color: #3498db; font-weight: 600;">launch_gui.bat</span>
           </span>
         </div>
 
