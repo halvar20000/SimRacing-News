@@ -325,6 +325,10 @@
       <div class="card" style="border: 1px solid rgba(52,152,219,0.4); background: linear-gradient(135deg, rgba(52,152,219,0.10), rgba(52,152,219,0.02));">
         <span class="card-tag" style="background: #3498db;">Unser Projekt</span>
         <h3>iRacing Overlays &mdash; die Dashboard-Suite</h3>
+        <figure style="margin: 0.4rem 0 1rem;">
+          <img src="../img/overlays-hero.jpg" alt="Die &Uuml;bertragung des CAS Porsche Community Cup in Hockenheim mit der iRacing-Overlays-Suite: Live-Standings, Streckenkarte, Session-Timer und LIVE-Badge" loading="lazy" style="width:100%; border-radius:10px; display:block; border:1px solid rgba(52,152,219,0.25);">
+          <figcaption style="font-size:0.8rem; color:rgba(255,255,255,0.5); margin-top:0.5rem;">Der CAS Porsche Community Cup in Hockenheim &mdash; Standings, Streckenkarte und Session-Overlays, alle selbst gehostet und live in OBS zusammengesetzt.</figcaption>
+        </figure>
         <p>Eine Sammlung <strong>kostenloser, selbst gehosteter Broadcast-Overlays f&uuml;r iRacing</strong>, gebaut mit Python + Flask. Jedes Overlay l&auml;uft als kleiner lokaler Webserver und wird in OBS Studio als Browser-Quelle eingebunden &mdash; keine Abos, keine Accounts, keine Cloud-Dienste. Die gesamte Telemetrie wird lokal &uuml;ber das iRacing-SDK mit <code>pyirsdk</code> ausgelesen; nichts verl&auml;sst deinen Rechner, au&szlig;er du aktivierst bewusst das optionale Sharing-Feature. Dreizehn Overlays laufen parallel, jedes auf seinem eigenen Port, und ein kleiner GUI-Launcher startet und stoppt sie per Klick. Wir haben das f&uuml;r die &Uuml;bertragung der CAS-Community-Rennen gebaut &mdash; es ist die Engine hinter unseren Race-Streams.</p>
         <span class="card-date" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
           <span style="color: #3498db; font-weight: 600;">Python + Flask &middot; OBS &middot; Windows</span>
@@ -336,6 +340,11 @@
 
         <div class="card">
           <span class="card-tag" style="background: #3498db;">Overlay</span>
+          <!-- TODO replace with real screenshot: ../img/overlays-dashboard-ui.jpg -->
+          <div class="shot-placeholder" style="width:100%; height:160px; border:1px dashed rgba(52,152,219,0.5); border-radius:8px; margin:0.2rem 0 0.9rem; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.35rem; background:rgba(52,152,219,0.06); color:#3498db; text-align:center;">
+            <span style="font-size:1.6rem;">&#128247;</span>
+            <span style="font-family:var(--font-heading); font-size:0.8rem; font-weight:600;">Dashboard-Screenshot folgt bald</span>
+          </div>
           <h3>Operator-Dashboard</h3>
           <p>Die Schaltzentrale der &Uuml;bertragung: Live-Telemetrie f&uuml;r jedes Auto, Kamerasteuerung und automatische Vorfall- &amp; &Uuml;berhol-Erkennung mit Auto-Replay. So kann ein einzelner Regisseur den Stream f&uuml;hren, w&auml;hrend das Geschehen l&auml;uft &mdash; und die entscheidenden Momente werden eingefangen, ohne jedes Auto manuell im Blick zu behalten.</p>
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -346,6 +355,7 @@
 
         <div class="card">
           <span class="card-tag" style="background: #3498db;">Overlay</span>
+          <img src="../img/overlays-standings.jpg" alt="Live-Standings-Overlay mit dem Porsche-Cup-Feld, Spitzenreiter, Abst&auml;nden und Intervallen" loading="lazy" style="width:100%; height:160px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
           <h3>Standings, Grid &amp; Ergebnisse</h3>
           <p>Live-Standings mit Session-Info-Leiste, Herstellerlogos und Pit-Infos; ein Qualifying-Grid mit farbigen Auto-Silhouetten; und vollst&auml;ndige Rennergebnisse mit Abst&auml;nden, Vorf&auml;llen und schnellster Runde. Die Grundgrafiken, die jede Race-&Uuml;bertragung braucht &mdash; alle aus der Live-Telemetrie gespeist.</p>
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -356,6 +366,7 @@
 
         <div class="card">
           <span class="card-tag" style="background: #3498db;">Overlay</span>
+          <img src="../img/overlays-trackmap.jpg" alt="Offline-SVG-Streckenkarte von Hockenheim mit Live-Punkten f&uuml;r jedes Auto, Session-Timer und LIVE-Badge" loading="lazy" style="width:100%; height:160px; object-fit:cover; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
           <h3>Offline-Streckenkarte</h3>
           <p>Eine SVG-Streckenkarte mit Live-Punkten f&uuml;r jedes Auto &mdash; ohne iRacing-Login und ohne Internet. Die Geometrie f&uuml;r ~300 Streckenkonfigurationen ist als JSON gebundelt. Das Overlay liest den Streckennamen aus dem SDK und l&auml;dt die passende Datei. Quellen: die SIMRacingApps-Streckenbibliothek und OpenStreetMap.</p>
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -366,6 +377,11 @@
 
         <div class="card">
           <span class="card-tag" style="background: #3498db;">Overlay</span>
+          <!-- TODO replace with real screenshot: ../img/overlays-logger.jpg -->
+          <div class="shot-placeholder" style="width:100%; height:160px; border:1px dashed rgba(52,152,219,0.5); border-radius:8px; margin:0.2rem 0 0.9rem; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.35rem; background:rgba(52,152,219,0.06); color:#3498db; text-align:center;">
+            <span style="font-size:1.6rem;">&#128247;</span>
+            <span style="font-family:var(--font-heading); font-size:0.8rem; font-weight:600;">Race-Logger-Screenshot folgt bald</span>
+          </div>
           <h3>Race Logger + Live-Charts</h3>
           <p>Schreibt pro Rennen eine JSONL-Datei &mdash; Runden, Boxenstopps, Flaggen, Strafen, Vorf&auml;lle und die Endwertung &mdash; und liefert einen vollst&auml;ndigen Live-Race-Monitor mit Rundenzeit-, Positions- und Abstands-Charts, die du in OBS einbinden kannst. Optionale, schreibgesch&uuml;tzte &ouml;ffentliche Endpunkte lassen Twitch-/Discord-Zuschauer &uuml;ber einen kostenlosen Cloudflare-Tunnel ein eigenes Chart &ouml;ffnen, w&auml;hrend alle Admin-Endpunkte lokal bleiben.</p>
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -386,6 +402,11 @@
 
         <div class="card">
           <span class="card-tag" style="background: #3498db;">Setup</span>
+          <!-- TODO replace with real screenshot: ../img/overlays-launcher.jpg -->
+          <div class="shot-placeholder" style="width:100%; height:160px; border:1px dashed rgba(52,152,219,0.5); border-radius:8px; margin:0.2rem 0 0.9rem; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.35rem; background:rgba(52,152,219,0.06); color:#3498db; text-align:center;">
+            <span style="font-size:1.6rem;">&#128247;</span>
+            <span style="font-family:var(--font-heading); font-size:0.8rem; font-weight:600;">GUI-Launcher-Screenshot folgt bald</span>
+          </div>
           <h3>So l&auml;uft es</h3>
           <p>Repo klonen, <code>pip install -r requirements.txt</code> (Flask, pyirsdk, Pillow, requests, pywin32) und den GUI-Launcher doppelklicken. In OBS jedes Overlay als Browser-Quelle auf seinem <code>localhost</code>-Port einbinden &mdash; oder die selbstheilenden Loader-Seiten nutzen, damit die Startreihenfolge egal ist. L&auml;uft unter Windows parallel zu iRacing; auch ein zweiter PC im LAN erreicht die Overlays.</p>
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
