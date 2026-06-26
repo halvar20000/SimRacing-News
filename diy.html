@@ -327,7 +327,7 @@
         <span class="card-tag" style="background: #3498db;">Our Project</span>
         <h3>iRacing Overlays &mdash; the dashboard suite</h3>
         <figure style="margin: 0.4rem 0 1rem;">
-          <img src="img/overlays-hero.jpg" alt="The CAS Porsche Community Cup broadcast at Hockenheim with the iRacing Overlays suite: live standings, track map, session timer and LIVE badge" loading="lazy" style="width:100%; border-radius:10px; display:block; border:1px solid rgba(52,152,219,0.25);">
+          <img class="zoomable" src="img/overlays-hero.jpg" alt="The CAS Porsche Community Cup broadcast at Hockenheim with the iRacing Overlays suite: live standings, track map, session timer and LIVE badge" loading="lazy" style="width:100%; border-radius:10px; display:block; border:1px solid rgba(52,152,219,0.25);">
           <figcaption style="font-size:0.8rem; color:rgba(255,255,255,0.5); margin-top:0.5rem;">The CAS Porsche Community Cup at Hockenheim &mdash; standings, track map and session overlays, all self-hosted and composited live in OBS.</figcaption>
         </figure>
         <p>A collection of <strong>free, self-hosted broadcast overlays for iRacing</strong>, built with Python + Flask. Each overlay runs as a small local web server and is added to OBS Studio as a browser source &mdash; no subscriptions, no accounts, no cloud services. All telemetry is read locally from the iRacing SDK via <code>pyirsdk</code>; nothing leaves your machine unless you explicitly enable the optional public sharing feature. A dozen-plus overlays run in parallel, each on its own port, and a small GUI launcher starts and stops them with a click. We built this to broadcast the CAS Community races &mdash; it's the engine behind our race streams. <a href="overlays/index.html" style="color: #5dade2; font-weight:600;">&#11088; Explore the dedicated project site &rarr;</a></p>
@@ -341,7 +341,7 @@
 
         <div class="card">
           <span class="card-tag" style="background: #3498db;">Overlay</span>
-          <img src="img/ovl-dashboard.jpg" alt="The iRacing Broadcast Dashboard operator screen with driver list, camera control and live overtake/incident feeds with auto-replay" loading="lazy" style="width:100%; height:160px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+          <img class="zoomable" src="img/ovl-dashboard.jpg" alt="The iRacing Broadcast Dashboard operator screen with driver list, camera control and live overtake/incident feeds with auto-replay" loading="lazy" style="width:100%; height:160px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
           <h3>Operator Dashboard</h3>
           <p>The control center for the broadcast: live telemetry for every car, camera control, and automatic incident &amp; overtake detection with auto-replay. Lets a single director run the stream while the action plays out, catching the moments that matter without watching every car manually.</p>
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -352,7 +352,7 @@
 
         <div class="card">
           <span class="card-tag" style="background: #3498db;">Overlay</span>
-          <img src="img/overlays-standings.jpg" alt="Live standings overlay listing the Porsche Cup field with leader, gaps and intervals" loading="lazy" style="width:100%; height:160px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+          <img class="zoomable" src="img/overlays-standings.jpg" alt="Live standings overlay listing the Porsche Cup field with leader, gaps and intervals" loading="lazy" style="width:100%; height:160px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
           <h3>Standings, Grid &amp; Results</h3>
           <p>Live standings with a session-info bar, manufacturer logos and pit info; a qualifying grid with colored car silhouettes; and full race results showing gaps, incidents and fastest lap. The bread-and-butter graphics every race broadcast needs, all driven from live telemetry.</p>
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -363,7 +363,7 @@
 
         <div class="card">
           <span class="card-tag" style="background: #3498db;">Overlay</span>
-          <img src="img/overlays-trackmap.jpg" alt="Offline SVG track map of Hockenheim with live car dots, session timer and LIVE badge" loading="lazy" style="width:100%; height:160px; object-fit:cover; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+          <img class="zoomable" src="img/overlays-trackmap.jpg" alt="Offline SVG track map of Hockenheim with live car dots, session timer and LIVE badge" loading="lazy" style="width:100%; height:160px; object-fit:cover; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
           <h3>Offline Track Map</h3>
           <p>An SVG track map with live car dots that needs no iRacing login and no internet &mdash; geometry for ~300 track configurations is bundled as JSON. The overlay reads the track name from the SDK and loads the matching file. Sources: the SIMRacingApps track library and OpenStreetMap.</p>
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -374,7 +374,7 @@
 
         <div class="card">
           <span class="card-tag" style="background: #3498db;">Overlay</span>
-          <img src="img/ovl-logger.jpg" alt="The Race Logger live monitor with a drivers table and an event timeline of laps, pit stops, flags and incidents" loading="lazy" style="width:100%; height:160px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+          <img class="zoomable" src="img/ovl-logger.jpg" alt="The Race Logger live monitor with a drivers table and an event timeline of laps, pit stops, flags and incidents" loading="lazy" style="width:100%; height:160px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
           <h3>Race Logger + Live Charts</h3>
           <p>Writes one JSONL file per race &mdash; laps, pit stops, flags, penalties, incidents and the final classification &mdash; and serves a full live race monitor with lap-time, position and gap charts you can add to OBS. Optional read-only public endpoints let Twitch/Discord viewers open a self-service chart via a free Cloudflare Tunnel, while all admin endpoints stay local.</p>
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -395,7 +395,7 @@
 
         <div class="card">
           <span class="card-tag" style="background: #3498db;">Setup</span>
-          <img src="img/ovl-launcher.jpg" alt="The iRacing Overlay Launcher desktop app listing every overlay with a status dot, Start/Stop buttons and Start All / Stop All controls" loading="lazy" style="width:100%; height:160px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+          <img class="zoomable" src="img/ovl-launcher.jpg" alt="The iRacing Overlay Launcher desktop app listing every overlay with a status dot, Start/Stop buttons and Start All / Stop All controls" loading="lazy" style="width:100%; height:160px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
           <h3>How to run it</h3>
           <p>Clone the repo, <code>pip install -r requirements.txt</code> (Flask, pyirsdk, Pillow, requests, pywin32) and double-click the GUI launcher. In OBS, add each overlay as a browser source pointing at its <code>localhost</code> port, or use the self-healing loader pages so start order no longer matters. Runs on Windows alongside iRacing; a second PC on the LAN can reach the overlays too.</p>
           <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">

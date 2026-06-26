@@ -57,4 +57,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefix = isDE ? 'Zuletzt aktualisiert: ' : 'Last updated: ';
     lastUpdated.textContent = prefix + now.toLocaleDateString(locale, options);
   }
+
+  // ===== Image lightbox (click to enlarge) =====
+  // Activates only for images carrying the .zoomable class, so it is a
+  // no-op on pages that don't use it.
+  const zoomables = document.querySelectorAll('img.zoomable');
+  if (zoomables.length) {
+    // Inject styles once
+    const css = document.createElement('style');
+    css.textContent =
+      'img.zoomable{cursor:zoom-in;}' +
+      '#lb-overlay{position:fixed;inset:0;background:rgba(5,5,9,0.92);display:flex;align-items:center;justify-content:center;z-index:9999;padding:2rem;cursor:zoom-out;opacity:0;visibility:hidden;transition:opacity .18s ease;}' +
+      '#lb-overlay.open{opacity:1;visibility:visible;}' +
+      '#lb-overlay img{max-width:95vw;max-height:90vh;width:auto;height:auto;border-radius:8px;box-shadow:0 12px 48px rgba(0,0,0,.7);border:1px solid rgba(255,255,255,0.1);}' +
+      '#lb-overlay .lb-close{position:fixed;top:0.75rem;right:1.25rem;color:#fff;font-size:2.4rem;line-height:1;cursor:pointer;font-family:Arial,sans-serif;opacity:0.85;}' +
+      '#lb-overlay .lb-close:hover{opacity:1;}' +
+      '#lb-overlay .lb-cap{position:fixed;bottom:1rem;left:0;right:0;text-align:center;color:rgba(255,255,255,0.75);font-family:var(--font-heading,sans-serif);font-size:0.85rem;padding:0 1rem;}';
+    document.head.appendChild(css);
+
+    let ov = null;
+    const buildOverlay = () => {
+      ov = document.createElement('div');
+      ov.id = 'lb-overlay';
+      ov.setAttribute('role', 'dialog');
+      ov.setAttribute('aria-modal', 'true');
+      ov.innerHTML = '<span class="lb-close" aria-label="Close">&times;</span><img alt=""><div class="lb-cap"></div>';
+      document.body.appendChild(ov);
+      ov.addEventListener('click', closeLb);
+    };
+    const openLb = (src, alt) => {
+      if (!ov) buildOverlay();
+      ov.querySelector('img').src = src;
+      ov.querySelector('img').alt = alt || '';
+      ov.querySelector('.lb-cap').textContent = alt || '';
+      ov.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeLb = () => {
+      if (ov) { ov.classList.remove('open'); document.body.style.overflow = ''; }
+    };
+    zoomables.forEach(im => {
+      im.addEventListener('click', () => openLb(im.getAttribute('src'), im.alt));
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+  }
 });

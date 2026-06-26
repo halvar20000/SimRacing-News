@@ -422,7 +422,7 @@
           <span class="card-tag" style="background: #3498db;">Unser Projekt</span>
           <h3 style="margin-top: 0.4rem;">iRacing Overlays &mdash; die komplette Broadcast- &amp; Stewarding-Suite</h3>
           <figure style="margin: 0.6rem 0 1.1rem;">
-            <img src="../img/overlays-hero.jpg" alt="Die &Uuml;bertragung des CAS Porsche Community Cup in Hockenheim mit der iRacing-Overlays-Suite: Live-Wertung, Offline-Streckenkarte, Session-Timer und LIVE-Badge, in OBS zusammengesetzt" loading="lazy" style="width:100%; border-radius:10px; display:block; border:1px solid rgba(52,152,219,0.25);">
+            <img class="zoomable" src="../img/overlays-hero.jpg" alt="Die &Uuml;bertragung des CAS Porsche Community Cup in Hockenheim mit der iRacing-Overlays-Suite: Live-Wertung, Offline-Streckenkarte, Session-Timer und LIVE-Badge, in OBS zusammengesetzt" loading="lazy" style="width:100%; border-radius:10px; display:block; border:1px solid rgba(52,152,219,0.25);">
             <figcaption style="font-size:0.8rem; color:rgba(255,255,255,0.55); margin-top:0.5rem;">Der CAS Porsche Community Cup in Hockenheim &mdash; Wertung, Streckenkarte und Session-Overlays, alles selbst gehostet und live in OBS zusammengesetzt.</figcaption>
           </figure>
           <p style="color: var(--text-secondary); line-height: 1.75; margin-bottom: 1rem;">Das ist der Motor hinter unseren Renn-Streams: eine Sammlung <strong style="color: var(--text-primary);">kostenloser, selbst gehosteter Broadcast-Overlays f&uuml;r iRacing</strong>, gebaut mit Python&nbsp;+&nbsp;Flask. Jedes Overlay l&auml;uft als kleiner lokaler Webserver und wird in <a href="https://obsproject.com/" target="_blank" rel="noopener" style="color:#5dade2;">OBS Studio</a> als Browser-Quelle eingebunden &mdash; <strong style="color: var(--text-primary);">keine Abos, keine Konten, keine Cloud-Dienste</strong>. Alle Telemetriedaten werden lokal &uuml;ber das iRacing-SDK via <code>pyirsdk</code> gelesen, und nichts verl&auml;sst deinen Rechner, solange du nicht ausdr&uuml;cklich die optionale &ouml;ffentliche Freigabe aktivierst. &Uuml;ber ein Dutzend Overlays laufen parallel, jedes auf einem eigenen Port, und ein kleiner Desktop-GUI-Launcher startet, stoppt und &uuml;berwacht sie per Klick. Das passt zur Philosophie der ganzen Seite &mdash; unabh&auml;ngig, keine Werbung, kein Tracking.</p>
@@ -440,7 +440,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Operator</span>
-            <img src="../img/ovl-dashboard.jpg" alt="Das Operator-Dashboard von iRacing Broadcast: Fahrerliste mit Positionen und Abst&auml;nden, Kamerasteuerung sowie Live-Feeds f&uuml;r &Uuml;berholman&ouml;ver und Vorf&auml;lle mit Auto-Replay-Buttons" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-dashboard.jpg" alt="Das Operator-Dashboard von iRacing Broadcast: Fahrerliste mit Positionen und Abst&auml;nden, Kamerasteuerung sowie Live-Feeds f&uuml;r &Uuml;berholman&ouml;ver und Vorf&auml;lle mit Auto-Replay-Buttons" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Broadcast-Dashboard</h3>
             <p>Die Schaltzentrale f&uuml;r den ganzen Stream: Live-Telemetrie f&uuml;r jedes Auto, volle Kamerasteuerung (Most Exciting, Focus Leader, Focus Crashes, Einzelkomponenten-Kameras) und automatische <strong>&Uuml;berhol- &amp; Vorfallerkennung mit Ein-Klick-Auto-Replay</strong>. Ein Regisseur kann die &Uuml;bertragung allein fahren, w&auml;hrend das Renngeschehen l&auml;uft &mdash; und erwischt die wichtigen Momente, ohne jedes Auto im Blick behalten zu m&uuml;ssen.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -451,7 +451,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Operator</span>
-            <img src="../img/ovl-replay-control.jpg" alt="Das Playback-Panel des Dashboards: LIVE-Anzeige mit Spulen, Pause, Play und Vorlauf sowie ein Jump-to-Round-Auswahlmen&uuml;" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-replay-control.jpg" alt="Das Playback-Panel des Dashboards: LIVE-Anzeige mit Spulen, Pause, Play und Vorlauf sowie ein Jump-to-Round-Auswahlmen&uuml;" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Instant-Replay-Steuerung</h3>
             <p>Teil des Dashboards: eine Transport-Leiste, mit der man durch das iRacing-Replay scrubbt, ohne die Operator-Ansicht zu verlassen &mdash; Spulen, Pause, Play, Vorlauf und ein Jump-to-Round-Auswahlmen&uuml;, um direkt zum Start jedes Rennens zu springen. Die Ein-Klick-Replay-Buttons in den &Uuml;berhol- und Vorfall-Feeds steuern dieses Panel, sodass der Regisseur einen sauberen Replay des eben passierten Man&ouml;vers abspielen kann.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -462,7 +462,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Overlay</span>
-            <img src="../img/ovl-standings.jpg" alt="Live-Wertungsturm mit Position, Fahrer, Abstand und Pit-Infos sowie Herstellerlogos und Session-Info-Leiste" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-standings.jpg" alt="Live-Wertungsturm mit Position, Fahrer, Abstand und Pit-Infos sowie Herstellerlogos und Session-Info-Leiste" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Live-Wertungsturm</h3>
             <p>Der Standard-Timing-Tower: Live-Reihenfolge mit Session-Info-Leiste, Herstellerlogos und Pit-Infos. Fahrer-/Team-Namen, Abstand vs. Intervall und die Speed-Spalte sind umschaltbar. Eigene Markenlogos kommen einfach als SVG in einen <code>brands/</code>-Ordner.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -473,7 +473,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Overlay</span>
-            <img src="../img/ovl-grid.jpg" alt="Qualifying-Grid-Overlay mit farbigen Auto-Silhouetten nach Startposition angeordnet" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-grid.jpg" alt="Qualifying-Grid-Overlay mit farbigen Auto-Silhouetten nach Startposition angeordnet" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Qualifying-Grid</h3>
             <p>Ein sauberes Startaufstellungs-Grid mit farbigen Auto-Silhouetten, perfekt f&uuml;r den Aufbau bis Lights-out. Liest die Qualifying-Reihenfolge direkt aus der Session &mdash; immer korrekt, ohne manuelle Eingabe.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -484,7 +484,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Overlay</span>
-            <img src="../img/ovl-results.jpg" alt="Vollst&auml;ndiges Rennergebnis-Overlay mit Zielreihenfolge, Abst&auml;nden, Vorfallz&auml;hlern und schnellster Runde" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-results.jpg" alt="Vollst&auml;ndiges Rennergebnis-Overlay mit Zielreihenfolge, Abst&auml;nden, Vorfallz&auml;hlern und schnellster Runde" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Rennergebnisse</h3>
             <p>Die vollst&auml;ndige Klassifizierung bei Zielflagge &mdash; Reihenfolge, Abst&auml;nde, Vorfallz&auml;hler und schnellste Runde &mdash; mit einer minimalen &bdquo;Lite&ldquo;-Variante f&uuml;r engere Layouts. Landet ohne Dateneingabe auf dem Post-Race-Screen.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -495,7 +495,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Offline</span>
-            <img src="../img/ovl-trackmap-ui.jpg" alt="Offline-SVG-Streckenkarte als Overlay mit live um den Kurs positionierten Auto-Punkten" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-trackmap-ui.jpg" alt="Offline-SVG-Streckenkarte als Overlay mit live um den Kurs positionierten Auto-Punkten" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Offline-Streckenkarte</h3>
             <p>Eine SVG-Streckenkarte mit live mitlaufenden Auto-Punkten, die <strong>kein iRacing-Login und kein Internet</strong> braucht &mdash; Geometrie f&uuml;r ~300 Streckenkonfigurationen ist als JSON gebundelt. Das Overlay liest den Streckennamen aus dem SDK und l&auml;dt die passende Datei. Quellen: die SIMRacingApps-Streckenbibliothek (Apache&nbsp;2.0) und OpenStreetMap (ODbL).</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -506,7 +506,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Overlay</span>
-            <img src="../img/ovl-livery.jpg" alt="On-Camera-Livery-Overlay mit 3D-gerendertem Auto und dem Namen des Fahrers, der gerade im Bild ist" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-livery.jpg" alt="On-Camera-Livery-Overlay mit 3D-gerendertem Auto und dem Namen des Fahrers, der gerade im Bild ist" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Livery &amp; Fahrername</h3>
             <p>Ein 3D-gerendertes Auto plus der Name des Fahrers, der gerade im Bild ist &mdash; der Broadcast-Bauchbinde, die Bild und Timing verbindet. Aktualisiert sich automatisch, sobald der Regisseur zwischen Autos schneidet.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -517,7 +517,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Daten</span>
-            <img src="../img/ovl-logger.jpg" alt="Live-Monitor des Race Loggers: Fahrertabelle und eine Ereignis-Timeline aus Runden, Boxenstopps, Flaggen und Vorf&auml;llen" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-logger.jpg" alt="Live-Monitor des Race Loggers: Fahrertabelle und eine Ereignis-Timeline aus Runden, Boxenstopps, Flaggen und Vorf&auml;llen" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Race Logger</h3>
             <p>Schreibt eine JSONL-Datei pro Rennen &mdash; Runden, Boxenstopps, Flaggen, Strafen, Vorf&auml;lle, Positionen und die Endklassifizierung &mdash; und liefert einen kompletten Live-Renn-Monitor: eine Fahrertabelle plus eine Ereignis-Timeline. Optionale, schreibgesch&uuml;tzte &ouml;ffentliche Endpunkte erlauben Twitch-/Discord-Zuschauern via kostenlosem Cloudflare-Tunnel eine Self-Service-Ansicht &mdash; alle Admin-Endpunkte bleiben lokal.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -528,7 +528,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Daten</span>
-            <img src="../img/ovl-charts.jpg" alt="Live-Rundenzeiten-Chart-Overlay, das die Rundenzeiten mehrerer Fahrer &uuml;ber den Rennverlauf darstellt" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-charts.jpg" alt="Live-Rundenzeiten-Chart-Overlay, das die Rundenzeiten mehrerer Fahrer &uuml;ber den Rennverlauf darstellt" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Live-Rundenzeiten-Charts</h3>
             <p>Der Race Logger rendert Rundenzeiten-, Positions- und Abstands-Charts, die als eigene Browser-Quelle in OBS landen &mdash; hier die Rundenzeiten mehrerer Fahrer &uuml;ber ein Rennen in Imola. Perfekt f&uuml;r einen Statistik-Einschub oder eine Bild-im-Bild-Ecke, die das Rennen sich entwickeln zeigt &mdash; alles aus denselben lokalen Daten.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -539,7 +539,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Overlay</span>
-            <img src="../img/ovl-delta.jpg" alt="Quali-Delta-Overlay mit dem Zeit-Delta eines Fahrers zur Session-Bestzeit samt Sektor-Splits" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-delta.jpg" alt="Quali-Delta-Overlay mit dem Zeit-Delta eines Fahrers zur Session-Bestzeit samt Sektor-Splits" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Quali-Delta</h3>
             <p>Ein gro&szlig;es, gut lesbares Delta zur Session-Bestzeit f&uuml;r das Auto im Bild, pro Sektor aufgeschl&uuml;sselt (gr&uuml;n f&uuml;r gewonnene, rot f&uuml;r verlorene Zeit) mit Pole- und Last-Lap-Referenzzeiten. Gemacht f&uuml;r die Qualifying-Spannung &mdash; Zuschauer sehen auf einen Blick, ob eine schnelle Runde vorn oder hinten liegt.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -550,7 +550,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Overlay</span>
-            <img src="../img/ovl-dotd.jpg" alt="Driver-of-the-Day-Overlay, das einen Fahrer mit gewonnenen Positionen, Aufholung, &Uuml;berholman&ouml;vern und Vorf&auml;llen sowie einer Verfolgerliste hervorhebt" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-dotd.jpg" alt="Driver-of-the-Day-Overlay, das einen Fahrer mit gewonnenen Positionen, Aufholung, &Uuml;berholman&ouml;vern und Vorf&auml;llen sowie einer Verfolgerliste hervorhebt" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Driver of the Day</h3>
             <p>Eine automatische Auszeichnungs-Karte nach dem Rennen: Sie bewertet das Feld nach gewonnenen Positionen, Aufholung aus einem Tiefpunkt, &Uuml;berholman&ouml;vern und Vorf&auml;llen und k&uuml;rt einen Driver of the Day mit den Kernstatistiken und einer kurzen Verfolgerliste. Ein fertiger Gespr&auml;chsaufh&auml;nger f&uuml;r die Nachbesprechung &mdash; ohne manuelles Zahlenrechnen.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -561,7 +561,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Overlay</span>
-            <img src="../img/ovl-session.jpg" alt="Session-Info-Overlay, das den Session-Namen RACE mit Gesamt- und Restzeit zeigt" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-session.jpg" alt="Session-Info-Overlay, das den Session-Namen RACE mit Gesamt- und Restzeit zeigt" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:center; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Session-Info</h3>
             <p>Eine kompakte, stets transparente Leiste mit dem Session-Namen plus Gesamt- und Restzeit (oder -runden) &mdash; damit Zuschauer, die mitten im Stream einschalten, sofort wissen, ob es Training, Qualifying oder Rennen ist und wie viel noch zu fahren ist.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -573,8 +573,8 @@
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Overlay</span>
             <div style="display:flex; gap:0.5rem; margin:0.2rem 0 0.9rem;">
-              <img src="../img/ovl-live-indicator.jpg" alt="Ein rotes LIVE-Badge mit Aufnahme-Punkt" loading="lazy" style="width:50%; height:120px; object-fit:contain; border-radius:8px; background:#0d0d12; border:1px solid rgba(255,255,255,0.08);">
-              <img src="../img/ovl-replay.jpg" alt="Ein goldenes REPLAY-Badge mit Punkt" loading="lazy" style="width:50%; height:120px; object-fit:contain; border-radius:8px; background:#0d0d12; border:1px solid rgba(255,255,255,0.08);">
+              <img class="zoomable" src="../img/ovl-live-indicator.jpg" alt="Ein rotes LIVE-Badge mit Aufnahme-Punkt" loading="lazy" style="width:50%; height:120px; object-fit:contain; border-radius:8px; background:#0d0d12; border:1px solid rgba(255,255,255,0.08);">
+              <img class="zoomable" src="../img/ovl-replay.jpg" alt="Ein goldenes REPLAY-Badge mit Punkt" loading="lazy" style="width:50%; height:120px; object-fit:contain; border-radius:8px; background:#0d0d12; border:1px solid rgba(255,255,255,0.08);">
             </div>
             <h3>LIVE-/REPLAY-Indikator</h3>
             <p>Ein kleines, stets transparentes Badge, das je nach Zustand des iRacing-Replay-Systems zwischen einem roten <strong>LIVE</strong> und einem goldenen <strong>REPLAY</strong> umschaltet &mdash; damit das Publikum nie im Zweifel ist, ob es das Geschehen live oder eine Wiederholung sieht. Sitzt in einer Bildschirmecke und l&auml;uft von selbst.</p>
@@ -587,8 +587,8 @@
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Overlay</span>
             <div style="display:flex; gap:0.5rem; margin:0.2rem 0 0.9rem;">
-              <img src="../img/ovl-white-flag.jpg" alt="Wei&szlig;-Flaggen-Overlay mit Startnummern-Namensschild FINAL LAP" loading="lazy" style="width:50%; height:150px; object-fit:cover; object-position:top; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-              <img src="../img/ovl-flag.jpg" alt="Zielflaggen-Overlay mit Startnummern-Namensschild RACE WINNER" loading="lazy" style="width:50%; height:150px; object-fit:cover; object-position:top; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
+              <img class="zoomable" src="../img/ovl-white-flag.jpg" alt="Wei&szlig;-Flaggen-Overlay mit Startnummern-Namensschild FINAL LAP" loading="lazy" style="width:50%; height:150px; object-fit:cover; object-position:top; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
+              <img class="zoomable" src="../img/ovl-flag.jpg" alt="Zielflaggen-Overlay mit Startnummern-Namensschild RACE WINNER" loading="lazy" style="width:50%; height:150px; object-fit:cover; object-position:top; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
             </div>
             <h3>Flaggen-Overlay</h3>
             <p>Eine stets transparente, wehende Flaggen-Grafik, die den Session-Flaggen-Status abbildet &mdash; gr&uuml;n, gelb, wei&szlig; und kariert. In den Schlussrunden kombiniert sie die wei&szlig;e Flagge mit einem <strong>FINAL LAP</strong>-Schild f&uuml;r den F&uuml;hrenden und bei Zielflagge die karierte mit einem <strong>RACE WINNER</strong>-Schild &mdash; ein sofortiges, broadcast-taugliches Finish, ohne etwas anzufassen.</p>
@@ -600,7 +600,7 @@
 
           <div class="card">
             <span class="card-tag" style="background: #3498db;">Launcher</span>
-            <img src="../img/ovl-launcher.jpg" alt="Die Desktop-App iRacing Overlay Launcher listet jedes Overlay mit Status-Punkt, Start-/Stopp-Buttons und Start-All-/Stop-All-Steuerung" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <img class="zoomable" src="../img/ovl-launcher.jpg" alt="Die Desktop-App iRacing Overlay Launcher listet jedes Overlay mit Status-Punkt, Start-/Stopp-Buttons und Start-All-/Stop-All-Steuerung" loading="lazy" style="width:100%; height:180px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
             <h3>Ein-Klick-GUI-Launcher</h3>
             <p>Kein Terminal n&ouml;tig: eine kleine Desktop-App mit Status-Punkt und Start/Stopp pro Overlay, dazu Start&nbsp;All / Stop&nbsp;All und ein Log-Fenster. Selbstheilende OBS-Loader-Seiten machen die Startreihenfolge egal &mdash; Quellen verbinden sich nach einem Neustart von selbst wieder. Enth&auml;lt sogar eine <strong>Corner-Cues</strong>-Fahrhilfe (Kurvenrichtung, Schwere und Apex-Speed-Sch&auml;tzungen) f&uuml;r Sessions, in denen die Ideallinie deaktiviert ist.</p>
             <span class="card-date" style="display: flex; justify-content: space-between; align-items: center;">
@@ -616,7 +616,7 @@
           <span class="card-tag" style="background: var(--accent-red);">Rennleitung</span>
           <h3 style="margin-top: 0.4rem;">iCASControl &mdash; das Stewarding-Dashboard</h3>
           <figure style="margin: 0.6rem 0 1.1rem;">
-            <img src="../img/ovl-racecontrol.jpg" alt="Das iCASControl-Rennleitungs-Dashboard: animierte Streckenkarte, vollst&auml;ndige Live-Timing-Tabelle f&uuml;r ein GT3- plus GT4-Feld und ein Race-Log mit Steward-Entscheidungen und Rennleitungs-Befehlen" loading="lazy" style="width:100%; border-radius:10px; display:block; border:1px solid rgba(230,57,70,0.25);">
+            <img class="zoomable" src="../img/ovl-racecontrol.jpg" alt="Das iCASControl-Rennleitungs-Dashboard: animierte Streckenkarte, vollst&auml;ndige Live-Timing-Tabelle f&uuml;r ein GT3- plus GT4-Feld und ein Race-Log mit Steward-Entscheidungen und Rennleitungs-Befehlen" loading="lazy" style="width:100%; border-radius:10px; display:block; border:1px solid rgba(230,57,70,0.25);">
             <figcaption style="font-size:0.8rem; color:rgba(255,255,255,0.55); margin-top:0.5rem;">iCASControl mit dem eingebauten Simulator in Silverstone &mdash; animierte Streckenkarte, Live-Timing, Vorfall-Log und der komplette Steward-Entscheidungs-Workflow.</figcaption>
           </figure>
           <p style="color: var(--text-secondary); line-height: 1.75; margin-bottom: 1rem;">Neben den Broadcast-Grafiken bringt das Projekt <strong style="color: var(--text-primary);">iCASControl</strong> mit, eine vollwertige Rennleitungs-/Stewarding-Konsole im Geist von <a href="#race-control" style="color: var(--accent-orange);">iRaceControl</a>. Anders als die Overlays ist es keine OBS-Quelle &mdash; es ist ein Vollbild-Control-Panel, das du unter <code>localhost:8080</code> &ouml;ffnest. Es gibt der Rennleitung eine animierte Streckenkarte, eine komplette Live-Timing-Tabelle und ein Vorfall-Log mit vollst&auml;ndigem Steward-Entscheidungs-Workflow.</p>
