@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>iCASControl &mdash; Rennleitung &amp; Stewarding | iRacing Overlays</title>
+  <meta name="description" content="iCASControl ist ein kostenloses Rennleitungs- und Stewarding-Dashboard f&uuml;r iRacing-Ligen: animierte Streckenkarte, Live-Timing, Vorfall-Log, ein vollst&auml;ndiger Steward-Entscheidungs-Workflow und Rennleitungs-Befehle. L&auml;uft mit Live-iRacing, einem eingebauten Simulator oder Replay.">
+  <link rel="canonical" href="https://simracing-hub.com/overlays/de/racecontrol.html">
+  <link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/racecontrol.html">
+  <link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/racecontrol.html">
+  <link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/racecontrol.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimRacing Hub">
+  <meta property="og:title" content="iCASControl &mdash; Rennleitung &amp; Stewarding">
+  <meta property="og:description" content="Ein kostenloses Rennleitungs- und Stewarding-Dashboard f&uuml;r iRacing-Ligen. Streckenkarte, Live-Timing, Vorfall-Log und der komplette Steward-Workflow.">
+  <meta property="og:url" content="https://simracing-hub.com/overlays/de/racecontrol.html">
+  <meta property="og:image" content="https://simracing-hub.com/img/ovl-racecontrol.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo" style="display:flex; align-items:center; gap:0.6rem;">
+        <img src="../../img/logo.svg" alt="SimRacing Hub" class="logo-img">
+        <span style="font-family:var(--font-heading); font-weight:700; font-size:1rem; color:#5dade2; letter-spacing:0.02em;">iRacing Overlays</span>
+      </a>
+      <button class="menu-toggle" aria-label="Men&uuml; umschalten">&#9776;</button>
+      <nav>
+        <a href="index.html">Start</a>
+        <a href="overlays.html">Overlays</a>
+        <a href="racecontrol.html" class="active">iCASControl</a>
+        <a href="setup.html">Installation</a>
+        <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener">GitHub &#8599;</a>
+        <a href="../../de/software.html" title="Zur&uuml;ck zu SimRacing Hub">&#8592; SimRacing Hub</a>
+        <div class="lang-switch">
+          <a href="../racecontrol.html" title="English">&#127468;&#127463;</a>
+          <a href="racecontrol.html" class="active-lang" title="Deutsch">&#127465;&#127466;</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>iCAS<span>Control</span></h1>
+    <p>Eine Vollbild-Rennleitungs- und Stewarding-Konsole f&uuml;r iRacing-Ligen &mdash; im Geist von iRaceControl, kostenlos und quelloffen.</p>
+    <span style="display:inline-block; margin-top:0.9rem; padding:0.3rem 0.85rem; border-radius:999px; background:rgba(230,57,70,0.14); border:1px solid rgba(230,57,70,0.45); color:#ff7a85; font-family:var(--font-heading); font-size:0.78rem; font-weight:600;">Version 0.1 &middot; ein funktionierendes Fundament</span>
+  </section>
+
+  <main>
+    <div class="sub-section">
+      <div style="max-width:980px; margin:0 auto;">
+
+        <figure style="margin:0 0 1.5rem;">
+          <img src="../../img/ovl-racecontrol.jpg" alt="Das iCASControl-Rennleitungs-Dashboard: animierte Streckenkarte, vollst&auml;ndige Live-Timing-Tabelle f&uuml;r ein GT3- plus GT4-Feld und ein Race-Log mit Steward-Entscheidungen und Rennleitungs-Befehlen" loading="lazy" style="width:100%; border-radius:12px; display:block; border:1px solid rgba(230,57,70,0.25);">
+          <figcaption style="font-size:0.82rem; color:rgba(255,255,255,0.55); margin-top:0.5rem; text-align:center;">iCASControl mit dem eingebauten Simulator in Silverstone &mdash; animierte Streckenkarte, Live-Timing, Vorfall-Log und der komplette Steward-Entscheidungs-Workflow.</figcaption>
+        </figure>
+
+        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:1.1rem;">Anders als die Broadcast-Overlays ist iCASControl <strong style="color:var(--text-primary);">keine OBS-Quelle</strong> &mdash; es ist ein Vollbild-Control-Panel, das du im Browser unter <code>localhost:8080</code> &ouml;ffnest. Es gibt der Rennleitung eine animierte Streckenkarte, eine komplette Live-Timing-Tabelle und ein Race-Log mit vollst&auml;ndigem Steward-Entscheidungs-Workflow, alles in Echtzeit &uuml;ber WebSockets.</p>
+
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#128260;</span> Drei Betriebsarten</h2>
+          <p>Die App ist um eine austauschbare Datenquelle gebaut und verh&auml;lt sich identisch, ob die Renndaten live, simuliert oder aufgezeichnet sind.</p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <span class="card-tag" style="background:var(--accent-red);">Simulator</span>
+            <h3>Simulator-Modus</h3>
+            <p>Ein komplettes, glaubw&uuml;rdiges GT3&nbsp;+&nbsp;GT4-Rennen l&auml;uft vollst&auml;ndig in der App auf dem echten Silverstone-Kurs &mdash; ohne iRacing. L&auml;uft auf Windows, macOS und Linux, ideal zum Lernen der Oberfl&auml;che, Entwickeln von Features und Aufnehmen von Demos.</p>
+          </div>
+          <div class="card">
+            <span class="card-tag" style="background:var(--accent-red);">Live</span>
+            <h3>iRacing-Modus</h3>
+            <p>Liest Live-Telemetrie aus einer laufenden iRacing-Kopie &uuml;ber das SDK und zeichnet die echte Streckenkarte (200+ Strecken gebundelt). Nur Windows, mit laufendem iRacing und Max&nbsp;Cars auf 63, damit das ganze Feld gemeldet wird.</p>
+          </div>
+          <div class="card">
+            <span class="card-tag" style="background:var(--accent-red);">Replay</span>
+            <h3>Replay-Modus</h3>
+            <p>Spielt ein zuvor aufgezeichnetes Rennen aus einem <code>.jsonl</code>-Log ab &mdash; Timing, Streckenkarte und Vorfall-Log aktualisieren sich genau wie in einem Live-Rennen, sodass ein Steward das Event im Nachhinein durchgehen und durch die Vorf&auml;lle scrubben kann.</p>
+          </div>
+        </div>
+        <p style="color:var(--text-secondary); line-height:1.8; margin:1.25rem 0 0;">Beim Start versucht es zuerst iRacing und f&auml;llt automatisch auf den Simulator zur&uuml;ck &mdash; und wechselt von selbst innerhalb weniger Sekunden auf Live-Daten, sobald iRacing startet.</p>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <div style="max-width:980px; margin:0 auto;">
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#9878;</span> Werkzeuge f&uuml;r den Race Director</h2>
+        </div>
+        <ul class="feature-list">
+          <li>
+            <span class="bullet"></span>
+            <div>
+              <strong>Live-Timing &amp; animierte Streckenkarte</strong>
+              <span>Jedes Auto erscheint als nummerierter Punkt in seiner Klassenfarbe &mdash; das ausgew&auml;hlte Auto bekommt einen roten Ring, der F&uuml;hrende einen goldenen, Autos abseits der Strecke blinken gelb. Die zentrale Tabelle listet Position, Runde, letzte/beste Runde, Abstand oder Intervall, Vorf&auml;lle, Boxenstopps und Speed &mdash; mit Umschaltern f&uuml;r Namen, Abstand/Intervall und die Speed-Spalte.</span>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div>
+              <strong>Steward-Entscheidungs-Workflow</strong>
+              <span>Das Race-Log erfasst jeden Vorfall, jedes Off-Track, jeden Boxenstopp, jede Flagge und Strafe &mdash; mit Filtern, um nicht ben&ouml;tigte Kategorien auszublenden. W&auml;hle einen Vorfall und halte eine Entscheidung fest &mdash; Noted, Investigating, No Action, Race Incident, Drive Through, Stop/Go, Time Penalty oder DSQ &mdash; mit Pro-Auto-Aktionen (0x, Notify, Wave-around, End-of-Line, DSQ) daneben.</span>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div>
+              <strong>Rennleitungs-Befehle</strong>
+              <span>Pace-Car ein- oder aussetzen, Boxengasse &ouml;ffnen oder schlie&szlig;en, &uuml;berrundete Autos winken und Rot- oder Gr&uuml;n-Flaggen setzen &mdash; mit NIW-Z&auml;hlung (Not-in-World), Pit-Erkennung und Flaggen-Handling integriert.</span>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div>
+              <strong>Teilt die Overlay-Streckenbibliothek</strong>
+              <span>Es liest dieselbe gebundelte Streckengeometrie wie das Streckenkarten-Overlay, sodass jede Strecke, die du f&uuml;r die Overlays hast, sofort dem Steward zur Verf&uuml;gung steht &mdash; 200+ Strecken mit der echten Karte.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <div style="max-width:980px; margin:0 auto;">
+        <div class="card" style="border:1px solid rgba(230,57,70,0.35); background:linear-gradient(135deg, rgba(230,57,70,0.08), rgba(230,57,70,0.02));">
+          <span class="card-tag" style="background:var(--accent-red);">Ehrlich zu den Grenzen</span>
+          <h3 style="margin-top:0.4rem;">Was heute funktioniert &mdash; und was kommt</h3>
+          <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:0.5rem;">v0.1 ist ein funktionierendes Fundament. Live-Timing, die echte Streckenkarte, das Vorfall- und Ereignis-Log, Abst&auml;nde und Intervalle, Pit-Erkennung, NIW-Z&auml;hlung, Flaggen-Handling, Herstellerlogos, der Steward-Entscheidungs-Workflow und alle Rennleitungs-Befehle laufen voll <strong style="color:var(--text-primary);">im Simulator- und Replay-Modus</strong> &mdash; das zeigt der Screenshot oben.</p>
+          <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:0;">Bei <strong style="color:var(--text-primary);">Live-iRacing</strong> werden Timing, Positionen, Oberfl&auml;chen, Flaggen, Wetter und die Streckenkarte direkt aus dem SDK gelesen. Zwei Grenzen werden bewusst genannt: iRacings SDK legt keinen Pro-Auto-Vorfall<em>z&auml;hler</em> f&uuml;r andere Autos offen (das Log erfasst Off-Track-Ausfl&uuml;ge und der Steward vergibt Punkte manuell), und es gibt keine Broadcast-Nachricht f&uuml;r Admin-Aktionen wie Full-Course-Yellow oder Pit-Open/Close (die App zeigt den zu nutzenden iRacing-Chat-Befehl). Beides zu automatisieren &mdash; plus Sequencer, Auto-Steward und PDF-/CSV-Exporte &mdash; steht auf der Roadmap.</p>
+        </div>
+        <div style="text-align:center; margin-top:1.75rem;">
+          <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; border-radius:8px; background:var(--accent-red); color:#0a0a0f; text-decoration:none; font-family:var(--font-heading); font-weight:700; font-size:0.95rem;">&#9654; iCASControl auf GitHub holen</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Start</a>
+        <a href="overlays.html">Overlays</a>
+        <a href="racecontrol.html">iCASControl</a>
+        <a href="setup.html">Installation</a>
+        <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener">GitHub</a>
+        <a href="../../de/index.html">SimRacing Hub</a>
+      </div>
+      <p>iRacing Overlays &mdash; ein kostenloses, quelloffenes Projekt von <a href="../../de/index.html" style="color:#5dade2;">SimRacing Hub</a>.</p>
+      <p class="footer-trust">Unabh&auml;ngig. Kostenlos. Selbst gehostet. Keine Konten. Kein Tracking.</p>
+      <span class="last-updated"></span>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

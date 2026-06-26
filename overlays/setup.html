@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Install &amp; Setup &mdash; iRacing Overlays | SimRacing Hub</title>
+  <meta name="description" content="How to install and run the iRacing Overlays suite: requirements, pip install, the GUI launcher, adding overlays to OBS as browser sources, self-healing loader pages, the offline track map and optional public sharing via Cloudflare Tunnel.">
+  <link rel="canonical" href="https://simracing-hub.com/overlays/setup.html">
+  <link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/setup.html">
+  <link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/setup.html">
+  <link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/setup.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimRacing Hub">
+  <meta property="og:title" content="Install &amp; Setup &mdash; iRacing Overlays">
+  <meta property="og:description" content="Install the suite, run the launcher and add the overlays to OBS as browser sources. Up and running the same evening.">
+  <meta property="og:url" content="https://simracing-hub.com/overlays/setup.html">
+  <meta property="og:image" content="https://simracing-hub.com/img/ovl-launcher.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo" style="display:flex; align-items:center; gap:0.6rem;">
+        <img src="../img/logo.svg" alt="SimRacing Hub" class="logo-img">
+        <span style="font-family:var(--font-heading); font-weight:700; font-size:1rem; color:#5dade2; letter-spacing:0.02em;">iRacing Overlays</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="overlays.html">Overlays</a>
+        <a href="racecontrol.html">iCASControl</a>
+        <a href="setup.html" class="active">Install &amp; Setup</a>
+        <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener">GitHub &#8599;</a>
+        <a href="../software.html" title="Back to SimRacing Hub">&#8592; SimRacing Hub</a>
+        <div class="lang-switch">
+          <a href="setup.html" class="active-lang" title="English">&#127468;&#127463;</a>
+          <a href="de/setup.html" title="Deutsch">&#127465;&#127466;</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Install <span>&amp; Setup</span></h1>
+    <p>If you can install Python, you can run this. Clone, install, launch &mdash; then add the overlays you want to OBS as browser sources.</p>
+  </section>
+
+  <main>
+
+    <!-- Requirements -->
+    <div class="sub-section">
+      <div style="max-width:960px; margin:0 auto;">
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#128203;</span> Requirements</h2>
+        </div>
+        <ul class="feature-list">
+          <li><span class="bullet"></span><div><strong>Windows</strong><span>iRacing only runs on Windows, so the overlays live there too. (iCASControl's simulator and replay modes also run on macOS and Linux.)</span></div></li>
+          <li><span class="bullet"></span><div><strong>Python 3.10+</strong><span>From <a href="https://www.python.org/downloads/" target="_blank" rel="noopener" style="color:#5dade2;">python.org</a> &mdash; tick &ldquo;Add Python to PATH&rdquo; during install.</span></div></li>
+          <li><span class="bullet"></span><div><strong>iRacing</strong><span>Running on the same machine, with a session loaded.</span></div></li>
+          <li><span class="bullet"></span><div><strong>OBS Studio</strong><span>Or any tool that supports browser sources, for the stream.</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Install -->
+    <div class="sub-section">
+      <div style="max-width:960px; margin:0 auto;">
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#128229;</span> Install</h2>
+        </div>
+        <pre style="background:#0d0d12; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:1rem 1.25rem; overflow-x:auto; color:#cfe8f7; font-size:0.88rem; line-height:1.6;"><code>git clone https://github.com/halvar20000/iracing-overlays.git
+cd iracing-overlays
+pip install -r requirements.txt</code></pre>
+        <p style="color:var(--text-secondary); line-height:1.8; margin-top:0.75rem;">That's it. The dependencies are Flask, pyirsdk, Pillow, requests and (Windows only) pywin32.</p>
+      </div>
+    </div>
+
+    <!-- Run -->
+    <div class="sub-section">
+      <div style="max-width:960px; margin:0 auto;">
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#9654;</span> Run the overlays</h2>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <span class="card-tag" style="background:#3498db;">Recommended</span>
+            <img src="../img/ovl-launcher.jpg" alt="The iRacing Overlay Launcher desktop app with a status dot, Start/Stop per overlay and Start All / Stop All controls" loading="lazy" style="width:100%; height:170px; object-fit:cover; object-position:top; border-radius:8px; margin:0.2rem 0 0.9rem; display:block; border:1px solid rgba(255,255,255,0.08);">
+            <h3>GUI launcher</h3>
+            <p>Double-click <code>launch_gui.bat</code>. A small desktop app opens with a Start/Stop button and status dot per overlay, plus Start&nbsp;All / Stop&nbsp;All and a log pane.</p>
+          </div>
+          <div class="card">
+            <span class="card-tag" style="background:#3498db;">Simple</span>
+            <h3>Batch launcher</h3>
+            <p>Run <code>launch_all.bat</code> to start every overlay in its own console window &mdash; no GUI, just go.</p>
+          </div>
+          <div class="card">
+            <span class="card-tag" style="background:#3498db;">One terminal</span>
+            <h3>Single command</h3>
+            <p>Run <code>python launch_all.py</code> to start all overlays in one terminal with colour-coded log prefixes. You can also run any single overlay directly, e.g. <code>python iracing_standings.py</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OBS -->
+    <div class="sub-section">
+      <div style="max-width:960px; margin:0 auto;">
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#127916;</span> Add overlays to OBS</h2>
+        </div>
+        <ul class="feature-list">
+          <li><span class="bullet"></span><div><strong>1. Start the overlays you want</strong><span>Each runs on its own port &mdash; e.g. 5005 for standings, 5007 for the track map.</span></div></li>
+          <li><span class="bullet"></span><div><strong>2. Add a Browser source</strong><span>In OBS: <strong>Sources &rarr; + &rarr; Browser</strong>, URL <code>http://localhost:&lt;port&gt;</code>.</span></div></li>
+          <li><span class="bullet"></span><div><strong>3. Toggle transparent stream mode</strong><span>Most overlays start with a dark debug background. Click into the browser source (Interact) and press <strong>H</strong> to switch to the transparent stream mode. The Live Indicator and Flag overlays are always transparent.</span></div></li>
+        </ul>
+        <p style="color:var(--text-secondary); line-height:1.8;">The overlays bind to <code>0.0.0.0</code>, so a second PC on your LAN can reach them at <code>http://&lt;your-ip&gt;:&lt;port&gt;</code> &mdash; handy for a dedicated streaming PC.</p>
+
+        <div class="card" style="border:1px solid rgba(52,152,219,0.3); margin-top:1.25rem;">
+          <span class="card-tag" style="background:#3498db;">Tip</span>
+          <h3>Self-healing browser sources &mdash; no manual refresh</h3>
+          <p>OBS loads each browser source once at startup; if the overlay server isn't running yet, the source stays blank until you hit Refresh. To avoid this, use the loader pages in <code>obs_loaders/</code>: in the browser-source properties, tick <strong>Local file</strong> and pick e.g. <code>obs_loaders/standings.html</code> instead of typing a URL. The loader retries automatically until the server responds &mdash; start order no longer matters, and overlays come back on their own after a restart. Regenerate the loaders with <code>python make_obs_loaders.py</code> after adding a new overlay.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Track map + sharing -->
+    <div class="sub-section">
+      <div style="max-width:960px; margin:0 auto;">
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#128506;</span> Offline track map &amp; optional sharing</h2>
+        </div>
+        <ul class="feature-list">
+          <li><span class="bullet"></span><div><strong>Offline track library</strong><span>The track map needs no iRacing login and no internet &mdash; geometry for ~300 configurations is bundled in <code>tracks/</code> as JSON. If a track isn't bundled it shows a friendly &ldquo;TRACK MAP NOT BUNDLED&rdquo; message. Geometry comes from the SIMRacingApps library (Apache&nbsp;2.0) and OpenStreetMap (ODbL).</span></div></li>
+          <li><span class="bullet"></span><div><strong>Car brand logos</strong><span>The standings overlay shows manufacturer logos from <code>brands/*.svg</code>. To add a brand, drop <code>brands/&lt;slug&gt;.svg</code> into the folder and, if needed, add a prefix mapping in <code>car_brands.py</code>.</span></div></li>
+          <li><span class="bullet"></span><div><strong>Optional public sharing</strong><span>The race logger has read-only public endpoints (<code>/share/chart</code>, <code>/share/standings</code>) so Twitch/Discord viewers can open a self-service chart. Expose them with a free <a href="https://www.cloudflare.com/products/tunnel/" target="_blank" rel="noopener" style="color:#5dade2;">Cloudflare Tunnel</a> &mdash; only <code>/share/*</code> paths are served remotely; all admin endpoints stay local.</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Troubleshooting -->
+    <div class="sub-section">
+      <div style="max-width:960px; margin:0 auto;">
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#128295;</span> Troubleshooting</h2>
+        </div>
+        <ul class="feature-list">
+          <li><span class="bullet"></span><div><strong>&ldquo;Waiting for iRacing&rdquo;</strong><span>iRacing must be running with a session loaded, not just the UI.</span></div></li>
+          <li><span class="bullet"></span><div><strong>Changed a script but see old behaviour</strong><span>Overlays keep the old code in memory &mdash; restart the overlay.</span></div></li>
+          <li><span class="bullet"></span><div><strong>Black box instead of transparency in OBS</strong><span>Press <strong>H</strong> in the browser source (Interact) to toggle stream mode.</span></div></li>
+          <li><span class="bullet"></span><div><strong>Port already in use</strong><span>Another overlay or app owns that port; each script's port is set at the bottom in <code>app.run(...)</code>.</span></div></li>
+        </ul>
+        <div style="text-align:center; margin-top:1.75rem;">
+          <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; border-radius:8px; background:#3498db; color:#0a0a0f; text-decoration:none; font-family:var(--font-heading); font-weight:700; font-size:0.95rem;">&#9654; Full README on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="overlays.html">Overlays</a>
+        <a href="racecontrol.html">iCASControl</a>
+        <a href="setup.html">Install &amp; Setup</a>
+        <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener">GitHub</a>
+        <a href="../index.html">SimRacing Hub</a>
+      </div>
+      <p>iRacing Overlays &mdash; a free, open-source project by <a href="../index.html" style="color:#5dade2;">SimRacing Hub</a>.</p>
+      <p class="footer-trust">Independent. Free. Self-hosted. No accounts. No tracking.</p>
+      <span class="last-updated"></span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>iRacing Overlays &mdash; Kostenlose, selbst gehostete Broadcast-Overlays &amp; Rennleitung</title>
+  <meta name="description" content="Eine kostenlose, quelloffene Sammlung selbst gehosteter Broadcast-Overlays f&uuml;r iRacing plus das Stewarding-Dashboard iCASControl. Keine Abos, keine Konten, keine Cloud — gebaut mit Python + Flask, l&auml;uft lokal und speist OBS.">
+  <link rel="canonical" href="https://simracing-hub.com/overlays/de/index.html">
+  <link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/index.html">
+  <link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/index.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimRacing Hub">
+  <meta property="og:title" content="iRacing Overlays &mdash; Kostenlose, selbst gehostete Broadcast-Overlays">
+  <meta property="og:description" content="Kostenlose, quelloffene Broadcast-Overlays + ein Stewarding-Dashboard f&uuml;r iRacing. L&auml;uft lokal, speist OBS, keine Cloud.">
+  <meta property="og:url" content="https://simracing-hub.com/overlays/de/index.html">
+  <meta property="og:image" content="https://simracing-hub.com/img/overlays-hero.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo" style="display:flex; align-items:center; gap:0.6rem;">
+        <img src="../../img/logo.svg" alt="SimRacing Hub" class="logo-img">
+        <span style="font-family:var(--font-heading); font-weight:700; font-size:1rem; color:#5dade2; letter-spacing:0.02em;">iRacing Overlays</span>
+      </a>
+      <button class="menu-toggle" aria-label="Men&uuml; umschalten">&#9776;</button>
+      <nav>
+        <a href="index.html" class="active">Start</a>
+        <a href="overlays.html">Overlays</a>
+        <a href="racecontrol.html">iCASControl</a>
+        <a href="setup.html">Installation</a>
+        <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener">GitHub &#8599;</a>
+        <a href="../../de/software.html" title="Zur&uuml;ck zu SimRacing Hub">&#8592; SimRacing Hub</a>
+        <div class="lang-switch">
+          <a href="../index.html" title="English">&#127468;&#127463;</a>
+          <a href="index.html" class="active-lang" title="Deutsch">&#127465;&#127466;</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>iRacing <span>Overlays</span></h1>
+    <p>Kostenlose, selbst gehostete Broadcast-Overlays &amp; ein Rennleitungs-Dashboard f&uuml;r iRacing &mdash; das quelloffene Toolkit hinter den Renn-Streams der CAS Community.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center; margin-top:1.1rem;">
+      <span style="padding:0.35rem 0.9rem; border-radius:999px; background:rgba(52,152,219,0.14); border:1px solid rgba(52,152,219,0.45); color:#5dade2; font-family:var(--font-heading); font-size:0.8rem; font-weight:600;">100% kostenlos</span>
+      <span style="padding:0.35rem 0.9rem; border-radius:999px; background:rgba(52,152,219,0.14); border:1px solid rgba(52,152,219,0.45); color:#5dade2; font-family:var(--font-heading); font-size:0.8rem; font-weight:600;">Open Source</span>
+      <span style="padding:0.35rem 0.9rem; border-radius:999px; background:rgba(52,152,219,0.14); border:1px solid rgba(52,152,219,0.45); color:#5dade2; font-family:var(--font-heading); font-size:0.8rem; font-weight:600;">Selbst gehostet</span>
+      <span style="padding:0.35rem 0.9rem; border-radius:999px; background:rgba(52,152,219,0.14); border:1px solid rgba(52,152,219,0.45); color:#5dade2; font-family:var(--font-heading); font-size:0.8rem; font-weight:600;">Kein Tracking</span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:0.75rem; justify-content:center; margin-top:1.5rem;">
+      <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; border-radius:8px; background:#3498db; color:#0a0a0f; text-decoration:none; font-family:var(--font-heading); font-weight:700; font-size:0.95rem;">&#9654; Auf GitHub ansehen</a>
+      <a href="overlays.html" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; border-radius:8px; background:transparent; color:#5dade2; border:1px solid rgba(52,152,219,0.5); text-decoration:none; font-family:var(--font-heading); font-weight:700; font-size:0.95rem;">Overlays entdecken &rarr;</a>
+    </div>
+  </section>
+
+  <main>
+
+    <div class="sub-section">
+      <div style="max-width:960px; margin:0 auto;">
+        <figure style="margin:0 0 1.5rem;">
+          <img src="../../img/overlays-hero.jpg" alt="Die &Uuml;bertragung des CAS Porsche Community Cup in Hockenheim mit der iRacing-Overlays-Suite: Live-Wertung, Offline-Streckenkarte, Session-Timer und LIVE-Badge, in OBS zusammengesetzt" loading="lazy" style="width:100%; border-radius:12px; display:block; border:1px solid rgba(52,152,219,0.25);">
+          <figcaption style="font-size:0.82rem; color:rgba(255,255,255,0.55); margin-top:0.5rem; text-align:center;">Eine Live-&Uuml;bertragung der CAS Community in Hockenheim &mdash; Wertung, Streckenkarte und Session-Overlays, alles selbst gehostet und in OBS zusammengesetzt.</figcaption>
+        </figure>
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#11088;</span> Broadcast-Grafiken, die auf deinem eigenen PC laufen</h2>
+        </div>
+        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:1.1rem;">iRacing Overlays ist eine Sammlung <strong style="color:var(--text-primary);">kostenloser, selbst gehosteter Broadcast-Overlays</strong>, gebaut mit Python&nbsp;+&nbsp;Flask. Jedes Overlay ist ein kleiner lokaler Webserver, den du in <a href="https://obsproject.com/" target="_blank" rel="noopener" style="color:#5dade2;">OBS Studio</a> als Browser-Quelle einbindest. Alle Telemetriedaten werden lokal &uuml;ber das iRacing-SDK via <code>pyirsdk</code> gelesen &mdash; <strong style="color:var(--text-primary);">keine Abos, keine Konten, nichts in der Cloud</strong>, und nichts verl&auml;sst deinen Rechner, solange du nicht ausdr&uuml;cklich die optionale &ouml;ffentliche Freigabe aktivierst.</p>
+        <p style="color:var(--text-secondary); line-height:1.8;">&Uuml;ber ein Dutzend Overlays laufen parallel, jedes auf einem eigenen Port, gestartet und gestoppt aus einem Ein-Klick-Desktop-Launcher. Daneben steht <strong style="color:var(--text-primary);">iCASControl</strong>, ein vollwertiges Rennleitungs- und Stewarding-Dashboard f&uuml;r Race Directors. Es ist dasselbe Toolkit, mit dem wir die CAS-Community-Rennen streamen &mdash; und es geh&ouml;rt dir, kostenlos, auf GitHub.</p>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <div class="section-header">
+        <h2><span class="icon">&#128293;</span> Was drinsteckt</h2>
+        <p>Vier S&auml;ulen &mdash; jede im Detail erkunden</p>
+      </div>
+      <div class="card-grid" style="max-width:1100px; margin:0 auto;">
+        <div class="card" style="border:1px solid rgba(52,152,219,0.3);">
+          <span class="card-tag" style="background:#3498db;">Overlays</span>
+          <h3>15 Broadcast-Overlays</h3>
+          <p>Wertungsturm, Qualifying-Grid, Rennergebnisse, Livery &amp; Fahrername, Flaggen, Session-Info, ein LIVE-/REPLAY-Badge, Quali-Delta, Driver of the Day und mehr &mdash; jede Grafik, die eine Renn&uuml;bertragung braucht, aus Live-Telemetrie.</p>
+          <span class="card-date"><a href="overlays.html" style="color:#5dade2; font-weight:600;">Alle Overlays ansehen &rarr;</a></span>
+        </div>
+        <div class="card" style="border:1px solid rgba(52,152,219,0.3);">
+          <span class="card-tag" style="background:#3498db;">Operator</span>
+          <h3>Broadcast-Dashboard</h3>
+          <p>Die Schaltzentrale des Regisseurs: Live-Telemetrie f&uuml;r jedes Auto, volle Kamerasteuerung und automatische &Uuml;berhol- &amp; Vorfallerkennung mit Ein-Klick-Instant-Replay. Den ganzen Stream von einem Bildschirm aus fahren.</p>
+          <span class="card-date"><a href="overlays.html" style="color:#5dade2; font-weight:600;">So funktioniert's &rarr;</a></span>
+        </div>
+        <div class="card" style="border:1px solid rgba(52,152,219,0.3);">
+          <span class="card-tag" style="background:#3498db;">Offline</span>
+          <h3>Streckenkarte &amp; Race Logger</h3>
+          <p>Eine Offline-SVG-Streckenkarte mit live mitlaufenden Auto-Punkten (~300 Strecken gebundelt, kein Internet n&ouml;tig) plus ein Race Logger, der jede Runde, jeden Boxenstopp und Vorfall aufzeichnet und Live-Rundenzeiten-Charts rendert.</p>
+          <span class="card-date"><a href="overlays.html" style="color:#5dade2; font-weight:600;">Entdecken &rarr;</a></span>
+        </div>
+        <div class="card" style="border:1px solid rgba(230,57,70,0.35);">
+          <span class="card-tag" style="background:var(--accent-red);">Rennleitung</span>
+          <h3>iCASControl Stewarding</h3>
+          <p>Eine Vollbild-Rennleitungs-Konsole: animierte Streckenkarte, Live-Timing, ein Vorfall-Log und der komplette Steward-Entscheidungs-Workflow &mdash; mit eingebautem Simulator, sodass es auf jedem OS l&auml;uft, sogar ohne iRacing.</p>
+          <span class="card-date"><a href="racecontrol.html" style="color:var(--accent-orange); font-weight:600;">iCASControl kennenlernen &rarr;</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <div style="max-width:960px; margin:0 auto;">
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#128274;</span> Privat von Grund auf</h2>
+        </div>
+        <ul class="feature-list">
+          <li><span class="bullet"></span><div><strong>L&auml;uft komplett auf deinem Rechner</strong><span>Jedes Overlay ist ein lokaler Webserver. Die Telemetrie wird vom iRacing-SDK auf demselben PC gelesen; die Daten ber&uuml;hren keinen fremden Server.</span></div></li>
+          <li><span class="bullet"></span><div><strong>Keine Konten, keine Abos, keine Geb&uuml;hren</strong><span>Von GitHub klonen und starten. Es gibt nichts zu registrieren und nichts zu bezahlen &mdash; jetzt nicht und sp&auml;ter nicht.</span></div></li>
+          <li><span class="bullet"></span><div><strong>Du entscheidest, was geteilt wird</strong><span>Eine optionale, schreibgesch&uuml;tzte &ouml;ffentliche Ansicht (via kostenlosem Cloudflare-Tunnel) l&auml;sst Zuschauer ein Self-Service-Chart &ouml;ffnen &mdash; und nur die freigegebenen Pfade sind erreichbar. Alles andere bleibt lokal.</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <div style="max-width:960px; margin:0 auto;">
+        <div class="section-header" style="text-align:left;">
+          <h2><span class="icon">&#9889;</span> Noch am selben Abend einsatzbereit</h2>
+        </div>
+        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:1rem;">Wer Python installieren kann, kann das hier betreiben. Repo klonen, Abh&auml;ngigkeiten installieren und den Launcher starten &mdash; dann die gew&uuml;nschten Overlays als Browser-Quellen in OBS einbinden.</p>
+        <pre style="background:#0d0d12; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:1rem 1.25rem; overflow-x:auto; color:#cfe8f7; font-size:0.88rem; line-height:1.6;"><code>git clone https://github.com/halvar20000/iracing-overlays.git
+cd iracing-overlays
+pip install -r requirements.txt
+# dann launch_gui.bat doppelklicken</code></pre>
+        <div style="text-align:center; margin-top:1.5rem;">
+          <a href="setup.html" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; border-radius:8px; background:#3498db; color:#0a0a0f; text-decoration:none; font-family:var(--font-heading); font-weight:700; font-size:0.95rem;">Zur vollst&auml;ndigen Anleitung &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Start</a>
+        <a href="overlays.html">Overlays</a>
+        <a href="racecontrol.html">iCASControl</a>
+        <a href="setup.html">Installation</a>
+        <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener">GitHub</a>
+        <a href="../../de/index.html">SimRacing Hub</a>
+      </div>
+      <p>iRacing Overlays &mdash; ein kostenloses, quelloffenes Projekt von <a href="../../de/index.html" style="color:#5dade2;">SimRacing Hub</a>.</p>
+      <p class="footer-trust">Unabh&auml;ngig. Kostenlos. Selbst gehostet. Keine Konten. Kein Tracking.</p>
+      <span class="last-updated"></span>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
