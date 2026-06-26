@@ -32,6 +32,39 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/software.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/software.html"/>
   </url>
+  <!-- iRacing Overlays project mini-site -->
+  <url>
+    <loc>https://simracing-hub.com/overlays/index.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/index.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/overlays/overlays.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/overlays.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/overlays.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/overlays.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/overlays/racecontrol.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/racecontrol.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/racecontrol.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/racecontrol.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/overlays/setup.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/setup.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/setup.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/setup.html"/>
+  </url>
   <url>
     <loc>https://simracing-hub.com/iracing.html</loc>
     <changefreq>daily</changefreq>
@@ -147,6 +180,39 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/software.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/software.html"/>
+  </url>
+  <!-- iRacing Overlays project mini-site (German) -->
+  <url>
+    <loc>https://simracing-hub.com/overlays/de/index.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/index.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/overlays/de/overlays.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/overlays.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/overlays.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/overlays.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/overlays/de/racecontrol.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/racecontrol.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/racecontrol.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/racecontrol.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/overlays/de/setup.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/setup.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/setup.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/setup.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/iracing.html</loc>
