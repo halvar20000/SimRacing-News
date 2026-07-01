@@ -108,6 +108,13 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/beyond-the-sim.html"/>
   </url>
   <url>
+    <loc>https://simracing-hub.com/alpha-racer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/alpha-racer.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/alpha-racer.html"/>
+  </url>
+  <url>
     <loc>https://simracing-hub.com/simhub-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -255,6 +262,13 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/beyond-the-sim.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/beyond-the-sim.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/de/alpha-racer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/alpha-racer.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/alpha-racer.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/simhub-guide.html</loc>
