@@ -5,312 +5,299 @@
   <!-- ================= ENGLISH ================= -->
   <url>
     <loc>https://simracing-hub.com/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/hardware.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-07-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/hardware.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/hardware.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/hardware.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/simulations.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/simulations.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simulations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/simulations.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/software.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/software.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/software.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/software.html"/>
   </url>
-  <!-- iRacing Overlays project mini-site -->
   <url>
     <loc>https://simracing-hub.com/overlays/index.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-06-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/index.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/overlays.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-06-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/overlays.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/overlays.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/overlays.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/racecontrol.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-06-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/racecontrol.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/setup.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-06-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/setup.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/setup.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/setup.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/iracing.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-07-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/iracing.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/iracing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/iracing.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/lmu.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-07-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/lmu.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/lmu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/lmu.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/cas-community.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/cas-community.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/cas-community.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/cas-community.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/youtube.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/youtube.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/youtube.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/youtube.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/diy.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/diy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/diy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/diy.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/beyond-the-sim.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/beyond-the-sim.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/beyond-the-sim.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/beyond-the-sim.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/alpha-racer.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/alpha-racer.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/alpha-racer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/alpha-racer.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/simhub-guide.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/simhub-guide.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simhub-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/simhub-guide.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/buying-guide.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/buying-guide.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/buying-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/buying-guide.html"/>
   </url>
-
   <url>
     <loc>https://simracing-hub.com/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/about.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/race-center.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/race-center-sfl.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-sfl.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-sfl.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-sfl.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/race-center-pccd.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-pccd.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-pccd.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-pccd.html"/>
   </url>
 
-  <!-- ================= GERMAN ================= -->
+  <!-- ================= DEUTSCH ================= -->
   <url>
     <loc>https://simracing-hub.com/de/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/hardware.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-07-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/hardware.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/hardware.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/hardware.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/simulations.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/simulations.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simulations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/simulations.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/software.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/software.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/software.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/software.html"/>
   </url>
-  <!-- iRacing Overlays project mini-site (German) -->
   <url>
     <loc>https://simracing-hub.com/overlays/de/index.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-06-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/index.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/de/overlays.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-06-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/overlays.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/overlays.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/overlays.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/de/racecontrol.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-06-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/racecontrol.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/de/setup.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-06-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/setup.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/setup.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/setup.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/iracing.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-07-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/iracing.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/iracing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/iracing.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/lmu.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-07-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/lmu.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/lmu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/lmu.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/cas-community.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/cas-community.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/cas-community.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/cas-community.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/youtube.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/youtube.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/youtube.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/youtube.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/diy.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/diy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/diy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/diy.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/beyond-the-sim.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/beyond-the-sim.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/beyond-the-sim.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/beyond-the-sim.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/alpha-racer.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/alpha-racer.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/alpha-racer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/alpha-racer.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/simhub-guide.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/simhub-guide.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simhub-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/simhub-guide.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/buying-guide.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/buying-guide.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/buying-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/buying-guide.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-07-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/about.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/race-center.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/race-center-sfl.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-sfl.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-sfl.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-sfl.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/race-center-pccd.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-pccd.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-pccd.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-pccd.html"/>
   </url>
 
 </urlset>

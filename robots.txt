@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 
-# Don't waste crawl budget on the legal page
-Disallow: /impressum.html
-Disallow: /de/impressum.html
+# The legal pages are crawlable on purpose: they carry <meta name="robots"
+# content="noindex,follow">, and Google can only honour that if it may fetch
+# them. Blocking them here made Search Console report them as
+# "Duplicate without user-selected canonical".
 
 Sitemap: https://simracing-hub.com/sitemap.xml
