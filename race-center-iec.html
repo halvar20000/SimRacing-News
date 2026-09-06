@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- BEGIN SEO-MANAGED -->
+    <title>CAS IEC Race Center – Sebring Round 1 | SimRacing Hub</title>
+    <meta name="description" content="Telemetry-driven results, an animated 2D replay and per-class data views from the CAS International Endurance Championship (IEC) Season 4 — Round 1, the 3 Hours of Sebring, multiclass LMP2 / GT3 / Porsche Cup.">
+    <link rel="canonical" href="https://simracing-hub.com/race-center-iec.html">
+    <link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-iec.html">
+    <link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-iec.html">
+    <link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-iec.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SimRacing Hub">
+    <meta property="og:title" content="CAS IEC Race Center – Sebring Round 1 | SimRacing Hub">
+    <meta property="og:description" content="Telemetry-driven results, an animated 2D replay and per-class data views from the CAS International Endurance Championship — the 3 Hours of Sebring.">
+    <meta property="og:url" content="https://simracing-hub.com/race-center-iec.html">
+    <meta property="og:image" content="https://simracing-hub.com/img/logo.svg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CAS IEC Race Center – Sebring Round 1 | SimRacing Hub">
+    <meta name="twitter:description" content="Telemetry-driven results, an animated 2D replay and per-class data views from the CAS International Endurance Championship — the 3 Hours of Sebring.">
+    <meta name="twitter:image" content="https://simracing-hub.com/img/logo.svg">
+  <!-- END SEO-MANAGED -->
+  <style>
+    /* ===== RACE CENTER ===== */
+    .race-intro {
+      max-width: 820px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: center;
+    }
+    .race-intro a { color: var(--accent-orange); }
+    .race-entry {
+      max-width: var(--max-width);
+      margin: 0 auto 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .race-entry:last-of-type { border-bottom: 0; }
+    .race-entry-head { margin-bottom: 1.5rem; }
+    .race-round {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      background: rgba(255, 107, 53, 0.12);
+      border: 1px solid rgba(255, 107, 53, 0.35);
+      border-radius: 5px;
+      padding: 0.3rem 0.7rem;
+      margin-bottom: 0.75rem;
+    }
+    .race-entry-head h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .race-meta {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.35rem;
+    }
+    .race-meta a { color: var(--accent-orange); text-decoration: none; white-space: nowrap; }
+    .race-meta a:hover { text-decoration: underline; }
+    .race-replay {
+      margin: 0 auto 2.25rem;
+      max-width: 960px;
+    }
+    .race-replay video {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: #000;
+    }
+    .replay-caption {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 0.6rem;
+    }
+    .race-block-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-primary);
+      margin: 2rem 0 1.1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .race-highlights {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+    .race-highlights p { margin-bottom: 0.9rem; }
+    .race-highlights p:last-child { margin-bottom: 0; }
+    .race-highlights strong { color: var(--text-primary); }
+    /* results table */
+    .results-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .race-results-table {
+      min-width: 760px;
+      font-variant-numeric: tabular-nums;
+    }
+    .race-results-table td.pos { font-family: var(--font-heading); font-weight: 700; color: var(--text-secondary); }
+    .race-results-table td.num { color: var(--text-muted); }
+    .race-results-table td.drv { color: #fff; }
+    .race-results-table td.car { color: var(--text-secondary); font-size: 0.85rem; }
+    .race-results-table td.res { font-size: 0.82rem; color: var(--text-secondary); }
+    .race-results-table tbody tr:first-child td.pos { color: var(--accent-yellow); }
+    .race-results-table td.best.flap { color: var(--accent-yellow); font-weight: 600; }
+    .flap-badge {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      background: rgba(255, 209, 102, 0.18);
+      color: var(--accent-yellow);
+      border-radius: 3px;
+      padding: 0.05rem 0.3rem;
+      vertical-align: middle;
+    }
+    .race-results-table tr.row-dnf td { color: var(--text-muted); }
+    .race-results-table tr.row-dnf td.drv { color: var(--text-secondary); }
+    .data-note {
+      max-width: var(--max-width);
+      margin: 1.75rem auto 0;
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .race-entry-head h2 { font-size: 1.5rem; }
+      .race-meta a { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo.svg" alt="SimRacing Hub" class="logo-img">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <nav>
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulations</a>
+        <a href="software.html">Software & Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html" class="active">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="beyond-the-sim.html">Beyond the Sim</a>
+        <a href="alpha-racer.html">Satire</a>
+        <a href="simhub-guide.html">Beginner's Guide</a>
+        <a href="buying-guide.html">Buying Guide</a>
+        <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener" title="CAS League Scoring (CLS) — live standings, schedules, results">CAS League Scoring (CLS) &#8599;</a>
+        <a href="about.html">About</a>
+        <a href="overlays/index.html" title="iRacing Overlays — our free broadcast overlay suite">Overlays</a>
+        <div class="lang-switch">
+          <a href="race-center-iec.html" class="active-lang" title="English">&#127468;&#127463;</a>
+          <a href="de/race-center-iec.html" title="Deutsch">&#127465;&#127466;</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1><span>CAS IEC</span> Race Center</h1>
+    <p>International Endurance Championship &mdash; telemetry replays, per-class data views and multiclass endurance results.</p>
+    <div class="hero-date">Latest: Sebring International Raceway &middot; Season 4 &middot; Round 1 &middot; 3 Hours &middot; 5 September 2026</div>
+  </section>
+
+  <main>
+
+    <div class="sub-section">
+      <div class="section-header">
+        <h2><span class="icon">&#127937;</span> Race Archive</h2>
+        <p>Every CAS race, reconstructed from the in-sim telemetry log</p>
+      </div>
+
+      <p class="race-intro">
+        The IEC Race Center is the data-driven companion to the CAS Community race reports. Each entry is built
+        straight from a live telemetry recording of the race: a 2D animated replay, the full classification
+        for every class, and the key numbers. Because the IEC runs three classes at once, gap and position
+        charts are computed within each class rather than across the field. For the narrative side &mdash; the broadcast story, qualifying and championship
+        context &mdash; see the <a href="cas-community.html">CAS Community race reports</a> and the
+        official <a href="https://league.simracing-hub.com/" target="_blank" rel="noopener">CAS League Scoring (CLS)</a> standings.
+        Newest race first.
+      </p>
+
+<div style="max-width: var(--max-width); margin: -1rem auto 2rem; text-align: center; display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap;"><a href="race-center.html" style="display: inline-block; padding: 0.55rem 1.2rem; background: rgba(255,107,53,0.12); border: 1px solid rgba(255,107,53,0.35); color: var(--accent-orange); border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 0.95rem;">GT3 WCT Race Center &rarr;</a><a href="race-center-pccd.html" style="display: inline-block; padding: 0.55rem 1.2rem; background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.4); color: #d4af37; border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 0.95rem;">PCCD Race Center &rarr;</a><a href="race-center-sfl.html" style="display: inline-block; padding: 0.55rem 1.2rem; background: rgba(6,182,212,0.12); border: 1px solid rgba(6,182,212,0.35); color: #06b6d4; border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 0.95rem;">SFL Cup Race Center &rarr;</a></div>
+
+      <!-- RACE-ENTRIES-START (newest first — Skill inserts new entries directly below this line) -->
+
+    <article class="race-entry" id="sebring-iec-r1">
+      <div class="race-entry-head">
+        <span class="race-round" style="background: rgba(16,185,129,0.12); color: #10b981; border-color: rgba(16,185,129,0.4);">CAS IEC &middot; Season 4 &middot; Round 1</span>
+        <h2>Sebring International Raceway &mdash; 3 Hours, Multiclass</h2>
+        <p class="race-meta">5 September 2026 &middot; 37 cars in three classes &middot; 3-hour endurance &middot; LMP2 &middot; GT3 &middot; Porsche 911 Cup &middot; clear, 25&nbsp;&deg;C air / 31&nbsp;&deg;C track &middot; <a href="cas-community.html#iec-sebring-review">Full race report &#8599;</a></p>
+      </div>
+      <div class="race-replay">
+        <video controls preload="none" playsinline poster="races/sebring-iec-r1-poster.jpg">
+          <source src="races/sebring-iec-r1-replay.mp4" type="video/mp4">
+        </video>
+        <p class="replay-caption">2D telemetry replay &mdash; the full three hours compressed to 100&nbsp;seconds, roughly 110&times; real time. Dot colour follows the car&rsquo;s livery brand; the side panel is live running order and lap count.</p>
+      </div>
+
+      <h3 class="race-block-title">By the Numbers</h3>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag cas">Overall &amp; LMP2 Winner</span>
+          <h3>WS Racing eSports LMP2&nbsp;I &mdash; 92 laps</h3>
+          <p>Daniel Langehegermann took overall pole with a 1:48.971 and the car led <strong>52 of the 92 laps</strong>. He and Fabian Buhl finished <strong>36.2&nbsp;s</strong> clear on a combined <strong>three incident points</strong> &mdash; the cleanest front-running drive of the night.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">The Other Two Classes</span>
+          <h3>DaRoAn (GT3) &middot; Aachen Yellow (Porsche Cup)</h3>
+          <p><strong>Andre N Villela</strong> won GT3 alone in the DaRoAn Acura by 30.3&nbsp;s, on <strong>two incident points in three hours</strong> &mdash; the lowest figure of any car in the race. <strong>Kevin K&uuml;pper</strong> took the Porsche Cup by 30.2&nbsp;s with the class&rsquo;s fastest lap.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Team of the Day</span>
+          <h3>Alemannia Aachen White &mdash; P13 &rarr; P2</h3>
+          <p><strong>Benjamin H&ouml;ft</strong> drove all three hours on his own, started thirteenth of sixteen in LMP2 and finished second in class <em>on the lead lap</em>, leading four laps himself &mdash; on five incident points, against a class average above seventeen.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Fastest Lap</span>
+          <h3>Martin Spieler &mdash; 1:49.021</h3>
+          <p>The quickest lap of the race, set on lap&nbsp;79 in the PWA E-Sports #BackFisch LMP2. Class bests: Michael Gasser 1:59.912 (GT3) and Kevin K&uuml;pper 2:01.469 (Porsche Cup).</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">&#128308; The Race-Control Crash</span>
+          <h3>One caution, and it came from a server</h3>
+          <p>Race control and iRacing were on the same machine, and both crashed. On restart the software re-counted every car&rsquo;s incidents and effectively doubled them &mdash; <strong>seven black flags in nine seconds</strong>, 24 more before the flag, and a Full Course Yellow that could not be cancelled. The one caution of the race, four laps long, was a software fault.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Attrition</span>
+          <h3>Six cars gone, 248 logged incidents</h3>
+          <p>Six cars disconnected or parked: Void Crown after two laps, Neon Pink after 41, Neon Orange after 45, KEK Racing after 56, Flying Arrow after 57, CAS-Tech Yellow after 20. Only <strong>five of sixteen LMP2</strong> and <strong>four of sixteen GT3</strong> reached the flag on the class lead lap.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Data Views &mdash; Whole Field</h3>
+      <div class="card-grid">
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Incidents on Track</span>
+          <a href="races/sebring-iec-r1-chart-incidents-map.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-chart-incidents-map.png" alt="Incident locations projected onto the Sebring layout" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">All 248 logged incidents projected onto the real Sebring geometry. The dense clusters are Turn&nbsp;17 onto the pit straight, the Hairpin, and the concrete-lined run through Sunset Bend.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Incident Timeline</span>
+          <a href="races/sebring-iec-r1-chart-incidents.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-chart-incidents.png" alt="Incident timeline by driver and race time" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Logged telemetry events by driver and race time. These are the logger&rsquo;s own detections, which undercount &mdash; the &bdquo;Inc&ldquo; column in the tables below uses iRacing&rsquo;s official points instead.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Pit &amp; Repair Timeline</span>
+          <a href="races/sebring-iec-r1-chart-pits.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-chart-pits.png" alt="Pit stop and repair timeline" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">The three-stint rhythm of the front-runners is visible as three neat columns around 40, 95 and 135 minutes. The long orange blocks are disasters, not strategy: Michael Gasser&rsquo;s 1123&nbsp;s and 1343&nbsp;s, Don Utz&rsquo;s 1051&nbsp;s repair, Kevin Osiewacz&rsquo;s 596&nbsp;s. Times are stationary pit time, not net race-time loss.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Race Pace by Class</span>
+          <a href="races/sebring-iec-r1-chart-pace.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-chart-pace.png" alt="Race-pace consistency violin plot" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Clean-lap distributions, pit and slow laps excluded. The multiclass split is stark: LMP2 lives between 1:50 and 1:53, GT3 and the Cup Porsches between 2:00 and 2:04. That ten-second delta is the whole traffic problem in one picture.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Net Overtaking</span>
+          <a href="races/sebring-iec-r1-chart-overtakes.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-chart-overtakes.png" alt="Net overtakes diverging bar chart" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Green = places gained on track, red = lost. In a three-class field this counts lapping traffic as well as racing, so read it as activity rather than as a ranking of overtakers.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">LMP2 &mdash; Data Views</h3>
+      <p class="race-intro" style="margin-bottom:1rem;">Gap and position charts are computed <strong>within the class</strong>. A field-wide version of either is meaningless here: the leader laps the Porsche Cup roughly every eight laps, which pushes the scale into the tens of minutes and buries the actual racing.</p>
+      <div class="card-grid">
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Gap to Class Leader</span>
+          <a href="races/sebring-iec-r1-lmp2-chart-gap.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-lmp2-chart-gap.png" alt="LMP2 gap to class leader" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">The lead group stays inside a minute for the whole race. Where several lines move together, the whole class is being neutralised or held up in traffic; the lines that fall away below are the cars that lost multiple laps to damage and repairs.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Class Position Changes</span>
+          <a href="races/sebring-iec-r1-lmp2-chart-positions.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-lmp2-chart-positions.png" alt="LMP2 position changes" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">H&ouml;ft&rsquo;s climb from thirteenth is the long diagonal. Hendrik Stanzel leads for a spell in the middle third before falling away, and the order settles only after the restart.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Lap-time Evolution</span>
+          <a href="races/sebring-iec-r1-lmp2-chart-stint-pace.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-lmp2-chart-stint-pace.png" alt="LMP2 lap-time evolution" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Lap by lap for all sixteen LMP2. Pit laps and black flags show as single spikes; the flat, narrow traces belong to the cars that finished on the lead lap.</p>
+        </div>
+      </div>
+<h3 class="race-block-title">Full Classification &mdash; LMP2</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Team</th><th>Driver(s)</th><th>Car</th><th>Grid</th><th>Laps</th><th>Best Lap</th><th>Gap</th><th>Inc</th><th>Result</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">294</td><td class="drv">WS Racing eSports LMP2 I [CAS IEC]</td><td>Daniel Langehegermann / Fabian Buhl</td><td class="car">Dallara P217</td><td>1</td><td>92</td><td class="best">1:49.449</td><td>&mdash;</td><td>3</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">2</td><td class="num">17</td><td class="drv">Alemannia Aachen eSports White</td><td>Benjamin Höft</td><td class="car">Dallara P217</td><td>13</td><td>92</td><td class="best">1:50.416</td><td>+36.158&nbsp;s</td><td>5</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">3</td><td class="num">112</td><td class="drv">WS Racing eSports LMP2 II [CAS IEC]</td><td>Florian Eigner</td><td class="car">Dallara P217</td><td>10</td><td>92</td><td class="best">1:49.923</td><td>+44.846&nbsp;s</td><td>5</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">4</td><td class="num">221</td><td class="drv">PWA E-Sports #BackFisch</td><td>Martin Spieler2</td><td class="car">Dallara P217</td><td>2</td><td>92</td><td class="best flap">1:49.021 <span class="flap-badge">FL</span></td><td>+67.560&nbsp;s</td><td>31</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">5</td><td class="num">77</td><td class="drv">DanKüchen Motorsport LMP2</td><td>Manfred Baar / Hubert Diethard</td><td class="car">Dallara P217</td><td>14</td><td>92</td><td class="best">1:51.183</td><td>+84.485&nbsp;s</td><td>12</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">6</td><td class="num">42</td><td class="drv">GoSquadra eSports</td><td>Niklas Stapf / Christian Jasper</td><td class="car">Dallara P217</td><td>6</td><td>91</td><td class="best">1:49.993</td><td>+1 lap</td><td>15</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">7</td><td class="num">19</td><td class="drv">Neon Simsports Yellow</td><td>Hendrik Stanzel / Anders Saß</td><td class="car">Dallara P217</td><td>3</td><td>91</td><td class="best">1:49.694</td><td>+1 lap</td><td>23</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">8</td><td class="num">169</td><td class="drv">Jurassic Kart Racing T-Rex</td><td>Hendrik Schubert / Timo Wulff</td><td class="car">Dallara P217</td><td>4</td><td>91</td><td class="best">1:50.365</td><td>+1 lap</td><td>28</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">9</td><td class="num">862</td><td class="drv">NEON Simsports #62</td><td>Fritz Morawetz</td><td class="car">Dallara P217</td><td>15</td><td>91</td><td class="best">1:51.188</td><td>+1 lap</td><td>28</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">10</td><td class="num">84</td><td class="drv">CAS-Tech Endurance Black</td><td>Johann Solowej / Andreas Leberer</td><td class="car">Dallara P217</td><td>11</td><td>91</td><td class="best">1:50.204</td><td>+1 lap</td><td>12</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">11</td><td class="num">1</td><td class="drv">Dat muss Kesseln!</td><td>Aaron Hatcher / Christian Kaschta</td><td class="car">Dallara P217</td><td>8</td><td>91</td><td class="best">1:50.569</td><td>+1 lap</td><td>25</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">12</td><td class="num">101</td><td class="drv">Alemannia Aachen eSports</td><td>Fabio Schuermann</td><td class="car">Dallara P217</td><td>9</td><td>87</td><td class="best">1:50.831</td><td>+5 laps</td><td>21</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">13</td><td class="num">6</td><td class="drv">Dat muss Kesseln! Team Werner</td><td>Kevin Osiewacz / Marvin Wortmann / Mario Severn</td><td class="car">Dallara P217</td><td>7</td><td>86</td><td class="best">1:49.567</td><td>+6 laps</td><td>24</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">14</td><td class="num">3</td><td class="drv">Pure Performance eSports 2</td><td>Sascha Scheidt / Kevin Kälberer</td><td class="car">Dallara P217</td><td>12</td><td>83</td><td class="best">1:49.966</td><td>+9 laps</td><td>24</td><td class="res">Finished</td></tr>
+          <tr style="opacity:0.6;"><td class="pos">15</td><td class="num">30</td><td class="drv">Void Crown Racing Esport</td><td>Timmy Kaiser</td><td class="car">Dallara P217</td><td>5</td><td>2</td><td class="best">&mdash;</td><td>+90 laps</td><td>5</td><td class="res">DNF</td></tr>
+          <tr style="opacity:0.6;"><td class="pos">16</td><td class="num"></td><td class="drv">Atzen Motorsport Delta</td><td>&mdash;</td><td class="car">Dallara P217</td><td>16</td><td>0</td><td class="best">&mdash;</td><td>&mdash;</td><td>0</td><td class="res">DNS</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="race-block-title">GT3 &mdash; Data Views</h3>
+      <div class="card-grid">
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Gap to Class Leader</span>
+          <a href="races/sebring-iec-r1-gt3-chart-gap.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-gt3-chart-gap.png" alt="GT3 gap to class leader" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Michael Gasser controls the first half, then the line ends: black flag, contact with Eggert, retirement. From there Villela is never headed.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Class Position Changes</span>
+          <a href="races/sebring-iec-r1-gt3-chart-positions.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-gt3-chart-positions.png" alt="GT3 position changes" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Pole-sitter Timo Elges falls through the order almost from the start; the podium three trade places until Gasser&rsquo;s exit settles it.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Lap-time Evolution</span>
+          <a href="races/sebring-iec-r1-gt3-chart-stint-pace.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-gt3-chart-stint-pace.png" alt="GT3 lap-time evolution" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Sixteen GT3 cars lap by lap. Villela&rsquo;s trace is the flattest on the chart &mdash; three hours without a single spike outside the pit laps.</p>
+        </div>
+      </div>
+<h3 class="race-block-title">Full Classification &mdash; GT3</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Team</th><th>Driver(s)</th><th>Car</th><th>Grid</th><th>Laps</th><th>Best Lap</th><th>Gap</th><th>Inc</th><th>Result</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">827</td><td class="drv">DaRoAn</td><td>Andre N Villela</td><td class="car">Acura NSX GT3 EVO 22</td><td>4</td><td>86</td><td class="best">2:00.259</td><td>&mdash;</td><td>2</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">2</td><td class="num">567</td><td class="drv">Neon Simsports Blue</td><td>Jens Krämer / Justin Christiansen</td><td class="car">BMW M4 GT3 EVO</td><td>3</td><td>86</td><td class="best">2:00.156</td><td>+30.303&nbsp;s</td><td>10</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">3</td><td class="num">98</td><td class="drv">JuHa Racing</td><td>Matthias Eggert / Jozef-Frederik Suto</td><td class="car">Ferrari 296 GT3</td><td>6</td><td>86</td><td class="best">2:00.552</td><td>+75.472&nbsp;s</td><td>19</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">4</td><td class="num">146</td><td class="drv">WS Racing eSports GT3 I [CAS IEC]</td><td>Christoph Kiesel</td><td class="car">Ford Mustang GT3</td><td>9</td><td>86</td><td class="best">2:00.894</td><td>+88.494&nbsp;s</td><td>19</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">5</td><td class="num">87</td><td class="drv">WS Racing eSports GT3 II [CAS IEC]</td><td>Dennis Erdsiek / Willem Haeger</td><td class="car">Mercedes-AMG GT3 2020</td><td>5</td><td>85</td><td class="best">2:00.775</td><td>+1 lap</td><td>12</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">6</td><td class="num">54</td><td class="drv">GermanPitbullzRacing Delta</td><td>Marco Mergardt</td><td class="car">BMW M4 GT3 EVO</td><td>8</td><td>85</td><td class="best">2:00.371</td><td>+1 lap</td><td>13</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">7</td><td class="num">83</td><td class="drv">CAS-Tech Endurance Red</td><td>Florian Brechmann / Andre Brechmann</td><td class="car">McLaren 720S GT3 EVO</td><td>7</td><td>85</td><td class="best">2:00.837</td><td>+1 lap</td><td>6</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">8</td><td class="num">16</td><td class="drv">Jurassic Kart Racing Brachiosaurus</td><td>Pascal Schörling</td><td class="car">BMW M4 GT3 EVO</td><td>11</td><td>85</td><td class="best">2:00.842</td><td>+1 lap</td><td>16</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">9</td><td class="num">35</td><td class="drv">Neon Simsports Purple</td><td>Max Mu</td><td class="car">Porsche 911 GT3 R (992)</td><td>16</td><td>84</td><td class="best">2:01.627</td><td>+2 laps</td><td>15</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">10</td><td class="num">583</td><td class="drv">Neon Simsports Green</td><td>Djavit Segashi / Fabian Paul2</td><td class="car">Porsche 911 GT3 R (992)</td><td>14</td><td>83</td><td class="best">2:02.578</td><td>+3 laps</td><td>21</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">11</td><td class="num">245</td><td class="drv">WS Racing eSports GT3 III [CAS IEC]</td><td>Ralf Thiele / Alex Turek</td><td class="car">Porsche 911 GT3 R (992)</td><td>13</td><td>83</td><td class="best">2:01.293</td><td>+3 laps</td><td>9</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">12</td><td class="num">29</td><td class="drv">Jurassic Kart Racing Velociraptor</td><td>Andreas Schulze / Timo Elges</td><td class="car">BMW M4 GT3 EVO</td><td>1</td><td>83</td><td class="best">2:00.172</td><td>+3 laps</td><td>27</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">13</td><td class="num">13</td><td class="drv">Neon Simsports White</td><td>Patrick Makovszky / Patrick Auer</td><td class="car">Porsche 911 GT3 R (992)</td><td>15</td><td>77</td><td class="best">2:03.491</td><td>+9 laps</td><td>39</td><td class="res">Finished</td></tr>
+          <tr style="opacity:0.6;"><td class="pos">14</td><td class="num">347</td><td class="drv">Flying Arrow Racing</td><td>Michael Gasser</td><td class="car">McLaren 720S GT3 EVO</td><td>2</td><td>57</td><td class="best flap">1:59.912 <span class="flap-badge">FL</span></td><td>+29 laps</td><td>17</td><td class="res">DNF</td></tr>
+          <tr style="opacity:0.6;"><td class="pos">15</td><td class="num">18</td><td class="drv">Neon Simsports Orange</td><td>Ricardo Still / Florian Roessler</td><td class="car">Ferrari 296 GT3</td><td>10</td><td>45</td><td class="best">2:01.290</td><td>+41 laps</td><td>24</td><td class="res">DNF</td></tr>
+          <tr style="opacity:0.6;"><td class="pos">16</td><td class="num">242</td><td class="drv">Neon Simsports Pink</td><td>Benjamin Warnow</td><td class="car">Ferrari 296 GT3</td><td>12</td><td>41</td><td class="best">2:02.049</td><td>+45 laps</td><td>20</td><td class="res">DNF</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="race-block-title">Porsche Cup &mdash; Data Views</h3>
+      <div class="card-grid">
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Gap to Class Leader</span>
+          <a href="races/sebring-iec-r1-pcup-chart-gap.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-pcup-chart-gap.png" alt="Porsche Cup gap to class leader" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">K&uuml;pper and Cursio swap the class lead repeatedly through the middle of the race &mdash; the two lines cross the zero axis again and again. The cliff at lap&nbsp;50 is Don Utz&rsquo;s repair.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Class Position Changes</span>
+          <a href="races/sebring-iec-r1-pcup-chart-positions.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-pcup-chart-positions.png" alt="Porsche Cup position changes" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Five cars, and by half distance only three still running. The lead changes hands more often here than in either of the bigger classes.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Lap-time Evolution</span>
+          <a href="races/sebring-iec-r1-pcup-chart-stint-pace.png" target="_blank" style="display:block;">
+            <img src="races/sebring-iec-r1-pcup-chart-stint-pace.png" alt="Porsche Cup lap-time evolution" style="width:100%; border-radius:6px; display:block;" loading="lazy">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">The Cup cars run the tightest lap-time band of the three classes &mdash; no BOP, identical machinery, and the pace differences are all driver.</p>
+        </div>
+      </div>
+<h3 class="race-block-title">Full Classification &mdash; Porsche Cup</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Team</th><th>Driver(s)</th><th>Car</th><th>Grid</th><th>Laps</th><th>Best Lap</th><th>Gap</th><th>Inc</th><th>Result</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">81</td><td class="drv">Alemannia Aachen eSports Yellow</td><td>Kevin Küpper</td><td class="car">Porsche 911 Cup (992.2)</td><td>3</td><td>84</td><td class="best flap">2:01.469 <span class="flap-badge">FL</span></td><td>&mdash;</td><td>16</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">2</td><td class="num">173</td><td class="drv">CAS-Tech Performance Blue</td><td>Thomas Kuebler / Antonio Cursio</td><td class="car">Porsche 911 Cup (992.2)</td><td>1</td><td>84</td><td class="best">2:02.378</td><td>+30.168&nbsp;s</td><td>10</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">3</td><td class="num">555</td><td class="drv">CAS-Tech Performance Green</td><td>Don Utz</td><td class="car">Porsche 911 Cup (992.2)</td><td>5</td><td>76</td><td class="best">2:02.434</td><td>+8 laps</td><td>18</td><td class="res">Finished</td></tr>
+          <tr style="opacity:0.6;"><td class="pos">4</td><td class="num">919</td><td class="drv">KEK Racing</td><td>Maxim Voigt / Bela Brünger</td><td class="car">Porsche 911 Cup (992.2)</td><td>2</td><td>56</td><td class="best">2:02.432</td><td>+28 laps</td><td>34</td><td class="res">DNF</td></tr>
+          <tr style="opacity:0.6;"><td class="pos">5</td><td class="num">067</td><td class="drv">CAS-Tech Performance Yellow</td><td>Thomas Herbrig</td><td class="car">Porsche 911 Cup (992.2)</td><td>4</td><td>20</td><td class="best">2:04.195</td><td>+64 laps</td><td>10</td><td class="res">DNF</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="race-block-title">Race Highlights</h3>
+      <div class="race-highlights">
+        <p><strong>The season opener was decided as much by what broke as by what raced.</strong> WS Racing eSports led from overall pole and were never seriously threatened in LMP2, but almost everything behind them was shaped by attrition: six wheelbase failures counted across the field, a driver stuck in third gear handing his car over mid-stint, repeated disconnections, and a leading GT3 that threw away an hour&rsquo;s work on track limits. In the Porsche Cup, Don Utz was wrecked while making room for a faster car and still came back out to take third in class, eight laps down.</p>
+        <p><strong>Then race control itself became the story.</strong> With roughly a third of the race left, the machine running both iRacing and the race-control software crashed. On restart the software re-counted every car&rsquo;s incidents and added them to what it already held, sending 31 black flags out in total &mdash; seven of them in nine seconds &mdash; and triggering a Full Course Yellow that could not be withdrawn. Some cars served drive-throughs they never owed; one owed a drive-through and never served it. Rather than rerun the race, the stewards reconstructed it from the official result, this telemetry recording, a full replay run and an independent breakdown, and applied a flat 13-second correction per unjustified drive-through. The result changed by exactly two positions.</p>
+      </div>
+
+      <p class="data-note">Source: iRacing event result (subsession 88492179). &bdquo;Inc&ldquo; shows official iRacing incident points, not the telemetry log&rsquo;s event count. Charts and the 2D replay are built from the iCASControl in-sim telemetry recording; gap and position charts are recomputed within each class. The classification reflects the stewards&rsquo; drive-through correction &mdash; in LMP2, Jurassic Kart Racing T-Rex is classified eighth and NEON Simsports #62 ninth. Official points and Team of the Day from <a href="https://league.simracing-hub.com/leagues/cas-iec" target="_blank" rel="noopener" style="color: var(--accent-orange);">CAS League Scoring</a>; narrative from the CAS Community Twitch broadcast.</p>
+    </article>
+
+      <!-- RACE-ENTRIES-END -->
+
+    </div>
+
+    </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">News</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="simulations.html">Simulations</a>
+        <a href="software.html">Software & Tools</a>
+        <a href="iracing.html">iRacing</a>
+        <a href="lmu.html">LMU</a>
+        <a href="cas-community.html">CAS Community</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="diy.html">DIY</a>
+        <a href="beyond-the-sim.html">Beyond the Sim</a>
+        <a href="alpha-racer.html">Satire</a>
+        <a href="simhub-guide.html">Beginner's Guide</a>
+        <a href="buying-guide.html">Buying Guide</a>
+        <a href="about.html">About</a>
+        <a href="overlays/index.html">Overlays</a>
+        <a href="impressum.html">Imprint</a>
+        <a href="datenschutz.html">Privacy</a>
+      </div>
+      <p>SimRacing Hub &mdash; AI-curated sim racing news, updated daily.</p>
+      <p class="footer-trust">Independent. No ads. No sponsorships. No affiliate links. No tracking.</p>
+      <span class="last-updated"></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
