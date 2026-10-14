@@ -1,0 +1,1704 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preview — Motegi R4</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>/* ===== SIMRACING HUB - Dark Racing Theme ===== */
+
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1a2e;
+  --bg-card-hover: #222240;
+  --accent-red: #e63946;
+  --accent-orange: #ff6b35;
+  --accent-yellow: #ffd166;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0b0;
+  --text-muted: #666680;
+  --border-color: #2a2a3e;
+  --gradient-race: linear-gradient(135deg, #e63946, #ff6b35);
+  --gradient-dark: linear-gradient(180deg, #0a0a0f 0%, #12121a 100%);
+  --shadow-glow: 0 0 20px rgba(230, 57, 70, 0.15);
+  --font-main: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Rajdhani', 'Inter', sans-serif;
+  --max-width: 1200px;
+  --transition: 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ===== HEADER & NAV ===== */
+header {
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.logo-img {
+  height: 42px;
+  width: auto;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--gradient-race);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-text span {
+  background: var(--gradient-race);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+nav { display: flex; align-items: center; gap: 0.1rem; }
+
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.lang-switch a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 22px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  opacity: 0.5;
+  transition: all var(--transition);
+  border: 1px solid transparent;
+  flex-shrink: 0;
+}
+
+.lang-switch a:hover {
+  opacity: 0.8;
+  background: rgba(230, 57, 70, 0.1);
+}
+
+.lang-switch a.active-lang {
+  opacity: 1;
+  border-color: var(--accent-red);
+  background: rgba(230, 57, 70, 0.15);
+}
+
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.35rem 0.55rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+nav a:hover, nav a.active {
+  color: var(--text-primary);
+  background: rgba(230, 57, 70, 0.1);
+}
+
+nav a.active {
+  color: var(--accent-red);
+  background: rgba(230, 57, 70, 0.15);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: var(--gradient-dark);
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(230, 57, 70, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  background: var(--gradient-race);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Hero badge pills */
+.hero-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.hero-badge:last-child {
+  background: rgba(230, 57, 70, 0.1);
+  border-color: rgba(230, 57, 70, 0.25);
+  color: var(--accent-red);
+}
+
+.hero-date {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.4rem 1rem;
+  background: rgba(230, 57, 70, 0.1);
+  border: 1px solid rgba(230, 57, 70, 0.2);
+  border-radius: 20px;
+  color: var(--accent-red);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-header h2 .icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gradient-race);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* ===== CARDS ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+/* Top story: first card in today's highlights spans full width */
+.card-grid.has-lead .card:first-child {
+  grid-column: 1 / -1;
+  border-color: rgba(230, 57, 70, 0.25);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(230, 57, 70, 0.06) 100%);
+}
+
+.card-grid.has-lead .card:first-child::before {
+  opacity: 1;
+}
+
+.card-grid.has-lead .card:first-child h3 {
+  font-size: 1.4rem;
+}
+
+:lang(en) .card-grid.has-lead .card:first-child .card-tag::after {
+  content: " — TOP STORY";
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+:lang(de) .card-grid.has-lead .card:first-child .card-tag::after {
+  content: " — TOP-MELDUNG";
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .card-grid.has-lead .card:first-child h3 {
+    font-size: 1.25rem;
+  }
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-race);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(230, 57, 70, 0.3);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.card:hover::before { opacity: 1; }
+
+.card-tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: rgba(230, 57, 70, 0.15);
+  color: var(--accent-red);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.card-tag.hardware { background: rgba(255, 107, 53, 0.15); color: var(--accent-orange); }
+.card-tag.software { background: rgba(255, 209, 102, 0.15); color: var(--accent-yellow); }
+.card-tag.iracing { background: rgba(0, 136, 255, 0.15); color: #0088ff; }
+.card-tag.lmu { background: rgba(0, 200, 120, 0.15); color: #00c878; }
+.card-tag.sim { background: rgba(160, 100, 255, 0.15); color: #a064ff; }
+.card-tag.cas { background: rgba(231, 76, 60, 0.15); color: #e74c3c; }
+.card-tag.real { background: rgba(212, 175, 55, 0.15); color: #d4af37; }
+
+/* ===== MULTI-CLASS RESULT CELLS (WCT Pro / AM) ===== */
+.result-cell .class-line {
+  display: block;
+  line-height: 1.55;
+}
+.result-cell .class-line + .class-line {
+  margin-top: 0.15rem;
+}
+.class-label {
+  display: inline-block;
+  min-width: 2.2em;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.05rem 0.35rem;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.class-label.pro { background: rgba(255, 107, 53, 0.18); color: var(--accent-orange); }
+.class-label.am  { background: rgba(255, 209, 102, 0.18); color: var(--accent-yellow); }
+
+/* ===== STANDINGS TABLES ===== */
+.standings-section {
+  max-width: 1200px;
+  margin: 0 auto 2.5rem;
+  padding: 1.25rem 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+}
+.standings-section .standings-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+}
+.standings-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.standings-grid.dual {
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 720px) {
+  .standings-grid.dual { grid-template-columns: 1fr; }
+}
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: rgba(18, 18, 26, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.standings-table caption {
+  caption-side: top;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-red);
+  padding: 0 0 0.55rem;
+  text-align: left;
+}
+.standings-table th {
+  text-align: left;
+  padding: 0.55rem 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(10, 10, 15, 0.4);
+}
+.standings-table td {
+  padding: 0.5rem 0.85rem;
+  border-bottom: 1px solid rgba(42, 42, 62, 0.4);
+  color: var(--text-primary);
+}
+.standings-table tbody tr:last-child td { border-bottom: 0; }
+.standings-table tbody tr:first-child td { color: #fff; font-weight: 600; }
+.standings-table .pos { width: 40px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.standings-table .pts {
+  width: 70px;
+  text-align: right;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--accent-orange);
+  font-variant-numeric: tabular-nums;
+}
+.standings-table tr.empty td {
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: 1rem 0.85rem;
+}
+
+/* ===== TRIBUTE / MEMORIAL BLOCK ===== */
+.tribute {
+  background: linear-gradient(180deg, #14141e 0%, #0f0f18 100%);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid #c8c8d6;
+  border-radius: 8px;
+  padding: 2rem 2.25rem;
+  margin: 2rem auto 2.5rem;
+  max-width: 820px;
+  text-align: center;
+}
+
+.tribute .tribute-mark {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #c8c8d6;
+  border: 1px solid #c8c8d6;
+  border-radius: 4px;
+  padding: 0.25rem 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.tribute h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.tribute .tribute-sub {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.tribute p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto 0.75rem;
+}
+
+.tribute .tribute-close {
+  display: block;
+  margin-top: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+/* ===== SECTION HEADER VARIANT FOR BEYOND THE SIM ===== */
+.section-sub {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.card-date {
+  display: block;
+  margin-top: 1rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.75rem;
+  color: var(--accent-red);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: gap var(--transition);
+}
+
+.card-link:hover { gap: 0.6rem; }
+
+/* ===== COMPARISON TABLES ===== */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-card);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.comparison-table-wrapper h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.25rem 1.5rem 0.5rem;
+  color: var(--text-primary);
+  border-bottom: none;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.85rem;
+}
+
+.comparison-table thead th {
+  background: rgba(230, 57, 70, 0.12);
+  color: var(--accent-red);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.85rem 1.1rem;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 2px solid rgba(230, 57, 70, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.comparison-table tbody td {
+  padding: 0.7rem 1.1rem;
+  border-bottom: 1px solid rgba(42, 42, 62, 0.4);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.comparison-table tbody tr:hover {
+  background: rgba(230, 57, 70, 0.06);
+}
+
+.comparison-table tbody tr:hover td {
+  color: var(--text-primary);
+}
+
+.comparison-table tbody td:first-child {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.comparison-table tbody td:nth-child(2) {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.comparison-table .price {
+  color: var(--accent-yellow);
+  font-weight: 600;
+}
+
+/* Tier color bars - applied to first td of each row */
+.comparison-table .tier-budget td:first-child { border-left: 4px solid #00c878; padding-left: calc(1.1rem - 1px); }
+.comparison-table .tier-mid td:first-child { border-left: 4px solid #0088ff; padding-left: calc(1.1rem - 1px); }
+.comparison-table .tier-high td:first-child { border-left: 4px solid var(--accent-orange); padding-left: calc(1.1rem - 1px); }
+.comparison-table .tier-pro td:first-child { border-left: 4px solid var(--accent-red); padding-left: calc(1.1rem - 1px); }
+
+/* Tier row subtle background tinting */
+.comparison-table .tier-budget { background: rgba(0, 200, 120, 0.03); }
+.comparison-table .tier-mid { background: rgba(0, 136, 255, 0.03); }
+.comparison-table .tier-high { background: rgba(255, 107, 53, 0.03); }
+.comparison-table .tier-pro { background: rgba(230, 57, 70, 0.03); }
+
+.comparison-table .tier-budget:hover { background: rgba(0, 200, 120, 0.08); }
+.comparison-table .tier-mid:hover { background: rgba(0, 136, 255, 0.08); }
+.comparison-table .tier-high:hover { background: rgba(255, 107, 53, 0.08); }
+.comparison-table .tier-pro:hover { background: rgba(230, 57, 70, 0.08); }
+
+.table-legend {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.6rem 1.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.table-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.table-legend span::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legend-budget::before { background: #00c878 !important; }
+.legend-mid::before { background: #0088ff !important; }
+.legend-high::before { background: var(--accent-orange) !important; }
+.legend-pro::before { background: var(--accent-red) !important; }
+
+@media (max-width: 768px) {
+  .comparison-table { font-size: 0.78rem; }
+  .comparison-table thead th { padding: 0.6rem 0.75rem; font-size: 0.72rem; }
+  .comparison-table tbody td { padding: 0.55rem 0.75rem; }
+  .comparison-table-wrapper h3 { font-size: 1.1rem; padding: 1rem 1rem 0.4rem; }
+  .table-legend { padding: 0.4rem 1rem 0.75rem; gap: 1rem; }
+}
+
+/* ===== HARDWARE SUB-SECTIONS ===== */
+.sub-section {
+  margin-bottom: 2.5rem;
+}
+
+.sub-section h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent-red);
+}
+
+/* ===== FEATURE LIST ===== */
+.feature-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.feature-list li {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: all var(--transition);
+}
+
+.feature-list li:hover {
+  border-color: rgba(230, 57, 70, 0.3);
+}
+
+.feature-list li .bullet {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  background: var(--accent-red);
+  border-radius: 50%;
+  margin-top: 0.45rem;
+}
+
+.feature-list li strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.feature-list li span {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* ===== QUICK NAV TILES ===== */
+.quick-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.quick-nav a {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem 1.25rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.quick-nav a:hover {
+  border-color: rgba(230, 57, 70, 0.4);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.quick-nav a .nav-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.quick-nav a .nav-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.quick-nav a .nav-desc {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+footer p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+footer .footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color var(--transition);
+}
+
+footer .footer-links a:hover { color: var(--accent-red); }
+
+.footer-trust {
+  color: var(--accent-orange) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 0.75rem;
+  opacity: 0.85;
+}
+
+.last-updated {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(230, 57, 70, 0.1);
+  border-radius: 12px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+/* ===== RESPONSIVE =====
+   Mobile menu kicks in at 1024px because we have 13+ nav items that
+   won't fit on a narrow desktop / tablet even with tight spacing.
+   Above 1024px the full horizontal nav is shown. */
+@media (max-width: 1024px) {
+  .menu-toggle { display: block; }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0; right: 0;
+    background: rgba(10, 10, 15, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    gap: 0.25rem;
+  }
+
+  nav.open { display: flex; }
+
+  nav a {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .lang-switch {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
+    justify-content: center;
+  }
+
+  .hero h1 { font-size: 2rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .quick-nav { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .quick-nav { grid-template-columns: 1fr; }
+  .feature-list { grid-template-columns: 1fr; }
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ===== LOADING ANIMATION ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card { animation: fadeInUp 0.5s ease backwards; }
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.15s; }
+.card:nth-child(4) { animation-delay: 0.2s; }
+.card:nth-child(5) { animation-delay: 0.25s; }
+.card:nth-child(6) { animation-delay: 0.3s; }
+
+/* ===== FEATURED REVIEW ===== */
+/* Editorial block for surfacing third-party hardware/software reviews. */
+/* Privacy-first: video card is a styled link to YouTube — no iframe embed, */
+/* so no YouTube cookies are set until the user actively clicks through. */
+.featured-review {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.featured-review-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 400px) 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.review-video-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-video-card a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 107, 53, 0.4);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.video-placeholder {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 50%, #1a1a2e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 107, 53, 0.18), transparent 60%);
+}
+
+.video-play-icon {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(230, 57, 70, 0.92);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  padding-left: 0.3rem;
+  box-shadow: 0 10px 24px rgba(230, 57, 70, 0.4);
+}
+
+.video-overlay-text {
+  position: absolute;
+  bottom: 0.9rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.video-title {
+  padding: 1rem 1.2rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.35;
+}
+
+.review-summary {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.review-pullquote {
+  margin: 0 0 1.5rem;
+  padding: 1.4rem 1.6rem;
+  border-left: 3px solid var(--accent-orange);
+  background: rgba(255, 107, 53, 0.06);
+  border-radius: 0 8px 8px 0;
+  font-size: 1.12rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.review-pullquote cite {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  font-style: normal;
+  color: var(--accent-orange);
+  font-family: var(--font-heading);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.review-section-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 1.75rem 0 0.6rem;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.review-list {
+  margin: 0 0 1rem;
+  padding: 0 0 0 1.2rem;
+}
+
+.review-list li {
+  margin-bottom: 0.55rem;
+}
+
+.review-list strong {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.editor-take {
+  margin: 1.6rem 0 1.4rem;
+  padding: 1rem 1.2rem;
+  background: rgba(0, 200, 120, 0.08);
+  border-left: 3px solid #00c878;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.editor-take strong {
+  color: #00c878;
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+}
+
+.review-watch-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  background: var(--accent-red);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.review-watch-button:hover {
+  background: #ff5565;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 860px) {
+  .featured-review-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .review-video-card {
+    max-width: 480px;
+  }
+}
+
+/* ===== CAS Schedule: Next-Up row highlight =====
+   The row gets a red background tint + red left-border on the Rd cell.
+   The "NEXT" pill used to live on the Rd cell (60px) and overlapped the
+   round number — it now sits on the last cell (Fastest Lap result-cell),
+   which on an upcoming row only contains an em-dash placeholder, so the
+   pill has clear space on the right edge. */
+.comparison-table tbody tr.next-up {
+  background: rgba(230, 57, 70, 0.10);
+}
+
+.comparison-table tbody tr.next-up:hover {
+  background: rgba(230, 57, 70, 0.16);
+}
+
+.comparison-table tbody tr.next-up td {
+  color: #fff;
+  font-weight: 600;
+}
+
+.comparison-table tbody tr.next-up td:first-child {
+  border-left: 4px solid var(--accent-red);
+  padding-left: calc(1.1rem - 1px);
+}
+
+.comparison-table tbody tr.next-up td:last-child {
+  position: relative;
+  padding-right: 3.5rem; /* reserve room for the NEXT pill on the right */
+}
+
+.comparison-table tbody tr.next-up td:last-child::after {
+  content: "NEXT";
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-red);
+  background: rgba(230, 57, 70, 0.18);
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+/* Smooth scroll for hash anchors (e.g. #sched-cc from the banner button) */
+html { scroll-behavior: smooth; }
+
+/* ===== Hero jump button (iRacing page "Jump to This Week's Schedule") ===== */
+.jump-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0088ff, #0066cc);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 12px rgba(0, 136, 255, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jump-button:hover {
+  background: linear-gradient(135deg, #33a0ff, #0088ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 136, 255, 0.45);
+}
+
+/* Extra breathing room so anchor-jumps don't hide the heading behind the sticky header */
+#this-week { scroll-margin-top: 90px; }
+
+/* ===== CAS Schedule: Result columns (Winner / Pole / Fastest Lap) ===== */
+.comparison-table td.result-cell {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.comparison-table td.result-cell.filled {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Completed rounds: subtle check mark on the round number column */
+.comparison-table tbody tr.completed td:first-child {
+  color: #7fd18b;
+}
+
+.comparison-table tbody tr.completed td:first-child::before {
+  content: "\2713 ";
+  color: #7fd18b;
+  font-weight: 700;
+  margin-right: 0.2rem;
+}
+
+/* Horizontal scroll fallback on narrow screens so 6-7 column tables stay readable */
+@media (max-width: 820px) {
+  .comparison-table-wrapper { overflow-x: auto; }
+  .comparison-table { min-width: 720px; }
+}
+</style><style>
+    /* ===== RACE CENTER ===== */
+    .race-intro {
+      max-width: 820px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: center;
+    }
+    .race-intro a { color: var(--accent-orange); }
+    .race-entry {
+      max-width: var(--max-width);
+      margin: 0 auto 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .race-entry:last-of-type { border-bottom: 0; }
+    .race-entry-head { margin-bottom: 1.5rem; }
+    .race-round {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      background: rgba(255, 107, 53, 0.12);
+      border: 1px solid rgba(255, 107, 53, 0.35);
+      border-radius: 5px;
+      padding: 0.3rem 0.7rem;
+      margin-bottom: 0.75rem;
+    }
+    .race-entry-head h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .race-meta {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.35rem;
+    }
+    .race-meta a { color: var(--accent-orange); text-decoration: none; white-space: nowrap; }
+    .race-meta a:hover { text-decoration: underline; }
+    .race-replay {
+      margin: 0 auto 2.25rem;
+      max-width: 960px;
+    }
+    .race-replay video {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: #000;
+    }
+    .replay-caption {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 0.6rem;
+    }
+    .race-block-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-primary);
+      margin: 2rem 0 1.1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .race-highlights {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+    .race-highlights p { margin-bottom: 0.9rem; }
+    .race-highlights p:last-child { margin-bottom: 0; }
+    .race-highlights strong { color: var(--text-primary); }
+    /* results table */
+    .results-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .race-results-table {
+      min-width: 760px;
+      font-variant-numeric: tabular-nums;
+    }
+    .race-results-table td.pos { font-family: var(--font-heading); font-weight: 700; color: var(--text-secondary); }
+    .race-results-table td.num { color: var(--text-muted); }
+    .race-results-table td.drv { color: #fff; }
+    .race-results-table td.car { color: var(--text-secondary); font-size: 0.85rem; }
+    .race-results-table td.res { font-size: 0.82rem; color: var(--text-secondary); }
+    .race-results-table tbody tr:first-child td.pos { color: var(--accent-yellow); }
+    .race-results-table td.best.flap { color: var(--accent-yellow); font-weight: 600; }
+    .flap-badge {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      background: rgba(255, 209, 102, 0.18);
+      color: var(--accent-yellow);
+      border-radius: 3px;
+      padding: 0.05rem 0.3rem;
+      vertical-align: middle;
+    }
+    .race-results-table tr.row-dnf td { color: var(--text-muted); }
+    .race-results-table tr.row-dnf td.drv { color: var(--text-secondary); }
+    .data-note {
+      max-width: var(--max-width);
+      margin: 1.75rem auto 0;
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .race-entry-head h2 { font-size: 1.5rem; }
+      .race-meta a { white-space: normal; }
+    }
+  </style>
+<style>body{padding:1rem 0} .card,.fade-in,.animate{opacity:1 !important;transform:none !important} .preview-label{max-width:1200px;margin:1rem auto;padding:.5rem 1rem;background:#ff6b35;color:#000;font-weight:700;border-radius:6px}</style>
+</head><body>
+<div class="preview-label">VORSCHAU 1/3 &mdash; cas-community.html: neuer Bericht (aufgeklappt)</div>
+<section class="section"><div class="container"><div class="sub-section" id="gt3-motegi-review">
+      <div class="section-header">
+        <h2><span class="icon">&#127937;</span> GT3 WCT Season&nbsp;14, Round&nbsp;4 &mdash; Mobility Resort Motegi</h2>
+        <p>Maurice Becker led all 33 laps again, but it only became a procession when Mike Zocher, the one driver who could stay with him, was black-flagged at pit entry</p>
+      </div>
+
+      <div style="max-width: 1200px; margin: 0 auto 1.5rem; padding: 1rem 1.4rem; background: rgba(255,107,53,0.08); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem;">
+        <span style="font-size: 1.6rem; line-height: 1;">&#128202;</span>
+        <span style="flex: 1; min-width: 240px; color: rgba(255,255,255,0.85); font-size: 0.95rem;">The 2D replay, lap-by-lap pace and gaps, and the full 20-car classification from Motegi are in the <strong>CAS Race Center</strong>.</span>
+        <a href="race-center.html#motegi-r4" style="display: inline-block; padding: 0.55rem 1.2rem; background: linear-gradient(135deg, #e74c3c, #c0392b); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 0.95rem;">Open Race Center &rarr;</a>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag cas">Race Result &middot; Pro</span>
+          <h3>&#127942; Maurice Becker, Schleich, Richter</h3>
+          <p>&#129351;&nbsp;<strong>Maurice Becker</strong> &mdash; Porsche 911 GT3&nbsp;R (992)<br>&#129352;&nbsp;Elias Schleich &mdash; Mercedes-AMG GT3 2020 &middot; +18.640&nbsp;s<br>&#129353;&nbsp;Dennis Richter &mdash; McLaren 720S GT3 EVO &middot; +19.035&nbsp;s</p>
+          <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">33 laps on the 4.801&nbsp;km Grand Prix course &middot; pole Maurice Becker 1:49.121 &middot; fastest lap Mike Zocher 1:49.382 &middot; 20 starters, SOF 2268, no cautions, air 21&nbsp;&deg;C</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Race Result &middot; AM</span>
+          <h3>&#127942; Bastian, Baar, Roessler</h3>
+          <p>&#129351;&nbsp;<strong>Andreas Bastian</strong> &mdash; Porsche 911 GT3&nbsp;R (992) &middot; P5 overall<br>&#129352;&nbsp;Manfred Baar &mdash; Ferrari 296 GT3 &middot; P8<br>&#129353;&nbsp;Florian Roessler &mdash; BMW M4 GT3 EVO &middot; P10</p>
+          <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">Bastian qualified second overall, 0.049&nbsp;s off pole &middot; the win puts him top of the AM table &middot; 11 AM cars against 9 Pro</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Driver of the Day</span>
+          <h3>&#127775; Gregor Micewski &mdash; 0.835</h3>
+          <p>From ninth on the grid to fourth at the flag, with <strong>seven overtakes</strong> on three incident points. The result draws him <strong>level on 118 points</strong> with Maurice Becker at the top of the Pro table.</p>
+          <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);">Also outstanding (CLS): Andre Brechmann P15&rarr;P9 with 11 overtakes &middot; Elias Schleich P6&rarr;P2 &middot; Manfred Baar P10&rarr;P8</p>
+        </div>
+      </div>
+
+      <details open style="max-width: 1200px; margin: 1.5rem auto 0; padding: 1.25rem 1.5rem; background: rgba(18, 18, 26, 0.6); border: 1px solid var(--border-color); border-radius: 10px;">
+        <summary style="font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--accent-red); cursor: pointer; padding: 0.25rem 0; letter-spacing: 0.5px;">&#128203; Full race report</summary>
+        <div style="margin-top: 1.25rem; font-size: 0.95rem; line-height: 1.75; color: rgba(255,255,255,0.85);">
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px; margin-top: 0.5rem;">Setting</h4>
+<p>Round&nbsp;4 took the WCT to the <strong>Mobility Resort Motegi</strong> in Japan. The 4.801&nbsp;km Grand Prix course has 14 corners and shares its pit lane with the 2.4&nbsp;km oval, where IndyCar raced from 1998 to 2011. Its character comes from two very hard stops, into Turn&nbsp;1 and Turn&nbsp;11, linked by a flowing middle section. It was dry, with the air at 21&nbsp;&deg;C and the track around 31&nbsp;&deg;C. The format was the usual one: open qualifying split into an AM and a Pro session, then a timed hour of racing &mdash; 33 laps &mdash; with one fuel stop.</p>
+<p>Only <strong>twenty drivers started</strong>, 9 Pro and 11 AM, with a strength of field of 2268. The booth counted 35 to 38 registrations and regretted the many late cancellations. Yannick Wonnenberg was still ill. Andreas commentated alone on cas_sim_tv.</p>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Qualifying</h4>
+<p>The AM session nearly went wrong for <strong>Andreas Bastian</strong>, who put the Porsche in the gravel on his out-lap. He recovered and kept improving to a <strong>1:49.170</strong>, the fastest AM time and good enough for second on the combined grid. In the Pro session Mike Zocher, Dennis Richter and Klaus Oberl&auml;nder queued first at pit exit. <strong>Maurice Becker</strong> found his time on his final lap, just as the chequered flag fell: <strong>1:49.121</strong>, only 0.049&nbsp;s quicker than Bastian. Becker said in the chat that the track had been six or seven degrees warmer for the Pro session. Richter (1:49.290), Marius Becker (1:49.307), Zocher (1:49.311) and Elias Schleich (1:49.356) completed the top six. The last corner cost many drivers their best lap.</p>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Race &mdash; the opening phase</h4>
+<p>Becker kept the lead from pole. Bastian lost places off the line, and <strong>Mike Zocher</strong>, the Season&nbsp;13 champion, went up the inside of his Speed Monkeys stablemate Richter to take second. After five laps Becker led Zocher by 2.8&nbsp;s, with Richter third. At the back there was contact at the start involving Torsten Folkers. The booth thought the other car was Matthias Kleinjohann&rsquo;s but was not sure, and this report does not assign it. Kleinjohann spun around minute&nbsp;12 with rear damage and pitted early, on lap&nbsp;14. Florian Roessler was caught up in the start and fell back to 17th.</p>
+<p>Further back the early laps belonged to <strong>Michael Endres</strong>, who gained six places in the AM Aston Martin and ran side by side with Markus Heinzl, which the booth called fair. He then pitted on lap&nbsp;9, dropped to last and disconnected after eight laps. The booth found no incident on the replay to explain it.</p>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Race &mdash; Zocher&rsquo;s chase and the black flag</h4>
+<p>For the first half the race had a real contest at the front. Zocher held Becker at around four seconds from lap&nbsp;5 to lap&nbsp;19 and set the fastest lap of the race, a <strong>1:49.382</strong>, on lap&nbsp;18. Richter ran a lonely third about five seconds further back. Then, coming in for his stop, Zocher was shown the <strong>black flag for speeding at pit entry</strong>. He served it together with his stop &mdash; 81&nbsp;s stationary instead of the usual 39 &mdash; and rejoined 14th. He fought back to <strong>11th</strong>. Becker said afterwards:</p>
+<p style="border-left: 3px solid var(--accent-orange); padding-left: 1rem;"><em>&bdquo;Okay, ja ich muss auch sagen, dass Mike Zocher auch relativ gut war. &hellip; der hat mich jetzt so ein bisschen schwitzen gebracht, wo er noch so drei, vier Sekunden hinter mir war. Aber irgendwie hat er in der Boxengasse dann Mist gebaut.&ldquo;</em></p>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Race &mdash; the stops</h4>
+<p>The main stop window ran from lap&nbsp;18 to lap&nbsp;21, with Bj&ouml;rn Krumpschmied first in. Stationary times were close, between <strong>38.3 and 42.8&nbsp;s</strong>; Andre Brechmann was quickest, and Becker and Gregor Micewski took 38.7&nbsp;s. When Marius Becker stopped, Schleich finally got ahead of him after more than twenty laps within 1.5&nbsp;s. <strong>Thomas Kuebler</strong> stayed out longer than the AM leaders and briefly led the class, then went off at pit entry; his 49.3&nbsp;s stop dropped him from third to fifth in class. <strong>Dirk Bolte</strong> lost the car on a kerb shortly after his stop and hit the barrier, which cost him a second visit to the pits. Becker came out of the cycle with a <strong>15.8&nbsp;s</strong> lead and extended it to 18.6&nbsp;s by the flag.</p>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Race &mdash; the fight for second</h4>
+<p>With Zocher gone, second was between <strong>Elias Schleich</strong> and <strong>Dennis Richter</strong>. The two swapped the place in the stop phase, were side by side at times on the run to Turn&nbsp;5, and in all spent twelve laps within 1.5&nbsp;s of each other. Schleich held on, and Richter came back to two tenths in the closing laps but finished <strong>0.39&nbsp;s</strong> behind. Marius Becker ran wide late on and was passed by Bastian and by <strong>Gregor Micewski</strong>, who finished fourth from ninth on the grid. In the final laps Roessler passed Heinzl after a flash of the headlights and Alex Turek followed him through. On the last lap Klaus Oberl&auml;nder had a big moment in the final corners; the booth first linked it to his fight with Marius Becker, then said it had nothing to do with him. He kept seventh.</p>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">AM &mdash; Bastian takes the lead</h4>
+<p><strong>Andreas Bastian</strong> spent the race in the top six overall, at times ahead of the Pro cars, and won AM in <strong>fifth overall</strong>. <strong>Manfred Baar</strong> was second in class in eighth and <strong>Florian Roessler</strong> third in tenth after his recovery from the start. Turek, Heinzl and Kuebler completed the AM top six. The result moves Bastian to the top of the AM championship.</p>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Notable incidents</h4>
+<ul style="padding-left: 1.5rem;"><li><strong>Mike Zocher</strong> &mdash; black flag for speeding at pit entry while running second, served with his stop (81&nbsp;s). From second to 14th; he finished 11th and kept the fastest lap.</li><li><strong>Benjamin Warnow</strong> &mdash; went hard into the tyre barrier, spent 181&nbsp;s in the pits for repairs and later disconnected after 22 laps (DNF).</li><li><strong>Michael Endres</strong> &mdash; disconnected after eight laps; CLS scores him DSQ, below the minimum distance.</li><li><strong>Thomas Kuebler</strong> &mdash; off at pit entry, a 49.3&nbsp;s stop.</li><li><strong>Dirk Bolte</strong> &mdash; lost the car on a kerb after his stop and hit the barrier.</li><li><strong>Start contact</strong> involving Torsten Folkers; the other car was not clearly identified on air.</li></ul>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Final classification &mdash; top 10 (overall)</h4>
+<p>P1 <strong>Maurice Becker</strong> (Porsche 911 GT3&nbsp;R, pole, led all 33 laps) &middot; P2 <strong>Elias Schleich</strong> (Mercedes-AMG, +18.640&nbsp;s) &middot; P3 <strong>Dennis Richter</strong> (McLaren 720S, +19.035&nbsp;s) &middot; P4 Gregor Micewski (Ferrari 296, +28.048&nbsp;s) &middot; P5 <strong>Andreas Bastian</strong> (Porsche 911 GT3&nbsp;R, +29.400&nbsp;s, <em>AM win</em>) &middot; P6 Marius Becker (McLaren 720S, +32.364&nbsp;s) &middot; P7 Klaus Oberl&auml;nder (McLaren 720S, +33.732&nbsp;s) &middot; P8 Manfred Baar (Ferrari 296, +44.070&nbsp;s) &middot; P9 Andre Brechmann (Lamborghini Hurac&aacute;n, +47.971&nbsp;s) &middot; P10 Florian Roessler (BMW M4, +51.488&nbsp;s). <em>Fastest lap:</em> Mike Zocher, 1:49.382 (P11). Class winners: Pro <strong>Maurice Becker</strong>, AM <strong>Andreas Bastian</strong>. The full 20-car classification is in the <a href="race-center.html#motegi-r4" style="color: var(--accent-orange);">Race Center</a>.</p>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Post-race</h4>
+<p>Becker and Richter came to the interview room. Respect for the runner-up came first: <em>&bdquo;Ja, also Respekt an Elias. Das war wirklich brutal schnell gut.&ldquo;</em> Andreas agreed that Schleich belongs in Pro: <em>&bdquo;Definitiv.&ldquo;</em> Becker on his car and the track: <em>&bdquo;Ja, der Porsche geht schon ganz gut hier.&ldquo;</em> and <em>&bdquo;Also ich mag die Strecke an sich ganz gerne.&ldquo;</em> Richter looked back at his lap-1 spin at Zandvoort without excuses: <em>&bdquo;Ja, aber dann war ich zu hitzk&ouml;pfig.&ldquo;</em></p>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Championship after Round&nbsp;4</h4>
+<p>The Pro table has a new pair at the top. <strong>Maurice Becker</strong> and <strong>Gregor Micewski</strong> are level on <strong>118</strong>, with Becker ahead in CLS; Becker has scored his after only three starts. Klaus Oberl&auml;nder is third on 110 and Elias Schleich fourth on 106. Leon Klein, the leader after Zandvoort, did not start and drops to seventh. In <strong>AM</strong>, Andreas Bastian leads on 144 from Florian Roessler (140) and Thomas Kuebler (138). <strong>Teams:</strong> Speed Monkeys II 173, REVORYX eSports 161, NEON Simsports Blue 152. Full tables below.</p>
+
+<h4 style="font-family: var(--font-heading); color: var(--accent-orange); margin: 1.25rem 0 0.5rem; font-size: 1rem; letter-spacing: 0.5px;">Notes from the booth</h4>
+<ul style="padding-left: 1.5rem;"><li><strong>Driver of the Day &mdash; Gregor Micewski</strong> (#08, NEON Simsports Purple, Pro): merit score <strong>0.835</strong>, from ninth to fourth with seven overtakes.</li><li><strong>Turnout:</strong> <em>&bdquo;Ja, schade, dass nur 20 Leute dabei waren.&ldquo;</em> Wonnenberg is <em>&bdquo;immer noch krank&ldquo;</em>.</li><li><strong>Teams:</strong> Elias Schleich races without a team. Teams cannot be changed mid-season, but a newcomer may join a team that has no more than three drivers; the change has to be made in CLS for team points to count.</li><li><strong>Streaming:</strong> from 27 October Thomas Herbrig will alternate with Andreas on the WCT broadcasts.</li><li><strong>Elsewhere in CAS:</strong> the SFL finale at the Algarve on 14 October, with Season&nbsp;9 registration now open (opener at Road Atlanta on 25 November); the Porsche Community Cup finale at the Hungaroring on 22 October; the Combined Cup on 21 October in the Ray FF1600; IEC <strong>Le Mans on 31 October</strong>; and the new <strong>Fun League</strong>, one-off races with an &ldquo;Eternal Champion&rdquo; table.</li><li><strong>Next WCT round:</strong> Round&nbsp;5 on the <strong>Indianapolis road course, Tuesday 20 October</strong>.</li></ul>
+
+<p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(255,255,255,0.55); font-style: italic;">The narrative is from the cas_sim_tv broadcast (Andreas). The classification, the Pro/AM split, round points, championship tables and the Driver of the Day are from <a href="https://league.simracing-hub.com/leagues/cas-gt3-wct" target="_blank" rel="noopener" style="color: var(--accent-orange);">CAS League Scoring (CLS)</a>. Grids, gaps, best laps, laps led and incident points come from the iRacing event result (subsession 89342879). Pit stops, the black flag and lap-by-lap gaps come from the in-sim iCASControl telemetry log. Where the broadcast could not establish who caused an incident, this report does not speculate.</p>
+        </div>
+      </details>
+    </div></div></section>
+<div class="preview-label">VORSCHAU 2/3 &mdash; cas-community.html: Meisterschaftsstand nach Lauf 4</div>
+<section class="section"><div class="container"><div class="sub-section" id="season-standings">
+      <div class="section-header">
+        <h2><span class="icon">&#127942;</span> Championship Standings &mdash; Season&nbsp;14</h2>
+        <p>GT3 WCT championship tables after <strong>Round&nbsp;4 (Mobility Resort Motegi)</strong>, straight from <a href="https://league.simracing-hub.com/leagues/cas-gt3-wct/seasons/cmt01d23n0001o3011qc3nc0a/standings" target="_blank" rel="noopener">CAS League Scoring (CLS)</a>. Pro and AM points include participation points (+5 per start); <strong>three results are dropped</strong> over the twelve rounds. There is no Gentleman Driver class this season. Drivers who are registered but have not started yet are listed as CLS shows them.</p>
+      </div>
+
+      <h3 class="race-block-title" style="margin-top:1rem;">Pro Championship &mdash; leaders: Maurice Becker and Gregor Micewski (118 each)</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Driver</th><th>Team</th><th>Rnd</th><th>Inc</th><th>Points</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">49</td><td class="drv">Maurice Becker</td><td class="car">REVORYX eSports</td><td>3</td><td>19</td><td><strong>118</strong></td></tr>
+          <tr><td class="pos">2</td><td class="num">08</td><td class="drv">Gregor Micewski</td><td class="car">NEON Simsports Purple</td><td>4</td><td>31</td><td><strong>118</strong></td></tr>
+          <tr><td class="pos">3</td><td class="num">51</td><td class="drv">Klaus Oberl&auml;nder</td><td class="car">Speed Monkeys II</td><td>4</td><td>29</td><td><strong>110</strong></td></tr>
+          <tr><td class="pos">4</td><td class="num">22</td><td class="drv">Elias Schleich</td><td class="car">&mdash;</td><td>4</td><td>14</td><td><strong>106</strong></td></tr>
+          <tr><td class="pos">5</td><td class="num">82</td><td class="drv">Andre Brechmann</td><td class="car">CAS Tech Performance Black</td><td>4</td><td>41</td><td><strong>98</strong></td></tr>
+          <tr><td class="pos">6</td><td class="num">63</td><td class="drv">Dennis Richter</td><td class="car">Speed Monkeys II</td><td>3</td><td>30</td><td><strong>90</strong></td></tr>
+          <tr><td class="pos">7</td><td class="num">16</td><td class="drv">Leon Klein</td><td class="car">SCHERER eSPORT</td><td>3</td><td>25</td><td><strong>88</strong></td></tr>
+          <tr><td class="pos">8</td><td class="num">14</td><td class="drv">Marius Becker</td><td class="car">Speed Monkeys II</td><td>3</td><td>28</td><td><strong>88</strong></td></tr>
+          <tr><td class="pos">9</td><td class="num">32</td><td class="drv">Benjamin Warnow</td><td class="car">NEON Simsports Red</td><td>4</td><td>62</td><td><strong>85</strong></td></tr>
+          <tr><td class="pos">10</td><td class="num">03</td><td class="drv">Yannick Wonnenberg</td><td class="car">Speed Monkeys</td><td>2</td><td>13</td><td><strong>80</strong></td></tr>
+          <tr><td class="pos">11</td><td class="num">13</td><td class="drv">Alvin Frauenknecht</td><td class="car">Melanzani Racing</td><td>2</td><td>12</td><td><strong>74</strong></td></tr>
+          <tr><td class="pos">12</td><td class="num">11</td><td class="drv">Tim Freudling</td><td class="car">REVORYX eSports</td><td>2</td><td>13</td><td><strong>68</strong></td></tr>
+          <tr><td class="pos">13</td><td class="num">05</td><td class="drv">Andy Weber</td><td class="car">NEON Simsports Orange</td><td>3</td><td>28</td><td><strong>68</strong></td></tr>
+          <tr><td class="pos">14</td><td class="num">01</td><td class="drv">Mike Zocher</td><td class="car">Speed Monkeys</td><td>2</td><td>15</td><td><strong>64</strong></td></tr>
+          <tr><td class="pos">15</td><td class="num">17</td><td class="drv">Ricardo Still</td><td class="car">NEON Simsports Blue</td><td>2</td><td>28</td><td><strong>54</strong></td></tr>
+          <tr><td class="pos">16</td><td class="num">33</td><td class="drv">Mike Girenz</td><td class="car">FRAMIDI Racing</td><td>1</td><td>4</td><td><strong>0</strong></td></tr>
+          <tr><td class="pos">17</td><td class="num">99</td><td class="drv">Andre Rajkovic</td><td class="car">Team Heusinkveld</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="race-block-title" style="margin-top:1.5rem;">AM Championship &mdash; leader: Andreas Bastian</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Driver</th><th>Team</th><th>Rnd</th><th>Inc</th><th>Points</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">921</td><td class="drv">Andreas Bastian</td><td class="car">NEON Simsports Blue</td><td>4</td><td>42</td><td><strong>144</strong></td></tr>
+          <tr><td class="pos">2</td><td class="num">141</td><td class="drv">Florian Roessler</td><td class="car">NEON Simsports Blue</td><td>4</td><td>26</td><td><strong>140</strong></td></tr>
+          <tr><td class="pos">3</td><td class="num">173</td><td class="drv">Thomas Kuebler</td><td class="car">CAS Tech Performance Red</td><td>4</td><td>31</td><td><strong>138</strong></td></tr>
+          <tr><td class="pos">4</td><td class="num">581</td><td class="drv">Manfred Baar</td><td class="car">DanK&uuml;chen Motorsport</td><td>4</td><td>22</td><td><strong>120</strong></td></tr>
+          <tr><td class="pos">5</td><td class="num">334</td><td class="drv">Dirk Bolte</td><td class="car">FRAMIDI Racing</td><td>4</td><td>40</td><td><strong>110</strong></td></tr>
+          <tr><td class="pos">6</td><td class="num">666</td><td class="drv">Bj&ouml;rn Krumpschmied</td><td class="car">CAS Tech Performance Red</td><td>4</td><td>23</td><td><strong>108</strong></td></tr>
+          <tr><td class="pos">7</td><td class="num">198</td><td class="drv">Alex Turek</td><td class="car">WS Racing eSports e.V</td><td>3</td><td>28</td><td><strong>88</strong></td></tr>
+          <tr><td class="pos">8</td><td class="num">999</td><td class="drv">Michael Endres</td><td class="car">GTunit</td><td>4</td><td>20</td><td><strong>83</strong></td></tr>
+          <tr><td class="pos">9</td><td class="num">151</td><td class="drv">Markus Heinzl</td><td class="car">Styrian Racing</td><td>3</td><td>27</td><td><strong>78</strong></td></tr>
+          <tr><td class="pos">10</td><td class="num">460</td><td class="drv">Michael Gessner</td><td class="car">VR46 Racing</td><td>3</td><td>29</td><td><strong>70</strong></td></tr>
+          <tr><td class="pos">11</td><td class="num">471</td><td class="drv">Torsten Folkers</td><td class="car">NEON Simsports Orange</td><td>3</td><td>15</td><td><strong>68</strong></td></tr>
+          <tr><td class="pos">12</td><td class="num">62</td><td class="drv">Fritz Morawetz</td><td class="car">NEON Simsports Red</td><td>2</td><td>23</td><td><strong>64</strong></td></tr>
+          <tr><td class="pos">13</td><td class="num">812</td><td class="drv">Alexander Thieme</td><td class="car">&mdash;</td><td>2</td><td>14</td><td><strong>58</strong></td></tr>
+          <tr><td class="pos">14</td><td class="num">998</td><td class="drv">Matthias Kleinjohann</td><td class="car">Speed Monkeys III</td><td>2</td><td>26</td><td><strong>38</strong></td></tr>
+          <tr><td class="pos">15</td><td class="num">777</td><td class="drv">Hubert Diethard</td><td class="car">DanK&uuml;chen Motorsport</td><td>2</td><td>22</td><td><strong>26</strong></td></tr>
+          <tr><td class="pos">16</td><td class="num">967</td><td class="drv">Ralph Mielke</td><td class="car">CAS Tech Performance Black</td><td>1</td><td>5</td><td><strong>22</strong></td></tr>
+          <tr><td class="pos">17</td><td class="num">774</td><td class="drv">Patrick Stummer</td><td class="car">&mdash;</td><td>2</td><td>22</td><td><strong>16</strong></td></tr>
+          <tr><td class="pos">18</td><td class="num">118</td><td class="drv">Bernhard Wlach</td><td class="car">DanK&uuml;chen Motorsport</td><td>1</td><td>1</td><td><strong>12</strong></td></tr>
+          <tr><td class="pos">19</td><td class="num">244</td><td class="drv">Danny Platzer</td><td class="car">&mdash;</td><td>1</td><td>15</td><td><strong>10</strong></td></tr>
+          <tr><td class="pos">20</td><td class="num">360</td><td class="drv">Robert Zellner</td><td class="car">NEON Simsports Purple</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="race-block-title" style="margin-top:1.5rem;">Team Championship &mdash; leader: Speed Monkeys II</h3>
+      <p style="font-size:0.85rem; color:rgba(255,255,255,0.6); margin:0 0 0.5rem;">Top twelve of the team classification; the best two results per team count. The full table is on CLS.</p>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>Team</th><th>Drivers</th><th>Points</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="drv">Speed Monkeys II</td><td>3</td><td><strong>173</strong></td></tr>
+          <tr><td class="pos">2</td><td class="drv">REVORYX eSports</td><td>2</td><td><strong>161</strong></td></tr>
+          <tr><td class="pos">3</td><td class="drv">NEON Simsports Blue</td><td>3</td><td><strong>152</strong></td></tr>
+          <tr><td class="pos">4</td><td class="drv">Speed Monkeys</td><td>2</td><td><strong>118</strong></td></tr>
+          <tr><td class="pos">5</td><td class="drv">NEON Simsports Purple</td><td>2</td><td><strong>92</strong></td></tr>
+          <tr><td class="pos">6</td><td class="drv">CAS Tech Performance Red</td><td>2</td><td><strong>84</strong></td></tr>
+          <tr><td class="pos">7</td><td class="drv">SCHERER eSPORT</td><td>1</td><td><strong>67</strong></td></tr>
+          <tr><td class="pos">8</td><td class="drv">Melanzani Racing</td><td>1</td><td><strong>64</strong></td></tr>
+          <tr><td class="pos">9</td><td class="drv">DanK&uuml;chen Motorsport</td><td>3</td><td><strong>51</strong></td></tr>
+          <tr><td class="pos">10</td><td class="drv">CAS Tech Performance Black</td><td>2</td><td><strong>48</strong></td></tr>
+          <tr><td class="pos">11</td><td class="drv">GTunit</td><td>1</td><td><strong>36</strong></td></tr>
+          <tr><td class="pos">12</td><td class="drv">NEON Simsports Orange</td><td>2</td><td><strong>32</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div></div></section>
+<div class="preview-label">VORSCHAU 3/3 &mdash; race-center.html: neuer Eintrag Motegi R4</div>
+<section class="section"><div class="container race-entries"><article class="race-entry" id="motegi-r4">
+      <div class="race-entry-head">
+        <span class="race-round">CAS GT3 WCT &middot; Season 14 &middot; Round 4</span>
+        <h2>Mobility Resort Motegi (Grand Prix)</h2>
+        <p class="race-meta">13 October 2026 &middot; 20 starters &middot; ~60-minute timed race (33 laps) &middot; dry, air 21&nbsp;&deg;C &middot; <a href="cas-community.html#gt3-motegi-review">Full race report &#8599;</a></p>
+      </div>
+      <div class="race-replay">
+        <video controls preload="none" playsinline poster="../races/motegi-r4-poster.jpg">
+          <source src="../races/motegi-r4-replay.mp4" type="video/mp4">
+        </video>
+        <p class="replay-caption">2D telemetry replay &mdash; the 60-minute race compressed to 90&nbsp;seconds. The circuit map is the real Motegi Grand Prix course (4.801&nbsp;km), which shares its pit lane with the oval.</p>
+      </div>
+      <h3 class="race-block-title">By the Numbers</h3>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag cas">Race Winner</span>
+          <h3>Maurice Becker &mdash; lights to flag</h3>
+          <p>Pole, <strong>all 33 laps led</strong> and the win &mdash; his second lights-to-flag victory in a row after Zandvoort. Only Mike Zocher stayed within reach, about 4&nbsp;s back, until his penalty.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">&#9201;&#65039; Winning Margin</span>
+          <h3>18.640 seconds</h3>
+          <p>He was 2.8&nbsp;s ahead after five laps, 3.8&nbsp;s by lap&nbsp;12 and 4.1&nbsp;s before the stops. With Zocher out of the way he led by 15.8&nbsp;s after the pit cycle and 18.6&nbsp;s at the flag.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">&#128337; Qualifying</span>
+          <h3>Becker on pole, 1:49.121</h3>
+          <p>Two sessions, AM first, then Pro. Becker took pole on his last lap, just 0.049&nbsp;s ahead of AM driver <strong>Andreas Bastian</strong>, who had been stuck in the gravel on his out-lap. Richter, Marius Becker and Zocher completed the top five.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">&#127942; Driver of the Day</span>
+          <h3>Gregor Micewski &mdash; 0.835</h3>
+          <p>#08 (NEON Simsports Purple, Pro) went from ninth to fourth with <strong>seven overtakes</strong> on three incident points. He is now level on 118 points with Becker at the top of the Pro championship.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Class Wins</span>
+          <h3>Maurice Becker in Pro, Bastian in AM</h3>
+          <p><strong>Andreas Bastian</strong> won AM in fifth overall, ahead of Manfred Baar and Florian Roessler, and takes the AM championship lead. In Pro, Elias Schleich finished second ahead of Dennis Richter by 0.39&nbsp;s.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">&#127988; Black Flag</span>
+          <h3>Zocher: from second to 11th</h3>
+          <p>Mike Zocher ran second for 18 laps and set the fastest lap, 1:49.382. A black flag for speeding at pit entry, served with his stop (81&nbsp;s stationary instead of about 39), dropped him to 14th; he recovered to 11th.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">&#9981; Pit Window</span>
+          <h3>Laps 18&ndash;21, 38.3&ndash;42.8&nbsp;s</h3>
+          <p>Most of the field made its fuel stop on laps 18&ndash;21; Kleinjohann came in early on lap&nbsp;14. Brechmann was quickest at 38.3&nbsp;s, Becker and Micewski took 38.7&nbsp;s. Kuebler went off at pit entry (49.3&nbsp;s). Folkers and Bolte stopped twice, and Warnow needed 181&nbsp;s of repairs before he disconnected.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag cas">Conditions &amp; Field</span>
+          <h3>Dry, 21&nbsp;&deg;C, 20 starters</h3>
+          <p>Dry, air 21&nbsp;&deg;C, no cautions. There were only 20 starters &mdash; 9 Pro, 11 AM &mdash; with a strength of field of 2268. Benjamin Warnow (lap&nbsp;22) and Michael Endres (lap&nbsp;8) dropped out after disconnecting.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Data Views</h3>
+      <div class="card-grid">
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Gap to Leader</span>
+          <a href="../races/motegi-r4-chart-gap.png" target="_blank" style="display:block;">
+            <img src="../races/motegi-r4-chart-gap.png" alt="Gap to Leader Motegi R4" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Becker's line is the axis for all 33 laps. Zocher held second about 4&nbsp;s behind until lap&nbsp;19; the deep V on laps 19&ndash;21 is the pit cycle, which distorts the gaps until everyone has stopped. Schleich and Richter finish 0.39&nbsp;s apart, 18.6&nbsp;s down.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Race Pace</span>
+          <a href="../races/motegi-r4-chart-pace.png" target="_blank" style="display:block;">
+            <img src="../races/motegi-r4-chart-pace.png" alt="Race Pace Motegi R4" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">This shows the spread of clean laps, with pit and out-laps removed. The front of the field ran within a few tenths of each other; Zocher's 1:49.382 on lap&nbsp;18 was the quickest single lap of the race.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Pit Stops</span>
+          <a href="../races/motegi-r4-chart-pits.png" target="_blank" style="display:block;">
+            <img src="../races/motegi-r4-chart-pits.png" alt="Pit Stops Motegi R4" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Each bar is one stop with its stationary time. The regular stops fall between laps 18 and 21. The long bars are Zocher (81&nbsp;s, served together with his black flag) and Warnow (181&nbsp;s, repairs); Folkers came in on lap&nbsp;1 and Bolte made a second, short stop after going off. Cool-down entries after the flag are excluded.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Pit Loss</span>
+          <a href="../races/motegi-r4-chart-pit-loss.png" target="_blank" style="display:block;">
+            <img src="../races/motegi-r4-chart-pit-loss.png" alt="Pit Loss Motegi R4" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">This is stationary time against the shortest regular stop, Brechmann's 38.3&nbsp;s. Seven cars were within one second of it. Kuebler lost 11&nbsp;s after going off at pit entry. Zocher's penalty stop and Warnow's repair stop fall outside the fuel-stop window and are not shown. Stationary time only, not net strategic loss.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Position Changes</span>
+          <a href="../races/motegi-r4-chart-positions.png" target="_blank" style="display:block;">
+            <img src="../races/motegi-r4-chart-positions.png" alt="Position Changes Motegi R4" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Becker is a straight line at P1. Zocher's line drops from second to 14th on laps 20&ndash;21 when he serves his penalty. Brechmann climbs steadily from 15th to ninth.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Net Overtaking</span>
+          <a href="../races/motegi-r4-chart-overtakes.png" target="_blank" style="display:block;">
+            <img src="../races/motegi-r4-chart-overtakes.png" alt="Net Overtaking Motegi R4" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">Green bars are places gained on track and red bars places lost. Brechmann leads at +6 from 11 passes, ahead of Micewski (+5) and Schleich (+4, never passed). Roessler has the most moves in both directions after his lap-1 drop; Zocher's &minus;6 is the penalty.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Incidents Timeline</span>
+          <a href="../races/motegi-r4-chart-incidents.png" target="_blank" style="display:block;">
+            <img src="../races/motegi-r4-chart-incidents.png" alt="Incidents Timeline Motegi R4" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">These are logged off-tracks, spins and contacts over the race, plus Zocher's black flag at minute&nbsp;35. Endres' contact came shortly before he disconnected; Warnow's spins run from minute&nbsp;28 to 41. The official incident points in the table come from the iRacing result.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Incidents on Track</span>
+          <a href="../races/motegi-r4-chart-incidents-map.png" target="_blank" style="display:block;">
+            <img src="../races/motegi-r4-chart-incidents-map.png" alt="Incidents on Track Motegi R4" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">This shows where the logged contacts, spins and off-tracks happened, projected onto the Motegi Grand Prix course.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Lap-time Evolution</span>
+          <a href="../races/motegi-r4-chart-stint-pace.png" target="_blank" style="display:block;">
+            <img src="../races/motegi-r4-chart-stint-pace.png" alt="Lap-time Evolution Motegi R4" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">These are top-10 lap times by lap. The bump around laps 19&ndash;21 is the stop phase.</p>
+        </div>
+        <div class="card" style="background:#0d0d14; padding:0.6rem;">
+          <span class="card-tag cas" style="margin: 0.3rem 0 0.5rem 0.3rem;">Battle Proximity</span>
+          <a href="../races/motegi-r4-chart-battle.png" target="_blank" style="display:block;">
+            <img src="../races/motegi-r4-chart-battle.png" alt="Battle Proximity Motegi R4" style="width:100%; border-radius:6px; display:block;">
+          </a>
+          <p style="margin:0.6rem 0.3rem 0.3rem; font-size:0.85rem; color:rgba(255,255,255,0.65);">This counts laps spent within 1.5&nbsp;s of each other, for the top&nbsp;12. Schleich&ndash;Marius Becker is the darkest square at 21 laps, then Roessler&ndash;Turek at 16 and Schleich&ndash;Richter at 12. Becker's row is empty: nobody got near him.</p>
+        </div>
+      </div>
+
+      <h3 class="race-block-title">Race Highlights</h3>
+      <div class="race-highlights">
+<p><strong>Maurice Becker</strong> repeated his Zandvoort performance at Motegi. He took pole by 0.049&nbsp;s on his final qualifying lap, led every one of the 33 laps and won by <strong>18.640&nbsp;s</strong>. For the first half of the race <strong>Mike Zocher</strong> was the only driver within reach, holding second about four seconds back and setting the fastest lap. Then he was black-flagged for speeding at pit entry, served the penalty with his stop and fell to 14th. Becker said afterwards that Zocher had made him sweat until his pit-lane mistake.</p>
+<p>That handed second to a long fight between <strong>Elias Schleich</strong> and <strong>Dennis Richter</strong>. Schleich, who had spent 21 laps within 1.5&nbsp;s of Marius Becker, got ahead in the pit cycle and held off Richter to the flag by 0.39&nbsp;s. <strong>Gregor Micewski</strong> came from ninth to fourth and was Driver of the Day. In AM, front-row starter <strong>Andreas Bastian</strong> won the class in fifth overall and took the AM championship lead. <strong>Andre Brechmann</strong> made the most passes of the night, from 15th to ninth.</p>
+      </div>
+
+      <h3 class="race-block-title">Full Classification</h3>
+      <div class="results-scroll">
+        <table class="standings-table race-results-table">
+          <thead><tr><th>Pos</th><th>#</th><th>Driver</th><th>Car</th><th>Cls</th><th>Laps</th><th>Best Lap</th><th>Gap</th><th>Inc</th><th>Pts</th><th>Result</th></tr></thead>
+          <tbody>
+          <tr><td class="pos">1</td><td class="num">49</td><td class="drv">Maurice Becker</td><td class="car">Porsche 911 GT3 R (992)</td><td>PRO</td><td>33</td><td class="best">1:49.400</td><td>&mdash;</td><td>6</td><td>35</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">2</td><td class="num">22</td><td class="drv">Elias Schleich</td><td class="car">Mercedes-AMG GT3 2020</td><td>PRO</td><td>33</td><td class="best">1:49.595</td><td>+18.640s</td><td>2</td><td>33</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">3</td><td class="num">63</td><td class="drv">Dennis Richter</td><td class="car">McLaren 720S GT3 EVO</td><td>PRO</td><td>33</td><td class="best">1:49.540</td><td>+19.035s</td><td>8</td><td>31</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">4</td><td class="num">08</td><td class="drv">Gregor Micewski</td><td class="car">Ferrari 296 GT3</td><td>PRO</td><td>33</td><td class="best">1:49.757</td><td>+28.048s</td><td>3</td><td>29</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">5</td><td class="num">921</td><td class="drv">Andreas Bastian</td><td class="car">Porsche 911 GT3 R (992)</td><td>AM</td><td>33</td><td class="best">1:49.680</td><td>+29.400s</td><td>7</td><td>27</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">6</td><td class="num">14</td><td class="drv">Marius Becker</td><td class="car">McLaren 720S GT3 EVO</td><td>PRO</td><td>33</td><td class="best">1:49.559</td><td>+32.364s</td><td>5</td><td>25</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">7</td><td class="num">51</td><td class="drv">Klaus Oberl&auml;nder</td><td class="car">McLaren 720S GT3 EVO</td><td>PRO</td><td>33</td><td class="best">1:49.810</td><td>+33.732s</td><td>6</td><td>23</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">8</td><td class="num">581</td><td class="drv">Manfred Baar</td><td class="car">Ferrari 296 GT3</td><td>AM</td><td>33</td><td class="best">1:49.971</td><td>+44.070s</td><td>4</td><td>21</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">9</td><td class="num">82</td><td class="drv">Andre Brechmann</td><td class="car">Lamborghini Hurac&aacute;n GT3 EVO</td><td>PRO</td><td>33</td><td class="best">1:50.284</td><td>+47.971s</td><td>10</td><td>19</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">10</td><td class="num">141</td><td class="drv">Florian Roessler</td><td class="car">BMW M4 GT3 EVO</td><td>AM</td><td>33</td><td class="best">1:50.092</td><td>+51.488s</td><td>3</td><td>17</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">11</td><td class="num">01</td><td class="drv">Mike Zocher</td><td class="car">McLaren 720S GT3 EVO</td><td>PRO</td><td>33</td><td class="best flap">1:49.382 <span class="flap-badge">FL</span></td><td>+51.918s</td><td>4</td><td>15</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">12</td><td class="num">198</td><td class="drv">Alex Turek</td><td class="car">Porsche 911 GT3 R (992)</td><td>AM</td><td>33</td><td class="best">1:50.125</td><td>+53.771s</td><td>10</td><td>13</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">13</td><td class="num">151</td><td class="drv">Markus Heinzl</td><td class="car">Ferrari 296 GT3</td><td>AM</td><td>33</td><td class="best">1:50.036</td><td>+56.441s</td><td>9</td><td>11</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">14</td><td class="num">173</td><td class="drv">Thomas Kuebler</td><td class="car">Mercedes-AMG GT3 2020</td><td>AM</td><td>33</td><td class="best">1:50.022</td><td>+58.541s</td><td>10</td><td>9</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">15</td><td class="num">666</td><td class="drv">Bj&ouml;rn Krumpschmied</td><td class="car">Chevrolet Corvette Z06 GT3.R</td><td>AM</td><td>33</td><td class="best">1:50.304</td><td>+67.095s</td><td>7</td><td>7</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">16</td><td class="num">334</td><td class="drv">Dirk Bolte</td><td class="car">McLaren 720S GT3 EVO</td><td>AM</td><td>33</td><td class="best">1:50.412</td><td>+106.391s</td><td>7</td><td>5</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">17</td><td class="num">471</td><td class="drv">Torsten Folkers</td><td class="car">Mercedes-AMG GT3 2020</td><td>AM</td><td>32</td><td class="best">1:51.567</td><td>+1 lap</td><td>10</td><td>4</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">18</td><td class="num">998</td><td class="drv">Matthias Kleinjohann</td><td class="car">BMW M4 GT3 EVO</td><td>AM</td><td>32</td><td class="best">1:51.073</td><td>+1 lap</td><td>11</td><td>3</td><td class="res">Finished</td></tr>
+          <tr><td class="pos">DNF</td><td class="num">32</td><td class="drv">Benjamin Warnow</td><td class="car">Mercedes-AMG GT3 2020</td><td>PRO</td><td>22</td><td class="best">1:50.367</td><td>+11 laps</td><td>10</td><td>2</td><td class="res">DNF</td></tr>
+          <tr><td class="pos">DSQ</td><td class="num">999</td><td class="drv">Michael Endres</td><td class="car">Aston Martin Vantage GT3 EVO</td><td>AM</td><td>8</td><td class="best">1:50.646</td><td>+25 laps</td><td>3</td><td>0</td><td class="res">DSQ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="data-note">Classification, the Pro/AM split, points, car numbers and the Driver of the Day are from the official <a href="https://league.simracing-hub.com/leagues/cas-gt3-wct" target="_blank" rel="noopener">CAS League Scoring (CLS)</a> round result. Grid, gaps, best laps, laps led and incident points come from the iRacing event result (subsession 89342879). Charts and the 2D replay are built from the in-sim iCASControl telemetry log, which also recorded Zocher's black flag; the reason for it (speeding at pit entry) is from the broadcast. The pit charts show stationary service time, not net strategic gain. The incident charts show logged telemetry events, which undercount the official incident points in the table. Folkers and Kleinjohann are classified one lap down; Warnow (DNF) and Endres (DSQ, below the minimum distance) both disconnected.</p>
+    </article></div></section>
+</body></html>
