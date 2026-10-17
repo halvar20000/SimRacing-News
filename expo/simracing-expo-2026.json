@@ -602,6 +602,14 @@
    "h": 901,
    "en": "On the main stage of the SimRacing Expo Frankfurt (fuelled by D-BOX): a talk round about BeamNG.drive, with an off-road buggy and its see-through chassis on the big screen.",
    "de": "Auf der Hauptbühne der SimRacing Expo Frankfurt (fuelled by D-BOX): eine Talkrunde zu BeamNG.drive, auf der Leinwand ein Offroad-Buggy mit durchsichtig dargestelltem Fahrwerk."
+  },
+  {
+   "t": "2026-10-17T14:08:18",
+   "img": "img/expo/simracing-expo-2026/76.jpg",
+   "w": 1600,
+   "h": 901,
+   "en": "A look at how BeamNG.drive works: the truck is shown as its soft-body physics model – a mesh of nodes and beams that simulates every deformation.",
+   "de": "Ein Blick in die Technik von BeamNG.drive: Der Truck wird als Soft-Body-Physikmodell gezeigt – ein Netz aus Knoten und Verbindungen, das jede Verformung berechnet."
   }
  ]
 }
