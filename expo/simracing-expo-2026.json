@@ -274,6 +274,30 @@
    "h": 1600,
    "en": "Right Direction Motion Simulator 'Compass': infinite yaw rotation on a turntable, three actuators for heave, pitch and roll, an X-Y platform for surge and sway – a home-built project, shown to visitors on the stand.",
    "de": "Right Direction Motion Simulator „Compass“: unendliche Gier-Rotation auf einem Drehteller, drei Aktuatoren für Heave, Pitch und Roll, eine X-Y-Plattform für Surge und Sway – ein Eigenbau, den Besucher am Stand ausprobieren."
+  },
+  {
+   "t": "2026-10-17T12:05:03",
+   "img": "img/expo/simracing-expo-2026/35.jpg",
+   "w": 1600,
+   "h": 901,
+   "en": "SIM – Speed in Motion sells the simulators turnkey: 6DOF motion (heave, surge, sway, roll, pitch, yaw), built, configured and tested, in three versions (racing, rally, flight), single or triple screen, up to 300 kg payload and 500 mm/s actuator speed.",
+   "de": "SIM – Speed in Motion verkauft die Simulatoren schlüsselfertig: 6DOF-Motion (Heave, Surge, Sway, Roll, Pitch, Yaw), aufgebaut, konfiguriert und getestet, in drei Versionen (Racing, Rally, Flight), mit Single- oder Triple-Screen, bis 300 kg Zuladung und 500 mm/s Aktuator-Geschwindigkeit."
+  },
+  {
+   "t": "2026-10-17T12:05:03",
+   "img": "img/expo/simracing-expo-2026/36.jpg",
+   "w": 901,
+   "h": 1600,
+   "en": "The same rig in red and yellow: six actuators lift, tilt and turn the whole cockpit.",
+   "de": "Das gleiche Rig in Rot-Gelb: sechs Aktuatoren heben, kippen und drehen das ganze Cockpit."
+  },
+  {
+   "t": "2026-10-17T12:05:03",
+   "img": "img/expo/simracing-expo-2026/37.jpg",
+   "w": 901,
+   "h": 1600,
+   "en": "A full 6DOF hexapod in a trailer: SIM – Speed in Motion (powered by VN Motion) with six 'Sim Brugge' actuators, Sparco seat and a large curved screen.",
+   "de": "Ein kompletter 6DOF-Hexapod im Anhänger: SIM – Speed in Motion (powered by VN Motion) mit sechs „Sim Brugge“-Aktuatoren, Sparco-Sitz und großem Curved-Monitor."
   }
  ]
 }
