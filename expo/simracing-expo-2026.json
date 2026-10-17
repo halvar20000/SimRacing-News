@@ -4,7 +4,7 @@
  "place": "Frankfurt",
  "entries": [
   {
-   "t": "2026-10-17T10:12:29",
+   "t": "2026-10-17T12:12:29+02:00",
    "img": "img/expo/simracing-expo-2026/01.jpg",
    "w": 1600,
    "h": 901,
@@ -12,7 +12,7 @@
    "de": "Home of Sim Racing (HOS) zeigt am Stand das ganze Programm: Virtual Racing Lounge, Lounge Control, Virtual Racing Store und Manufaktur."
   },
   {
-   "t": "2026-10-17T10:12:29",
+   "t": "2026-10-17T12:12:29+02:00",
    "img": "img/expo/simracing-expo-2026/02.jpg",
    "w": 1600,
    "h": 901,
@@ -20,7 +20,7 @@
    "de": "Blickfang am HOS-Stand: ein weißes Rohrrahmen-Cockpit mit KYOSO-Schriftzug, D-BOX-Motion, großem Curved-Monitor und Pedalen mit orangefarbenen Akzenten."
   },
   {
-   "t": "2026-10-17T10:24:17",
+   "t": "2026-10-17T12:24:17+02:00",
    "img": "img/expo/simracing-expo-2026/03.jpg",
    "w": 1600,
    "h": 901,
@@ -28,7 +28,7 @@
    "de": "Ebenfalls in der neuen Open World von Assetto Corsa EVO: ein Mercedes-AMG GT auf einer Landstraße durch die Hügel."
   },
   {
-   "t": "2026-10-17T10:24:17",
+   "t": "2026-10-17T12:24:17+02:00",
    "img": "img/expo/simracing-expo-2026/04.jpg",
    "w": 1600,
    "h": 901,
@@ -36,7 +36,7 @@
    "de": "Assetto Corsa EVO zeigt auf einer großen LED-Wand die neue Open World – inklusive Reh, das über die Waldstraße springt."
   },
   {
-   "t": "2026-10-17T10:28:07",
+   "t": "2026-10-17T12:28:07+02:00",
    "img": "img/expo/simracing-expo-2026/05.jpg",
    "w": 1600,
    "h": 901,
@@ -44,7 +44,7 @@
    "de": "Nächster Halt: Wolf Racing – und die Rigs an diesem Stand sind richtig schön."
   },
   {
-   "t": "2026-10-17T10:28:07",
+   "t": "2026-10-17T12:28:07+02:00",
    "img": "img/expo/simracing-expo-2026/06.jpg",
    "w": 901,
    "h": 1600,
@@ -52,7 +52,7 @@
    "de": "Wolf Racing im Detail: eine Halterung mit VESA-artiger Platte, an das Aluprofil geklemmt und mit Sterngriffen verstellbar – ganz ohne Werkzeug."
   },
   {
-   "t": "2026-10-17T10:28:07",
+   "t": "2026-10-17T12:28:07+02:00",
    "img": "img/expo/simracing-expo-2026/07.jpg",
    "w": 1600,
    "h": 901,
@@ -60,7 +60,7 @@
    "de": "Wolf-Racing-Rig aus Aluprofilen in Schwarz: verstellbare Sitz- und Pedalplatten mit WOLF-Schriftzug und eine Querstrebe für die Bildschirmhalterung."
   },
   {
-   "t": "2026-10-17T10:28:08",
+   "t": "2026-10-17T12:28:08+02:00",
    "img": "img/expo/simracing-expo-2026/08.jpg",
    "w": 901,
    "h": 1600,
@@ -68,7 +68,7 @@
    "de": "Der Hingucker in Blau: das Wolf-Racing-Rig mit schwarzen Platten, Lenkradhalterung vorn und passender Bodenmatte."
   },
   {
-   "t": "2026-10-17T10:28:20",
+   "t": "2026-10-17T12:28:20+02:00",
    "img": "img/expo/simracing-expo-2026/09.jpg",
    "w": 1600,
    "h": 901,
@@ -76,7 +76,7 @@
    "de": "Und noch eins von Wolf Racing: das Rig in Rot-Schwarz, hier mit breiter Triple-Monitor-Halterung obendrauf."
   },
   {
-   "t": "2026-10-17T10:29:46",
+   "t": "2026-10-17T12:29:46+02:00",
    "img": "img/expo/simracing-expo-2026/10.jpg",
    "w": 1600,
    "h": 901,
@@ -84,7 +84,7 @@
    "de": "Blick unter die Haut bei Wolf Racing: ein rotes Rig-Gestell mit einem elektrischen Linearantrieb unter der Sitzplatte."
   },
   {
-   "t": "2026-10-17T10:29:46",
+   "t": "2026-10-17T12:29:46+02:00",
    "img": "img/expo/simracing-expo-2026/11.jpg",
    "w": 901,
    "h": 1600,
@@ -92,7 +92,7 @@
    "de": "Der passende Schalensitz von Wolf Racing in schwarzer Wildlederoptik, mit gestickten Logos und Nackenkissen."
   },
   {
-   "t": "2026-10-17T10:51:11",
+   "t": "2026-10-17T12:51:11+02:00",
    "img": "img/expo/simracing-expo-2026/12.jpg",
    "w": 1600,
    "h": 901,
@@ -100,7 +100,7 @@
    "de": "Brandneu auf der Messe: das Rig SU-GT2 von SIMULTRACK – Pedale und Wheelbase passgenau verstellbar, Sitzposition nach dem Vorbild echter Rennwagen und Kabelkanäle direkt in den Aluprofilen."
   },
   {
-   "t": "2026-10-17T10:51:11",
+   "t": "2026-10-17T12:51:11+02:00",
    "img": "img/expo/simracing-expo-2026/13.jpg",
    "w": 901,
    "h": 1600,
@@ -108,7 +108,7 @@
    "de": "Das SU-GT2 in echt: ein schwarzes Alu-Cockpit mit großem Curved-Monitor, Wheelbase und Pedalen – und kaum ein Kabel zu sehen."
   },
   {
-   "t": "2026-10-17T10:51:11",
+   "t": "2026-10-17T12:51:11+02:00",
    "img": "img/expo/simracing-expo-2026/14.jpg",
    "w": 1600,
    "h": 901,
@@ -116,7 +116,7 @@
    "de": "Ebenfalls am SIMULTRACK-Stand: ein Motion-Rig, bei dem vier Aktuatoren mit rot abgesetzten Gehäusen das ganze Cockpit bewegen, während ein Besucher Probe fährt."
   },
   {
-   "t": "2026-10-17T10:58:21",
+   "t": "2026-10-17T12:58:21+02:00",
    "img": "img/expo/simracing-expo-2026/15.jpg",
    "w": 1600,
    "h": 901,
@@ -124,7 +124,7 @@
    "de": "Overlays von GO Setups (GO Fast) am SIMULTRACK-Stand: ein großes BRAKE als Bremshinweis, Live-Delta zur Referenzrunde, eine Kurvenanalyse mit Gas- und Bremskurven und die Fahrzeugeinstellungen auf einen Blick."
   },
   {
-   "t": "2026-10-17T11:26:59",
+   "t": "2026-10-17T13:26:59+02:00",
    "img": "img/expo/simracing-expo-2026/16.jpg",
    "w": 1600,
    "h": 901,
@@ -132,7 +132,7 @@
    "de": "Ein seltener Blick ins Innere: Simagic zeigt eine aufgeschnittene Direct-Drive-Wheelbase – Rotor, Kupferwicklungen, Lager und dahinter die Steuerplatine."
   },
   {
-   "t": "2026-10-17T11:30:18",
+   "t": "2026-10-17T13:30:18+02:00",
    "img": "img/expo/simracing-expo-2026/17.jpg",
    "w": 1600,
    "h": 901,
@@ -140,7 +140,7 @@
    "de": "Eine sehr schöne, hochwertige Buttonbox von Bavarian SimTec: 20 beleuchtete Tasten – vom Funk über Car Settings bis zu den Dash-Seiten – und zwei Drehgeber für Lautstärke, Helligkeit, Delta und Fuel. Preis laut Stand: rund 300 Euro."
   },
   {
-   "t": "2026-10-17T11:48:32",
+   "t": "2026-10-17T13:48:32+02:00",
    "img": "img/expo/simracing-expo-2026/18.jpg",
    "w": 1600,
    "h": 901,
@@ -148,7 +148,7 @@
    "de": "Nächster Stand: Thermaltake – der PC-Hardware-Hersteller setzt groß auf Sim Racing."
   },
   {
-   "t": "2026-10-17T11:48:32",
+   "t": "2026-10-17T13:48:32+02:00",
    "img": "img/expo/simracing-expo-2026/19.jpg",
    "w": 1600,
    "h": 901,
@@ -156,7 +156,7 @@
    "de": "Ein komplettes Thermaltake-Setup im Einsatz: Rig aus Aluprofilen mit Motion-Aktuatoren an den Ecken, G15-Wheelbase und Lenkrad mit Display – hier mit RaceRoom."
   },
   {
-   "t": "2026-10-17T11:48:32",
+   "t": "2026-10-17T13:48:32+02:00",
    "img": "img/expo/simracing-expo-2026/20.jpg",
    "w": 1600,
    "h": 901,
@@ -164,7 +164,7 @@
    "de": "Die Direct-Drive-Wheelbase Thermaltake G15 aus der Nähe, mit geripptem Alu-Gehäuse."
   },
   {
-   "t": "2026-10-17T11:48:32",
+   "t": "2026-10-17T13:48:32+02:00",
    "img": "img/expo/simracing-expo-2026/21.jpg",
    "w": 1600,
    "h": 901,
@@ -172,7 +172,7 @@
    "de": "Thermaltake XRW-G1 GT Steering Wheel: 13 Zoll, Made in Italy, CNC-gefräst aus Aluminium und Carbon, 5-Zoll-Touchscreen, 10 RGB-Tasten, 3 Encoder, 2 Daumen-Encoder und Kippschalter. Messeangebot 1.299,90 Euro (UVP 1.699,90)."
   },
   {
-   "t": "2026-10-17T11:48:33",
+   "t": "2026-10-17T13:48:33+02:00",
    "img": "img/expo/simracing-expo-2026/22.jpg",
    "w": 1600,
    "h": 901,
@@ -180,7 +180,7 @@
    "de": "Das Motion-Cockpit von Thermaltake mit Rohrrahmen, lila Beleuchtung und GT-Sitz – vier Aktuatoren unter dem Gestell sorgen für ordentlich Bewegung."
   },
   {
-   "t": "2026-10-17T11:49:54",
+   "t": "2026-10-17T13:49:54+02:00",
    "img": "img/expo/simracing-expo-2026/23.jpg",
    "w": 901,
    "h": 1600,
@@ -188,7 +188,7 @@
    "de": "Die Eckdaten zum CAPO X: Dual-System-Tower-Gehäuse für zwei unabhängige M-ATX-Systeme, nahtlos gewölbte Scheibe aus Tempered Glass, Platz für 2x 360-mm-Radiatoren und bis zu 13x 120-mm-Lüfter, in Schwarz und Weiß. Messeangebot 169,90 Euro (UVP 204,90)."
   },
   {
-   "t": "2026-10-17T11:49:54",
+   "t": "2026-10-17T13:49:54+02:00",
    "img": "img/expo/simracing-expo-2026/24.jpg",
    "w": 901,
    "h": 1600,
@@ -196,7 +196,7 @@
    "de": "Zwei PCs in einem Gehäuse: das Thermaltake CAPO X Dual System Chassis in Weiß, hier mit zwei GeForce-RTX-Karten, Wasserkühlung und jeder Menge blauer Beleuchtung."
   },
   {
-   "t": "2026-10-17T11:50:47",
+   "t": "2026-10-17T13:50:47+02:00",
    "img": "img/expo/simracing-expo-2026/25.jpg",
    "w": 1600,
    "h": 901,
@@ -204,7 +204,7 @@
    "de": "Thermaltake G15 Racing Bundle: 15-Nm-Direct-Drive-Wheelbase mit 24 Bit Auflösung, D-förmiges 13-Zoll-Lenkrad mit Quick-Release, 12 Tasten, zwei Schalthebeln, Clutch Paddles und RPM-LEDs sowie ein 3-Pedal-Set aus Metall mit Hall-Effect-Sensoren und einstellbarer Bremsdämpfung. Messeangebot 649,90 Euro (UVP 990,90)."
   },
   {
-   "t": "2026-10-17T11:52:24",
+   "t": "2026-10-17T13:52:24+02:00",
    "img": "img/expo/simracing-expo-2026/26.jpg",
    "w": 901,
    "h": 1600,
@@ -212,7 +212,7 @@
    "de": "Thermaltake ST360 Ultra ARGB Sync: 7-Zoll-IPS-Display (1024x600) auf magnetischem Pumpenkopf, seitlich angeordnete Schläuche für einen aufgeräumten Build, Single-Frame-Lüfter; Software TT RGB Plus 3.0 mit AIForge. Messeangebot 149,90 Euro (UVP 189,90)."
   },
   {
-   "t": "2026-10-17T11:52:25",
+   "t": "2026-10-17T13:52:25+02:00",
    "img": "img/expo/simracing-expo-2026/27.jpg",
    "w": 901,
    "h": 1600,
@@ -220,7 +220,7 @@
    "de": "Thermaltake MAGFloe 360 Ultra ARGB Sync: 3,95-Zoll-LCD (480x480) für GIFs, Videos, Uhrzeit, Wetter und Echtzeitinfos, drei SWAFAN EX 12 ARGB Lüfter. Messeangebot 189,90 Euro (UVP 264,90)."
   },
   {
-   "t": "2026-10-17T11:52:25",
+   "t": "2026-10-17T13:52:25+02:00",
    "img": "img/expo/simracing-expo-2026/28.jpg",
    "w": 901,
    "h": 1600,
@@ -228,7 +228,7 @@
    "de": "Auch PC-Kühlung bei Thermaltake: die AiO MAGCurve 360 Ultra ARGB Sync mit 6,67-Zoll-AMOLED-Curved-Display (2240x1080) auf der Pumpe und drei TOUGHFAN EX 120 ARGB Lüftern. Messeangebot 239,90 Euro (UVP 349,90)."
   },
   {
-   "t": "2026-10-17T11:53:31",
+   "t": "2026-10-17T13:53:31+02:00",
    "img": "img/expo/simracing-expo-2026/29.jpg",
    "w": 1600,
    "h": 901,
@@ -236,7 +236,7 @@
    "de": "Thermaltake XRP-L1 Loadcell Pedal Set: 200-kg-Präzisions-Loadcell mit 16 Bit Auflösung, Made in Italy, Frontplatten aus Carbon, CNC-gefräste Struktur aus Aluminium, Gaspedal mit selbstschmierender Nylonhülse und berührungslosem Hall-Effect-Sensor. Messeangebot 799,90 Euro (UVP 899,90)."
   },
   {
-   "t": "2026-10-17T11:53:55",
+   "t": "2026-10-17T13:53:55+02:00",
    "img": "img/expo/simracing-expo-2026/30.jpg",
    "w": 1600,
    "h": 901,
@@ -244,7 +244,7 @@
    "de": "Der Einstieg bei Thermaltake: das G6 Racing Bundle mit 6-Nm-Direct-Drive-Wheelbase (16 Bit), dem gleichen D-förmigen 13-Zoll-Lenkrad mit Quick-Release und dem 3-Pedal-Set aus Metall mit Hall-Effect-Sensoren wie beim G15-Bundle. Messeangebot 399,90 Euro (UVP 649,90)."
   },
   {
-   "t": "2026-10-17T11:54:14",
+   "t": "2026-10-17T13:54:14+02:00",
    "img": "img/expo/simracing-expo-2026/31.jpg",
    "w": 1600,
    "h": 901,
@@ -252,7 +252,7 @@
    "de": "Ein weißer Thermaltake-Showcase-PC in lila Licht: Grafikkarte Sapphire Radeon PURE, AiO mit gewölbtem Display auf der Pumpe, das CPU- und GPU-Temperatur zeigt, und Lüfter ringsum."
   },
   {
-   "t": "2026-10-17T12:01:16",
+   "t": "2026-10-17T14:01:16+02:00",
    "img": "img/expo/simracing-expo-2026/32.jpg",
    "w": 1600,
    "h": 901,
@@ -260,7 +260,7 @@
    "de": "Die Geschichte dahinter: Joe Veren hat den Motion-Simulator Compass selbst entworfen und gebaut – „born in my mind, built by my own two hands“ – von den ersten Skizzen über Fräsen und Elektronik bis zur Software."
   },
   {
-   "t": "2026-10-17T12:01:17",
+   "t": "2026-10-17T14:01:17+02:00",
    "img": "img/expo/simracing-expo-2026/33.jpg",
    "w": 901,
    "h": 1600,
@@ -268,7 +268,7 @@
    "de": "Jede Menge Achsen: Auf der runden Basis sieht man die Aktuatoren für Heave, Pitch und Roll und darunter die X-Y-Plattform."
   },
   {
-   "t": "2026-10-17T12:01:17",
+   "t": "2026-10-17T14:01:17+02:00",
    "img": "img/expo/simracing-expo-2026/34.jpg",
    "w": 901,
    "h": 1600,
@@ -276,7 +276,7 @@
    "de": "Right Direction Motion Simulator „Compass“: unendliche Gier-Rotation auf einem Drehteller, drei Aktuatoren für Heave, Pitch und Roll, eine X-Y-Plattform für Surge und Sway – ein Eigenbau, den Besucher am Stand ausprobieren."
   },
   {
-   "t": "2026-10-17T12:05:03",
+   "t": "2026-10-17T14:05:03+02:00",
    "img": "img/expo/simracing-expo-2026/35.jpg",
    "w": 1600,
    "h": 901,
@@ -284,7 +284,7 @@
    "de": "SIM – Speed in Motion verkauft die Simulatoren schlüsselfertig: 6DOF-Motion (Heave, Surge, Sway, Roll, Pitch, Yaw), aufgebaut, konfiguriert und getestet, in drei Versionen (Racing, Rally, Flight), mit Single- oder Triple-Screen, bis 300 kg Zuladung und 500 mm/s Aktuator-Geschwindigkeit."
   },
   {
-   "t": "2026-10-17T12:05:03",
+   "t": "2026-10-17T14:05:03+02:00",
    "img": "img/expo/simracing-expo-2026/36.jpg",
    "w": 901,
    "h": 1600,
@@ -292,7 +292,7 @@
    "de": "Das gleiche Rig in Rot-Gelb: sechs Aktuatoren heben, kippen und drehen das ganze Cockpit."
   },
   {
-   "t": "2026-10-17T12:05:03",
+   "t": "2026-10-17T14:05:03+02:00",
    "img": "img/expo/simracing-expo-2026/37.jpg",
    "w": 901,
    "h": 1600,
@@ -300,7 +300,7 @@
    "de": "Ein kompletter 6DOF-Hexapod im Anhänger: SIM – Speed in Motion (powered by VN Motion) mit sechs „Sim Brugge“-Aktuatoren, Sparco-Sitz und großem Curved-Monitor."
   },
   {
-   "t": "2026-10-17T12:08:59",
+   "t": "2026-10-17T14:08:59+02:00",
    "img": "img/expo/simracing-expo-2026/38.jpg",
    "w": 901,
    "h": 1600,
@@ -308,7 +308,7 @@
    "de": "So sieht ein Motor von innen aus: Statoren mit Kupferwicklungen, Rotoren und Blechpakete in allen Größen – die Bauteile, aus denen auch eine Direct-Drive-Wheelbase besteht."
   },
   {
-   "t": "2026-10-17T12:08:59",
+   "t": "2026-10-17T14:08:59+02:00",
    "img": "img/expo/simracing-expo-2026/39.jpg",
    "w": 901,
    "h": 1600,
@@ -316,7 +316,7 @@
    "de": "Die Vitrine von Maxmore: fertige Motoren und Gehäuse, darunter gefräste Alu-Motorgehäuse mit Kühlrippen."
   },
   {
-   "t": "2026-10-17T12:09:00",
+   "t": "2026-10-17T14:09:00+02:00",
    "img": "img/expo/simracing-expo-2026/40.jpg",
    "w": 1600,
    "h": 901,
@@ -324,7 +324,7 @@
    "de": "Ein Blick hinter die Kulissen: Maxmore Technology Group entwickelt und baut Elektromotoren nach Maß – „German Quality meets Chinese Speed and Prices“."
   },
   {
-   "t": "2026-10-17T12:09:18",
+   "t": "2026-10-17T14:09:18+02:00",
    "img": "img/expo/simracing-expo-2026/41.jpg",
    "w": 901,
    "h": 1600,
@@ -332,7 +332,7 @@
    "de": "Und dafür ist das alles gedacht: Maxmore fertigt High-End-Sim-Racing-Hardware für andere Marken – maßgeschneiderte Direct-Drive-Motoren, Lenkräder, Quick-Release-Systeme und Pedalsets, vom Prototyp bis zur Serienfertigung auf automatisierten Linien."
   },
   {
-   "t": "2026-10-17T12:15:59",
+   "t": "2026-10-17T14:15:59+02:00",
    "img": "img/expo/simracing-expo-2026/42.jpg",
    "w": 1600,
    "h": 901,
@@ -340,7 +340,7 @@
    "de": "Das imsim-Cockpit „01“ von hinten: tief sitzender Sitz, Aktuatoren hinter der Sitzschale und ein großer Curved-Monitor – der Andrang am Stand war groß."
   },
   {
-   "t": "2026-10-17T12:16:00",
+   "t": "2026-10-17T14:16:00+02:00",
    "img": "img/expo/simracing-expo-2026/43.jpg",
    "w": 1600,
    "h": 901,
@@ -348,7 +348,7 @@
    "de": "Ein weiteres imsim-Rig mit geschwungenem schwarzem Rahmen, der Pedale und Cockpit zusammenhält."
   },
   {
-   "t": "2026-10-17T12:16:00",
+   "t": "2026-10-17T14:16:00+02:00",
    "img": "img/expo/simracing-expo-2026/44.jpg",
    "w": 1600,
    "h": 901,
@@ -356,7 +356,7 @@
    "de": "Das imsim TERRA in Schwarz-Gold, mit D-BOX-Aktuatoren unter dem Rahmen."
   },
   {
-   "t": "2026-10-17T12:16:00",
+   "t": "2026-10-17T14:16:00+02:00",
    "img": "img/expo/simracing-expo-2026/45.jpg",
    "w": 1600,
    "h": 901,
@@ -364,7 +364,7 @@
    "de": "Nächster Stand: imsim."
   },
   {
-   "t": "2026-10-17T12:17:21",
+   "t": "2026-10-17T14:17:21+02:00",
    "img": "img/expo/simracing-expo-2026/46.jpg",
    "w": 1600,
    "h": 901,
@@ -372,7 +372,7 @@
    "de": "Ebenfalls von imsim: ein Simulator im Porsche-Design – weiße Karosserie mit Leuchtband und PORSCHE-Schriftzug am Heck, Carbon-Sitz, ausgestellt am Porsche-Stand."
   },
   {
-   "t": "2026-10-17T12:35:37",
+   "t": "2026-10-17T14:35:37+02:00",
    "img": "img/expo/simracing-expo-2026/47.jpg",
    "w": 901,
    "h": 1600,
@@ -380,7 +380,7 @@
    "de": "Die MCP MultiBox läuft mit dem SimEngine-Plugin – hier der Startbildschirm „The race begins…“."
   },
   {
-   "t": "2026-10-17T12:35:37",
+   "t": "2026-10-17T14:35:37+02:00",
    "img": "img/expo/simracing-expo-2026/48.jpg",
    "w": 901,
    "h": 1600,
@@ -388,7 +388,7 @@
    "de": "Selbst bauen und gratis mitnehmen: Beim Workshop von Pokornyi Engineering bauen Besucher ihre eigene MCP MultiBox – eine Buttonbox mit LED-Matrix (hier die Ganganzeige), acht beleuchteten Tasten und Drehknopf. Termine gibt es per Online-Buchung, der Samstag war schon ausgebucht."
   },
   {
-   "t": "2026-10-17T12:36:34",
+   "t": "2026-10-17T14:36:34+02:00",
    "img": "img/expo/simracing-expo-2026/49.jpg",
    "w": 901,
    "h": 1600,
@@ -396,7 +396,7 @@
    "de": "Aus der Bauanleitung von Pokornyi Engineering: die Maße des TGR-H-Lenkrads mit 5-Zoll-VoCore-Display."
   },
   {
-   "t": "2026-10-17T12:36:34",
+   "t": "2026-10-17T14:36:34+02:00",
    "img": "img/expo/simracing-expo-2026/50.jpg",
    "w": 1600,
    "h": 901,
@@ -404,7 +404,7 @@
    "de": "Ein weiteres Lenkrad von Pokornyi Engineering mit Butterfly-Griffen, Dash-Display und Drehschaltern für TC, MAP und Bremsbalance."
   },
   {
-   "t": "2026-10-17T12:36:35",
+   "t": "2026-10-17T14:36:35+02:00",
    "img": "img/expo/simracing-expo-2026/51.jpg",
    "w": 1600,
    "h": 901,
@@ -412,7 +412,7 @@
    "de": "Pokornyi Engineering baut auch Rennlenkräder: hier ein Formel-Lenkrad mit großem Display, farbig markierten Drehschaltern (HYB, MAP, LED, TC, ABS) und einem Kranz Schaltlichter."
   },
   {
-   "t": "2026-10-17T12:40:49",
+   "t": "2026-10-17T14:40:49+02:00",
    "img": "img/expo/simracing-expo-2026/52.jpg",
    "w": 1600,
    "h": 901,
@@ -420,7 +420,7 @@
    "de": "Das Helente-Rig in Orange-Weiß: Motion-Aktuatoren unter dem Cockpit, Monitorhalterung, Tastaturablage und Getränkehalter – alles an Bord."
   },
   {
-   "t": "2026-10-17T12:40:50",
+   "t": "2026-10-17T14:40:50+02:00",
    "img": "img/expo/simracing-expo-2026/53.jpg",
    "w": 901,
    "h": 1600,
@@ -428,7 +428,7 @@
    "de": "Ein kompletter Helente-Simulator: der PC direkt am Rig, Triple-Monitore, Motion-Aktuatoren und am Rahmen Partner-Logos u. a. von Vero Motion und Asetek Racing."
   },
   {
-   "t": "2026-10-17T12:40:50",
+   "t": "2026-10-17T14:40:50+02:00",
    "img": "img/expo/simracing-expo-2026/54.jpg",
    "w": 901,
    "h": 1600,
@@ -436,7 +436,7 @@
    "de": "Nächster Stand: Helente – schlüsselfertige Rennsimulatoren, mit Vero Motion als offiziellem Motion-Partner. Laut Helente-Website gibt es vier Modelle: CORE ab 13.000 €, H1 ab 20.000 €, HX ab 41.000 € und HXR ab 57.000 € (inkl. MwSt.)."
   },
   {
-   "t": "2026-10-17T13:11:44",
+   "t": "2026-10-17T15:11:44+02:00",
    "img": "img/expo/simracing-expo-2026/55.jpg",
    "w": 901,
    "h": 1600,
@@ -444,7 +444,7 @@
    "de": "Auf der Messe mitgenommen: 2Tenths, eine kostenlose Telemetrie-App für iRacing, Assetto Corsa, Assetto Corsa Competizione, Le Mans Ultimate und F1 – mit KI-Analyse („Tenth Sensai“), Telemetrie-Kurven, 2D- und 3D-Streckenkarte und Setup-Vergleich. app.2tenths.gg"
   },
   {
-   "t": "2026-10-17T13:18:37",
+   "t": "2026-10-17T15:18:37+02:00",
    "img": "img/expo/simracing-expo-2026/56.jpg",
    "w": 901,
    "h": 1600,
@@ -452,7 +452,7 @@
    "de": "Heusinkveld DisplayDash: 389 Euro, Halterung 59 Euro. Erste Charge mit begrenztem Bestand – wer jetzt kauft, bekommt eine Limited-Edition-Cap dazu."
   },
   {
-   "t": "2026-10-17T13:18:37",
+   "t": "2026-10-17T15:18:37+02:00",
    "img": "img/expo/simracing-expo-2026/57.jpg",
    "w": 901,
    "h": 1600,
@@ -460,7 +460,7 @@
    "de": "Neu von Heusinkveld: das DisplayDash – großes Display mit Relative, Gang, Fuel und Bedienfeldern für Lautstärke, Scheibenwischer und Lüfter, dazu 16 Drehgeber mit farbiger Beleuchtung und fünf Tasten."
   },
   {
-   "t": "2026-10-17T13:20:08",
+   "t": "2026-10-17T15:20:08+02:00",
    "img": "img/expo/simracing-expo-2026/58.jpg",
    "w": 1600,
    "h": 901,
@@ -468,7 +468,7 @@
    "de": "Bald von Heusinkveld: das One SC (funktionsfähiger Prototyp) – Plug & Play mit Simucube 3, 4,3-Zoll-Touchscreen, 12 RGB-beleuchtete Tasten, 11 RGB-Schaltlichter und nur 1.050 g."
   },
   {
-   "t": "2026-10-17T13:20:08",
+   "t": "2026-10-17T15:20:08+02:00",
    "img": "img/expo/simracing-expo-2026/59.jpg",
    "w": 1600,
    "h": 901,
@@ -476,7 +476,7 @@
    "de": "Heusinkveld One: etwa 270 mm Durchmesser an den Griffen, integrierte 50,8-mm-Gewindenabe (optionaler Adapter auf 70 mm für 34 € zzgl. MwSt.). Preis 349 € zzgl. MwSt."
   },
   {
-   "t": "2026-10-17T13:20:09",
+   "t": "2026-10-17T15:20:09+02:00",
    "img": "img/expo/simracing-expo-2026/60.jpg",
    "w": 1600,
    "h": 901,
@@ -484,7 +484,7 @@
    "de": "Heusinkveld Ultimate+ Black: 3-Pedal-Set mit fester Bremse (19-mm-Hart-Elastomer) auf der Ultimate+-Grundplatte – 1.303 € zzgl. MwSt."
   },
   {
-   "t": "2026-10-17T13:24:07",
+   "t": "2026-10-17T15:24:07+02:00",
    "img": "img/expo/simracing-expo-2026/61.jpg",
    "w": 1600,
    "h": 901,
@@ -492,7 +492,7 @@
    "de": "GSI GT MAX32: rundes GT-Lenkrad mit Carbon-Kranz und roter Markierung oben, Dash-Display mit Fuel, Delta, Temperaturen und Rundendaten sowie beleuchteten Drehschaltern für Bias, TC1 und TC2."
   },
   {
-   "t": "2026-10-17T13:24:08",
+   "t": "2026-10-17T15:24:08+02:00",
    "img": "img/expo/simracing-expo-2026/62.jpg",
    "w": 1600,
    "h": 901,
@@ -500,7 +500,7 @@
    "de": "GSI Artemis: drei große Wahlschalter mit beleuchteten Ring-Beschriftungen (BIAS, MAP, FUEL, ERS, DIFF …) und VCMPRO-USB-C-Display."
   },
   {
-   "t": "2026-10-17T13:24:08",
+   "t": "2026-10-17T15:24:08+02:00",
    "img": "img/expo/simracing-expo-2026/63.jpg",
    "w": 1600,
    "h": 901,
@@ -508,7 +508,7 @@
    "de": "GSI Hyper P1: ein Formel-Lenkrad mit Schaltlicht-Kranz, Sektorzeiten im Display und blau beleuchteten Drehschaltern."
   },
   {
-   "t": "2026-10-17T13:24:08",
+   "t": "2026-10-17T15:24:08+02:00",
    "img": "img/expo/simracing-expo-2026/64.jpg",
    "w": 1600,
    "h": 901,
@@ -516,7 +516,7 @@
    "de": "Nächster Stand: Gomez Sim Industries (GSI) – „Beautifully Designed“."
   },
   {
-   "t": "2026-10-17T13:28:10",
+   "t": "2026-10-17T15:28:10+02:00",
    "img": "img/expo/simracing-expo-2026/65.jpg",
    "w": 1600,
    "h": 901,
@@ -524,7 +524,7 @@
    "de": "Ebenfalls bei Caseking: das MOZA Racing KS Pro – 300-mm-Butterfly-Lenkrad, 2,99-Zoll-Display (780 x 248 px), fünf Drehschalter (4x 12-, 1x 8-stufig), vier Daumen-Encoder und zwei Funky Switches, magnetische Schaltwippen aus Forged Carbon, zwei analoge Kupplungswippen, RGB-Schaltlichter und sechs Flaggen-LEDs."
   },
   {
-   "t": "2026-10-17T13:28:10",
+   "t": "2026-10-17T15:28:10+02:00",
    "img": "img/expo/simracing-expo-2026/66.jpg",
    "w": 901,
    "h": 1600,
@@ -532,7 +532,7 @@
    "de": "Das Datenblatt: Gehäuse Phanteks EX5 Plus Midi Tower, AMD Ryzen 7 9800X3D, ZOTAC RTX 5080 AMP Extreme Infinity 16 GB, ASUS TUF Gaming B850-Plus WiFi, 32 GB G.Skill Trident Z5 RGB DDR5-6000, 2 TB Crucial E100 NVMe, Phanteks S25 360 ARGB AiO und Netzteil Phanteks AMP GH 850 W."
   },
   {
-   "t": "2026-10-17T13:28:10",
+   "t": "2026-10-17T15:28:10+02:00",
    "img": "img/expo/simracing-expo-2026/67.jpg",
    "w": 1600,
    "h": 901,
@@ -540,7 +540,7 @@
    "de": "Am Stand von Caseking (Pro/Gamers Group): ein Phanteks-Gaming-PC mit AMD Ryzen 7 9800X3D und NVIDIA GeForce RTX 5080, aufgebaut im Phanteks EX5 Plus mit Display in der Seitenwand."
   },
   {
-   "t": "2026-10-17T13:32:03",
+   "t": "2026-10-17T15:32:03+02:00",
    "img": "img/expo/simracing-expo-2026/68.jpg",
    "w": 1600,
    "h": 901,
@@ -548,7 +548,7 @@
    "de": "Purple Race Labs 2 Pedal Set bei Caseking: Load Cells in Gas- und Bremspedal, CNC-gefrästes 6061-Aluminium auf einer Basis aus 304L-Edelstahl, Bremskraft bis 150 kg, Gaspedal von 2,8 bis 12,2 kg einstellbar, Höhe, Neigung, Position, Weg und Vorspannung justierbar, 16-Bit-Controller, USB Plug & Play, Made in the Netherlands."
   },
   {
-   "t": "2026-10-17T13:32:03",
+   "t": "2026-10-17T15:32:03+02:00",
    "img": "img/expo/simracing-expo-2026/69.jpg",
    "w": 1600,
    "h": 901,
@@ -556,7 +556,7 @@
    "de": "Im Mercedes-AMG-Petronas-Look: das HAVN HS 420 Mercedes-AMG Petronas Edition mit AMD Ryzen 7 9800X3D, XFX Mercury RX 9070 XT OC 16 GB, ASUS TUF Gaming B850-Plus WiFi, 32 GB V-Color Manta XSky RGB DDR5-6000, 1 TB Crucial E100, Alpenföhn Matterhorn 2 Aurora Max, Kolink Regulator 850 W und acht Jonsbo ZA 140 mm ARGB Lüftern."
   },
   {
-   "t": "2026-10-17T13:39:18",
+   "t": "2026-10-17T15:39:18+02:00",
    "img": "img/expo/simracing-expo-2026/70.jpg",
    "w": 901,
    "h": 1600,
@@ -564,7 +564,7 @@
    "de": "Simucube-Zubehör in der Vitrine: Montagehalterung, Quick-Release und Naben-Adapter, darunter ein Adapter für 70-mm- und 50,8-mm-Lenkräder."
   },
   {
-   "t": "2026-10-17T13:39:18",
+   "t": "2026-10-17T15:39:18+02:00",
    "img": "img/expo/simracing-expo-2026/71.jpg",
    "w": 1600,
    "h": 901,
@@ -572,7 +572,7 @@
    "de": "Direct-Drive-Wheelbases von Simucube, darunter die Simucube 3 Sport: SPM-Direct-Drive-Motor, 15 Nm maximales Drehmoment, Anschluss per Simucube Link. Am Stand direkt beim SimRaceShop erhältlich."
   },
   {
-   "t": "2026-10-17T13:39:18",
+   "t": "2026-10-17T15:39:18+02:00",
    "img": "img/expo/simracing-expo-2026/72.jpg",
    "w": 1600,
    "h": 901,
@@ -580,7 +580,7 @@
    "de": "Simucube-Pedale aus der Nähe: Der Pedalarm wirkt auf eine kompakte Antriebseinheit mit großem Simucube-Gehäuse."
   },
   {
-   "t": "2026-10-17T13:39:19",
+   "t": "2026-10-17T15:39:19+02:00",
    "img": "img/expo/simracing-expo-2026/73.jpg",
    "w": 1600,
    "h": 901,
@@ -588,7 +588,7 @@
    "de": "Neu von Simucube: das Co-Pedal – „eine Kupplung, aber auch ein Gaspedal. Ein passives Pedal der nächsten Generation.“"
   },
   {
-   "t": "2026-10-17T13:42:21",
+   "t": "2026-10-17T15:42:21+02:00",
    "img": "img/expo/simracing-expo-2026/74.jpg",
    "w": 901,
    "h": 1600,
@@ -596,7 +596,7 @@
    "de": "Messepreise bei Simucube: 10 % Rabatt ab 1.000 € Bestellwert (Code SRE10), 15 % ab 2.000 € (SRE15), 20 % ab 3.500 € (SRE20) – den Code beim Bestellen auf simucube.com eingeben."
   },
   {
-   "t": "2026-10-17T14:05:56",
+   "t": "2026-10-17T16:05:56+02:00",
    "img": "img/expo/simracing-expo-2026/75.jpg",
    "w": 1600,
    "h": 901,
@@ -604,7 +604,7 @@
    "de": "Auf der Hauptbühne der SimRacing Expo Frankfurt (fuelled by D-BOX): eine Talkrunde zu BeamNG.drive, auf der Leinwand ein Offroad-Buggy mit durchsichtig dargestelltem Fahrwerk."
   },
   {
-   "t": "2026-10-17T14:08:18",
+   "t": "2026-10-17T16:08:18+02:00",
    "img": "img/expo/simracing-expo-2026/76.jpg",
    "w": 1600,
    "h": 901,
@@ -612,7 +612,7 @@
    "de": "Ein Blick in die Technik von BeamNG.drive: Der Truck wird als Soft-Body-Physikmodell gezeigt – ein Netz aus Knoten und Verbindungen, das jede Verformung berechnet."
   },
   {
-   "t": "2026-10-17T14:08:36",
+   "t": "2026-10-17T16:08:36+02:00",
    "img": "img/expo/simracing-expo-2026/77.jpg",
    "w": 1600,
    "h": 901,
@@ -620,7 +620,7 @@
    "de": "Noch detaillierter: ein ganzes Auto als dichte Wolke aus Physik-Knoten – die Grundlage für das realistische Crash- und Verformungsverhalten in BeamNG."
   },
   {
-   "t": "2026-10-17T14:27:45",
+   "t": "2026-10-17T16:27:45+02:00",
    "img": "img/expo/simracing-expo-2026/78.jpg",
    "w": 1600,
    "h": 901,
@@ -628,7 +628,7 @@
    "de": "Ein echtes Rennauto am Maxmore-Stand: der Porsche #33 von W&S Motorsport im grünen Design der Maxmore Technology Group, eingesetzt in der GT4 Winter Series."
   },
   {
-   "t": "2026-10-17T14:29:53",
+   "t": "2026-10-17T16:29:53+02:00",
    "img": "img/expo/simracing-expo-2026/79.jpg",
    "w": 1600,
    "h": 901,
@@ -636,7 +636,7 @@
    "de": "Die Startnummer verrät es: #33 in der GT4 Winter Series (SRO Licensed Series, powered by Gedlich Racing)."
   },
   {
-   "t": "2026-10-17T14:45:20",
+   "t": "2026-10-17T16:45:20+02:00",
    "img": "img/expo/simracing-expo-2026/80.jpg",
    "w": 1600,
    "h": 901,
@@ -644,7 +644,7 @@
    "de": "Fanatec ClubSport Formula V3 Oracle Red Bull Racing: offiziell lizenziert, angelehnt an das Design des RB22, Forged-Carbon-Optik auch am Podium Advanced Paddle Module, zum 22-jährigen Jubiläum von Red Bull Racing – erhältlich ab November 2026."
   },
   {
-   "t": "2026-10-17T14:45:20",
+   "t": "2026-10-17T16:45:20+02:00",
    "img": "img/expo/simracing-expo-2026/81.jpg",
    "w": 1600,
    "h": 901,
@@ -652,7 +652,7 @@
    "de": "Die geplanten Eckdaten von Project Obsidian: 5-Zoll-Farb-LCD in hoher Auflösung (1280 x 720), Display, RevLEDs und beleuchtete 12-Stufen-Drehschalter unter einer einzigen Glasscheibe, SimHub-kompatibel per USB oder WLAN, geplant für 2027."
   },
   {
-   "t": "2026-10-17T14:45:21",
+   "t": "2026-10-17T16:45:21+02:00",
    "img": "img/expo/simracing-expo-2026/82.jpg",
    "w": 1600,
    "h": 901,
@@ -660,7 +660,7 @@
    "de": "Ein erster Blick auf Fanatecs „Project Obsidian“: Das Lenkrad ist noch ein Prototyp und noch nicht erhältlich – hier mit großem Display und vier beleuchteten Drehschaltern."
   },
   {
-   "t": "2026-10-17T14:53:38",
+   "t": "2026-10-17T16:53:38+02:00",
    "img": "img/expo/simracing-expo-2026/83.jpg",
    "w": 901,
    "h": 1600,
@@ -668,7 +668,7 @@
    "de": "Klein, aber praktisch, ebenfalls von Bavarian SimTec: eine Handyhalterung mit kabellosem Schnellladen fürs Rig."
   },
   {
-   "t": "2026-10-17T14:53:38",
+   "t": "2026-10-17T16:53:38+02:00",
    "img": "img/expo/simracing-expo-2026/84.jpg",
    "w": 1600,
    "h": 901,
@@ -676,7 +676,7 @@
    "de": "Bavarian SimTec DDU5 mit Beacon Lights: ein Dash-Display mit Rundenzeiten, Delta, Fuel-Rechner und Wetter, Schaltlichtern am Rand und zwei LED-Leisten an den Seiten."
   },
   {
-   "t": "2026-10-17T14:53:39",
+   "t": "2026-10-17T16:53:39+02:00",
    "img": "img/expo/simracing-expo-2026/85.jpg",
    "w": 1600,
    "h": 901,
@@ -684,7 +684,7 @@
    "de": "Das Control Center von Bavarian SimTec: 20 frei beschriftbare, beleuchtete Tasten – vom Motorstart über Tankmengen bis „Good Race!“ und „Mein Gott, muss das sein?!“ – dazu zwei Drehgeber."
   },
   {
-   "t": "2026-10-17T14:54:47",
+   "t": "2026-10-17T16:54:47+02:00",
    "img": "img/expo/simracing-expo-2026/86.jpg",
    "w": 1600,
    "h": 901,
@@ -692,7 +692,7 @@
    "de": "Ein weiteres Formel-Lenkrad von Bavarian SimTec, diesmal ohne Display: eine Reihe Schaltlichter, beleuchtete Tasten in Pink und Gelb (P2P, Radio, Drink, Pit) und 12-Stufen-Drehschalter für ABS und TC."
   },
   {
-   "t": "2026-10-17T14:54:47",
+   "t": "2026-10-17T16:54:47+02:00",
    "img": "img/expo/simracing-expo-2026/87.jpg",
    "w": 1600,
    "h": 901,
@@ -700,7 +700,7 @@
    "de": "Formel-Lenkrad von Bavarian SimTec in Carbon, im Design des Delta PRO SC: großes Dash-Display, beleuchtete Tasten für DRS, OT und Bremsbalance-Schritte, 12-Stufen-Drehschalter für ABS und TC und zwei Multifunktions-Wahlschalter."
   },
   {
-   "t": "2026-10-17T14:54:48",
+   "t": "2026-10-17T16:54:48+02:00",
    "img": "img/expo/simracing-expo-2026/88.jpg",
    "w": 1600,
    "h": 901,
@@ -708,7 +708,7 @@
    "de": "Das Topmodell von Bavarian SimTec: das Omega Pro V2 LCI – „Designed & Manufactured in Bavaria“, mit großem Dash-Display, Kränzen aus bunt beleuchteten Drehschaltern und Tasten für DRS, OT, MGU und Funk."
   },
   {
-   "t": "2026-10-17T14:56:00",
+   "t": "2026-10-17T16:56:00+02:00",
    "img": "img/expo/simracing-expo-2026/89.jpg",
    "w": 1600,
    "h": 901,
@@ -716,7 +716,7 @@
    "de": "Bavarian SimTec Delta PRO SC – „Designed & Manufactured in Bavaria“: Carbon-Lenkrad mit großem Dash-Display, beleuchteten Tasten (DRS, OT, FCY, Wiper), 12-Stufen-Drehschaltern für ABS und TC und orangefarbenen Encoder-Ringen."
   },
   {
-   "t": "2026-10-17T14:58:04",
+   "t": "2026-10-17T16:58:04+02:00",
    "img": "img/expo/simracing-expo-2026/90.jpg",
    "w": 1600,
    "h": 901,
@@ -724,7 +724,7 @@
    "de": "SRS Ultra Dash 7.8 bei SimRaceShop: ein breites 7,8-Zoll-Dash-Display mit Relative, Sektorzeiten, Fuel und Fahrzeugeinstellungen, dazu Schalt- und Flaggenlichter – rund 350 Euro (simraceshop.de)."
   },
   {
-   "t": "2026-10-17T14:58:40",
+   "t": "2026-10-17T16:58:40+02:00",
    "img": "img/expo/simracing-expo-2026/91.jpg",
    "w": 1600,
    "h": 901,
@@ -732,7 +732,7 @@
    "de": "Ebenfalls von SimRaceShop (SRS): das DID V_26, ein kompaktes Zusatzdisplay in Rot für TC, ABS, Bremsbalance, Map, Fuel und Motortemperaturen – rund 150 Euro."
   },
   {
-   "t": "2026-10-17T15:01:02",
+   "t": "2026-10-17T17:01:02+02:00",
    "img": "img/expo/simracing-expo-2026/92.jpg",
    "w": 1600,
    "h": 901,
@@ -740,7 +740,7 @@
    "de": "Mission-Sim-Formel-Lenkrad V2 bei SimRaceShop: großes Display mit Relative und Fuel-Daten, Kranz aus Schaltlichtern, beleuchtete Drehschalter für Mode, Strategie, Drive und Brake sowie farbige Encoder für LONG und LAT."
   },
   {
-   "t": "2026-10-17T15:05:29",
+   "t": "2026-10-17T17:05:29+02:00",
    "img": "img/expo/simracing-expo-2026/93.jpg",
    "w": 1600,
    "h": 901,
@@ -748,7 +748,7 @@
    "de": "Preise bei Asetek Racing: Initium DD5.5 349 €, Initium DD10 499 €, Forte DD18 949 €, Invicta DD27 1.399 €. Messeangebot: 20 % auf alles mit dem Code FRANKFURT20 auf asetek.com/simsports/eu, gültig bis 18. Oktober, 23:59 Uhr MESZ (ausgenommen Dual Mode Shifter, Load-Cell-Handbremse und Invicta Formula Pro Lenkrad)."
   },
   {
-   "t": "2026-10-17T15:05:29",
+   "t": "2026-10-17T17:05:29+02:00",
    "img": "img/expo/simracing-expo-2026/94.jpg",
    "w": 1600,
    "h": 901,
@@ -756,7 +756,7 @@
    "de": "Die Direct-Drive-Wheelbases Asetek Forte DD18, vorn mit dem Quick-Release-Anschluss."
   },
   {
-   "t": "2026-10-17T15:05:29",
+   "t": "2026-10-17T17:05:29+02:00",
    "img": "img/expo/simracing-expo-2026/95.jpg",
    "w": 901,
    "h": 1600,
@@ -764,7 +764,7 @@
    "de": "Der Einstieg bei Asetek Racing: die Direct-Drive-Wheelbase Initium."
   },
   {
-   "t": "2026-10-17T15:07:46",
+   "t": "2026-10-17T17:07:46+02:00",
    "img": "img/expo/simracing-expo-2026/96.jpg",
    "w": 1600,
    "h": 901,
@@ -772,7 +772,7 @@
    "de": "Die gleiche Forte Formula Pro Button Box (659 €), hier mit den Formula LMP Handles (89 €) – geschlossener Griff wie bei Prototypen."
   },
   {
-   "t": "2026-10-17T15:07:46",
+   "t": "2026-10-17T17:07:46+02:00",
    "img": "img/expo/simracing-expo-2026/97.jpg",
    "w": 1600,
    "h": 901,
@@ -780,7 +780,7 @@
    "de": "Asetek GT Nova Steering Wheel: beleuchtete Tasten, kleines Display, Schaltlichter und zwei 12-Stufen-Drehschalter – 299 € (inkl. MwSt.)."
   },
   {
-   "t": "2026-10-17T15:07:47",
+   "t": "2026-10-17T17:07:47+02:00",
    "img": "img/expo/simracing-expo-2026/98.jpg",
    "w": 1600,
    "h": 901,
@@ -788,7 +788,7 @@
    "de": "Asetek Forte Formula Pro Button Box: Display, Schaltlichter und beleuchtete Drehschalter für Bias, Engine und Bremsbox – 659 €; hier mit den Formula Regular Handles mit Wildleder (89 €), Preise inkl. MwSt."
   },
   {
-   "t": "2026-10-17T15:07:47",
+   "t": "2026-10-17T17:07:47+02:00",
    "img": "img/expo/simracing-expo-2026/99.jpg",
    "w": 1600,
    "h": 901,
@@ -796,7 +796,7 @@
    "de": "Die Spitze bei Asetek: das Invicta Formula Steering Wheel in Forged Carbon, mit Display, Schaltlichtern und beleuchteten Drehschaltern für ABS, TC und Deploy – gefertigt auf Bestellung, ab 1.299 € (inkl. MwSt.)."
   },
   {
-   "t": "2026-10-17T15:19:15",
+   "t": "2026-10-17T17:19:15+02:00",
    "img": "img/expo/simracing-expo-2026/100.jpg",
    "w": 901,
    "h": 1600,
