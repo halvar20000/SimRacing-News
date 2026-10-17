@@ -610,6 +610,14 @@
    "h": 901,
    "en": "A look at how BeamNG.drive works: the truck is shown as its soft-body physics model – a mesh of nodes and beams that simulates every deformation.",
    "de": "Ein Blick in die Technik von BeamNG.drive: Der Truck wird als Soft-Body-Physikmodell gezeigt – ein Netz aus Knoten und Verbindungen, das jede Verformung berechnet."
+  },
+  {
+   "t": "2026-10-17T14:08:36",
+   "img": "img/expo/simracing-expo-2026/77.jpg",
+   "w": 1600,
+   "h": 901,
+   "en": "Even more detailed: a whole car as a dense cloud of physics nodes – the basis for BeamNG's realistic crash and deformation behaviour.",
+   "de": "Noch detaillierter: ein ganzes Auto als dichte Wolke aus Physik-Knoten – die Grundlage für das realistische Crash- und Verformungsverhalten in BeamNG."
   }
  ]
 }
