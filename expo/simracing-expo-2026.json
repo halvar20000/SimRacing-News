@@ -696,8 +696,8 @@
    "img": "img/expo/simracing-expo-2026/87.jpg",
    "w": 1600,
    "h": 901,
-   "en": "Bavarian SimTec formula wheel in carbon: large dash display, illuminated buttons for DRS, OT and brake bias steps, 12-way rotary switches for ABS and TC and two multi-function selectors.",
-   "de": "Formel-Lenkrad von Bavarian SimTec in Carbon: großes Dash-Display, beleuchtete Tasten für DRS, OT und Bremsbalance-Schritte, 12-Stufen-Drehschalter für ABS und TC und zwei Multifunktions-Wahlschalter."
+   "en": "Bavarian SimTec formula wheel in carbon, in the style of the Delta PRO SC: large dash display, illuminated buttons for DRS, OT and brake bias steps, 12-way rotary switches for ABS and TC and two multi-function selectors.",
+   "de": "Formel-Lenkrad von Bavarian SimTec in Carbon, im Design des Delta PRO SC: großes Dash-Display, beleuchtete Tasten für DRS, OT und Bremsbalance-Schritte, 12-Stufen-Drehschalter für ABS und TC und zwei Multifunktions-Wahlschalter."
   },
   {
    "t": "2026-10-17T14:54:48",
@@ -706,6 +706,14 @@
    "h": 901,
    "en": "The flagship from Bavarian SimTec: the Omega Pro V2 LCI – 'designed & manufactured in Bavaria', with a large dash display, rings of colourful illuminated rotary switches and buttons for DRS, OT, MGU and radio.",
    "de": "Das Topmodell von Bavarian SimTec: das Omega Pro V2 LCI – „Designed & Manufactured in Bavaria“, mit großem Dash-Display, Kränzen aus bunt beleuchteten Drehschaltern und Tasten für DRS, OT, MGU und Funk."
+  },
+  {
+   "t": "2026-10-17T14:56:00",
+   "img": "img/expo/simracing-expo-2026/89.jpg",
+   "w": 1600,
+   "h": 901,
+   "en": "Bavarian SimTec Delta PRO SC – 'designed & manufactured in Bavaria': carbon wheel with a large dash display, illuminated buttons (DRS, OT, FCY, wiper), 12-way rotary switches for ABS and TC and orange encoder rings.",
+   "de": "Bavarian SimTec Delta PRO SC – „Designed & Manufactured in Bavaria“: Carbon-Lenkrad mit großem Dash-Display, beleuchteten Tasten (DRS, OT, FCY, Wiper), 12-Stufen-Drehschaltern für ABS und TC und orangefarbenen Encoder-Ringen."
   }
  ]
 }
