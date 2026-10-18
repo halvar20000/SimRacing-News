@@ -842,6 +842,54 @@
    "h": 1600,
    "en": "The Mission Sim wheel at the maker's own stand: VPG (vpgsim.co.uk), with colourful illuminated buttons and rotary switches on a display stand.",
    "de": "Das Mission-Sim-Lenkrad am Stand des Herstellers selbst: VPG (vpgsim.co.uk), mit bunt beleuchteten Tasten und Drehschaltern auf einem Präsentationsständer."
+  },
+  {
+   "t": "2026-10-18T11:25:08+02:00",
+   "img": "img/expo/simracing-expo-2026/106.jpg",
+   "w": 1600,
+   "h": 901,
+   "en": "PUEX SIM SIGNAL in the box: two spotter light bars, two FLAG panels, a TIMER display and the controller (TIMER, SPOT, FLAG, EXTRA PWR, PC) that runs everything over one USB port.",
+   "de": "PUEX SIM SIGNAL im Karton: zwei Spotter-Leuchtleisten, zwei FLAG-Panels, ein TIMER-Display und der Controller (TIMER, SPOT, FLAG, EXTRA PWR, PC), der alles über einen einzigen USB-Anschluss steuert."
+  },
+  {
+   "t": "2026-10-18T11:25:08+02:00",
+   "img": "img/expo/simracing-expo-2026/107.jpg",
+   "w": 901,
+   "h": 1600,
+   "en": "\"How many USB ports do you need?\" PUEX SIM's answer: one. The SIGNAL controller links TIMER (lap time, position), SPOTTER (spotter alerts, brake indication) and FLAG (flags, warnings, pit info). Aluminium housing, three colours, works with SimHub / DNR.",
+   "de": "„Wie viele USB-Anschlüsse brauchst du?“ Die Antwort von PUEX SIM: einen. Der SIGNAL-Controller verbindet TIMER (Rundenzeit, Position), SPOTTER (Spotter-Ansagen, Bremsanzeige) und FLAG (Flaggen, Warnungen, Boxeninfos). Aluminiumgehäuse, drei Farben, kompatibel mit SimHub / DNR."
+  },
+  {
+   "t": "2026-10-18T11:25:08+02:00",
+   "img": "img/expo/simracing-expo-2026/108.jpg",
+   "w": 1600,
+   "h": 901,
+   "en": "The spotter bars in all three housing colours: Satin Orange, Matte Black and Deep Blue, next to the SIGNAL controller.",
+   "de": "Die Spotter-Leisten in allen drei Gehäusefarben: Satin Orange, Matte Black und Deep Blue, daneben der SIGNAL-Controller."
+  },
+  {
+   "t": "2026-10-18T11:25:08+02:00",
+   "img": "img/expo/simracing-expo-2026/109.jpg",
+   "w": 1600,
+   "h": 901,
+   "en": "The three PUEX SIM SIGNAL modules: SPOTTER with 50 RGB LEDs (25 per side), FLAG with an 8×8 RGB matrix and expandable to several units, TIMER as a numeric display for lap time, position and status. Three devices, one port, daisy-chained.",
+   "de": "Die drei PUEX-SIM-SIGNAL-Module: SPOTTER mit 50 RGB-LEDs (25 pro Seite), FLAG mit 8×8-RGB-Matrix und auf mehrere Einheiten erweiterbar, TIMER als numerische Anzeige für Rundenzeit, Position und Status. Drei Geräte, ein Anschluss, per Daisy-Chain verbunden."
+  },
+  {
+   "t": "2026-10-18T11:25:09+02:00",
+   "img": "img/expo/simracing-expo-2026/110.jpg",
+   "w": 1600,
+   "h": 901,
+   "en": "SIGNAL mounted on a monitor: spotter bars left and right, TIMER and FLAG on top (\"bESt LAP\" plus an arrow), a second FLAG panel below.",
+   "de": "SIGNAL am Monitor montiert: Spotter-Leisten links und rechts, TIMER und FLAG oben („bESt LAP“ und ein Pfeil), ein zweites FLAG-Panel unten."
+  },
+  {
+   "t": "2026-10-18T11:25:09+02:00",
+   "img": "img/expo/simracing-expo-2026/111.jpg",
+   "w": 1600,
+   "h": 901,
+   "en": "Same setup, different message: \"GoodLuck\" on the TIMER, everything glowing red.",
+   "de": "Gleicher Aufbau, andere Botschaft: „GoodLuck“ auf dem TIMER, alles leuchtet rot."
   }
  ],
  "notes": [
