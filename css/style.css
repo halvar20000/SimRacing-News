@@ -874,6 +874,11 @@ footer .footer-links a:hover { color: var(--accent-red); }
   color: var(--text-muted);
   font-size: 0.75rem;
 }
+/* Pages without data-live-dates leave this span empty — don't render an
+   empty pill in their footer. */
+.last-updated:empty {
+  display: none;
+}
 
 /* ===== RESPONSIVE =====
    Mobile menu kicks in at 1024px because we have 13+ nav items that

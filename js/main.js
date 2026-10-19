@@ -33,8 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const lang = document.documentElement.lang || 'en';
   const isDE = lang === 'de';
 
-  // Update hero date dynamically (homepage only)
-  const heroDate = document.querySelector('.hero-date');
+  // Live date stamps are opt-in per page. Only a page whose <body> carries
+  // data-live-dates gets its hero date and footer stamp rewritten to "now" —
+  // that is the daily news pages, which really are regenerated every morning.
+  // Evergreen pages (buying guide, SimHub guide, button boxes) and the race
+  // centers keep the text written in their HTML, so they stop claiming to have
+  // been updated today and the race centers keep their "Latest: ..." line.
+  const liveDates = document.body.hasAttribute('data-live-dates');
+
+  // Update hero date dynamically (daily news pages only)
+  const heroDate = liveDates ? document.querySelector('.hero-date') : null;
   if (heroDate) {
     const now = new Date();
     const locale = isDE ? 'de-DE' : 'en-US';
@@ -48,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     heroDate.textContent = prefix + ' ' + dateStr + ' \u2022 ' + timeStr;
   }
 
-  // Update last-updated timestamp in footer
-  const lastUpdated = document.querySelector('.last-updated');
+  // Update last-updated timestamp in footer (daily news pages only)
+  const lastUpdated = liveDates ? document.querySelector('.last-updated') : null;
   if (lastUpdated) {
     const now = new Date();
     const locale = isDE ? 'de-DE' : 'en-US';
