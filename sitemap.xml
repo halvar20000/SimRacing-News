@@ -5,154 +5,161 @@
   <!-- ================= ENGLISH ================= -->
   <url>
     <loc>https://simracing-hub.com/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/hardware.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/hardware.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/hardware.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/hardware.html"/>
   </url>
   <url>
+    <loc>https://simracing-hub.com/button-boxes.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/button-boxes.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/button-boxes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/button-boxes.html"/>
+  </url>
+  <url>
     <loc>https://simracing-hub.com/simulations.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/simulations.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simulations.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/simulations.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/software.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/software.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/software.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/software.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/index.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/index.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/overlays.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/overlays.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/overlays.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/overlays.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/racecontrol.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/racecontrol.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/setup.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/setup.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/setup.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/setup.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/iracing.html</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/iracing.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/iracing.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/iracing.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/lmu.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/lmu.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/lmu.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/lmu.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/cas-community.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/cas-community.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/cas-community.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/cas-community.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/youtube.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/youtube.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/youtube.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/youtube.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/diy.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/diy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/diy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/diy.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/beyond-the-sim.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/beyond-the-sim.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/beyond-the-sim.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/beyond-the-sim.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/alpha-racer.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/alpha-racer.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/alpha-racer.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/alpha-racer.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/simhub-guide.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/simhub-guide.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simhub-guide.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/simhub-guide.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/buying-guide.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/buying-guide.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/buying-guide.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/buying-guide.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/about.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/about.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/race-center.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/race-center-sfl.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-sfl.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-sfl.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-sfl.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/race-center-pccd.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-pccd.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-pccd.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-pccd.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/race-center-iec.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-iec.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-iec.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-iec.html"/>
@@ -161,154 +168,161 @@
   <!-- ================= DEUTSCH ================= -->
   <url>
     <loc>https://simracing-hub.com/de/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/hardware.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/hardware.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/hardware.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/hardware.html"/>
   </url>
   <url>
+    <loc>https://simracing-hub.com/de/button-boxes.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/button-boxes.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/button-boxes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/button-boxes.html"/>
+  </url>
+  <url>
     <loc>https://simracing-hub.com/de/simulations.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/simulations.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simulations.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/simulations.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/software.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/software.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/software.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/software.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/de/index.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/index.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/de/overlays.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/overlays.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/overlays.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/overlays.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/de/racecontrol.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/racecontrol.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/de/setup.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/setup.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/setup.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/setup.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/iracing.html</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/iracing.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/iracing.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/iracing.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/lmu.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/lmu.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/lmu.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/lmu.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/cas-community.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/cas-community.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/cas-community.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/cas-community.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/youtube.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/youtube.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/youtube.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/youtube.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/diy.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/diy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/diy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/diy.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/beyond-the-sim.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/beyond-the-sim.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/beyond-the-sim.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/beyond-the-sim.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/alpha-racer.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/alpha-racer.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/alpha-racer.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/alpha-racer.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/simhub-guide.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/simhub-guide.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/simhub-guide.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/simhub-guide.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/buying-guide.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/buying-guide.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/buying-guide.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/buying-guide.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/about.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/about.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/race-center.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/race-center-sfl.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-sfl.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-sfl.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-sfl.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/race-center-pccd.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-pccd.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-pccd.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-pccd.html"/>
   </url>
   <url>
     <loc>https://simracing-hub.com/de/race-center-iec.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/race-center-iec.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/de/race-center-iec.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/race-center-iec.html"/>
