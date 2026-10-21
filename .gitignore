@@ -11,3 +11,7 @@ scripts/.env.*
 # Python virtual environment for scripts/ — never push to GitHub
 .venv/
 venv/
+
+# Raw race inputs and source recordings — local only, never push
+RaceSummeries/
+video/
