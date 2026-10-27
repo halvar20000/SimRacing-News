@@ -72,6 +72,9 @@
         <div class="section-header" style="text-align:left;">
           <h2><span class="icon">&#128229;</span> Installation</h2>
         </div>
+        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:0.75rem;"><strong style="color:var(--text-primary);">Am einfachsten (Windows):</strong> <a href="https://github.com/halvar20000/iracing-overlays/archive/refs/heads/main.zip" style="color:#5dade2;">ZIP laden</a>, entpacken und <code>install.bat</code> doppelklicken &ndash; oder diese Zeile in PowerShell einf&uuml;gen. Der Installer richtet Python (falls n&ouml;tig), alle Pakete und die Desktop-Verkn&uuml;pfung &bdquo;iRacing Overlays&ldquo; ein; Updates kommen danach per Knopf &bdquo;Update &amp; restart&ldquo; im Launcher. Ausf&uuml;hrlich: <a href="racecontrol-anleitung.html#2-installation-der-iracing-overlay-app" style="color:#5dade2;">Anleitung, Kapitel 2</a>.</p>
+        <pre style="background:#0d0d12; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:1rem 1.25rem; overflow-x:auto; color:#cfe8f7; font-size:0.88rem; line-height:1.6;"><code>powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/halvar20000/iracing-overlays/main/install.ps1 | iex"</code></pre>
+        <p style="color:var(--text-secondary); line-height:1.8; margin:1.25rem 0 0.75rem;">F&uuml;r Entwickler, mit git:</p>
         <pre style="background:#0d0d12; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:1rem 1.25rem; overflow-x:auto; color:#cfe8f7; font-size:0.88rem; line-height:1.6;"><code>git clone https://github.com/halvar20000/iracing-overlays.git
 cd iracing-overlays
 pip install -r requirements.txt</code></pre>

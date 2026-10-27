@@ -49,7 +49,7 @@
   <section class="hero">
     <h1>iCAS<span>Control</span></h1>
     <p>A full-screen race-control and stewarding console for iRacing leagues &mdash; in the spirit of iRaceControl, free and open source.</p>
-    <span style="display:inline-block; margin-top:0.9rem; padding:0.3rem 0.85rem; border-radius:999px; background:rgba(230,57,70,0.14); border:1px solid rgba(230,57,70,0.45); color:#ff7a85; font-family:var(--font-heading); font-size:0.78rem; font-weight:600;">Version 0.1 &middot; a working foundation</span>
+    <span style="display:inline-block; margin-top:0.9rem; padding:0.3rem 0.85rem; border-radius:999px; background:rgba(230,57,70,0.14); border:1px solid rgba(230,57,70,0.45); color:#ff7a85; font-family:var(--font-heading); font-size:0.78rem; font-weight:600;">Version 0.1.14 &middot; used live in league races</span>
   </section>
 
   <main>
@@ -58,7 +58,7 @@
 
         <figure style="margin:0 0 1.5rem;">
           <img class="zoomable" src="../img/ovl-racecontrol.jpg" alt="The iCASControl race-control dashboard: an animated track map, a full live-timing table for a GT3 plus GT4 field, and a race log with steward decision and race-control command buttons" loading="lazy" style="width:100%; border-radius:12px; display:block; border:1px solid rgba(230,57,70,0.25);">
-          <figcaption style="font-size:0.82rem; color:rgba(255,255,255,0.55); margin-top:0.5rem; text-align:center;">iCASControl running its built-in simulator at Silverstone &mdash; animated track map, live timing, incident log and the full steward decision workflow.</figcaption>
+          <figcaption style="font-size:0.82rem; color:rgba(255,255,255,0.55); margin-top:0.5rem; text-align:center;">iCASControl on a GT3 race: track map, live timing with sector times, race log with official incident points and steward decisions, race-control panel.</figcaption>
         </figure>
 
         <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:1.1rem;">Unlike the broadcast overlays, iCASControl is <strong style="color:var(--text-primary);">not an OBS source</strong> &mdash; it is a full-screen control panel you open in a browser at <code>localhost:8080</code>. It gives a race director an animated track map, a complete live-timing table, and a race log with a full steward decision workflow, all updating in real time over WebSockets.</p>
@@ -97,46 +97,64 @@
           <li>
             <span class="bullet"></span>
             <div>
-              <strong>Live timing &amp; animated track map</strong>
-              <span>Every car appears as a numbered roundel in its class colour &mdash; the selected car gets a red ring, the leader a gold one, off-track cars flash yellow. The centre table lists position, lap, last/best lap, gap or interval, incidents, pit stops and speed, with toggles for names, gap/interval and the speed column.</span>
+              <strong>Live incidents</strong>
+              <span>Official iRacing incident points (1x / 2x / 4x) live for every car when the PC is session admin, plus our own detection of spins, contacts (with the other car's number) and stopped cars &mdash; that works even as a spectator.</span>
             </div>
           </li>
           <li>
             <span class="bullet"></span>
             <div>
-              <strong>Steward decision workflow</strong>
-              <span>The race log records every incident, off-track, pit stop, flag and penalty, with filters to hide categories you don't need. Select an incident and record a decision &mdash; Noted, Investigating, No Action, Race Incident, Drive Through, Stop/Go, Time Penalty or DSQ &mdash; with per-car actions (0x, notify, wave-around, end-of-line, DSQ) alongside.</span>
+              <strong>Replay from any log line</strong>
+              <span>Select a line, press Replay (8 s before) or -20s: iRacing jumps there, puts the camera on the car and plays at 1x. LIVE goes back.</span>
             </div>
           </li>
           <li>
             <span class="bullet"></span>
             <div>
-              <strong>Race-control commands</strong>
-              <span>Deploy or end the pace car, open or close the pit lane, wave lapped cars, and post red or green flags &mdash; with NIW (not-in-world) counting, pit detection and flag handling built in.</span>
+              <strong>Penalties straight into iRacing</strong>
+              <span>Drive-through, stop &amp; go, DSQ, EOL, wave-around, clear, pace car, pit open / close, caution laps &mdash; sent as iRacing admin chat commands, then checked in the telemetry (&ldquo;iRacing confirmed&rdquo;). Right-click menu on every driver like iRaceControl, reasons with presets.</span>
             </div>
           </li>
           <li>
             <span class="bullet"></span>
             <div>
-              <strong>Shares the overlay track library</strong>
-              <span>It reads the same bundled circuit geometry as the track-map overlay, so any track you have for the overlays is instantly available to the steward &mdash; 200+ circuits with the real map.</span>
+              <strong>Auto Steward</strong>
+              <span>Incident-limit messages, automatic full course caution when the whole field collects too many points in a short time, blue-flag warning and drive-through, fast-repair and meatball messages, and a sequencer for timed messages (e.g. Pro / Am qualifying split).</span>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div>
+              <strong>On the stream</strong>
+              <span>Decisions appear on the Race Control banner overlay and as DT / SG / +10s / DSQ tags on the standings tower.</span>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div>
+              <strong>Several stewards, anywhere</strong>
+              <span>Access password, a one-click internet link (Cloudflare tunnel, no router setup), browser login, steward chat, &ldquo;I take it&rdquo; claims, and a follow mode: a steward runs iCASControl next to their own iRacing, sees the main log and replays incidents on his own PC.</span>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div>
+              <strong>Autosave</strong>
+              <span>Every 10 s; after a crash or restart it continues the same race without double-counting incidents.</span>
             </div>
           </li>
         </ul>
+        <figure style="margin:1.5rem 0 0;">
+          <img class="zoomable" src="../img/ovl-icas-stewards.jpg" alt="STEWARDS panel with online stewards, chat, access password, internet link and follow mode" loading="lazy" style="width:100%; border-radius:12px; display:block; border:1px solid rgba(230,57,70,0.25);">
+          <figcaption style="font-size:0.82rem; color:rgba(255,255,255,0.55); margin-top:0.5rem; text-align:center;">The STEWARDS panel: who is online, steward chat, access password, internet link and follow mode.</figcaption>
+        </figure>
       </div>
     </div>
-
     <div class="sub-section">
-      <div style="max-width:980px; margin:0 auto;">
-        <div class="card" style="border:1px solid rgba(230,57,70,0.35); background:linear-gradient(135deg, rgba(230,57,70,0.08), rgba(230,57,70,0.02));">
-          <span class="card-tag" style="background:var(--accent-red);">Honest about its limits</span>
-          <h3 style="margin-top:0.4rem;">What works today &mdash; and what's coming</h3>
-          <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:0.5rem;">v0.1 is a working foundation. Live timing, the real track map, the incident and event log, gaps and intervals, pit detection, NIW counting, flag handling, manufacturer logos, the steward decision workflow and all race-control commands work fully <strong style="color:var(--text-primary);">in simulator and replay mode</strong> &mdash; that is what the screenshot above shows.</p>
-          <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:0;">For <strong style="color:var(--text-primary);">live iRacing</strong>, timing, positions, surfaces, flags, weather and the circuit map are read straight from the SDK. Two limitations are deliberately flagged: iRacing's SDK doesn't expose a per-car incident <em>count</em> for other cars (so the log records off-track excursions and the steward assigns points manually), and it has no broadcast message for admin actions like full-course yellows or pit open/close (so the app shows the iRacing chat command to use). Automating both &mdash; plus a Sequencer, Auto-Steward and PDF/CSV exports &mdash; is on the roadmap.</p>
-        </div>
-        <div style="text-align:center; margin-top:1.75rem;">
-          <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; border-radius:8px; background:var(--accent-red); color:#0a0a0f; text-decoration:none; font-family:var(--font-heading); font-weight:700; font-size:0.95rem;">&#9654; Get iCASControl on GitHub</a>
-        </div>
+      <div style="max-width:980px; margin:0 auto; text-align:center;">
+        <a href="de/racecontrol-anleitung.html" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; border-radius:8px; background:var(--accent-red); color:#0a0a0f; text-decoration:none; font-family:var(--font-heading); font-weight:700; font-size:0.95rem; margin:0.3rem;">&#128214; Full guide (German)</a>
+        <a href="https://github.com/halvar20000/iracing-overlays" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; border-radius:8px; border:1px solid var(--accent-red); color:#ff7a85; text-decoration:none; font-family:var(--font-heading); font-weight:700; font-size:0.95rem; margin:0.3rem;">&#9654; Get it on GitHub</a>
+        <p style="color:var(--text-secondary); margin-top:1rem; font-size:0.9rem;">Installed together with the iRacing Overlays app (install.bat). Free and open source.</p>
       </div>
     </div>
   </main>

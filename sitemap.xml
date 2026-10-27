@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/racecontrol.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/racecontrol.html"/>
@@ -217,10 +217,14 @@
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/de/racecontrol.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://simracing-hub.com/overlays/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://simracing-hub.com/overlays/de/racecontrol.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simracing-hub.com/overlays/racecontrol.html"/>
+  </url>
+  <url>
+    <loc>https://simracing-hub.com/overlays/de/racecontrol-anleitung.html</loc>
+    <lastmod>2026-10-27</lastmod>
   </url>
   <url>
     <loc>https://simracing-hub.com/overlays/de/setup.html</loc>
